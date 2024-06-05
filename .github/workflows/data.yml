@@ -36,7 +36,7 @@ jobs:
       - init
     strategy:
       matrix:
-        spider: ${{ needs.init.outputs.spiders }}
+        spider: ${{ fromJSON(fromJSON(needs.init.outputs.spiders)) }}
     steps:
       - name: Matrix => (${{ matrix.spider }})
         run: |
