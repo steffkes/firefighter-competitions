@@ -23,13 +23,6 @@ jobs:
     steps:
       - name: Echo previous outputs
         run: echo "${{ toJSON(needs.init.outputs) }}"
-  my_echo2:
-    runs-on: ubuntu-latest
-    needs:
-      - init
-    steps:
-      - name: Echo previous outputs
-        run: echo "${{ needs.init.outputs }}"
   my_matrix:
     runs-on: ubuntu-latest
     needs:
