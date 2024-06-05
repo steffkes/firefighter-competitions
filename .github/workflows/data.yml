@@ -1,7 +1,5 @@
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
 
 jobs:
   fetch:
@@ -15,13 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: data-collection
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "pip"
-      - run: pip install -r requirements.txt
-      - run: find spider/ -name "*rec*.py" | sort | xargs -L1 scrapy runspider
-      - run: scrapy runspider collector.py
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: data-collection
+      - name: Set env
+        run: echo "SPIDERS=$(find spider/ -name "*rec*.py" | sort)" >> $GITHUB_ENV
+      - name: Test
+        run: echo $SPIDERS
