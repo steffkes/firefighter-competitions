@@ -15,7 +15,7 @@ jobs:
           ref: data-collection
       - name: generate matrix
         id: generate-matrix
-        run: echo "spiders='$(find spider/ -name "*rec*.py" | sort | jq -ncR '[inputs]')'" >> $GITHUB_ENV
+        run: echo "spiders='$(find spider/ -name "*rec*.py" | sort | jq -ncR '[inputs]')'" >> "$GITHUB_OUTPUT"
   my_echo:
     runs-on: ubuntu-latest
     needs:
