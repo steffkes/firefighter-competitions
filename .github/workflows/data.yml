@@ -14,6 +14,6 @@ jobs:
         with:
           ref: data-collection
       - name: Set env
-        run: echo "SPIDERS=$(find spider/ -name "*rec*.py" | sort)" >> $GITHUB_ENV
+        run: echo "SPIDERS='$(find spider/ -name "*rec*.py" | sort)'" >> $GITHUB_ENV
       - name: Test
         run: echo $SPIDERS
