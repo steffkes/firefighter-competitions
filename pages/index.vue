@@ -283,10 +283,7 @@
                     {{ flag(competition.location.country_code) }}
                     {{ competition.location.city }}</span
                   >
-                  <ParticipantCounter
-                    v-if="competition.has_registration_open"
-                    :competition="competition"
-                  />
+                  <ParticipantCounter :competition="competition" />
                   <SingleboerseCounter
                     v-if="singleboerse[competition.id]"
                     :id="singleboerse[competition.id]"
