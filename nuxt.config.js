@@ -29,11 +29,9 @@ export default defineNuxtConfig({
       if (nitroConfig.dev) return;
 
       nitroConfig.prerender.routes.push(
-        ...(
-          await glob(["api/competitions/*.json.js"], {
-            cwd: "./server",
-          })
-        ).map((path) => "/" + path.replace(/\.js$/, ""))
+        ...(await glob(["data/teams/*.json"])).map(
+          (path) => "/api/competitions/" + basename(path)
+        )
       );
     },
   },
