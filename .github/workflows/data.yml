@@ -16,5 +16,5 @@ jobs:
           git config --global user.name "steffkes" &&
           git subtree pull \
             --prefix data \
-            https://github.com/steffkes/firefighter-competitions-data.git main --squash
-      - uses: stefanzweifel/git-auto-commit-action@v4
+            https://github.com/steffkes/firefighter-competitions-data.git main --squash &&
+          git push
