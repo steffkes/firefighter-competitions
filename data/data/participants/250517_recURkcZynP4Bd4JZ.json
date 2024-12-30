@@ -1,7 +1,7 @@
 {
-  "date": "2024-12-29T06:46:18.204778",
+  "date": "2024-12-30T07:16:05.368141",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 156,
+  "count": 160,
   "teams": [
     [
       "Adrian Kirchner",
@@ -26,6 +26,10 @@
     [
       "Andreas Butzer",
       "Benedikt Butzer"
+    ],
+    [
+      "Andreas Koball",
+      "Lukas Merz"
     ],
     [
       "Andreas Reiner",
@@ -234,6 +238,10 @@
     [
       "Marc-Oliver Pitz",
       "Stefan Hornstein"
+    ],
+    [
+      "Markus Berg",
+      "Tim Speier"
     ],
     [
       "Markus Klink",
