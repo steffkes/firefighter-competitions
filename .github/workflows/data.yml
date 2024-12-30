@@ -12,5 +12,5 @@ jobs:
       - run: >
           git subtree pull \
             --prefix data \
-            git@github.com:steffkes/firefighter-competitions-data.git main --squash
+            https://github.com/steffkes/firefighter-competitions-data.git main --squash
       - uses: stefanzweifel/git-auto-commit-action@v4
