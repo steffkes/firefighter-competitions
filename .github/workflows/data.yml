@@ -12,6 +12,8 @@ jobs:
         with:
           fetch-depth: 0
       - run: >
+          git config --global user.email "steffkes@firefighter-competitions.actions.github.site" &&
+          git config --global user.name "steffkes" &&
           git subtree pull \
             --prefix data \
             https://github.com/steffkes/firefighter-competitions-data.git main --squash
