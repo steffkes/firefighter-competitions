@@ -1,11 +1,15 @@
 {
-  "date": "2024-12-31T11:54:11.604256",
+  "date": "2024-12-31T20:13:55.374414",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 168,
+  "count": 172,
   "teams": [
     [
       "Adrian Kirchner",
       "Armin Kirchner"
+    ],
+    [
+      "Alan Dittrich",
+      "Moritz Bulach"
     ],
     [
       "Alexander Bender",
@@ -62,6 +66,10 @@
     [
       "Christian Koch",
       "Petra Koch"
+    ],
+    [
+      "Christian Korupp",
+      "Max Mayer"
     ],
     [
       "Christian Maier",
