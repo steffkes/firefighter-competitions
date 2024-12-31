@@ -94,4 +94,8 @@ const groupedResults = computed(() =>
     return state;
   }, {}),
 );
+
+useSeoMeta({
+  title: "Persönliche Bestzeiten (" + name + " @ " + year + ")",
+});
 </script>
