@@ -73,7 +73,9 @@ const formatDate = (date) =>
     day: "2-digit",
   });
 
-const { params: { name } } = useRoute();
+const {
+  params: { name },
+} = useRoute();
 
 const { data: calendar } = await useFetch(
   "/api/personal-calendar/" + encodeURIComponent(name),
