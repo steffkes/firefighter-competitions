@@ -29,14 +29,18 @@
                 </p>
                 <p v-for="result in item.teams">
                   1× mit
-                  <NuxtLink
-                    :to="{
-                      name: 'persoenlicher-kalender-name',
-                      params: { name: result.join(', ') },
-                    }"
-                  >
-                    {{ result.join(", ") }}
-                  </NuxtLink>
+                  <template v-if="result.length">
+                    <template v-for="(name, index) in result">
+                      <template v-if="index">, </template>
+                      <NuxtLink
+                        :to="{
+                          name: 'persoenlicher-kalender-name',
+                          params: { name },
+                        }"
+                        >{{ name }}</NuxtLink
+                      ></template
+                    >
+                  </template>
                 </p>
               </div>
             </div>
