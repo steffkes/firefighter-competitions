@@ -27,8 +27,17 @@
                 <p v-for="result in item.results">
                   <time :duration="result.duration">{{ result.duration }}</time>
                   <template v-if="result.names.length">
-                    ({{ result.names.join(", ") }})</template
-                  >
+                    (<template v-for="(name, index) in result.names">
+                      <template v-if="index">, </template>
+                      <NuxtLink
+                        :to="{
+                          name: 'persoenliche-bestzeiten-name-year',
+                          params: { name, year },
+                        }"
+                        >{{ name }}</NuxtLink
+                      ></template
+                    >)
+                  </template>
                 </p>
               </div>
             </div>
