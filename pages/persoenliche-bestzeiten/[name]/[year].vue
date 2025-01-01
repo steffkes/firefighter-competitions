@@ -45,6 +45,16 @@
         </tr>
       </tbody>
     </table>
+
+    <p>
+      <NuxtLink
+        :to="{
+          name: 'persoenlicher-kalender-name',
+          params: { name },
+        }"
+        >Persönlicher Kalender von {{ name }}</NuxtLink
+      >
+    </p>
   </div>
 
   <footer class="footer mt-6">

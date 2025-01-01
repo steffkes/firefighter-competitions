@@ -48,6 +48,16 @@
         </tr>
       </tbody>
     </table>
+
+    <p>
+      <NuxtLink
+        :to="{
+          name: 'persoenliche-bestzeiten-name-year',
+          params: { name, year: 2024 },
+        }"
+        >Persönliche Bestzeiten von {{ name }}</NuxtLink
+      >
+    </p>
   </div>
 
   <footer class="footer mt-6">
