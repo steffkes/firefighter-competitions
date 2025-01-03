@@ -1,7 +1,7 @@
 {
-  "date": "2025-01-03T14:54:11.672219",
+  "date": "2025-01-03T20:40:11.139719",
   "competition_id": "recWBkOlwgxBXLHAl",
-  "count": 184,
+  "count": 200,
   "teams": [
     [
       "Aaron Fischer",
@@ -26,6 +26,10 @@
     [
       "Alexander Möller",
       "Christoph Kreutzer"
+    ],
+    [
+      "Alexander Roos",
+      "Patrick Schramm"
     ],
     [
       "Alexander Tönges",
@@ -136,8 +140,16 @@
       "Silvio Wick"
     ],
     [
+      "Daniel Schaller",
+      "Jannik Stephan"
+    ],
+    [
       "Danny Bänsch",
       "Enrico Stade"
+    ],
+    [
+      "Darlene Schramm",
+      "Selina Kraus"
     ],
     [
       "David Peetzen",
@@ -150,6 +162,10 @@
     [
       "Dominik Strba",
       "Mario Blaschke"
+    ],
+    [
+      "Elly Schweigert",
+      "Robert Müller"
     ],
     [
       "Eric Koch",
@@ -178,6 +194,10 @@
     [
       "Frances Rudolf",
       "Isabell Schütz"
+    ],
+    [
+      "Frank Meinhold",
+      "Sascha Seidel"
     ],
     [
       "Heiko Richter",
@@ -228,6 +248,10 @@
       "Moritz Bauer"
     ],
     [
+      "Jonas Wicklein",
+      "Sebastian Fröbel"
+    ],
+    [
       "Julia Dawid",
       "Michi Dawid"
     ],
@@ -268,12 +292,20 @@
       "Lukas Degenhardt"
     ],
     [
+      "Leander Weißbrodt",
+      "Stefan Langbein"
+    ],
+    [
       "Lucas Harbich",
       "Markus Brill"
     ],
     [
       "Lukas Krahl",
       "Stephan Graef"
+    ],
+    [
+      "Malte Haack",
+      "Reimond Kamrath"
     ],
     [
       "Manuela Kirchner",
