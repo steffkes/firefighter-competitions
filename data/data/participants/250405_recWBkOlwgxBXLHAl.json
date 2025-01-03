@@ -1,7 +1,7 @@
 {
-  "date": "2025-01-01T20:56:24.244076",
+  "date": "2025-01-02T23:54:05.201350",
   "competition_id": "recWBkOlwgxBXLHAl",
-  "count": 176,
+  "count": 184,
   "teams": [
     [
       "Aaron Fischer",
@@ -92,6 +92,10 @@
       "Marc Lontke"
     ],
     [
+      "Christian Petatz",
+      "Marius Mucha"
+    ],
+    [
       "Christian Will",
       "Stefan Rodschinka"
     ],
@@ -106,6 +110,10 @@
     [
       "Christopher Röder",
       "Marco Walter"
+    ],
+    [
+      "Claudia Knebel",
+      "Tobias Fröhlich"
     ],
     [
       "Damian Pyka",
@@ -144,12 +152,20 @@
       "Mario Blaschke"
     ],
     [
+      "Eric Koch",
+      "Markus Krüger"
+    ],
+    [
       "Fabian Hägele",
       "Tom Falkner"
     ],
     [
       "Fabian Schröter",
       "Wayne Lüdecke"
+    ],
+    [
+      "Felix Poser",
+      "Jeremy Heier"
     ],
     [
       "Florian Graef",
