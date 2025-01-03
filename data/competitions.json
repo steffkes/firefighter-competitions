@@ -3068,7 +3068,7 @@
         "name": "Schachmatt Ulm",
         "url": "https://www.schachmatt-ulm.de/",
         "participants": {
-            "count": 174
+            "count": 176
         },
         "date": {
             "start": "2025-02-08",
@@ -3164,7 +3164,7 @@
         "name": "LOTTO Thüringen Treppenlauf",
         "url": "https://my.raceresult.com/313752/",
         "participants": {
-            "count": 176
+            "count": 184
         },
         "date": {
             "start": "2025-04-05",
@@ -3236,7 +3236,7 @@
         "name": "Schonacher Schanzenlauf",
         "url": "http://www.schonacher-schanzenlauf.de",
         "participants": {
-            "count": 174
+            "count": 178
         },
         "date": {
             "start": "2025-05-17",
@@ -3680,6 +3680,30 @@
             "coordinates": {
                 "lat": 50.8816904,
                 "lng": 12.1321235
+            }
+        }
+    },
+    {
+        "id": "recfXe2FFz9Q5jBRZ",
+        "kind": "FSR",
+        "name": "Schanzenlauf Oberstdorf",
+        "url": "https://feuerwehr-oberstdorf.de/aktuelles/schanzenlauf-2024",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-10-18",
+            "end": "2025-10-18",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Oberstdorf",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 47.3749871,
+                "lng": 10.270242
             }
         }
     },
