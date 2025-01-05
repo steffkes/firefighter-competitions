@@ -3164,7 +3164,7 @@
         "name": "LOTTO Thüringen Treppenlauf",
         "url": "https://my.raceresult.com/313752/",
         "participants": {
-            "count": 206
+            "count": 208
         },
         "date": {
             "start": "2025-04-05",
@@ -3236,7 +3236,7 @@
         "name": "Schonacher Schanzenlauf",
         "url": "http://www.schonacher-schanzenlauf.de",
         "participants": {
-            "count": 184
+            "count": 186
         },
         "date": {
             "start": "2025-05-17",
@@ -3512,6 +3512,30 @@
             "coordinates": {
                 "lat": 48.7849506,
                 "lng": 8.6496677
+            }
+        }
+    },
+    {
+        "id": "recPYTDYqzceAPJmV",
+        "kind": "FCC",
+        "name": "Firefit Championships Europe",
+        "url": "https://www.instagram.com/p/DEc5cVBMplg/",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-08-02",
+            "end": "2025-08-03",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Kassel",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 51.32066,
+                "lng": 9.485909
             }
         }
     },
