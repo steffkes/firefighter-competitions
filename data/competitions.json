@@ -3068,7 +3068,7 @@
         "name": "Schachmatt Ulm",
         "url": "https://www.schachmatt-ulm.de/",
         "participants": {
-            "count": 178
+            "count": 180
         },
         "date": {
             "start": "2025-02-08",
@@ -3164,7 +3164,7 @@
         "name": "LOTTO Thüringen Treppenlauf",
         "url": "https://my.raceresult.com/313752/",
         "participants": {
-            "count": 200
+            "count": 206
         },
         "date": {
             "start": "2025-04-05",
@@ -3251,6 +3251,30 @@
             "coordinates": {
                 "lat": 48.1352787,
                 "lng": 8.2023015
+            }
+        }
+    },
+    {
+        "id": "recmjfsbZTbvc1JM0",
+        "kind": "FSR",
+        "name": "Berlin Firefighter Stairrun",
+        "url": "https://www.berlin-firefighter-stairrun.de/",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-05-17",
+            "end": "2025-05-17",
+            "is_draft": true,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Berlin",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 52.523125,
+                "lng": 13.4127656
             }
         }
     },
@@ -3473,7 +3497,7 @@
         "name": "Nordschwarzwald Trophy",
         "url": "https://www.eventservice-stahl.de/veranstaltungen/nordschwarzwald-trophy/feuerwehr-lauf-ohne-pa/",
         "participants": {
-            "count": 16
+            "count": 18
         },
         "date": {
             "start": "2025-08-01",
