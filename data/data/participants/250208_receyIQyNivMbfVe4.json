@@ -1,7 +1,7 @@
 {
-  "date": "2025-01-10T15:12:33.095506",
+  "date": "2025-01-10T21:12:15.368281",
   "competition_id": "receyIQyNivMbfVe4",
-  "count": 190,
+  "count": 192,
   "teams": [
     [
       "Adrian Kirchner",
@@ -33,7 +33,7 @@
     ],
     [
       "Andreas Fischer",
-      "Christian Kreit"
+      "Korbinian Gast"
     ],
     [
       "Andreas Huber",
@@ -346,6 +346,10 @@
     [
       "Moritz Wegerich",
       "René Stange"
+    ],
+    [
+      "Niclas Lamparter",
+      "Yannec Lamparter"
     ],
     [
       "Nico Beha",
