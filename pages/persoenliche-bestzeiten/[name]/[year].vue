@@ -9,7 +9,10 @@
     <p class="title is-3 has-text-centered">Persönliche Bestzeiten</p>
     <p class="subtitle is-5 has-text-centered">{{ name }} ({{ year }})</p>
 
-    <table class="table is-striped is-fullwidth">
+    <table
+      v-if="Object.values(groupedResults).length"
+      class="table is-striped is-fullwidth"
+    >
       <tbody>
         <tr v-for="item in groupedResults">
           <td class="py-4">
@@ -45,6 +48,11 @@
         </tr>
       </tbody>
     </table>
+    <article v-else class="message">
+      <div class="message-body">
+        {{ name }} hat {{ year }} (noch) keine Wettkämpfe besucht.
+      </div>
+    </article>
 
     <p>
       <NuxtLink
