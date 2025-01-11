@@ -1,7 +1,7 @@
 {
-  "date": "2025-01-11T09:12:38.202352",
+  "date": "2025-01-11T15:12:37.089345",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 198,
+  "count": 202,
   "teams": [
     [
       "Adrian Kirchner",
@@ -46,6 +46,10 @@
     [
       "Andreas Koball",
       "Lukas Merz"
+    ],
+    [
+      "Andreas Matthes",
+      "Dennis Riesle"
     ],
     [
       "Andreas Reiner",
@@ -182,6 +186,10 @@
     [
       "Florian Kieninger",
       "Lucas Storz"
+    ],
+    [
+      "Florian Meisinger",
+      "Tobias Kiefer"
     ],
     [
       "Florian Mündlein",
