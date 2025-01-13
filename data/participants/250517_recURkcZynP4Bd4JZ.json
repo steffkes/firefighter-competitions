@@ -1,7 +1,7 @@
 {
-  "date": "2025-01-13T15:14:52.754912",
+  "date": "2025-01-13T21:14:03.534068",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 206,
+  "count": 216,
   "teams": [
     [
       "Adrian Kirchner",
@@ -18,6 +18,10 @@
     [
       "Alexander Bender",
       "Timo Keller"
+    ],
+    [
+      "Alexander Borst",
+      "Markus Haas"
     ],
     [
       "Alexander Fromme",
@@ -188,6 +192,10 @@
       "Lukas Hirscher"
     ],
     [
+      "Florian Huber",
+      "Jakob Thaler"
+    ],
+    [
       "Florian Kieninger",
       "Lucas Storz"
     ],
@@ -206,6 +214,10 @@
     [
       "Gabriel Pfleghaar",
       "Lorenz Hilebrand"
+    ],
+    [
+      "Guido Abele",
+      "Marc Michael Menzl"
     ],
     [
       "Gunther Fuchs",
@@ -294,6 +306,14 @@
     [
       "Lars Gentner",
       "Tobias Boost"
+    ],
+    [
+      "Lea Weber",
+      "Luca Tom Gurel"
+    ],
+    [
+      "Lena Lieb",
+      "Max Gurel"
     ],
     [
       "Lukas Dold",
