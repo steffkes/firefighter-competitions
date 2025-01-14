@@ -7,6 +7,12 @@ class ParticipantItem(scrapy.Item):
     names = scrapy.Field()
 
 
+class ResultRankItem(scrapy.Item):
+    total = scrapy.Field()
+    category = scrapy.Field()
+    age_group = scrapy.Field()
+
+
 class ResultItem(scrapy.Item):
     date = scrapy.Field()
     competition_id = scrapy.Field()
@@ -15,6 +21,8 @@ class ResultItem(scrapy.Item):
     category = scrapy.Field()
     names = scrapy.Field()
     bib = scrapy.Field()
+    age_group = scrapy.Field()
+    rank = scrapy.Field()
 
 
 from scrapy.utils.python import to_bytes
@@ -79,6 +87,7 @@ class JsonLinesItemExporter(BaseJsonLinesItemExporter):
                 item["duration"],
                 item["type"],
                 item["category"] or "",
+                item.get("age_group"),
                 item.get("bib"),
             ),
         )

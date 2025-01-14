@@ -1,6 +1,12 @@
 import scrapy
 from datetime import datetime
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import (
+    JsonItemExporter,
+    JsonLinesItemExporter,
+    ParticipantItem,
+    ResultItem,
+    ResultRankItem,
+)
 
 
 class Spider(scrapy.Spider):
@@ -53,14 +59,24 @@ class Spider(scrapy.Spider):
         for row in response.css('[class^="LineContainer"]'):
             name = fixName(row.css('[name="sp4"]::text').get().strip())
             raw_duration = row.css('[name="sp9"]::text').get().strip().split(" ")[0]
+            age_group = row.css('[name="sp5"]::text').get().strip()
 
             yield ResultItem(
                 date=self.race_date,
                 competition_id=self.competition_id,
                 type=competition_type,
-                category=row.css('[name="sp5"]::text').get().strip()[0],
+                category=age_group[0],
                 duration="00:%s.0" % ("0" + raw_duration)[-5:],
                 names=[name],
+                age_group=age_group,
+                rank=ResultRankItem(
+                    total=int(row.css('[name="sp1"]::text').get().strip()),
+                    category=int(
+                        row.css('[name="sp2"]::text').get().strip()
+                        or row.css('[name="sp3"]::text').get().strip()
+                    ),
+                    age_group=int(row.css('[name="sp6"]::text').get().strip()),
+                ),
             )
 
 
