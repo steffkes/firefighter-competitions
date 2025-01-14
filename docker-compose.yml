@@ -6,5 +6,6 @@ services:
       target: production
     environment:
       NUXT_HOST: 0.0.0.0
+      MOTHERDUCK_API_TOKEN:
     ports:
       - 127.0.0.1:6680:3000

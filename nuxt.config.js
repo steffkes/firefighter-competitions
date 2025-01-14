@@ -21,4 +21,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    motherduckApiToken: process.env.MOTHERDUCK_API_TOKEN,
+  },
 });
