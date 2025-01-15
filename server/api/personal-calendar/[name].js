@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import glob from "fast-glob";
 import competitionProvider from "@/competition-provider.js";
+import pg from "pg";
 
 export default defineEventHandler(async (event) => {
   const requestedName = decodeURIComponent(
@@ -16,33 +17,41 @@ export default defineEventHandler(async (event) => {
     ]),
   );
 
-  const eventsMapperFn = async (path) => {
-    try {
-      const { competition_id, teams } = JSON.parse(
-        readFileSync(resolve(path), "utf-8"),
-      );
+  const client = new pg.Client({
+    connectionString: useRuntimeConfig(event)["DB_DSN"],
+  });
+  await client.connect();
 
-      const filteredTeams = teams
-        .filter((team) => team.includes(requestedName))
-        .map((team) => team.filter((name) => name != requestedName));
-
-      return {
-        competition: competitions[competition_id],
-        teams: filteredTeams,
-      };
-    } catch (error) {
-      return {};
-    }
-  };
-
-  const events = await Promise.all(
-    (await glob(["./data/data/participants/*.json"])).map(eventsMapperFn),
+  const result = await client.query(
+    `SELECT competition_id, teams
+FROM participants
+WHERE $1 = ANY(teams)`,
+    [requestedName],
   );
+  await client.end();
+
+  const data = result.rows.reduce((state, { competition_id, teams }) => {
+    if (!(competition_id in state)) {
+      state[competition_id] = {
+        competition: competitions[competition_id],
+        teams: [],
+      };
+    }
+
+    state[competition_id]["teams"].push(
+      teams.filter((name) => name != requestedName),
+    );
+
+    return state;
+  }, {});
 
   const today = new Date().toISOString();
-
-  return events.filter(
-    ({ competition, teams }) =>
-      teams?.length && competition?.date?.start >= today,
-  );
+  return Object.values(data)
+    .filter(
+      ({ competition, teams }) =>
+        teams?.length && competition?.date?.start >= today,
+    )
+    .toSorted((a, b) =>
+      a.competition.date.start.localeCompare(b.competition.date.start),
+    );
 });
