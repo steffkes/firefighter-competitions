@@ -1,7 +1,6 @@
 import { defineEventHandler } from "h3"; // needed for test
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import glob from "fast-glob";
+import competitionProvider from "@/competition-provider.js";
+import pg from "pg";
 
 export default defineEventHandler(async (event) => {
   const requestedName = decodeURIComponent(
@@ -9,16 +8,33 @@ export default defineEventHandler(async (event) => {
   );
   const requestedYear = getRouterParam(event, "year");
 
-  const results = (await glob(["data/data/results/*.jsonl"]))
-    .flatMap((path) =>
-      readFileSync(resolve(path), "utf8")
-        .trim()
-        .split(/\r?\n/)
-        .filter(Boolean)
-        .map(JSON.parse),
-    )
-    .filter(({ date }) => date.startsWith(requestedYear))
-    .filter(({ names }) => names.includes(requestedName));
+  const competitions = Object.fromEntries(
+    (await competitionProvider()).map((competition) => [
+      competition.id,
+      competition,
+    ]),
+  );
 
-  return results;
+  const client = new pg.Client({
+    connectionString: useRuntimeConfig(event)["DB_DSN"],
+  });
+  await client.connect();
+
+  const result = await client.query(
+    `SELECT competition_id, duration, type, names
+FROM results
+WHERE $1 = ANY(names)`,
+    [requestedName],
+  );
+  await client.end();
+
+  return result.rows
+    .filter(({ competition_id }) =>
+      competitions[competition_id].date.start?.startsWith(requestedYear),
+    )
+    .toSorted((a, b) =>
+      competitions[a.competition_id].date.start.localeCompare(
+        competitions[b.competition_id].date.start,
+      ),
+    );
 });

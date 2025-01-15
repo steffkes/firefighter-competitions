@@ -21,4 +21,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    DB_DSN: process.env.DB_DSN,
+  },
 });
