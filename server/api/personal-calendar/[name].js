@@ -1,7 +1,4 @@
 import { defineEventHandler } from "h3"; // needed for test
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import glob from "fast-glob";
 import competitionProvider from "@/competition-provider.js";
 import pg from "pg";
 
