@@ -267,8 +267,6 @@ const calendarPath = computed(
 
 useHead({
   title: "Feuerwehr Wettkämpfe",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  charset: "utf-8",
   meta: [
     {
       name: "description",
@@ -278,13 +276,6 @@ useHead({
       property: "og:image",
       content:
         "https://firefighter-competitions.vercel.app/firefighter-competitions.jpg",
-    },
-  ],
-  script: [
-    {
-      src: "https://plausible.io/js/script.js",
-      "data-domain": "firefighter-competitions.vercel.app",
-      defer: true,
     },
   ],
 });
