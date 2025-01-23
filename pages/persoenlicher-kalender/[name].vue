@@ -15,7 +15,7 @@
       <NuxtLink
         :to="{
           name: 'persoenliche-bestzeiten-name-year',
-          params: { name, year: 2024 },
+          params: { name, year: new Date().getFullYear() },
         }"
         >Persönliche Bestzeiten von {{ name }}</NuxtLink
       >
