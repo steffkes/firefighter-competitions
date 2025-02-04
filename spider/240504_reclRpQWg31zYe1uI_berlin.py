@@ -2,7 +2,13 @@ import scrapy
 from datetime import datetime
 from pathlib import Path
 from scrapy.utils.iterators import csviter
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import (
+    JsonItemExporter,
+    JsonLinesItemExporter,
+    ParticipantItem,
+    ResultItem,
+    ResultRankItem,
+)
 
 
 class Spider(scrapy.spiders.CSVFeedSpider):
@@ -11,7 +17,6 @@ class Spider(scrapy.spiders.CSVFeedSpider):
     competition_id = __name__.split("_")[1]
     ident = __name__[0:24]
 
-    tmp_bib = 1
     delimiter = ";"
 
     custom_settings = {
@@ -43,12 +48,13 @@ class Spider(scrapy.spiders.CSVFeedSpider):
             "file://%s" % Path("spider/data/240504_berlin_starter.csv").resolve(),
             callback=self.parse_starters,
         )
-        yield scrapy.Request(
-            "file://%s" % Path("spider/data/240504_berlin.csv").resolve()
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://www.ergebnisliste.de/urkunden/urkstairrun_suche_nach_kombi.php",
+            callback=self.parse,
         )
 
     def parse_starters(self, response):
-        fixName = lambda name: " ".join(reversed(name.split(", ")))
         for row in csviter(
             response, self.delimiter, self.headers, quotechar=self.quotechar
         ):
@@ -57,22 +63,47 @@ class Spider(scrapy.spiders.CSVFeedSpider):
                 names=sorted(map(fixName, [row["name1"], row["name2"]])),
             )
 
-    def parse_row(self, response, row):
-        names = sorted(
-            map(
-                lambda name: " ".join(reversed(list(map(str.strip, name.split(","))))),
-                [row["Name1"], row["Name2"]],
+    def parse(self, response):
+        for row in filter(
+            lambda row: row.css(":nth-child(4)::text").get() == "Stairrun"
+            and row.css(".datum::text").get() == "04.05.2024",
+            response.css("table tr"),
+        ):
+            duration = "00:" + ("0" + row.css(":nth-child(9)::text").get())[-7:]
+            age_group = row.css(":nth-child(8)::text").get()
+            names = row.css(":nth-child(12)::text").get().split("/")
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type="MPA",
+                duration=duration,
+                category={"Ladies": "W", "Mix": "X"}.get(age_group, "M"),
+                age_group=age_group,
+                names=sorted(map(fixName, names)),
+                bib=row.css(":nth-child(5)::text").get(),
+                rank=ResultRankItem(
+                    total=int(row.css(":nth-child(11)::text").get()),
+                    age_group=int(row.css(":nth-child(10)::text").get()),
+                ),
             )
-        )
 
-        yield ResultItem(
-            date=self.race_date,
-            competition_id=self.competition_id,
-            bib=self.tmp_bib,
-            type="MPA",
-            duration="00:" + row["Time"][0:7],
-            category={"Ladies": "W", "Mix": "X"}.get(row["Category"].strip(), "M"),
-            names=names,
-        )
 
-        self.tmp_bib = self.tmp_bib + 1
+def fixName(name):
+    return " ".join(map(str.strip, reversed(name.split(","))))
+
+
+import pytest
+
+
+@pytest.mark.parametrize(
+    "input,output",
+    [
+        ("Süßenbach, Jan ", "Jan Süßenbach"),
+        (" Di Gioia, Alessandro ", "Alessandro Di Gioia"),
+        ("Grote-Lambers, Katrin-Madlen", "Katrin-Madlen Grote-Lambers"),
+        ("Tuchbreiter,Nicole", "Nicole Tuchbreiter")
+    ],
+)
+def test_fixName(input, output):
+    assert fixName(input) == output
