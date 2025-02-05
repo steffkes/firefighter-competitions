@@ -9,6 +9,22 @@
     <p class="title is-3 has-text-centered">Persönliche Bestzeiten</p>
     <p class="subtitle is-5 has-text-centered">{{ name }} ({{ year }})</p>
 
+    <nav class="pagination is-small is-centered" role="navigation">
+      <ul class="pagination-list">
+        <li v-for="i in [2022, 2023, 2024, 2025]">
+          <NuxtLink
+            :to="{
+              name: route_name,
+              params: { ...params, year: i },
+            }"
+            class="pagination-link"
+            :class="{ 'is-current': i == year }"
+            >{{ i }}</NuxtLink
+          >
+        </li>
+      </ul>
+    </nav>
+
     <PersonalResults :name="name" :year="year"></PersonalResults>
 
     <p>
@@ -36,9 +52,8 @@
 </template>
 
 <script setup>
-const {
-  params: { name, year },
-} = useRoute();
+const { name: route_name, params } = useRoute();
+const { name, year } = params;
 
 useSeoMeta({
   title: "Persönliche Bestzeiten (" + name + " @ " + year + ")",
