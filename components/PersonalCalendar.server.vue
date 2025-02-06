@@ -1,5 +1,3 @@
 <template>
-  <article class="message">
-    <div class="message-body">Wettkampf-Teilnahmen werden geladen …</div>
-  </article>
+  <p class="mb-3">Wettkampf-Teilnahmen werden geladen …</p>
 </template>
