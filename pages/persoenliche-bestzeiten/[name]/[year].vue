@@ -7,7 +7,7 @@
     </nav>
 
     <p class="title is-3 has-text-centered">Persönliche Bestzeiten</p>
-    <p class="subtitle is-5 has-text-centered">{{ name }} ({{ year }})</p>
+    <p class="subtitle is-5 has-text-centered">{{ name }}</p>
 
     <PersonalResultsNavigation
       :route_name="route_name"
