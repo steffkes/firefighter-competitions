@@ -49,6 +49,9 @@ table td.date {
   text-align: right !important;
   font-variant-numeric: tabular-nums;
 }
+time {
+  font-variant-numeric: tabular-nums;
+}
 
 @media screen and (max-width: 1024px) {
   table .date {
