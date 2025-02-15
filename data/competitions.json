@@ -3356,7 +3356,7 @@
         "name": "Stairways to Heaven",
         "url": "https://stairways.ch/de/",
         "participants": {
-            "count": 121
+            "count": 123
         },
         "date": {
             "start": "2025-05-11",
@@ -3419,6 +3419,30 @@
             "coordinates": {
                 "lat": 52.523125,
                 "lng": 13.4127656
+            }
+        }
+    },
+    {
+        "id": "recoyhqUgEdyLOcT7",
+        "kind": "FSR",
+        "name": "alive step up copy",
+        "url": "https://alive.si/",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-05-17",
+            "end": "2025-05-17",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Ljubljana",
+            "country_code": "SI",
+            "coordinates": {
+                "lat": 46.066912,
+                "lng": 14.541362
             }
         }
     },
