@@ -1,7 +1,7 @@
 {
-  "date": "2025-02-16T15:11:49.209163",
+  "date": "2025-02-16T21:11:53.535985",
   "competition_id": "recDQgPZf3fKZwQV1",
-  "count": 6,
+  "count": 8,
   "teams": [
     [
       "Christian Grüner",
@@ -10,6 +10,10 @@
     [
       "Dominik Thiel",
       "Tobias Diedrigkeit"
+    ],
+    [
+      "Eric Hering",
+      "Stefan Marienthal"
     ],
     [
       "Matthias Schmidt",
