@@ -2715,7 +2715,7 @@
             "end": "2024-08-25",
             "is_draft": null,
             "is_canceled": null,
-            "registration_opens": null
+            "registration_opens": "2025-02-19T11:00:00.000Z"
         },
         "location": {
             "city": "Köln",
@@ -3284,7 +3284,7 @@
         "name": "Zwickauer Hochhaus Treppenlauf",
         "url": "https://my.raceresult.com/322261/info",
         "participants": {
-            "count": 6
+            "count": 8
         },
         "date": {
             "start": "2025-04-13",
