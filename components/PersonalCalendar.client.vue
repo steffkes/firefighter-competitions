@@ -16,8 +16,9 @@
                 {{ item.teams.length }}× insgesamt
               </p>
               <p v-for="result in item.teams">
-                1× mit
+                1×
                 <template v-if="result.length">
+                  mit
                   <template v-for="(name, index) in result">
                     <template v-if="index">, </template>
                     <NuxtLink
