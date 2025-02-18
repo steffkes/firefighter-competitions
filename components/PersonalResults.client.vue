@@ -82,10 +82,10 @@ const competitions = Object.fromEntries(
 );
 
 const results = await $fetch(
-  "/api/personal-results/" + encodeURIComponent(name) + "/" + year,
+  "/api/personal-results/" + encodeURIComponent(name.trim()) + "/" + year,
 );
 
-const filteredNames = (names) => names.filter((item) => item != name);
+const filteredNames = (names) => names.filter((item) => item != name.trim());
 
 const groupedResults = computed(() =>
   results.reduce((state, result) => {
