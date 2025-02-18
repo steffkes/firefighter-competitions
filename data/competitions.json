@@ -1746,6 +1746,30 @@
         }
     },
     {
+        "id": "recuroGAOnlF2dbLL",
+        "kind": "FSR",
+        "name": "Pyramidenkogel Turmlauf",
+        "url": "https://www.pyramidenkogel-turmlauf.at",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2023-09-10",
+            "end": "2023-09-10",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Schiefling am See",
+            "country_code": "AT",
+            "coordinates": {
+                "lat": 46.60929012,
+                "lng": 14.14499348
+            }
+        }
+    },
+    {
         "id": "recuxTE3WPxqoyLd1",
         "kind": "FCC",
         "name": "Europas Challenge",
@@ -2799,6 +2823,30 @@
         }
     },
     {
+        "id": "recSVTIVNI0UmxpeT",
+        "kind": "FSR",
+        "name": "Pyramidenkogel Turmlauf",
+        "url": "https://www.pyramidenkogel-turmlauf.at",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2024-09-08",
+            "end": "2024-09-08",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Schiefling am See",
+            "country_code": "AT",
+            "coordinates": {
+                "lat": 46.60929012,
+                "lng": 14.14499348
+            }
+        }
+    },
+    {
         "id": "recqYhG0KpSxOiq0G",
         "kind": "FCC",
         "name": "FireFit Championships",
@@ -3692,7 +3740,7 @@
         "name": "Nordschwarzwald Trophy",
         "url": "https://www.eventservice-stahl.de/veranstaltungen/nordschwarzwald-trophy/feuerwehr-lauf-ohne-pa/",
         "participants": {
-            "count": 132
+            "count": 142
         },
         "date": {
             "start": "2025-08-01",
