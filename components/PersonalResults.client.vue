@@ -15,7 +15,7 @@
               <CompetitionTags :competition="item.competition" />
             </div>
             <div class="column">
-              <p v-for="result in item.results">
+              <div v-for="result in item.results" class="mb-2">
                 <time :duration="result.duration">{{ result.duration }}</time>
                 <template v-if="result.names.length">
                   (<template v-for="(name, index) in result.names">
@@ -29,7 +29,23 @@
                     ></template
                   >)
                 </template>
-              </p>
+
+                <div
+                  v-if="result.ranks.length"
+                  class="field is-grouped is-grouped-multiline"
+                >
+                  <div v-for="rank of result.ranks" class="control">
+                    <div class="tags has-addons">
+                      <span
+                        class="tag is-dark"
+                        :style="{ backgroundColor: rankColors[rank.rank] }"
+                        >{{ rank.rank }}.</span
+                      >
+                      <span class="tag">{{ rank.label ?? "Gesamt" }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -101,4 +117,10 @@ const groupedResults = computed(() =>
     return state;
   }, {}),
 );
+
+const rankColors = {
+  1: "#C9B037", // 🥇
+  2: "#B4B4B4", // 🥈
+  3: "#AD8A56", // 🥉
+};
 </script>

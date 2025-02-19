@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
   await client.connect();
 
   const result = await client.query(
-    `SELECT competition_id, duration, type, names
+    `SELECT competition_id, duration, type, names, ranks
 FROM results
 WHERE $1 = ANY(names)`,
     [requestedName],
