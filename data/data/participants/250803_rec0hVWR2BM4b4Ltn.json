@@ -1,8 +1,12 @@
 {
-  "date": "2025-02-20T15:14:50.277610",
+  "date": "2025-02-20T21:11:35.059329",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 86,
+  "count": 98,
   "teams": [
+    [
+      "Alexander Hanke",
+      "Christian Krieg"
+    ],
     [
       "Alexander Wigger",
       "Lena Kurz"
@@ -60,8 +64,20 @@
       "Matthias Mund"
     ],
     [
+      "Elisa Ehmer",
+      "Martin Eichenlaub"
+    ],
+    [
+      "Felix Hartmann",
+      "Lara Löwing"
+    ],
+    [
       "Felix Lieneke",
       "Lars Volke"
+    ],
+    [
+      "Gina Görmer",
+      "Niklas Lambert"
     ],
     [
       "Gunther Fuchs",
@@ -78,6 +94,10 @@
     [
       "Jacqueline Phan",
       "Martin Franke"
+    ],
+    [
+      "Johannes Schun",
+      "Robert de Lange"
     ],
     [
       "Julia Dawid",
@@ -146,6 +166,10 @@
     [
       "Marcel Sonnefeld",
       "Pascal Schlösser"
+    ],
+    [
+      "Marco Ruoff",
+      "Markus Widmaier"
     ],
     [
       "Marcos Oliveira",
