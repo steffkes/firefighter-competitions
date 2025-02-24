@@ -1,5 +1,6 @@
 import scrapy
 from datetime import datetime
+import re
 
 
 class ParticipantItem(scrapy.Item):
@@ -139,3 +140,69 @@ class Spider(scrapy.Spider):
     @staticmethod
     def fixName(name):
         return name
+
+    @staticmethod
+    def fixDuration(duration):
+        return re.sub(
+            r"((\d+):)?(\d+):(\d+),(\d)\d*",
+            lambda match: "{0:02d}:{1:02d}:{2:02d}.{3}".format(
+                *map(lambda input: int(input or 0), match.group(2, 3, 4, 5))
+            ),
+            duration,
+        )
+
+
+class FirefitSpider(Spider):
+    def parse(self, response):
+        tables = response.css("table.ffc-table-dark")
+
+        for index, (type, category) in enumerate(
+            [
+                ("MPA", "M individual"),
+                ("MPA", "W individual"),
+                ("OPA", "M tandem"),
+                ("OPA", "W tandem"),
+                ("OPA", "X tandem"),
+                ("OPA", "M relay"),
+                ("OPA", "W relay"),
+                ("OPA", "X relay"),
+            ]
+        ):
+            for row in tables[index].css("tbody tr.status-ok"):
+                raw_duration = "".join(row.css(".result-line1 span::text").getall())
+
+                names = [row.css(".name-line1::text").get().strip()]
+                team = sorted(row.css(".member-name span::text").getall())
+                if len(team):
+                    names = team
+
+                yield ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type=type,
+                    duration=self.fixDuration(raw_duration),
+                    names=names,
+                    category=category,
+                    rank=ResultRankItem(
+                        category=int(
+                            row.css(".rank-val.age-overall::text").get()[0:-1]
+                        ),
+                    ),
+                )
+
+
+import pytest
+
+
+@pytest.mark.parametrize(
+    "output,input",
+    [
+        ("00:13:31.6", "13:31,6"),
+        ("01:00:27.0", "1:00:27,0"),
+        ("00:05:48.3", "5:48,34"),
+        ("00:02:55.7", "2:55,70"),
+        ("00:02:46.9", "2:46,96"),
+    ],
+)
+def test_fixDuration(input, output):
+    assert Spider.fixDuration(input) == output
