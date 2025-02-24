@@ -153,22 +153,43 @@ class Spider(scrapy.Spider):
 
 
 class FirefitSpider(Spider):
+
+    competition_map = {
+        "individual - men": ("MPA", "M individual"),
+        "individual - women": ("MPA", "W individual"),
+        "tandem - men": ("OPA", "M tandem"),
+        "tandem - women": ("OPA", "W tandem"),
+        "tandem - mixed": ("OPA", "X tandem"),
+        "relay - men": ("OPA", "M relay"),
+        "relay - women": ("OPA", "W relay"),
+        "relay - mixed": ("OPA", "X relay"),
+        "relay - women & mixed": ("OPA", "W & X relay"),
+        # 'relay - elimination - men',
+        # 'relay - elimination - women',
+        # 'relay - elimination - mixed'
+        # 'relay - elimination - women & mixed'
+    }
+
     def parse(self, response):
         tables = response.css("table.ffc-table-dark")
+        buttons = response.css(".ffc-button.table-selector::text").getall()
 
-        for index, (type, category) in enumerate(
-            [
-                ("MPA", "M individual"),
-                ("MPA", "W individual"),
-                ("OPA", "M tandem"),
-                ("OPA", "W tandem"),
-                ("OPA", "X tandem"),
-                ("OPA", "M relay"),
-                ("OPA", "W relay"),
-                ("OPA", "X relay"),
+        for (type, category), table in [
+            (self.competition_map[button], tables[index])
+            for (index, button) in enumerate(buttons)
+            if button in self.competition_map
+        ]:
+            ranks = {"age_group": {}}
+            age_selectors = [
+                {
+                    "label": item.css("::text").get(),
+                    "min_age": int(item.css("::attr(data-age-min)").get()),
+                    "max_age": int(item.css("::attr(data-age-max)").get()),
+                }
+                for item in table.css(".age-selectors div")[1:]
             ]
-        ):
-            for row in tables[index].css("tbody tr.status-ok"):
+
+            for row in table.css("tbody tr.status-ok"):
                 raw_duration = "".join(row.css(".result-line1 span::text").getall())
 
                 names = [row.css(".name-line1::text").get().strip()]
@@ -176,7 +197,7 @@ class FirefitSpider(Spider):
                 if len(team):
                     names = team
 
-                yield ResultItem(
+                result = ResultItem(
                     date=self.race_date,
                     competition_id=self.competition_id,
                     type=type,
@@ -189,6 +210,25 @@ class FirefitSpider(Spider):
                         ),
                     ),
                 )
+
+                if age_selectors:
+                    age = int(row.css(".age::text").get())
+                    age_group = next(
+                        (
+                            ag["label"]
+                            for ag in age_selectors
+                            if ag["min_age"] <= age <= ag["max_age"]
+                        ),
+                        None,
+                    )
+                    if age_group:
+                        result["age_group"] = age_group
+                        result["rank"]["age_group"] = ranks["age_group"].get(
+                            age_group, 1
+                        )
+                        ranks["age_group"][age_group] = result["rank"]["age_group"] + 1
+
+                yield result
 
 
 import pytest
