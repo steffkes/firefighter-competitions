@@ -1,41 +1,13 @@
+from util import Spider, ParticipantItem, ResultItem, ResultRankItem
 import scrapy
-from datetime import datetime
 import re
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
 
 
-class Spider(scrapy.Spider):
+class CompetitionSpider(Spider):
     name = __name__
-    race_date = datetime.strptime(__name__.split("_")[0], "%y%m%d").strftime("%Y-%m-%d")
-    competition_id = __name__.split("_")[1]
-    ident = __name__[0:24]
 
-    race_id = "281781"
-    race_key = "1a92069df75cc5903748fe12993e7e8b"
-
-    custom_settings = {
-        "FEED_EXPORTERS": {
-            "starter": JsonItemExporter,
-            "results": JsonLinesItemExporter,
-        },
-        "FEEDS": {
-            "data/participants/%(ident)s.json": {
-                "format": "starter",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ParticipantItem],
-            },
-            "data/results/%(name)s.jsonl": {
-                "format": "results",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ResultItem],
-            },
-        },
-        "EXTENSIONS": {
-            "scrapy.extensions.telnet.TelnetConsole": None,
-        },
-    }
+    race_id = "313822"
+    race_key = "6c9e34b3e68526be8ae12fdaa2a5158c"
 
     def start_requests(self):
         for contest in [9026, 9027]:
@@ -52,6 +24,20 @@ class Spider(scrapy.Spider):
                 callback=self.parse_starters,
             )
 
+        for contest, type in [(1, "OPA"), (2, "MPA")]:
+            yield scrapy.FormRequest(
+                method="GET",
+                url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+                formdata={
+                    "key": self.race_key,
+                    "contest": str(contest),
+                    "listname": "10 Ergebnislisten|00 Ergebnisliste OA (Kategorie)",
+                },
+                cb_kwargs={
+                    "competition_type": type,
+                },
+            )
+
     def parse_starters(self, response):
         reverseName = lambda name: " ".join(
             reversed(list(map(str.strip, name.split(" "))))
@@ -66,3 +52,49 @@ class Spider(scrapy.Spider):
                 competition_id=self.competition_id,
                 names=sorted(map(fixName, entry["cell"]["name"].split("<br>"))),
             )
+
+    def parse(self, response, competition_type):
+        ranks = {"category": {}, "age_group": {}}
+
+        for entry in response.json()["data"]:
+            [_, status, bib, _, _, names, raw_age_group, raw_duration, _] = entry
+
+            if status in ["DSQ", "DNF", "a.k."]:  # disqualified
+                continue
+
+            names = sorted(map(str.strip, names.split("|")))
+            age_group = " ".join(raw_age_group.split(" ")[:-1])
+            category = {
+                "Burschen": "M",
+                "Mannsbilder": "M",
+                "Alte Knacker": "M",
+                "Pärchen": "X",
+                "Mädels": "W",
+            }[age_group]
+
+            rank_total = ranks.get("total", 1)
+            rank_category = ranks["category"].get(category, 1)
+
+            result = ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type=competition_type,
+                duration=self.fixDuration(raw_duration),
+                category=category,
+                names=names,
+                rank=ResultRankItem(total=rank_total, category=rank_category),
+                bib=bib,
+            )
+
+            ranks["total"] = rank_total + 1
+            ranks["category"][category] = rank_category + 1
+
+            if category == "M":
+                rank_age_group = ranks["age_group"].get(age_group, 1)
+
+                result["age_group"] = age_group
+                result["rank"]["age_group"] = rank_age_group
+
+                ranks["age_group"][age_group] = rank_age_group + 1
+
+            yield result
