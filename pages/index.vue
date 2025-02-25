@@ -248,11 +248,14 @@ const filteredCompetitions = computed(() => {
 const upcomingRegistrations = computed(() => {
   return filteredCompetitions.value.filter(
     ({ date: { registration_opens } }) => {
+      if (!registration_opens) {
+        return false;
+      }
       const diffDays = differenceInDays(
         parseIsoDate(registration_opens),
         new Date(),
       );
-      return registration_opens && diffDays >= 0 && diffDays < 7 * 4;
+      return diffDays >= 0 && diffDays < 7 * 4;
     },
   );
 });
