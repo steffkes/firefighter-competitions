@@ -2,11 +2,11 @@
   <table v-if="calendar.length" class="table is-striped is-fullwidth">
     <tbody>
       <tr v-for="item in calendar">
-        <td class="date py-4">
-          <CompetitionDate :competition="item.competition" />
-        </td>
         <td class="py-4">
           <div class="columns">
+            <div class="column is-2 has-text-right-desktop">
+              <CompetitionDate :competition="item.competition" />
+            </div>
             <div class="column">
               {{ item.competition.name }}
               <CompetitionTags :competition="item.competition" />
@@ -44,25 +44,6 @@
     </div>
   </article>
 </template>
-
-<style scoped>
-table th.date,
-table td.date {
-  text-align: right !important;
-  font-variant-numeric: tabular-nums;
-}
-
-@media screen and (max-width: 1024px) {
-  table .date {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  table .date {
-    width: 15%;
-  }
-}
-</style>
 
 <script setup>
 const { name } = defineProps(["name"]);
