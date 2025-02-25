@@ -5,12 +5,18 @@
     v-if="
       formatDate(competition.date.start) != formatDate(competition.date.end)
     "
-    style="white-space: nowrap"
+    class="ml-1"
   >
     -
     <FormattedDate :date="competition.date.end" />
   </span>
 </template>
+
+<style scoped>
+span {
+  display: inline-block;
+}
+</style>
 
 <script setup>
 defineProps(["competition"]);
