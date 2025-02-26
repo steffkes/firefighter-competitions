@@ -87,7 +87,7 @@ class JsonLinesItemExporter(BaseJsonLinesItemExporter):
             key=lambda item: (
                 item["duration"],
                 item["type"],
-                item.get("category"),
+                item.get("category", ""),
                 item.get("age_group"),
                 item.get("bib"),
             ),
@@ -144,7 +144,7 @@ class Spider(scrapy.Spider):
     @staticmethod
     def fixDuration(duration):
         return re.sub(
-            r"((\d+):)?(\d+):(\d+),(\d)\d*",
+            r"((\d+)[:h])?(\d+)[:'](\d+)[,\.](\d)\d*",
             lambda match: "{0:02d}:{1:02d}:{2:02d}.{3}".format(
                 *map(lambda input: int(input or 0), match.group(2, 3, 4, 5))
             ),
@@ -242,6 +242,11 @@ import pytest
         ("00:05:48.3", "5:48,34"),
         ("00:02:55.7", "2:55,70"),
         ("00:02:46.9", "2:46,96"),
+        ("00:07:23.4", "00h07'23,4"),
+        ("00:08:52.3", "00h08'52,3"),
+        ("00:12:49.6", "00h12'49,6"),
+        ("00:01:37.8", "01:37.89"),
+        ("00:04:35.2", "04:35.29"),
     ],
 )
 def test_fixDuration(input, output):

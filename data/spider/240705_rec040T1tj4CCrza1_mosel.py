@@ -1,47 +1,21 @@
+from util import Spider, ParticipantItem, ResultItem, ResultRankItem
 import scrapy
-from datetime import datetime
 import re
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
 
 
-class Spider(scrapy.Spider):
+class CompetitionSpider(Spider):
     name = __name__
-    race_date = datetime.strptime(__name__.split("_")[0], "%y%m%d").strftime("%Y-%m-%d")
-    competition_id = __name__.split("_")[1]
-    ident = __name__[0:24]
-
-    race_id = "259924"
-    race_key = "9cca7a2e787022b15a2c81b253b2dde6"
-
-    custom_settings = {
-        "FEED_EXPORTERS": {
-            "starter": JsonItemExporter,
-            "results": JsonLinesItemExporter,
-        },
-        "FEEDS": {
-            "data/participants/%(ident)s.json": {
-                "format": "starter",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ParticipantItem],
-            },
-            "data/results/%(name)s.jsonl": {
-                "format": "results",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ResultItem],
-            },
-        },
-        "EXTENSIONS": {
-            "scrapy.extensions.telnet.TelnetConsole": None,
-        },
-    }
 
     def start_requests(self):
         yield scrapy.FormRequest(
             method="GET",
             url="https://www.firefighter-challenge-germany.de/combat-challenge/registrierungsliste/",
             callback=self.parse_starters,
+        )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://www.firefighter-challenge-germany.de/ergebnisse/",
         )
 
     def parse_starters(self, response):
@@ -79,3 +53,37 @@ class Spider(scrapy.Spider):
                 competition_id=self.competition_id,
                 names=sorted(map(cleanName, entry.split(","))),
             )
+
+    def parse(self, response):
+        ranks = {"category": {}, "age_group": {}}
+        for row in response.css(
+            "div[data-targetid='overall'][data-target='results-17'] table tbody tr"
+        ):
+            if row.css(".place::text").get() in ["DSQ", "DNS"]:
+                continue
+
+            age_group = row.css(".ageclass::text").get()
+            category = age_group[0].upper()
+
+            rank_total = ranks.get("total", 1)
+            rank_category = ranks["category"].get(category, 1)
+            rank_age_group = ranks["age_group"].get(age_group, 1)
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type="MPA",
+                duration=self.fixDuration(row.css(".totaltime::text").get()),
+                names=[self.fixName(row.css(".member::text").get())],
+                category=category,
+                age_group=age_group,
+                rank=ResultRankItem(
+                    total=rank_total,
+                    category=rank_category,
+                    age_group=rank_age_group,
+                ),
+            )
+
+            ranks["total"] = rank_total + 1
+            ranks["category"][category] = rank_category + 1
+            ranks["age_group"][age_group] = rank_age_group + 1
