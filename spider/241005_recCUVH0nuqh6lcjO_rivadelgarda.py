@@ -1,47 +1,40 @@
+from util import Spider, ParticipantItem, ResultItem, ResultRankItem
 import scrapy
-from datetime import datetime
-from util import (
-    JsonItemExporter,
-    JsonLinesItemExporter,
-    ParticipantItem,
-    ResultItem,
-    ResultRankItem,
-)
+import re
 
 nameMappings = {"Hindelang Günther": "Günther Hindelang"}
 
 
-class Spider(scrapy.Spider):
+class CompetitionSpider(Spider):
     name = __name__
-    race_date = datetime.strptime(__name__.split("_")[0], "%y%m%d").strftime("%Y-%m-%d")
-    competition_id = __name__.split("_")[1]
-    ident = __name__[0:24]
 
-    ranks = {"total": 1, "category": {"M": 1, "W": 1}}
+    ranks = {"category": {}}
 
-    custom_settings = {
-        "FEED_EXPORTERS": {
-            "starter": JsonItemExporter,
-            "results": JsonLinesItemExporter,
-        },
-        "FEEDS": {
-            "data/participants/%(ident)s.json": {
-                "format": "starter",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ParticipantItem],
-            },
-            "data/results/%(name)s.jsonl": {
-                "format": "results",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ResultItem],
-            },
-        },
-        "EXTENSIONS": {
-            "scrapy.extensions.telnet.TelnetConsole": None,
-        },
-    }
+    @staticmethod
+    def fixName(name):
+        [firstname, lastname] = reversed(
+            list(map(lambda str: str.strip(), name.split("\xa0")))
+        )
+
+        fixed = " ".join(
+            [
+                firstname,
+                re.sub(
+                    r"^(.)(.+)$",
+                    lambda match: "%s%s" % (match.group(1), match.group(2).lower()),
+                    lastname,
+                ),
+            ]
+        )
+
+        return nameMappings.get(fixed, fixed)
+
+    @staticmethod
+    def fixDuration(raw_duration):
+        if raw_duration == "Squalificato":
+            return None
+
+        return Spider.fixDuration(raw_duration)
 
     def start_requests(self):
         yield scrapy.FormRequest(
@@ -60,12 +53,15 @@ class Spider(scrapy.Spider):
         for result in response.css("Resultats R"):
             entry = entries[result.attrib["d"]]
 
-            duration = fixDuration(result.attrib["t"])
+            duration = self.fixDuration(result.attrib["t"])
             bib = result.attrib["d"]
             category = {"M": "M", "F": "W"}.get(entry.attrib["x"])
 
             if not duration:
                 continue
+
+            rank_total = self.ranks.get("total", 1)
+            rank_category = self.ranks["category"].get(category, 1)
 
             yield ResultItem(
                 date=self.race_date,
@@ -73,44 +69,13 @@ class Spider(scrapy.Spider):
                 duration=duration,
                 type="MPA",
                 category=category,
-                names=[fixName(entry.attrib["n"])],
-                rank=ResultRankItem(
-                    total=self.ranks["total"], category=self.ranks["category"][category]
-                ),
+                names=[self.fixName(entry.attrib["n"])],
+                rank=ResultRankItem(total=rank_total, category=rank_category),
                 bib=bib,
             )
 
-            self.ranks["total"] += 1
-            self.ranks["category"][category] += 1
-
-
-import re
-
-
-def fixDuration(raw_duration):
-    if raw_duration == "Squalificato":
-        return None
-
-    return re.sub(r"^(00)h(\d{2})'(\d{2}),(\d)\d*$", r"\1:\2:\3.\4", raw_duration)
-
-
-def fixName(name):
-    [firstname, lastname] = reversed(
-        list(map(lambda str: str.strip(), name.split("\xa0")))
-    )
-
-    fixed = " ".join(
-        [
-            firstname,
-            re.sub(
-                r"^(.)(.+)$",
-                lambda match: "%s%s" % (match.group(1), match.group(2).lower()),
-                lastname,
-            ),
-        ]
-    )
-
-    return nameMappings.get(fixed, fixed)
+            self.ranks["total"] = rank_total + 1
+            self.ranks["category"][category] = rank_category + 1
 
 
 import pytest
@@ -120,13 +85,11 @@ import pytest
     "input,output",
     [
         ("00h07'23,4", "00:07:23.4"),
-        ("00h08'52,3", "00:08:52.3"),
-        ("00h12'49,6", "00:12:49.6"),
         ("Squalificato", None),
     ],
 )
 def test_fixDuration(input, output):
-    assert fixDuration(input) == output
+    assert CompetitionSpider.fixDuration(input) == output
 
 
 @pytest.mark.parametrize(
@@ -139,4 +102,4 @@ def test_fixDuration(input, output):
     ],
 )
 def test_fixName(input, output):
-    assert fixName(input) == output
+    assert CompetitionSpider.fixName(input) == output

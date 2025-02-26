@@ -1,6 +1,12 @@
 import scrapy
 from datetime import datetime
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import (
+    JsonItemExporter,
+    JsonLinesItemExporter,
+    ParticipantItem,
+    ResultItem,
+    ResultRankItem,
+)
 
 
 class Spider(scrapy.Spider):
@@ -60,22 +66,22 @@ class Spider(scrapy.Spider):
 
     def parse_single(self, response, type, gender):
         for row in response.css("table tr")[1:]:
-            [_, name, _country, _team, duration] = row.css("td ::text").getall()
+            [rank, name, _country, _team, duration] = row.css("td ::text").getall()
 
             yield ResultItem(
                 date=self.race_date,
                 competition_id=self.competition_id,
                 type=type,
-                category=gender,
                 duration="0" + duration,
                 names=[fixName(name)],
-                bib=None,
+                category=gender,
+                rank=ResultRankItem(category=rank),
             )
 
     def parse_relay(self, response, type):
         for row in response.css("table tr")[1:]:
             [
-                _bib,
+                rank,
                 names,
                 _country,
                 _team,
@@ -83,8 +89,18 @@ class Spider(scrapy.Spider):
                 duration2,
                 duration3,
                 _sum1_2,
-                _sum,
+                relay_duration,
             ] = row.css("td ::text").getall()
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type=type,
+                duration="0" + relay_duration,
+                names=sorted(map(fixName, names.split(","))),
+                category="Relay",
+                rank=ResultRankItem(category=rank),
+            )
 
             for name, duration in zip(
                 names.split(","), [duration1, duration2, duration3]
@@ -93,15 +109,13 @@ class Spider(scrapy.Spider):
                     date=self.race_date,
                     competition_id=self.competition_id,
                     type=type,
-                    category=None,
                     duration="0" + duration,
                     names=[fixName(name.strip())],
-                    bib=None,
                 )
 
 
 def fixName(name):
-    parts = name.split(" ")
+    parts = name.strip().split(" ")
 
     # last part goes first, assuming just one firstname
     parts.insert(0, parts.pop())
@@ -120,7 +134,7 @@ import pytest
         ("NOVAK TOBIJA ALJAŽ", "Aljaž Novak Tobija"),
         ("Hafner Urban", "Urban Hafner"),
         ("Hodža Frelih Matic", "Matic Hodža Frelih"),
-        ("Bukovec Kren Ana", "Ana Bukovec Kren"),
+        (" Bukovec Kren Ana", "Ana Bukovec Kren"),
     ],
 )
 def test_fixName(input, output):

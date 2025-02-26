@@ -1,6 +1,14 @@
 import scrapy
 from datetime import datetime
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import (
+    JsonItemExporter,
+    JsonLinesItemExporter,
+    ParticipantItem,
+    ResultItem,
+    ResultRankItem,
+)
+
+changedParticipants = {"Stefan Mattheis": "Stefan Matheis"}
 
 
 class Spider(scrapy.Spider):
@@ -11,6 +19,8 @@ class Spider(scrapy.Spider):
 
     race_id = "243715"
     race_key = "239ea356c505f6a066895ae6d0cc3fbe"
+
+    ranks = {"category": {}}
 
     custom_settings = {
         "FEED_EXPORTERS": {
@@ -48,6 +58,7 @@ class Spider(scrapy.Spider):
         )
 
     def parse(self, response):
+        results = []
         data = response.json()["data"]
         for entry in (
             data["#1_Feuerwehr (1) - Zeit: 19:38:15 - Durchschnitt: 12:39"]
@@ -59,12 +70,26 @@ class Spider(scrapy.Spider):
                 continue
 
             duration = "00:%s.0" % raw_duration.zfill(5)
+            category = {"weiblich": "W", "männlich": "M"}[gender.lower()]
 
-            yield ResultItem(
-                date=self.race_date,
-                competition_id=self.competition_id,
-                type="MPA",
-                category={"weiblich": "W", "männlich": "M"}[gender.lower()],
-                duration=duration,
-                names=[name],
+            results.append(
+                ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type="MPA",
+                    duration=duration,
+                    names=[changedParticipants.get(name, name)],
+                    category=category,
+                )
             )
+
+        for result in sorted(results, key=lambda result: result["duration"]):
+            rank_total = self.ranks.get("total", 1)
+            rank_category = self.ranks["category"].get(category, 1)
+
+            result["rank"] = ResultRankItem(total=rank_total, category=rank_category)
+
+            yield result
+
+            self.ranks["total"] = rank_total + 1
+            self.ranks["category"][category] = rank_category + 1

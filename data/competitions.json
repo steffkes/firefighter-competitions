@@ -3039,6 +3039,30 @@
         }
     },
     {
+        "id": "recDOQbgbyeUi9L1n",
+        "kind": "FCC",
+        "name": "Firefighter Combat Challenge @ USAG",
+        "url": null,
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2024-10-12",
+            "end": "2024-10-12",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Böblingen",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 48.6833889,
+                "lng": 9.05125
+            }
+        }
+    },
+    {
         "id": "recL95uxMRJ0CWcPT",
         "kind": "FSR",
         "name": "Schanzenlauf Oberstdorf",
@@ -3428,7 +3452,7 @@
         "name": "Stairways to Heaven",
         "url": "https://stairways.ch/de/",
         "participants": {
-            "count": 139
+            "count": 140
         },
         "date": {
             "start": "2025-05-11",
@@ -3812,7 +3836,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 154
+            "count": 156
         },
         "date": {
             "start": "2025-08-03",
