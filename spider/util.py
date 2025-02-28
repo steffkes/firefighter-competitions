@@ -231,6 +231,187 @@ class FirefitSpider(Spider):
                 yield result
 
 
+class FccSpider(Spider):
+    event_day_ids = []
+    age_group_fallback = None
+
+    @staticmethod
+    def fixName(name):
+        return re.sub(r"\s+", " ", name.strip())
+
+    def start_requests(self):
+        if self.event_day_ids:
+            yield scrapy.FormRequest(
+                method="GET",
+                url="https://www.firefighter-challenge-germany.de/combat-challenge/registrierungsliste/",
+                callback=self.parse_starters,
+            )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://www.firefighter-challenge-germany.de/ergebnisse/",
+        )
+
+    def parse_starters(self, response):
+        for event_day_id in self.event_day_ids:
+            for row in response.css(
+                "table[data-eventdayid='{}'] tr".format(event_day_id)
+            ):
+                entry = row.css("td:nth-child(3)::text").get()
+
+                if not entry:
+                    continue
+
+                yield ParticipantItem(
+                    competition_id=self.competition_id,
+                    names=sorted(map(self.fixName, entry.split(","))),
+                )
+
+    def parse(self, response):
+        yield from self.parse_single(response)
+        yield from self.parse_teams(response)
+
+    def parse_single(self, response):
+        ranks = {"category": {}, "age_group": {}}
+        for row in response.css(
+            "div[data-targetid='overall'][data-target='results-{}'] table tbody tr".format(
+                self.event_id
+            )
+        ):
+            if row.css(".place::text").get() in ["DSQ", "DNS"]:
+                continue
+
+            age_group = row.css(".ageclass::text").get() or self.age_group_fallback
+            category = "%s individual" % age_group[0].upper()
+
+            rank_total = ranks.get("total", 1)
+            rank_category = ranks["category"].get(category, 1)
+            rank_age_group = ranks["age_group"].get(age_group, 1)
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type="MPA",
+                duration=self.fixDuration(row.css(".totaltime::text").get()),
+                names=[self.fixName(row.css(".member::text").get())],
+                category=category,
+                age_group=age_group,
+                rank=ResultRankItem(
+                    total=rank_total,
+                    category=rank_category,
+                    age_group=rank_age_group,
+                ),
+            )
+
+            ranks["total"] = rank_total + 1
+            ranks["category"][category] = rank_category + 1
+            ranks["age_group"][age_group] = rank_age_group + 1
+
+    def parse_teams(self, response):
+        for target_id, category in [
+            ("TF", "W tandem"),
+            ("TM", "M tandem"),
+            ("TMIX", "X tandem"),
+            ("RV", "relay"),
+        ]:
+            for row in response.css(
+                "div[data-targetid='{}'][data-target='results-{}'] table tbody tr".format(
+                    target_id, self.event_id
+                ),
+            ):
+                if row.css(".place::text").get() in ["DSQ", "DNS"]:
+                    continue
+
+                yield ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type="OPA",
+                    duration=self.fixDuration(row.css(".totaltime::text").get()),
+                    names=sorted(
+                        map(self.fixName, row.css(".member::text").get().split(","))
+                    ),
+                    category=category,
+                    rank=ResultRankItem(category=int(row.css(".place::text").get())),
+                )
+
+
+class BadWildbadSpider(Spider):
+    ranks = {"category": {}}
+
+    def start_requests(self):
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+            formdata={
+                "key": self.race_key,
+                "listname": "Online|Teilnehmerliste ABC",
+                "contest": "3",
+            },
+            callback=self.parse_starters,
+        )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+            formdata={
+                "key": self.race_key,
+                "listname": "Online|Zieleinlaufliste",
+                "contest": "3",
+            },
+        )
+
+    def parse_starters(self, response):
+        fixName = lambda name: " ".join(reversed(list(map(str.strip, name.split(",")))))
+
+        for [
+            _bib,
+            _bib2,
+            name,
+            _nationality,
+            _byear,
+            _gender,
+            _category,
+            _team,
+            _empty,
+        ] in (response.json()["data"] or {}).get("#1_Feuerwehr-Stäffeleslauf", []):
+            yield ParticipantItem(
+                competition_id=self.competition_id, names=[fixName(name)]
+            )
+
+    def parse(self, response):
+        for [
+            bib,
+            _bib2,
+            _rank,
+            name,
+            _nationality,
+            _byear,
+            category,
+            _gender_full,
+            team,
+            raw_duration,
+            _time_difference,
+        ] in (response.json()["data"] or {}).get("#1_Feuerwehr-Stäffeleslauf", []):
+            duration = "00:%s.0" % raw_duration
+
+            rank_total = self.ranks.get("total", 1)
+            rank_category = self.ranks["category"].get(category, 1)
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type="OPA",
+                duration=duration,
+                names=[name],
+                category=category,
+                rank=ResultRankItem(total=rank_total, category=rank_category),
+                bib=bib,
+            )
+
+            self.ranks["total"] = rank_total + 1
+            self.ranks["category"][category] = rank_category + 1
+
+
 import pytest
 
 
