@@ -1,11 +1,4 @@
 export default defineNuxtConfig({
-  vite: {
-    server: {
-      hmr: {
-        clientPort: 6601,
-      },
-    },
-  },
   css: ["@/node_modules/bulma/css/bulma.min.css"],
   nitro: {
     devServer: {
