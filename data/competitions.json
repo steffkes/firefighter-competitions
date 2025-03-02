@@ -3529,7 +3529,7 @@
         "date": {
             "start": "2025-05-17",
             "end": "2025-05-17",
-            "is_draft": true,
+            "is_draft": null,
             "is_canceled": null,
             "registration_opens": null
         },
@@ -3548,7 +3548,7 @@
         "name": "alive step up",
         "url": "https://alive.si/",
         "participants": {
-            "count": 157
+            "count": 158
         },
         "date": {
             "start": "2025-05-17",
@@ -3687,6 +3687,27 @@
         }
     },
     {
+        "id": "recYFTEtSxRAUPOt7",
+        "kind": "FCC",
+        "name": "Firefighter Challenge Slovenia",
+        "url": "https://firefighter-challenge-slovenia.si/",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-06-27",
+            "end": "2025-06-29",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": null,
+            "country_code": "SI",
+            "coordinates": null
+        }
+    },
+    {
         "id": "recJ1lklfmgyvij7a",
         "kind": "FCC",
         "name": "Mengener Feuerwehrwettkampf",
@@ -3767,7 +3788,7 @@
             "count": null
         },
         "date": {
-            "start": "2025-07-18",
+            "start": "2025-07-19",
             "end": "2025-07-20",
             "is_draft": null,
             "is_canceled": null,
@@ -3804,6 +3825,27 @@
                 "lat": 47.3656559,
                 "lng": 8.5460289
             }
+        }
+    },
+    {
+        "id": "rechoK8QzzMJP52ZY",
+        "kind": "FCC",
+        "name": "British Firefighter Challenge",
+        "url": "https://www.britishfirefighterchallenge.co.uk/",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-07-26",
+            "end": "2025-07-27",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Watford",
+            "country_code": "GB",
+            "coordinates": null
         }
     },
     {
@@ -3860,7 +3902,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 174
+            "count": 176
         },
         "date": {
             "start": "2025-08-03",
@@ -3947,30 +3989,6 @@
             "coordinates": {
                 "lat": 48.0453537,
                 "lng": 15.6144483
-            }
-        }
-    },
-    {
-        "id": "recWftiqj9uXljQY9",
-        "kind": "FCC",
-        "name": "Firefighter Combat Challenge",
-        "url": "https://www.firefighter-challenge-germany.de",
-        "participants": {
-            "count": null
-        },
-        "date": {
-            "start": "2025-09-13",
-            "end": "2025-09-14",
-            "is_draft": true,
-            "is_canceled": null,
-            "registration_opens": null
-        },
-        "location": {
-            "city": "Berlin",
-            "country_code": "DE",
-            "coordinates": {
-                "lat": 52.5170365,
-                "lng": 13.3888599
             }
         }
     },
@@ -4139,6 +4157,30 @@
             "coordinates": {
                 "lat": 50.8816904,
                 "lng": 12.1321235
+            }
+        }
+    },
+    {
+        "id": "recWftiqj9uXljQY9",
+        "kind": "FCC",
+        "name": "Firefighter Combat Challenge",
+        "url": "https://www.firefighter-challenge-germany.de",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-10-10",
+            "end": "2025-10-11",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Berlin",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 52.5170365,
+                "lng": 13.3888599
             }
         }
     },
