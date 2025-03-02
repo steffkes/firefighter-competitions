@@ -13,7 +13,7 @@
         <li>
           <NuxtLink
             :to="{
-              name: 'persoenliche-bestzeiten-name-year',
+              name: 'personal-results',
               params: { name, year: new Date().getFullYear() },
             }"
             >🥇️ Persönliche Bestzeiten</NuxtLink
@@ -69,6 +69,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  path: "/persoenlicher-kalender/:name",
+});
+
 const { name: route_name, params } = useRoute();
 const { name } = params;
 

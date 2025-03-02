@@ -22,7 +22,7 @@
                     <template v-if="index">, </template>
                     <NuxtLink
                       :to="{
-                        name: 'persoenliche-bestzeiten-name-year',
+                        name: 'personal-results',
                         params: { name, year },
                       }"
                       >{{ name }}</NuxtLink
