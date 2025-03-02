@@ -78,7 +78,7 @@
 
 <script setup>
 definePageMeta({
-  path: "/persoenliche-bestzeiten/:name/:year",
+  path: "/persoenlich/:name/bestzeiten/:year",
 });
 
 const { name: route_name, params } = useRoute();

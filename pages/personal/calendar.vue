@@ -70,7 +70,7 @@
 
 <script setup>
 definePageMeta({
-  path: "/persoenlicher-kalender/:name",
+  path: "/persoenlich/:name/kalender",
 });
 
 const { name: route_name, params } = useRoute();
