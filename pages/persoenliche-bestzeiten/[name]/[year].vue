@@ -6,8 +6,22 @@
       </div>
     </nav>
 
-    <p class="title is-3 has-text-centered">Persönliche Bestzeiten</p>
-    <p class="subtitle is-5 has-text-centered">{{ name }}</p>
+    <p class="title is-3 has-text-centered">{{ name }}</p>
+
+    <div class="tabs is-fullwidth">
+      <ul>
+        <li class="is-active"><a>🥇️ Persönliche Bestzeiten</a></li>
+        <li>
+          <NuxtLink
+            :to="{
+              name: 'persoenlicher-kalender-name',
+              params: { name },
+            }"
+            >📅 Persönlicher Kalender</NuxtLink
+          >
+        </li>
+      </ul>
+    </div>
 
     <PersonalResultsNavigation
       :route_name="route_name"
@@ -20,16 +34,6 @@
       :route_name="route_name"
       :params="params"
     ></PersonalResultsNavigation>
-
-    <p>
-      <NuxtLink
-        :to="{
-          name: 'persoenlicher-kalender-name',
-          params: { name },
-        }"
-        >Persönlicher Kalender von {{ name }}</NuxtLink
-      >
-    </p>
   </div>
 
   <footer class="footer mt-6">

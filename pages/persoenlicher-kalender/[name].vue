@@ -6,20 +6,26 @@
       </div>
     </nav>
 
-    <p class="title is-3 has-text-centered">Persönlicher Kalender</p>
-    <p class="subtitle is-5 has-text-centered">{{ name }}</p>
+    <p class="title is-3 has-text-centered">{{ name }}</p>
+
+    <div class="tabs is-fullwidth">
+      <ul>
+        <li>
+          <NuxtLink
+            :to="{
+              name: 'persoenliche-bestzeiten-name-year',
+              params: { name, year: new Date().getFullYear() },
+            }"
+            >🥇️ Persönliche Bestzeiten</NuxtLink
+          >
+        </li>
+        <li class="is-active">
+          <a>📅 Persönlicher Kalender</a>
+        </li>
+      </ul>
+    </div>
 
     <PersonalCalendar :name="name"></PersonalCalendar>
-
-    <p>
-      <NuxtLink
-        :to="{
-          name: 'persoenliche-bestzeiten-name-year',
-          params: { name, year: new Date().getFullYear() },
-        }"
-        >Persönliche Bestzeiten von {{ name }}</NuxtLink
-      >
-    </p>
   </div>
 
   <footer class="footer mt-6">
