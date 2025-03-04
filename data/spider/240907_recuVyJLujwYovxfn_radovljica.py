@@ -1,4 +1,5 @@
 from util import Spider, ParticipantItem, ResultItem, ResultRankItem
+import itertools
 import scrapy
 import re
 
@@ -7,6 +8,17 @@ class CompetitionSpider(Spider):
     name = __name__
 
     def start_requests(self):
+        def categoryAgeGroupTandem(entry):
+            raw_age_group = entry["application"]["assignedCategory"]["label"][1:]
+            category = "%s tandem" % {"F": "W", "MX": "X"}.get(
+                raw_age_group, raw_age_group[0]
+            )
+            age_group = raw_age_group if category == "M tandem" else None
+            return (category, age_group)
+
+        def categoryAgeGroupRelay(entry):
+            return ("relay", None)
+
         yield scrapy.FormRequest(
             method="GET",
             url="https://api.fcc-slo.eu/api/races/42/runs",
@@ -17,7 +29,24 @@ class CompetitionSpider(Spider):
             method="GET",
             url="https://api.fcc-slo.eu/api/races/43/runs",
             callback=self.parse_teams,
+            cb_kwargs={"categoryAgeGroupMapper": categoryAgeGroupTandem},
         )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://api.fcc-slo.eu/api/races/44/runs",
+            callback=self.parse_teams,
+            cb_kwargs={"categoryAgeGroupMapper": categoryAgeGroupRelay},
+        )
+
+        # ranks: 0 = first item in pair / 1 = second item in pair
+        for id, ranks in [(45, {}), (46, {}), (47, {0: 1, 1: 2}), (48, {1: 3})]:
+            yield scrapy.FormRequest(
+                method="GET",
+                url="https://api.fcc-slo.eu/api/races/{id}/runs".format(id=id),
+                callback=self.parse_relay_ko,
+                cb_kwargs={"ranks": ranks},
+            )
 
     def parse_single(self, response):
         groups = []
@@ -68,7 +97,7 @@ class CompetitionSpider(Spider):
 
                 yield entry
 
-    def parse_teams(self, response):
+    def parse_teams(self, response, categoryAgeGroupMapper):
         groups = []
         entries = []
 
@@ -76,11 +105,7 @@ class CompetitionSpider(Spider):
             if entry["disqualification"]:
                 continue
 
-            raw_age_group = entry["application"]["assignedCategory"]["label"][1:]
-            category = "%s tandem" % {"F": "W", "MX": "X"}.get(
-                raw_age_group, raw_age_group[0]
-            )
-            age_group = None
+            (category, age_group) = categoryAgeGroupMapper(entry)
 
             result = ResultItem(
                 date=self.race_date,
@@ -99,9 +124,8 @@ class CompetitionSpider(Spider):
                 bib=entry["startNumber"],
             )
 
-            if category == "M tandem":
-                result["age_group"] = raw_age_group
-                age_group = raw_age_group
+            if age_group:
+                result["age_group"] = age_group
 
             groups.append((category, age_group))
             entries.append(result)
@@ -131,3 +155,34 @@ class CompetitionSpider(Spider):
                     entry["rank"]["age_group"] = entries_age_group.index(entry) + 1
 
                 yield entry
+
+    def parse_relay_ko(self, response, ranks):
+        # group them in pairs of 2
+        for pair in itertools.batched(
+            sorted(response.json(), key=lambda entry: entry["startNumber"]), 2
+        ):
+            # ensure the fastest one is first.
+            for position, entry in enumerate(
+                sorted(pair, key=lambda entry: entry["totalTime"])
+            ):
+                result = ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type="OPA",
+                    duration=self.fixDuration(entry["totalTime"]),
+                    names=sorted(
+                        map(
+                            lambda item: "{firstName} {lastName}".format(
+                                **item["competitor"]
+                            ),
+                            entry["application"]["applicationCompetitors"],
+                        )
+                    ),
+                    category="relay k.o.",
+                    bib=entry["startNumber"],
+                )
+
+                if position in ranks:
+                    result["rank"] = ResultRankItem(category=ranks[position])
+
+                yield result
