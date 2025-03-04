@@ -52,7 +52,7 @@ class JsonItemExporter(BaseItemExporter):
 
         teams = sorted(
             map(lambda item: item["names"], self.items),
-            key=lambda entry: (len(entry), entry),
+            key=lambda names: (len(names), list(map(lambda name: name or "", names))),
         )
         data = {
             "date": datetime.now().isoformat(),
@@ -328,7 +328,12 @@ class FccSpider(Spider):
                     type="OPA",
                     duration=self.fixDuration(row.css(".totaltime::text").get()),
                     names=sorted(
-                        map(self.fixName, row.css(".member::text").get().split(","))
+                        filter(
+                            bool,
+                            map(
+                                self.fixName, row.css(".member::text").get().split(",")
+                            ),
+                        )
                     ),
                     category=category,
                     rank=ResultRankItem(category=int(row.css(".place::text").get())),
@@ -428,6 +433,8 @@ import pytest
         ("00:12:49.6", "00h12'49,6"),
         ("00:01:37.8", "01:37.89"),
         ("00:04:35.2", "04:35.29"),
+        ("00:02:11.9", "00:02:11.9100000"),
+        ("00:02:36.5", "00:02:36.5500000"),
     ],
 )
 def test_fixDuration(input, output):
