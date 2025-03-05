@@ -85,6 +85,6 @@ const handleForm = async (event) => {
 };
 
 useSeoMeta({
-  title: "Persönlicher Kalender (" + name + ")",
+  title: name + ": Persönlicher Kalender",
 });
 </script>

@@ -93,6 +93,6 @@ const handleForm = async (event) => {
 };
 
 useSeoMeta({
-  title: "Persönliche Bestzeiten (" + name + " @ " + year + ")",
+  title: name + ": Persönliche Bestzeiten @ " + year,
 });
 </script>
