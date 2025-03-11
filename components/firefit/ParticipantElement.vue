@@ -25,12 +25,23 @@
       {{ participant.team }}
     </p>
 
-    <p v-for="result in participant.previousResults">
-      <FirefitFormattedTime
-        style="background-color: transparent"
-        :time="result.time"
-      ></FirefitFormattedTime>
-    </p>
+    <div class="mt-2">
+      <div v-for="result in participant.previousResults">
+        <FirefitFormattedTime
+          style="background-color: transparent"
+          :time="result.time"
+        ></FirefitFormattedTime>
+        <span class="tag">
+          {{ flag(result.competition.location.country_code) }}
+          {{ result.competition.location.city }}</span
+        >
+        <FormattedDate
+          :date="result.competition.date.start"
+          class="tag"
+          style="background-color: transparent"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

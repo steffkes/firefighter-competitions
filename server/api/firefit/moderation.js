@@ -1,5 +1,7 @@
+import competitionProvider from "@/competition-provider.js";
+
 export default defineEventHandler(async (event) => {
-  return [
+  const pairs = [
     [
       {
         name: "Till Schmidt",
@@ -346,4 +348,22 @@ export default defineEventHandler(async (event) => {
       },
     ],
   ];
+
+  const competitions = Object.fromEntries(
+    (await competitionProvider()).map((competition) => [
+      competition.id,
+      competition,
+    ]),
+  );
+
+  const fix = (pair) => {
+    pair["previousResults"] = pair["previousResults"].map((result) => {
+      result["competition"] = competitions[result["competitionId"]];
+      delete result["competitionId"];
+      return result;
+    });
+    return pair;
+  };
+
+  return pairs.map(([p1, p2]) => [fix(p1), fix(p2)]);
 });
