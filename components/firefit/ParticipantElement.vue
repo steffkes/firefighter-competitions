@@ -26,12 +26,15 @@
     </p>
 
     <div class="mt-2">
-      <div v-for="result in participant.previousResults">
+      <div
+        v-for="(result, index) in participant.previousResults"
+        :class="{ 'has-background-white-bis': index % 2 }"
+      >
         <FirefitFormattedTime
           style="background-color: transparent"
           :time="result.time"
         ></FirefitFormattedTime>
-        <span class="tag">
+        <span class="tag" style="background-color: transparent">
           {{ flag(result.competition.location.country_code) }}
           {{ result.competition.location.city }}</span
         >
