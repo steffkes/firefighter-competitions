@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container is-max-tablet">
     <div v-for="[p1, p2] in pairs" class="columns is-mobile my-1">
       <FirefitParticipantElement
         :participant="p1"

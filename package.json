@@ -25,7 +25,7 @@
     "prettier": "3.4.2"
   },
   "dependencies": {
-    "bulma": "^0.9.4",
+    "bulma": "^1.0.3",
     "ical-generator": "^4.1.0",
     "pg": "^8.13.1"
   },
