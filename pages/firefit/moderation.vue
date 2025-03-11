@@ -3,7 +3,7 @@
     <div v-for="[p1, p2] in pairs" class="columns is-mobile my-1">
       <FirefitParticipantElement
         :participant="p1"
-        class="has-background-warning"
+        class="has-background-warning-light"
       ></FirefitParticipantElement>
       <FirefitParticipantElement
         :participant="p2"
