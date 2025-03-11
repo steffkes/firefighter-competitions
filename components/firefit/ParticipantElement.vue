@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <div class="tags mb-0">
+    <div class="tags mb-2">
       <span class="tag">{{ flag(participant.country) }}</span>
       <span class="tag">{{
         { male: "♂️", female: "♀️" }[participant.gender]
