@@ -27,26 +27,7 @@
       {{ participant.team }}
     </p>
 
-    <div class="mt-2">
-      <div
-        v-for="(result, index) in participant.previousResults"
-        :class="{ 'has-background-white-bis': index % 2 }"
-      >
-        <FirefitFormattedTime
-          :class="[isPersonalBest(result.time) ? 'is-dark' : 'is-transparent']"
-          :time="result.time"
-        ></FirefitFormattedTime>
-        <span class="tag is-transparent">
-          {{ flag(result.competition.location.country_code) }}
-          {{ result.competition.location.city }}</span
-        >
-        <FormattedDate
-          :date="result.competition.date.start"
-          :formatter="formatDate"
-          class="tag is-transparent"
-        />
-      </div>
-    </div>
+    <FirefitPreviousResults :participant="participant" />
   </div>
 </template>
 
@@ -60,16 +41,10 @@
 const { participant } = defineProps(["participant"]);
 
 const times = []
-  .concat([participant.result], participant.previousResults)
+  .concat([participant.result])
   .map(({ time }) => time)
   .toSorted();
 const isPersonalBest = (time) => times.indexOf(time) == 0;
-
-const formatDate = (date) =>
-  new Date(date).toLocaleDateString("de-DE", {
-    month: "short",
-    year: "2-digit",
-  });
 
 const flag = (countryCode) =>
   countryCode
