@@ -7,7 +7,7 @@ time {
   font-variant-numeric: tabular-nums;
 }
 
-time >>> span {
+time :deep(span) {
   font-size: 0.6rem;
 }
 </style>
