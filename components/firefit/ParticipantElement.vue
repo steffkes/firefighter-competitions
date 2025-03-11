@@ -9,7 +9,9 @@
 
       <span class="is-pulled-right">
         <FirefitFormattedTime
-          class="is-success"
+          :class="[
+            isPersonalBest(participant.result.time) ? 'is-dark' : 'is-success',
+          ]"
           :time="participant.result.time"
         ></FirefitFormattedTime>
         <span v-if="participant.result.penalty" class="tag is-danger ml-1"
@@ -31,26 +33,37 @@
         :class="{ 'has-background-white-bis': index % 2 }"
       >
         <FirefitFormattedTime
-          style="background-color: transparent"
+          :class="[isPersonalBest(result.time) ? 'is-dark' : 'is-transparent']"
           :time="result.time"
         ></FirefitFormattedTime>
-        <span class="tag" style="background-color: transparent">
+        <span class="tag is-transparent">
           {{ flag(result.competition.location.country_code) }}
           {{ result.competition.location.city }}</span
         >
         <FormattedDate
           :date="result.competition.date.start"
           :formatter="formatDate"
-          class="tag"
-          style="background-color: transparent"
+          class="tag is-transparent"
         />
       </div>
     </div>
   </div>
 </template>
 
+<style scoped>
+.is-transparent {
+  background-color: transparent;
+}
+</style>
+
 <script setup>
-defineProps(["participant"]);
+const { participant } = defineProps(["participant"]);
+
+const times = []
+  .concat([participant.result], participant.previousResults)
+  .map(({ time }) => time)
+  .toSorted();
+const isPersonalBest = (time) => times.indexOf(time) == 0;
 
 const formatDate = (date) =>
   new Date(date).toLocaleDateString("de-DE", {
