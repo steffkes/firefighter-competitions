@@ -1,7 +1,7 @@
 {
-  "date": "2025-03-11T09:15:13.025583",
+  "date": "2025-03-11T15:15:58.882451",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 222,
+  "count": 240,
   "teams": [
     [
       "Adrian Schwind",
@@ -14,6 +14,10 @@
     [
       "Alexander Hanke",
       "Christian Krieg"
+    ],
+    [
+      "Alexander Spelsberg",
+      "Julian Fastenrath"
     ],
     [
       "Alexander Wigger",
@@ -172,6 +176,10 @@
       "Gabriel Jaudas"
     ],
     [
+      "Fabienne Sophia Denise Flaig",
+      "Jara Pötzsch"
+    ],
+    [
       "Felix Hartmann",
       "Lara Löwing"
     ],
@@ -236,6 +244,10 @@
       "Michael-Pascal Schäfer"
     ],
     [
+      "Janine Franken",
+      "Marc Winkler"
+    ],
+    [
       "Jasmin Bohun",
       "Sabrina Icks"
     ],
@@ -246,6 +258,10 @@
     [
       "Johannes Schun",
       "Robert de Lange"
+    ],
+    [
+      "Jonas Dallmayer",
+      "Robin Krumm"
     ],
     [
       "Julia Dawid",
@@ -286,6 +302,10 @@
     [
       "Kai Junker",
       "Lars Neumeyer"
+    ],
+    [
+      "Kai Klinkenberg",
+      "Marcel Santana"
     ],
     [
       "Katja Schygulla",
@@ -334,6 +354,10 @@
     [
       "Lukas Scholten",
       "Sebastian Deckers"
+    ],
+    [
+      "Lydia Voß",
+      "Paul Florian Thomas"
     ],
     [
       "Manuel Greber",
@@ -408,6 +432,10 @@
       "Stephan Arndt"
     ],
     [
+      "Nick Pircher",
+      "Tom Albus"
+    ],
+    [
       "Nils Lindemann",
       "Skrollan Heuser"
     ],
@@ -446,6 +474,14 @@
     [
       "Stefan Aniello",
       "Tom Aniello"
+    ],
+    [
+      "Timm Kramer",
+      "Timo Hoß"
+    ],
+    [
+      "Tobias Temp",
+      "Will Dieter"
     ]
   ]
 }
