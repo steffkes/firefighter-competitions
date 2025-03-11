@@ -9,15 +9,14 @@
         :class="[isPersonalBest(result.time) ? 'is-dark' : 'is-transparent']"
         :time="result.time"
       ></FirefitFormattedTime>
-      <span class="tag is-transparent">
+      <span class="is-size-7">
         {{ flag(result.competition.location.country_code) }}
-        {{ result.competition.location.city }}</span
-      >
-      <FormattedDate
-        :date="result.competition.date.start"
-        :formatter="formatDate"
-        class="tag is-transparent"
-      />
+        {{ result.competition.location.city }}
+        (<FormattedDate
+          :date="result.competition.date.start"
+          :formatter="formatDate"
+        />)
+      </span>
     </div>
     <div v-else class="skeleton-lines">
       <div></div>
