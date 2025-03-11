@@ -357,11 +357,13 @@ export default defineEventHandler(async (event) => {
   );
 
   const fix = (pair) => {
-    pair["previousResults"] = pair["previousResults"].map((result) => {
-      result["competition"] = competitions[result["competitionId"]];
-      delete result["competitionId"];
-      return result;
-    });
+    pair["previousResults"] = pair["previousResults"]
+      .map((result) => {
+        result["competition"] = competitions[result["competitionId"]];
+        delete result["competitionId"];
+        return result;
+      })
+      .toReversed();
     return pair;
   };
 
