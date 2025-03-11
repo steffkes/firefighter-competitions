@@ -1,6 +1,6 @@
 <template>
   <time :datetime="date">
-    {{ formatDate(date) }}
+    {{ formatter(date) }}
   </time>
 </template>
 
@@ -13,5 +13,5 @@ time {
 <script setup>
 import { formatDate } from "../util";
 
-defineProps(["date"]);
+const { formatter = formatDate } = defineProps(["date", "formatter"]);
 </script>

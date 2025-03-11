@@ -37,6 +37,7 @@
         >
         <FormattedDate
           :date="result.competition.date.start"
+          :formatter="formatDate"
           class="tag"
           style="background-color: transparent"
         />
@@ -47,6 +48,12 @@
 
 <script setup>
 defineProps(["participant"]);
+
+const formatDate = (date) =>
+  new Date(date).toLocaleDateString("de-DE", {
+    month: "short",
+    year: "2-digit",
+  });
 
 const flag = (countryCode) =>
   countryCode
