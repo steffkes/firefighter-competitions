@@ -12,7 +12,7 @@
           class="is-success"
           :time="participant.result.time"
         ></FirefitFormattedTime>
-        <span v-if="participant.result.penalty" class="tag is-danger mr-1"
+        <span v-if="participant.result.penalty" class="tag is-danger ml-1"
           >+{{ participant.result.penalty }}s</span
         >
       </span>
