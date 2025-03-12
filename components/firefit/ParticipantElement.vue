@@ -15,7 +15,14 @@
             ]"
             :time="participant.result.time"
           ></FirefitFormattedTime>
-          <span v-if="participant.result.penalty" class="tag is-danger"
+          <span
+            v-if="participant.result.penalty"
+            class="tag"
+            :class="{
+              'is-danger': !active,
+              'is-danger-light': active,
+              'has-text-danger': active,
+            }"
             >+{{ participant.result.penalty }}s</span
           >
         </template>
@@ -39,6 +46,7 @@
       </p>
 
       <FirefitPreviousResults
+        v-if="active"
         :participant="participant"
         :isPersonalBest="isPersonalBest"
         @receivedResults="handleResults"
@@ -55,7 +63,7 @@
 </style>
 
 <script setup>
-const { participant } = defineProps(["participant"]);
+const { participant } = defineProps(["participant", "active"]);
 
 const results = ref([]);
 const times = computed(() => results.value.map(({ time }) => time).toSorted());
