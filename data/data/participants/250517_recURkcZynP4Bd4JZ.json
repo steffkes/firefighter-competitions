@@ -1,7 +1,7 @@
 {
-  "date": "2025-03-12T15:15:25.237285",
+  "date": "2025-03-12T21:13:07.424139",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 320,
+  "count": 322,
   "teams": [
     [
       "Adrian Kirchner",
@@ -630,6 +630,10 @@
     [
       "Simon Wehrle",
       "Yannick Meinzer"
+    ],
+    [
+      "Stefan Wolff",
+      "Sven Honnefeller"
     ],
     [
       "Thomas Kern",
