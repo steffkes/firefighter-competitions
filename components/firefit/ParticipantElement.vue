@@ -1,37 +1,50 @@
 <template>
   <div class="column">
-    <div class="tags mb-2">
-      <span class="tag">{{ flag(participant.country) }}</span>
-      <span class="tag">{{
-        { male: "♂️", female: "♀️" }[participant.gender]
-      }}</span>
-      <span class="tag">42</span>
+    <template v-if="participant.result">
+      <div class="tags mb-2">
+        <span class="tag">{{ flag(participant.country) }}</span>
+        <span class="tag">{{ { M: "♂️", F: "♀️" }[participant.gender] }}</span>
+        <span class="tag">42</span>
 
-      <span class="is-pulled-right">
-        <FirefitFormattedTime
-          :class="[
-            isPersonalBest(participant.result.time) ? 'is-dark' : 'is-success',
-          ]"
-          :time="participant.result.time"
-        ></FirefitFormattedTime>
-        <span v-if="participant.result.penalty" class="tag is-danger ml-1"
-          >+{{ participant.result.penalty }}s</span
-        >
-      </span>
-    </div>
+        <template v-if="participant.result.status == 'OK'">
+          <FirefitFormattedTime
+            :class="[
+              isPersonalBest(participant.result.time)
+                ? 'is-dark'
+                : 'is-success',
+            ]"
+            :time="participant.result.time"
+          ></FirefitFormattedTime>
+          <span v-if="participant.result.penalty" class="tag is-danger"
+            >+{{ participant.result.penalty }}s</span
+          >
+        </template>
+        <template v-else>
+          <span
+            class="tag"
+            :class="{
+              'is-danger': participant.result.status == 'DSQ',
+              'is-warning': participant.result.status == 'DNF',
+            }"
+            >{{ participant.result.status }}</span
+          >
+        </template>
+      </div>
 
-    <p>
-      <strong>{{ participant.name }}</strong>
-    </p>
-    <p>
-      {{ participant.team }}
-    </p>
+      <p>
+        <strong>{{ participant.name }}</strong>
+      </p>
+      <p>
+        {{ participant.team }}
+      </p>
 
-    <FirefitPreviousResults
-      :participant="participant"
-      :isPersonalBest="isPersonalBest"
-      @receivedResults="handleResults"
-    />
+      <FirefitPreviousResults
+        :participant="participant"
+        :isPersonalBest="isPersonalBest"
+        @receivedResults="handleResults"
+      />
+    </template>
+    <template v-else> (empty) </template>
   </div>
 </template>
 

@@ -20,5 +20,5 @@ html {
 </style>
 
 <script setup>
-const { data: pairs } = await useFetch("/api/firefit/moderation");
+const { data: pairs } = await useFetch("/api/firefit/runs");
 </script>
