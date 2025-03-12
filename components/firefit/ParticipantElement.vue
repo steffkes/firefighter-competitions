@@ -27,7 +27,11 @@
       {{ participant.team }}
     </p>
 
-    <FirefitPreviousResults :participant="participant" />
+    <FirefitPreviousResults
+      :participant="participant"
+      :isPersonalBest="isPersonalBest"
+      @receivedResults="handleResults"
+    />
   </div>
 </template>
 
@@ -40,14 +44,21 @@
 <script setup>
 const { participant } = defineProps(["participant"]);
 
-const times = []
-  .concat([participant.result])
-  .map(({ time }) => time)
-  .toSorted();
-const isPersonalBest = (time) => times.indexOf(time) == 0;
+const results = ref([]);
+const times = computed(() => results.value.map(({ time }) => time).toSorted());
+
+// `time` needs to be truncated. database only stores one decimal point!
+const isPersonalBest = (time) => times.value.indexOf(time.slice(0, 10)) === 0;
 
 const flag = (countryCode) =>
   countryCode
     .toUpperCase()
     .replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt()));
+
+// participants result gets added here, because otherwise `times` already contains
+// it - before results are loaded. hence the current result would always be the
+// best .. until other results are loaded.
+const handleResults = (fetchedResults) => {
+  results.value = [].concat(fetchedResults, [participant.result]);
+};
 </script>
