@@ -3555,7 +3555,7 @@
             "end": "2025-05-17",
             "is_draft": null,
             "is_canceled": null,
-            "registration_opens": null
+            "registration_opens": "2025-03-17T17:00:00.000Z"
         },
         "location": {
             "city": "Berlin",
@@ -3572,7 +3572,7 @@
         "name": "alive step up",
         "url": "https://alive.si/",
         "participants": {
-            "count": 158
+            "count": 160
         },
         "date": {
             "start": "2025-05-17",
@@ -3596,7 +3596,7 @@
         "name": "Bad Wildbader Stäffeleslauf",
         "url": "https://my.raceresult.com/309460/info",
         "participants": {
-            "count": 55
+            "count": 57
         },
         "date": {
             "start": "2025-05-23",
@@ -3620,7 +3620,7 @@
         "name": "SkyRun MesseTurm Frankfurt",
         "url": "https://my.raceresult.com/323081",
         "participants": {
-            "count": 111
+            "count": 132
         },
         "date": {
             "start": "2025-06-01",
@@ -3926,7 +3926,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 266
+            "count": 270
         },
         "date": {
             "start": "2025-08-03",
@@ -4077,7 +4077,7 @@
             "end": "2025-09-21",
             "is_draft": null,
             "is_canceled": null,
-            "registration_opens": null
+            "registration_opens": "2025-03-17T09:00:00.000Z"
         },
         "location": {
             "city": "Rottweil",

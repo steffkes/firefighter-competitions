@@ -1,7 +1,7 @@
 {
-  "date": "2025-03-13T09:16:05.671932",
+  "date": "2025-03-13T15:15:56.424465",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 111,
+  "count": 132,
   "teams": [
     [
       "Alexander Hick",
@@ -79,6 +79,16 @@
       "Till Arnold"
     ],
     [
+      "Darwin Botthof",
+      "Florian Axer",
+      "Florian Wagner"
+    ],
+    [
+      "Dennis Joerger",
+      "Lukas Kraushaar",
+      "Wolfgang Mueller"
+    ],
+    [
       "Dominik Schneider",
       "Julian Schepp",
       "Maximilian Ried"
@@ -92,6 +102,11 @@
       "Dorian Pfaff",
       "Milan Rohrbach",
       "Tobias Diener"
+    ],
+    [
+      "Eike Schucht",
+      "Matthias Blaschke",
+      "Stefan Weimar"
     ],
     [
       "Felix Niese",
@@ -129,6 +144,11 @@
       "Max Mustermann"
     ],
     [
+      "Heiko Neumeier",
+      "Kim Luca Melms",
+      "Pascal Witzel"
+    ],
+    [
       "Jan Sven Dumbeck",
       "N. N.",
       "N. N."
@@ -147,6 +167,11 @@
       "Jörg Eberhard",
       "Name Dein",
       "Name Dein"
+    ],
+    [
+      "Jörg Spangenberg",
+      "Thorsten Rosenberger",
+      "Uli Schleußner"
     ],
     [
       "Kathrin Kuske",
@@ -174,6 +199,11 @@
       "Tamara Bedacht"
     ],
     [
+      "Markus Sojka",
+      "Michael Schulz",
+      "Pascal Jacobsohn"
+    ],
+    [
       "N. N.",
       "N. N.",
       "N. N."
@@ -187,6 +217,11 @@
       "N. N.",
       "René Hacker",
       "Torsten Zarnke"
+    ],
+    [
+      "Philipp Weitzel",
+      "Sebastian Menn",
+      "Tim Fox"
     ]
   ]
 }
