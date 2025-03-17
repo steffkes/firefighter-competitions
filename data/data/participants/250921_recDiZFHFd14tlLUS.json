@@ -1,7 +1,7 @@
 {
-  "date": "2025-03-17T15:14:56.994716",
+  "date": "2025-03-17T21:13:02.550624",
   "competition_id": "recDiZFHFd14tlLUS",
-  "count": 594,
+  "count": 596,
   "teams": [
     [
       "A Frick",
@@ -176,12 +176,12 @@
       "Jürgen Bossert"
     ],
     [
-      "Benamin Bäuerle",
-      "Manuel Bidmon"
-    ],
-    [
       "Benedikt Kolb",
       "Steffen Meinhold"
+    ],
+    [
+      "Benjamin Bäuerle",
+      "Manuel Bidmon"
     ],
     [
       "Benjamin Osswald",
@@ -242,6 +242,10 @@
     [
       "Christian Bräuer",
       "Lukas Halas"
+    ],
+    [
+      "Christian Class",
+      "Marc Albus"
     ],
     [
       "Christian Ehrich",
