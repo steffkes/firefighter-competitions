@@ -1,7 +1,13 @@
 import scrapy
 from datetime import datetime
 from itertools import groupby
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import (
+    JsonItemExporter,
+    JsonLinesItemExporter,
+    ParticipantItem,
+    ResultItem,
+    ResultRankItem,
+)
 from pathlib import Path
 import csv
 
@@ -83,16 +89,48 @@ class Spider(scrapy.Spider):
         reader = csv.DictReader(
             response.body.decode("utf-8").splitlines(), delimiter=";"
         )
+
+        results = []
+        groups = []
+
         for row in reader:
-            yield ResultItem(
+            result = ResultItem(
                 date=self.race_date,
                 competition_id=self.competition_id,
                 duration="00:" + (("0" + row["Time"])[-9:])[:7],
                 type="MPA",
-                category=None,
                 names=sorted(map(nameMapper, [row["Name 1"], row["Name 2"]])),
+                category={"MIX": "X"}.get(row["Category"], row["Category"]),
                 bib=row["No"],
             )
+
+            if row["Age Group"]:
+                result["age_group"] = row["Age Group"]
+
+            results.append(result)
+            groups.append((result["category"], result.get("age_group")))
+
+        for category, age_group in sorted(set(groups)):
+            results_category = list(
+                filter(lambda result: result["category"] == category, results)
+            )
+            results_age_group = list(
+                filter(
+                    lambda result: result.get("age_group") == age_group,
+                    results_category,
+                )
+            )
+
+            for result in results_age_group:
+                result["rank"] = ResultRankItem(
+                    total=results.index(result) + 1,
+                    category=results_category.index(result) + 1,
+                )
+
+                if age_group:
+                    result["rank"]["age_group"] = results_age_group.index(result) + 1
+
+                yield result
 
 
 import re
