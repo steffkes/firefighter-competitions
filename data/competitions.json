@@ -3500,7 +3500,7 @@
         "name": "Stairways to Heaven",
         "url": "https://stairways.ch/de/",
         "participants": {
-            "count": 149
+            "count": 150
         },
         "date": {
             "start": "2025-05-11",
@@ -3620,7 +3620,7 @@
         "name": "SkyRun MesseTurm Frankfurt",
         "url": "https://my.raceresult.com/323081",
         "participants": {
-            "count": 162
+            "count": 165
         },
         "date": {
             "start": "2025-06-01",
@@ -3926,7 +3926,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 318
+            "count": 334
         },
         "date": {
             "start": "2025-08-03",
@@ -4123,31 +4123,7 @@
         "date": {
             "start": "2025-09-27",
             "end": "2025-09-27",
-            "is_draft": true,
-            "is_canceled": null,
-            "registration_opens": null
-        },
-        "location": {
-            "city": "Riva del Garda",
-            "country_code": "IT",
-            "coordinates": {
-                "lat": 45.8847708,
-                "lng": 10.8396942
-            }
-        }
-    },
-    {
-        "id": "rec5MnGt9YZAWi2gI",
-        "kind": "FSR",
-        "name": "Garda Lift on Fire",
-        "url": "https://www.instagram.com/gardaliftonfire/",
-        "participants": {
-            "count": null
-        },
-        "date": {
-            "start": "2025-10-04",
-            "end": "2025-10-04",
-            "is_draft": true,
+            "is_draft": null,
             "is_canceled": null,
             "registration_opens": null
         },
@@ -4214,14 +4190,14 @@
         "name": "Schanzenlauf Oberstdorf",
         "url": "https://feuerwehr-oberstdorf.de/aktuelles/schanzenlauf-2024",
         "participants": {
-            "count": 8
+            "count": null
         },
         "date": {
             "start": "2025-10-18",
             "end": "2025-10-18",
             "is_draft": null,
             "is_canceled": null,
-            "registration_opens": null
+            "registration_opens": "2025-03-30T10:00:00.000Z"
         },
         "location": {
             "city": "Oberstdorf",

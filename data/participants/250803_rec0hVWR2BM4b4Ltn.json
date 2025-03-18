@@ -1,8 +1,12 @@
 {
-  "date": "2025-03-18T09:15:47.627123",
+  "date": "2025-03-18T15:15:52.485380",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 318,
+  "count": 334,
   "teams": [
+    [
+      "Adrian Gonschor",
+      "Nils Eilau"
+    ],
     [
       "Adrian Opielewicz",
       "Fabian Schmidt"
@@ -120,6 +124,10 @@
       "Fabian Kiewning"
     ],
     [
+      "Benno Klein",
+      "Bernd Adrian"
+    ],
+    [
       "Björn Bianga",
       "Sven Hemmeter"
     ],
@@ -162,6 +170,10 @@
     [
       "Christina Wurm",
       "Maren Brüser"
+    ],
+    [
+      "Christoph Gonschor",
+      "Stephan Schnepper"
     ],
     [
       "Christoph Maier",
@@ -270,6 +282,10 @@
     [
       "Florian Schweickard",
       "Pirmin Prokein"
+    ],
+    [
+      "Florian Schürenkrämer",
+      "Hendrik Rütten"
     ],
     [
       "Florian Stortz",
@@ -392,6 +408,10 @@
       "Markus Braun"
     ],
     [
+      "Julie Hanke",
+      "Swea Gerke"
+    ],
+    [
       "Julien Schmidt",
       "Lukas Keller"
     ],
@@ -410,6 +430,10 @@
     [
       "Jörg Buhrau",
       "Jörg Peeters"
+    ],
+    [
+      "Jörg Mais",
+      "Mike Hilger"
     ],
     [
       "Kai Junker",
@@ -564,6 +588,10 @@
       "Oliver Müller"
     ],
     [
+      "Michael Risch",
+      "Pascal Schnepper"
+    ],
+    [
       "Michael Zink",
       "Patrick Uetz"
     ],
@@ -622,6 +650,10 @@
     [
       "Simon Doll",
       "Thorsten Speer"
+    ],
+    [
+      "Simon Gehrmann",
+      "Timo Berndt"
     ],
     [
       "Stefan Aniello",
