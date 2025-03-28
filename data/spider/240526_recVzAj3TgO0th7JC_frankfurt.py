@@ -48,6 +48,7 @@ class CompetitionSpider(Spider):
         starters = []
         for [
             _id,
+            _id2,
             _empty,
             bib,
             name,
@@ -71,17 +72,17 @@ class CompetitionSpider(Spider):
 
         data = response.json()["data"]
 
-        groups = []
-        results = []
+        team_results = []
+        single_results = []
         for team, names in data[data_key].items():
             [rank_team, team_duration] = re.match(
                 r"\#\d+_(\d+)\.///.*?///(.+)", team
             ).group(1, 2)
 
             [
-                [_id1, bib1, name1, duration1, age_group1, _nationality1],
-                [_id2, bib2, name2, duration2, age_group2, _nationality2],
-                [_id3, bib3, name3, duration3, age_group3, _nationality3],
+                [_id1, _id21, bib1, name1, duration1, age_group1, _nationality1],
+                [_id2, _id22, bib2, name2, duration2, age_group2, _nationality2],
+                [_id3, _id32, bib3, name3, duration3, age_group3, _nationality3],
             ] = names
 
             team_gender = list(
@@ -89,15 +90,17 @@ class CompetitionSpider(Spider):
             )
             team_category = team_gender[0] if len(team_gender) == 1 else "X"
 
-            yield ResultItem(
-                date=self.race_date,
-                competition_id=self.competition_id,
-                type=competition_type,
-                duration=self.fixDuration(team_duration),
-                names=sorted(map(fixName, [name1, name2, name3])),
-                category=team_category,
-                rank=ResultRankItem(total=int(rank_team)),
-                bib=bib1.split("-")[0],
+            team_results.append(
+                ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type=competition_type,
+                    duration=self.fixDuration(team_duration),
+                    names=sorted(map(fixName, [name1, name2, name3])),
+                    category=team_category,
+                    rank=ResultRankItem(total=int(rank_team)),
+                    bib=bib1.split("-")[0],
+                )
             )
 
             for bib, name, duration, age_group in zip(
@@ -118,13 +121,42 @@ class CompetitionSpider(Spider):
                     age_group=age_group,
                     bib=bib,
                 )
-                results.append(result)
-                groups.append((category, age_group))
+                single_results.append(result)
 
-        results = sorted(results, key=lambda result: result["duration"])
+        team_results = sorted(team_results, key=lambda result: result["duration"])
 
-        for category, age_group in sorted(set(groups)):
-            entries_type = results
+        for category in sorted(
+            set(
+                map(
+                    lambda result: result["category"],
+                    team_results,
+                )
+            )
+        ):
+            results_category = list(
+                filter(lambda result: result["category"] == category, team_results)
+            )
+            durations_category = list(
+                map(lambda result: result["duration"], results_category)
+            )
+
+            for result in results_category:
+                result["rank"]["category"] = (
+                    durations_category.index(result["duration"]) + 1
+                )
+                yield result
+
+        single_results = sorted(single_results, key=lambda result: result["duration"])
+
+        for category, age_group in sorted(
+            set(
+                map(
+                    lambda result: (result["category"], result["age_group"]),
+                    single_results,
+                )
+            )
+        ):
+            entries_type = single_results
             entries_category = list(
                 filter(lambda result: result["category"] == category, entries_type)
             )
