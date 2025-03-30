@@ -1,8 +1,12 @@
 {
-  "date": "2025-03-30T09:13:21.537189",
+  "date": "2025-03-30T15:13:35.905791",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 380,
+  "count": 396,
   "teams": [
+    [
+      "Aaron Saad Albrecht",
+      "Mathis Grumbach"
+    ],
     [
       "Adrian Gonschor",
       "Nils Eilau"
@@ -108,6 +112,10 @@
       "Marlene Schindler"
     ],
     [
+      "Ansgar Ottensmann",
+      "Christoph Hellweg"
+    ],
+    [
       "Antonia Schniedermann",
       "Svea Hönekop"
     ],
@@ -200,8 +208,16 @@
       "Philipp Weißhaar"
     ],
     [
+      "Christoph Schehr",
+      "Lucas Faul"
+    ],
+    [
       "Christoph Wynands",
       "Jan Kiepe"
+    ],
+    [
+      "Christopher Bertram",
+      "Thomas Watsworth"
     ],
     [
       "Christopher Wißmanns",
@@ -608,6 +624,10 @@
       "Markus Tietze"
     ],
     [
+      "Marcel Weber",
+      "Maximilian Kleibrink"
+    ],
+    [
       "Marco Montillon",
       "Stephan Korn"
     ],
@@ -646,6 +666,14 @@
     [
       "Matthias Weickmann",
       "Nicole Tuchbreiter"
+    ],
+    [
+      "Maurice Kwiotek",
+      "Paul Kissel"
+    ],
+    [
+      "Max Hellweg",
+      "Piet Starck"
     ],
     [
       "Max Jakubaschk",
@@ -722,6 +750,10 @@
     [
       "Philipp Sellmeyer",
       "Thorsten Gartmann"
+    ],
+    [
+      "Pia Winkler",
+      "Sven Hansmeyer"
     ],
     [
       "Sascha Schwarz",
