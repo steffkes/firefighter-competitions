@@ -3380,7 +3380,7 @@
         "name": "LOTTO Thüringen Treppenlauf",
         "url": "https://my.raceresult.com/313752/",
         "participants": {
-            "count": null
+            "count": 350
         },
         "date": {
             "start": "2025-04-05",
@@ -3404,7 +3404,7 @@
         "name": "Zwickauer Hochhaus Treppenlauf",
         "url": "https://my.raceresult.com/322261/info",
         "participants": {
-            "count": 50
+            "count": 56
         },
         "date": {
             "start": "2025-04-13",
@@ -3524,7 +3524,7 @@
         "name": "Schonacher Schanzenlauf",
         "url": "http://www.schonacher-schanzenlauf.de",
         "participants": {
-            "count": 380
+            "count": 382
         },
         "date": {
             "start": "2025-05-17",
@@ -3926,7 +3926,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 414
+            "count": 420
         },
         "date": {
             "start": "2025-08-03",
