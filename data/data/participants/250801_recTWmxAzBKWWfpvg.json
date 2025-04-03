@@ -1,7 +1,7 @@
 {
-  "date": "2025-04-03T09:15:38.526526",
+  "date": "2025-04-03T15:14:00.811404",
   "competition_id": "recTWmxAzBKWWfpvg",
-  "count": 190,
+  "count": 192,
   "teams": [
     [
       "Agostino Marulli",
@@ -382,6 +382,10 @@
     [
       "Simon Schwarz",
       "Wiegand Maximilian"
+    ],
+    [
+      "Sven Schmitt",
+      "Weindel Luis"
     ]
   ]
 }
