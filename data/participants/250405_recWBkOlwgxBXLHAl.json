@@ -1,8 +1,24 @@
 {
-  "date": "2025-04-05T09:13:19.445248",
+  "date": "2025-04-05T15:12:37.039777",
   "competition_id": "recWBkOlwgxBXLHAl",
-  "count": 348,
+  "count": 356,
   "teams": [
+    [
+      "",
+      "N.N. 377"
+    ],
+    [
+      "",
+      "N.N. 99219"
+    ],
+    [
+      "",
+      "N.N. 99220"
+    ],
+    [
+      "",
+      "N.N. 99221"
+    ],
     [
       "Aaron Fischer",
       "Christian Weber"
@@ -26,6 +42,10 @@
     [
       "Alexander Lohr",
       "Alexander Möller"
+    ],
+    [
+      "Alexander Lohr",
+      "Michael Steurer"
     ],
     [
       "Alexander Montag",
@@ -104,10 +124,6 @@
       "Julia Steppacher"
     ],
     [
-      "Anna Lena Steurer",
-      "Michael Steurer"
-    ],
-    [
       "Antje Vetter",
       "Susanne Wolf"
     ],
@@ -166,6 +182,10 @@
     [
       "Christian Petatz",
       "Marius Mucha"
+    ],
+    [
+      "Christof Kiebler",
+      "Dennis Küllmer"
     ],
     [
       "Christoph Kreutzer",
@@ -234,10 +254,6 @@
     [
       "Darlene Schramm",
       "Selina Kraus"
-    ],
-    [
-      "Dennis Küllmer",
-      "Florian Schmidt"
     ],
     [
       "Dobby Bauer",
