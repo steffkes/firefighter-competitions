@@ -1,7 +1,7 @@
 {
-  "date": "2025-04-05T03:19:05.517963",
+  "date": "2025-04-05T09:13:19.445248",
   "competition_id": "recWBkOlwgxBXLHAl",
-  "count": 350,
+  "count": 348,
   "teams": [
     [
       "Aaron Fischer",
@@ -92,10 +92,6 @@
       "Björn Herborn"
     ],
     [
-      "André Möckl",
-      "Kay Galler"
-    ],
-    [
       "Anke Topf",
       "Max Ludwig"
     ],
@@ -128,10 +124,6 @@
       "Christian Metz"
     ],
     [
-      "Benjamin Nast",
-      "Tony Fuß"
-    ],
-    [
       "Benjamin Schrader",
       "Erik Langenhahn"
     ],
@@ -142,10 +134,6 @@
     [
       "Benjamin Wegele",
       "Daniel Eckhart"
-    ],
-    [
-      "Bernd Ulshöfer",
-      "Fabian Saller"
     ],
     [
       "Bianca Schrader",
@@ -280,8 +268,16 @@
       "Markus Krüger"
     ],
     [
+      "Eric Langenhahn",
+      "Matthias Weickmann"
+    ],
+    [
       "Fabian Hägele",
       "Tom Falkner"
+    ],
+    [
+      "Fabian Saller",
+      "Ludwig Balk"
     ],
     [
       "Fabian Schröter",
@@ -300,10 +296,6 @@
       "Jeremy Heier"
     ],
     [
-      "Florian Graef",
-      "Jakob Haeseler"
-    ],
-    [
       "Florian Laubach",
       "Mario Siegel"
     ],
@@ -317,11 +309,15 @@
     ],
     [
       "Frank Meinhold",
-      "Sascha Seidel"
+      "Janik Stephan"
     ],
     [
       "Fritz Kielmann",
       "Willy Gerber"
+    ],
+    [
+      "Guido Suhrmeyer",
+      "Steve Roidl"
     ],
     [
       "Hannes Senge",
@@ -350,6 +346,10 @@
     [
       "Jacob Strehle",
       "Stefan Schulz"
+    ],
+    [
+      "Jakob Haeseler",
+      "Tugce Zinal"
     ],
     [
       "Jakob Herold",
@@ -389,7 +389,7 @@
     ],
     [
       "Jasmin Zeugner",
-      "Maurice Helmerich"
+      "Patrick Zeugner"
     ],
     [
       "Jason Pradler",
@@ -449,7 +449,7 @@
     ],
     [
       "Kai Frieß",
-      "Sascha Eichhorn"
+      "Niklas Kirsch"
     ],
     [
       "Karolin Barcsik",
@@ -482,10 +482,6 @@
     [
       "Kevin Kiesbauer",
       "Tim Rommert"
-    ],
-    [
-      "Kilian Hose",
-      "Timo Hose"
     ],
     [
       "Kristin Hofmann",
@@ -568,6 +564,10 @@
       "Tabea Weeke"
     ],
     [
+      "Markus Krüger",
+      "Robert Judis"
+    ],
+    [
       "Markus Pahn",
       "Tobias Hannusch"
     ],
@@ -576,16 +576,8 @@
       "Sascha Kneißle"
     ],
     [
-      "Martin Zeunemann",
-      "Peter Häusler"
-    ],
-    [
       "Matthias Kaden",
       "Michael Kaufmann"
-    ],
-    [
-      "Matthias Weickmann",
-      "Nicolas Faure"
     ],
     [
       "Matthias Weickmann",
@@ -628,12 +620,12 @@
       "Sören Stier"
     ],
     [
-      "Nick Förster",
-      "Paul Steiner"
-    ],
-    [
       "Nicolas Häfele",
       "Sophie Bayer"
+    ],
+    [
+      "Nicole Neumeyer",
+      "Timo Hose"
     ],
     [
       "Niklas Schulz",
@@ -660,8 +652,12 @@
       "Sebastian Oertel"
     ],
     [
-      "Philipp Meißner",
-      "Robert Judis"
+      "Paul Steiner",
+      "Sebastian Stegner"
+    ],
+    [
+      "Peter Häusler",
+      "Sven Späth"
     ],
     [
       "Rebecca Kasseckert",
