@@ -1,7 +1,7 @@
 {
-  "date": "2025-04-13T03:47:51.585022",
+  "date": "2025-04-13T09:16:39.687078",
   "competition_id": "recDQgPZf3fKZwQV1",
-  "count": 60,
+  "count": 64,
   "teams": [
     [
       "Alexander Höhne",
@@ -32,8 +32,16 @@
       "Ingo Blut"
     ],
     [
+      "Christian Roth",
+      "Heiko Wenzel"
+    ],
+    [
       "Dominik Thiel",
       "Tobias Diedrigkeit"
+    ],
+    [
+      "Emma Eibisch",
+      "Isabell Müller"
     ],
     [
       "Eric Hering",
@@ -42,6 +50,10 @@
     [
       "Erik Langenhahn",
       "Florian Wedel"
+    ],
+    [
+      "Erik Langenhahn",
+      "Karsten Neupert"
     ],
     [
       "Erik Scheibe",
@@ -60,6 +72,10 @@
       "Monique Lucius"
     ],
     [
+      "Florian Romanowsky",
+      "Rick Windisch"
+    ],
+    [
       "Franz Engelhardt",
       "Thorben Lenzen"
     ],
@@ -76,20 +92,16 @@
       "Stan Flecher"
     ],
     [
-      "Heiko Wenzel",
-      "Luca Englert"
-    ],
-    [
-      "Isabell Müller",
-      "Kay Hain"
-    ],
-    [
       "Jana Reinhardt",
       "Karsten Neupert"
     ],
     [
       "Jessica Wilhelm",
       "Johanna Kühn"
+    ],
+    [
+      "Joas Böttcher",
+      "Leon Flügge"
     ],
     [
       "Johannes Wittig",
@@ -118,10 +130,6 @@
     [
       "Matthias Schmidt",
       "Rosario Roth"
-    ],
-    [
-      "Rick Windisch",
-      "Toni Schubert"
     ]
   ]
 }
