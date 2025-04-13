@@ -1,7 +1,7 @@
 {
-  "date": "2025-04-13T15:14:00.915431",
+  "date": "2025-04-13T21:12:59.363736",
   "competition_id": "recooWID949hlRemN",
-  "count": 555,
+  "count": 580,
   "teams": [
     [
       "Adam Slavicek"
@@ -85,6 +85,9 @@
       "Christian Küpers"
     ],
     [
+      "Christian Meyer"
+    ],
+    [
       "Christian Schüller"
     ],
     [
@@ -101,6 +104,9 @@
     ],
     [
       "David Kubis"
+    ],
+    [
+      "David Probst"
     ],
     [
       "Dennis Wolz"
@@ -173,6 +179,9 @@
     ],
     [
       "Jaka Kopitar"
+    ],
+    [
+      "Jan Kapek"
     ],
     [
       "Jan Pipis"
@@ -415,10 +424,16 @@
       "Reich Stefanie"
     ],
     [
+      "Robert Lehmann"
+    ],
+    [
       "Robin Altbürger"
     ],
     [
       "Robin Winter"
+    ],
+    [
+      "Roman Munzar"
     ],
     [
       "Ronny Lantzke"
@@ -517,6 +532,15 @@
       "Tom Trost"
     ],
     [
+      "Tomas Sirotek"
+    ],
+    [
+      "Tomáš Višňar"
+    ],
+    [
+      "Tomáš Vondráček"
+    ],
+    [
       "Tuchbreiter Nicole"
     ],
     [
@@ -575,6 +599,10 @@
     [
       "Alexander Sader",
       "Tobias Fischer"
+    ],
+    [
+      "Amanda Mackey",
+      "Ken Helgerson"
     ],
     [
       "Andre Grieß-Dany",
@@ -905,6 +933,10 @@
       "Olaf Krause"
     ],
     [
+      "Oliver Nopper",
+      "Robert Lehmann"
+    ],
+    [
       "Patrick Vierhaus",
       "Roberto Segundo"
     ],
@@ -985,9 +1017,19 @@
       "Rebea Sonnenberg"
     ],
     [
+      "Christian Meyer",
+      "Nina Korittko",
+      "Wolfgang Stark"
+    ],
+    [
       "Dietmar Kirsch",
       "Gerd Müller",
       "Magnus Hirschfeld"
+    ],
+    [
+      "Finn Giersberg",
+      "Kira Haida",
+      "Thomas Werxhausen"
     ],
     [
       "Jan Panick",
@@ -998,6 +1040,11 @@
       "Jörg Winkler",
       "Mario Fleerkortte",
       "Mirco Feuerhack"
+    ],
+    [
+      "Markus Brockers",
+      "Matthias Metzen",
+      "Stefan Masson"
     ],
     [
       "Patrick Kirsch",
@@ -1039,6 +1086,12 @@
       "Kathrin Madlen Grote Lambers",
       "Mareike Rosenbaum",
       "Sven Ramaker"
+    ],
+    [
+      "Dario Peter",
+      "Hans-Christian Marwedel",
+      "Severin Körschgen",
+      "Vladyslav Oliinyk"
     ],
     [
       "Denny Goldhahn",
