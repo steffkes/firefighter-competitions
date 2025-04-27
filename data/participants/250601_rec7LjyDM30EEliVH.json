@@ -1,11 +1,11 @@
 {
-  "date": "2025-04-27T15:14:00.907680",
+  "date": "2025-04-27T21:12:26.999642",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 297,
+  "count": 309,
   "teams": [
     [
-      "Ihab Schmidt",
-      "Lukas Ottum"
+      "Enrico Furnari",
+      "Jonas Traud"
     ],
     [
       "Alexander Fischer",
@@ -78,6 +78,11 @@
       "Jan Kühn"
     ],
     [
+      "André-Marcel Hess",
+      "Carsten Schwägerl",
+      "Maurice Hess"
+    ],
+    [
       "Aron Horn",
       "Jonas-Fynn Morhard",
       "Luis Fuchs"
@@ -106,6 +111,11 @@
       "Benjamin Ohl",
       "Christian Heß",
       "Patrick Fleer"
+    ],
+    [
+      "Bennet Moritz Heyen",
+      "Jannis Unger",
+      "Kristina Müller"
     ],
     [
       "Bernd Helmer",
@@ -318,9 +328,19 @@
       "Stephan Kesisoglu"
     ],
     [
+      "Gregor Wilhelm",
+      "Kristian Nelkert",
+      "Niels Lorenz"
+    ],
+    [
       "Heiko Neumeier",
       "Kim Luca Melms",
       "Pascal Witzel"
+    ],
+    [
+      "Ihab Schmidt",
+      "Lukas Ottum",
+      "Michael Richly"
     ],
     [
       "Jan Sven Dumbeck",
