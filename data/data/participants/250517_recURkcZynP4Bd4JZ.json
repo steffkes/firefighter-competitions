@@ -1,11 +1,15 @@
 {
-  "date": "2025-04-29T03:29:02.747644",
+  "date": "2025-04-29T09:21:37.930638",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 418,
+  "count": 420,
   "teams": [
     [
       "Adrian Kirchner",
       "Armin Kirchner"
+    ],
+    [
+      "Adrian Schwer",
+      "René Zandomeni"
     ],
     [
       "Ahmad Darwish",
@@ -572,6 +576,10 @@
       "Marcus Böth"
     ],
     [
+      "Katja Schweizer",
+      "Markus Mezger"
+    ],
+    [
       "Kevin Schmidt",
       "Tobias Haag"
     ],
@@ -650,10 +658,6 @@
     [
       "Markus Maier",
       "Nicolas Faure"
-    ],
-    [
-      "Markus Mezger",
-      "Simon Mezger"
     ],
     [
       "Markus Steinemann",
