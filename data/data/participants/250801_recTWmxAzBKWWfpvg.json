@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-01T03:44:05.651230",
+  "date": "2025-05-01T09:17:20.715629",
   "competition_id": "recTWmxAzBKWWfpvg",
-  "count": 228,
+  "count": 230,
   "teams": [
     [
       "Aaron Begier",
@@ -266,6 +266,10 @@
     [
       "Julian Pfeiffle",
       "Michael Mann"
+    ],
+    [
+      "Jörg Weimer",
+      "Kalle Müller"
     ],
     [
       "Kai Rinderknecht",
