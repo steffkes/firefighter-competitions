@@ -1,12 +1,17 @@
 {
-  "date": "2025-05-04T15:13:54.363502",
+  "date": "2025-05-04T21:12:42.025014",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 357,
+  "count": 375,
   "teams": [
     [
       "Alex Ulm",
       "Alexander Schaper",
       "Ralph Schwäch"
+    ],
+    [
+      "Alexander Bamberger",
+      "Ivo Weihert",
+      "Maximilian Stark"
     ],
     [
       "Alexander Fischer",
@@ -374,6 +379,11 @@
       "Martin Glanzner"
     ],
     [
+      "Florian Schneider",
+      "Frank Feiler",
+      "Jens Leschhorn"
+    ],
+    [
       "Frank Hug",
       "Marcel Hiesel",
       "Max Mustermann"
@@ -402,6 +412,11 @@
       "Heiko Neumeier",
       "Kim Luca Melms",
       "Pascal Witzel"
+    ],
+    [
+      "Ina Sommer",
+      "Marc Hildebrandt",
+      "Nico Junge"
     ],
     [
       "Jakob Albert",
@@ -489,6 +504,11 @@
       "Sebastian Jansen"
     ],
     [
+      "Lukas Wiebe",
+      "Philipp Geiß",
+      "Sascha Zeißler"
+    ],
+    [
       "Marc Schwarz",
       "Patrick Bergner",
       "Timo Crößmann"
@@ -512,6 +532,11 @@
       "Markus Bek",
       "Thomas Schmid",
       "Tobias Metzger"
+    ],
+    [
+      "Markus Blum",
+      "Michelle Falsett",
+      "Randolph Schmidt"
     ],
     [
       "Markus Sojka",
@@ -547,6 +572,11 @@
       "Melanie Brück",
       "Robin Fischer",
       "Sebastian Büchling"
+    ],
+    [
+      "Miguel Alberti",
+      "Peter Stein",
+      "Sven Behnke"
     ],
     [
       "Moritz Höhn",
