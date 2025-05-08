@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-08T09:20:32.694743",
+  "date": "2025-05-08T15:16:49.550554",
   "competition_id": "reczDUPUd3QCRSGFr",
-  "count": 10,
+  "count": 18,
   "teams": [
     [
       "Ben Zimmermann",
@@ -12,6 +12,10 @@
       "Petra Koch"
     ],
     [
+      "Eric Niebergall",
+      "Florian Domis"
+    ],
+    [
       "Florian Bajusz",
       "Jochen Fröhlich"
     ],
@@ -20,8 +24,20 @@
       "Ronny Becker"
     ],
     [
+      "Jessica Eifler",
+      "Marc Schröder"
+    ],
+    [
       "Mirjam Färber",
       "Tom Lettermann"
+    ],
+    [
+      "Patrick Diewald",
+      "Sascha Roth"
+    ],
+    [
+      "Philipp Diegler",
+      "Tom Klauck"
     ]
   ]
 }
