@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-08T09:20:30.754553",
+  "date": "2025-05-08T15:16:47.436418",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 524,
+  "count": 526,
   "teams": [
     [
       "Aaron Saad Albrecht",
@@ -432,6 +432,10 @@
       "Nils Werle"
     ],
     [
+      "Felix Fingerle",
+      "Manfred Freimut"
+    ],
+    [
       "Felix Hartmann",
       "Lara Löwing"
     ],
@@ -520,10 +524,6 @@
       "Mario Fleerkortte"
     ],
     [
-      "Gunther Fuchs",
-      "Manfred Freimut"
-    ],
-    [
       "Hagen Scherer",
       "Ronny Becker"
     ],
@@ -590,6 +590,10 @@
     [
       "Jasmin Bohun",
       "Stefan Matheis"
+    ],
+    [
+      "Jasper Westermann",
+      "Kim Maurice Herrmann"
     ],
     [
       "Jean Pascal Sawkins",
