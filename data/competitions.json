@@ -3572,7 +3572,7 @@
         "name": "alive step up",
         "url": "https://alive.si/",
         "participants": {
-            "count": 138
+            "count": 139
         },
         "date": {
             "start": "2025-05-17",
@@ -3620,7 +3620,7 @@
         "name": "SkyRun MesseTurm Frankfurt",
         "url": "https://my.raceresult.com/323081",
         "participants": {
-            "count": 423
+            "count": 435
         },
         "date": {
             "start": "2025-06-01",
@@ -3926,7 +3926,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 528
+            "count": 544
         },
         "date": {
             "start": "2025-08-03",
@@ -3941,6 +3941,30 @@
             "coordinates": {
                 "lat": 50.9480362,
                 "lng": 6.9431545
+            }
+        }
+    },
+    {
+        "id": "rec2aW0q7wzO75rRV",
+        "kind": "FSR",
+        "name": "Bobbauer Firefighter Stairrun",
+        "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02Jqn5oh4uEqCzpqzSGbWCHujqggj2ad3QLMVwmt1ZhtqrxCim8UZ8RKu3Eki7fBYWl&id=100068041901584",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2025-08-16",
+            "end": "2025-08-16",
+            "is_draft": null,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Bobbau",
+            "country_code": "DE",
+            "coordinates": {
+                "lat": 51.6911892,
+                "lng": 12.2620175
             }
         }
     },
@@ -4125,7 +4149,7 @@
             "end": "2025-09-27",
             "is_draft": null,
             "is_canceled": null,
-            "registration_opens": null
+            "registration_opens": "2025-06-01T18:00:00.000Z"
         },
         "location": {
             "city": "Riva del Garda",
