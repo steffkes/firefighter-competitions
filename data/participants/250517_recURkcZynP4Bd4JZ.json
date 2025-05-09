@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-09T09:17:55.232624",
+  "date": "2025-05-09T15:18:32.900798",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 86,
+  "count": 90,
   "teams": [
     [
       "Alexander Bender",
@@ -84,6 +84,10 @@
       "Michael Kalcher"
     ],
     [
+      "Jan Waldkircher",
+      "Raphael Hotz"
+    ],
+    [
       "Jasmin Bohun",
       "Petra Koch"
     ],
@@ -128,6 +132,10 @@
       "Nico Beha"
     ],
     [
+      "Marius Munz",
+      "Nick Baumann"
+    ],
+    [
       "Markus Maier",
       "Nicolas Faure"
     ],
@@ -141,7 +149,7 @@
     ],
     [
       "Max Kern",
-      "Patrick Lupfer"
+      "Tobias Volk"
     ],
     [
       "Nadja Will",
@@ -154,6 +162,10 @@
     [
       "Nils Spang",
       "Volker Dickhardt"
+    ],
+    [
+      "Patrick Lupfer",
+      "Tim Disch"
     ],
     [
       "Rainer Kunz",
@@ -170,10 +182,6 @@
     [
       "Stefan Wolff",
       "Sven Honnefeller"
-    ],
-    [
-      "Tim Disch",
-      "Tobias Volk"
     ]
   ]
 }
