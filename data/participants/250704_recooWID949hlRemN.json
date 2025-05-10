@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-10T09:18:01.912349",
+  "date": "2025-05-10T15:14:04.340435",
   "competition_id": "recooWID949hlRemN",
-  "count": 660,
+  "count": 683,
   "teams": [
     [
       "Adam Slavicek"
@@ -97,6 +97,9 @@
       "Daniel Schimank"
     ],
     [
+      "Daniel Toporek"
+    ],
+    [
       "Dario Peter"
     ],
     [
@@ -107,6 +110,9 @@
     ],
     [
       "David Probst"
+    ],
+    [
+      "Dawid Rabczyk"
     ],
     [
       "Dennis Wolz"
@@ -121,7 +127,16 @@
       "Dirk Fischer"
     ],
     [
+      "Dominik Brunejko"
+    ],
+    [
       "Dominik Zirbes"
+    ],
+    [
+      "Dummy"
+    ],
+    [
+      "Dummy"
     ],
     [
       "Erik Hoffmeister"
@@ -137,6 +152,9 @@
     ],
     [
       "Felix Hentschel"
+    ],
+    [
+      "Ferdinand Weber"
     ],
     [
       "Florian Rosenbaum"
@@ -178,9 +196,6 @@
       "Jaka Kopitar"
     ],
     [
-      "Jakub Kapek"
-    ],
-    [
       "Jan Kapek"
     ],
     [
@@ -188,9 +203,6 @@
     ],
     [
       "Jan Volfl"
-    ],
-    [
-      "Jan Völfl"
     ],
     [
       "Jan Wisniewski"
@@ -214,6 +226,9 @@
       "Jonas Eisenhauer"
     ],
     [
+      "Julian Weber"
+    ],
+    [
       "Jörg Dombrowski"
     ],
     [
@@ -230,6 +245,9 @@
     ],
     [
       "Kirsten Schneidereit"
+    ],
+    [
+      "Krzysztof Stencel"
     ],
     [
       "Lars Mayer"
@@ -400,6 +418,9 @@
       "Mike Stöbener"
     ],
     [
+      "Mike Weikamm"
+    ],
+    [
       "Mirco Feuerhack"
     ],
     [
@@ -458,6 +479,9 @@
     ],
     [
       "Phillipp Kozin"
+    ],
+    [
+      "Piotr Spizewski"
     ],
     [
       "Rainer Klampferer"
@@ -632,6 +656,10 @@
       "Thomas Schragner"
     ],
     [
+      "???",
+      "Krzysztof Stencel"
+    ],
+    [
       "Adam Slavíček",
       "David Kubiš"
     ],
@@ -740,12 +768,20 @@
       "Stefan Matheis"
     ],
     [
+      "Daniel Toporek",
+      "Dominik Brunejko"
+    ],
+    [
       "Dario Peter",
       "Frank Peter"
     ],
     [
       "David Kalicki",
       "Tobias Nöhr"
+    ],
+    [
+      "Dawid Rabczyk",
+      "Piotr Spizewski"
     ],
     [
       "Dennis Wolz",
@@ -760,8 +796,16 @@
       "Magnus Hirschfeld"
     ],
     [
+      "Dirk Fischer",
+      "Michel Menten"
+    ],
+    [
       "Dominic Scholz",
       "Simon Gapp"
+    ],
+    [
+      "Dominik Zirbes",
+      "Rüdiger Zeuner-Christ"
     ],
     [
       "Dummy Dummy",
@@ -1330,6 +1374,13 @@
       "Maurice Strauss",
       "Nicole Tuchbreiter",
       "Stefan Matheis"
+    ],
+    [
+      "Daniel Toporek",
+      "Dawid Rabczyk",
+      "Dominik Brunejko",
+      "Krzysztof Stencel",
+      "Piotr Spizewski"
     ],
     [
       "Eric Kessler",
