@@ -3809,7 +3809,7 @@
         "name": "Leinetal Firefighter Combat Challenge",
         "url": "https://www.facebook.com/TFALeinetal/",
         "participants": {
-            "count": 287
+            "count": 288
         },
         "date": {
             "start": "2025-07-19",
@@ -3926,7 +3926,7 @@
         "name": "Kölnturm Treppenlauf",
         "url": "https://www.koelner-treppenlauf.de/anmeldung/",
         "participants": {
-            "count": 550
+            "count": 554
         },
         "date": {
             "start": "2025-08-03",
@@ -4397,6 +4397,30 @@
             "coordinates": {
                 "lat": 50.6977798,
                 "lng": 10.6802269
+            }
+        }
+    },
+    {
+        "id": "recRnyAQk9bzIczQX",
+        "kind": "FCC",
+        "name": "Firefit Championships Europe",
+        "url": "https://www.anpi.be/en/news/firefit-coming-lens-2026",
+        "participants": {
+            "count": null
+        },
+        "date": {
+            "start": "2026-05-02",
+            "end": "2026-05-03",
+            "is_draft": true,
+            "is_canceled": null,
+            "registration_opens": null
+        },
+        "location": {
+            "city": "Lens",
+            "country_code": "BE",
+            "coordinates": {
+                "lat": 50.5737411,
+                "lng": 3.8586497
             }
         }
     },
