@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-13T21:13:53.434174",
+  "date": "2025-05-14T03:33:27.152419",
   "competition_id": "recURkcZynP4Bd4JZ",
-  "count": 90,
+  "count": 72,
   "teams": [
     [
       "Alexander Bender",
@@ -12,16 +12,8 @@
       "Benedikt Butzer"
     ],
     [
-      "Andreas Dold",
-      "Manuel Kleiser"
-    ],
-    [
       "Andreas Reiner",
       "Meike Bausch"
-    ],
-    [
-      "Andreas Seemann",
-      "Moritz Seemann"
     ],
     [
       "Andreas Wirth",
@@ -46,10 +38,6 @@
     [
       "Christian Kuka",
       "Jonas Magg"
-    ],
-    [
-      "Christoph Schwager",
-      "Robert Ruff"
     ],
     [
       "Daniel Kister",
@@ -78,18 +66,6 @@
     [
       "Frank Strobel",
       "Steffen Haag"
-    ],
-    [
-      "Hannes Schreiber",
-      "Michael Kalcher"
-    ],
-    [
-      "Jan Waldkircher",
-      "Raphael Hotz"
-    ],
-    [
-      "Jasmin Bohun",
-      "Petra Koch"
     ],
     [
       "Johannes Dannecker",
@@ -124,24 +100,20 @@
       "Tobias Boost"
     ],
     [
-      "Maja Wengert",
-      "Vanessa Butzer"
-    ],
-    [
       "Manuel Kienzler",
       "Nico Beha"
     ],
     [
-      "Marius Munz",
-      "Nick Baumann"
+      "Manuel Kleiser",
+      "Torsten Wölfel"
+    ],
+    [
+      "Marcel Bauer",
+      "Nadja Will"
     ],
     [
       "Markus Maier",
       "Nicolas Faure"
-    ],
-    [
-      "Martin Schwarzwälder",
-      "Robert Braun"
     ],
     [
       "Mathias Hepting",
@@ -150,10 +122,6 @@
     [
       "Max Kern",
       "Tobias Volk"
-    ],
-    [
-      "Nadja Will",
-      "Willeon Köckeritz"
     ],
     [
       "Nicolas Faure",
@@ -174,10 +142,6 @@
     [
       "Rainer Kunz",
       "Rudi Wengert"
-    ],
-    [
-      "Simon Gerstner",
-      "Simon Walter"
     ],
     [
       "Stefan Wolff",
