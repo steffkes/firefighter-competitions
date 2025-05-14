@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-14T09:21:55.034279",
+  "date": "2025-05-14T15:20:32.582204",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 483,
+  "count": 495,
   "teams": [
     [
       "Alejandro Hernandez-Bonell",
@@ -177,6 +177,11 @@
       "Benedikt Bangert",
       "Johannes Bangert",
       "Johannes Wind"
+    ],
+    [
+      "Benedikt Kronhardt",
+      "Florian Knaus",
+      "Samuel Brumhard"
     ],
     [
       "Benedikt Pflumm",
@@ -374,11 +379,6 @@
       "Maximilian Ried"
     ],
     [
-      "Dominik Thiel",
-      "Stefan Matheis",
-      "Tobias Diedrigkeit"
-    ],
-    [
       "Dorian Pfaff",
       "Milan Rohrbach",
       "Tobias Diener"
@@ -462,6 +462,11 @@
       "Felix Schnabel",
       "Mike Fieber",
       "Tom Beckmann"
+    ],
+    [
+      "Finn Freund",
+      "Lennart Fuchs",
+      "Pia Oberhofer"
     ],
     [
       "Florian Bajusz",
@@ -584,6 +589,11 @@
       "Robin Mack"
     ],
     [
+      "Johannes Ruppert",
+      "Luca Blecher",
+      "Luca Brauburger"
+    ],
+    [
       "Jonas Eisenhauer",
       "Markus Brähler",
       "Pascal Bernhard"
@@ -607,6 +617,11 @@
       "Julian Frai",
       "Lukas Lutz",
       "Lukas Trefflich"
+    ],
+    [
+      "Julian Knopp",
+      "Maurice Bahlinger",
+      "Sebastian Kampe"
     ],
     [
       "Julian Wehrle",
@@ -767,6 +782,11 @@
       "Moritz Höhn",
       "Noel Urbanek",
       "Thomas Rosog"
+    ],
+    [
+      "Moritz Nagel",
+      "Stefan Matheis",
+      "Tobias Diedrigkeit"
     ],
     [
       "N. N.",
