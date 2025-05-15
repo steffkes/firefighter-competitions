@@ -1,8 +1,13 @@
 {
-  "date": "2025-05-15T15:18:22.216026",
+  "date": "2025-05-15T21:15:18.106381",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 510,
+  "count": 531,
   "teams": [
+    [
+      "Adrian Mandt",
+      "David Lesch",
+      "Frederik Weidner"
+    ],
     [
       "Alejandro Hernandez-Bonell",
       "Andrei Vintu",
@@ -37,6 +42,16 @@
       "Alexander Gohlke",
       "Andreas Weißelberg",
       "Sebastian Durth"
+    ],
+    [
+      "Alexander Haslböck",
+      "Benedikt Maihöfer",
+      "Florian Krien"
+    ],
+    [
+      "Alexander Haus",
+      "Maximilian Springer",
+      "Wiktor Kowalicki"
     ],
     [
       "Alexander Hick",
@@ -127,6 +142,11 @@
       "Andreas Conrad",
       "Clara Conrad",
       "Jan Kühn"
+    ],
+    [
+      "André Wagner",
+      "Martin Bipper",
+      "Sabine Albert"
     ],
     [
       "André-Marcel Hess",
@@ -429,6 +449,11 @@
       "Malte Menold"
     ],
     [
+      "Erwin Kukuljac",
+      "Luca Weis",
+      "Stefan Trzaska"
+    ],
+    [
       "Fabian Beck",
       "Lukas Lang",
       "Tim Köhler"
@@ -579,6 +604,11 @@
       "Sarah Schwab"
     ],
     [
+      "Jan Kilb",
+      "Matthias Trost",
+      "Maximilian Schlüter"
+    ],
+    [
       "Jan Sven Dumbeck",
       "N. N.",
       "N. N."
@@ -657,6 +687,11 @@
       "Jörg Spangenberg",
       "Thorsten Rosenberger",
       "Uli Schleußner"
+    ],
+    [
+      "Karl Florian Albert",
+      "Pascal Wagner",
+      "Robin Riemenschneider"
     ],
     [
       "Karsten Neupert",
