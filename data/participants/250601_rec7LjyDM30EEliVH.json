@@ -1,12 +1,17 @@
 {
-  "date": "2025-05-16T03:40:21.734687",
+  "date": "2025-05-16T09:19:39.939996",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 534,
+  "count": 537,
   "teams": [
     [
       "Adrian Mandt",
       "David Lesch",
       "Frederik Weidner"
+    ],
+    [
+      "Albrecht Gutjahr",
+      "Michael Manto",
+      "Patrick Lorz"
     ],
     [
       "Alejandro Hernandez-Bonell",
@@ -26,7 +31,7 @@
     [
       "Alexander Eitzeroth",
       "Finn Becker",
-      "Stefan Voigt"
+      "Patrick Kovacic"
     ],
     [
       "Alexander Fischer",
@@ -347,6 +352,11 @@
       "Daniel Gantz",
       "Magnus Ebert",
       "Niklas Nolte"
+    ],
+    [
+      "Daniel Memmel",
+      "René Hacker",
+      "Torsten Zarnke"
     ],
     [
       "Daniel Muth",
@@ -862,11 +872,6 @@
       "N. N.",
       "N. N.",
       "Steffen Waschki"
-    ],
-    [
-      "N. N.",
-      "René Hacker",
-      "Torsten Zarnke"
     ],
     [
       "N.n. N.n.",
