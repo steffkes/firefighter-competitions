@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-20T03:39:58.328388",
+  "date": "2025-05-20T09:26:50.519949",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 555,
+  "count": 552,
   "teams": [
     [
       "Adrian Mandt",
@@ -162,6 +162,11 @@
       "André-Marcel Hess",
       "Carsten Schwägerl",
       "Maurice Hess"
+    ],
+    [
+      "Andy Bühner",
+      "Fabienne Quitter",
+      "Steffen Leppler"
     ],
     [
       "Anina Höper",
@@ -339,6 +344,11 @@
       "Sebastian Haas"
     ],
     [
+      "Christoph Johne",
+      "Leonhard Kreutz",
+      "Philipp Herberich"
+    ],
+    [
       "Christoph Stengel",
       "Tim Elsenheimer",
       "Tobias Kreis"
@@ -381,7 +391,7 @@
     [
       "Daniel Kister",
       "Michael Bahmann",
-      "Tursky Niko"
+      "Niko Tursky"
     ],
     [
       "Daniel Memmel",
@@ -412,11 +422,6 @@
       "David Eckel",
       "Lisa Benz",
       "Thorsten Bruck"
-    ],
-    [
-      "Denise Öztürk",
-      "Jonas Medelnik",
-      "Lasse Janus"
     ],
     [
       "Dennis Hofmann",
@@ -764,11 +769,6 @@
       "Ralf Zinn"
     ],
     [
-      "Leonhard Kreutz",
-      "N. N.",
-      "Philipp Herberich"
-    ],
-    [
       "Lorenz Röhrig",
       "Manuel Grünewald",
       "Michelle Keller"
@@ -892,11 +892,6 @@
       "Moritz Nagel",
       "Stefan Matheis",
       "Tobias Diedrigkeit"
-    ],
-    [
-      "N. N.",
-      "N. N.",
-      "N. N."
     ],
     [
       "N. N.",
