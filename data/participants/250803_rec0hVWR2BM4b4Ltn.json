@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-26T09:41:53.847035",
+  "date": "2025-05-26T15:23:40.349735",
   "competition_id": "rec0hVWR2BM4b4Ltn",
-  "count": 604,
+  "count": 606,
   "teams": [
     [
       "Aaron Saad Albrecht",
@@ -70,6 +70,10 @@
     [
       "Alfons Hennemann",
       "Guido Feldhaus"
+    ],
+    [
+      "Alfonso Barcena",
+      "Thomas Schindele"
     ],
     [
       "Andre Bohlmann",
@@ -772,6 +776,10 @@
       "Swea Gerke"
     ],
     [
+      "Julien Danielzik",
+      "Max Kistner-Bahr"
+    ],
+    [
       "Julien Heiß",
       "Leon Sieburg"
     ],
@@ -1106,10 +1114,6 @@
     [
       "Oliver Thelen",
       "Tim Breickmann"
-    ],
-    [
-      "Oliver Waibel",
-      "Thomas Schindele"
     ],
     [
       "Pascal Haubrichs",
