@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-27T03:34:34.106713",
+  "date": "2025-05-27T09:22:50.548454",
   "competition_id": "rec7LjyDM30EEliVH",
-  "count": 552,
+  "count": 567,
   "teams": [
     [
       "Adrian Mandt",
@@ -47,6 +47,11 @@
       "Alexander Gohlke",
       "Andreas Weißelberg",
       "Sebastian Durth"
+    ],
+    [
+      "Alexander Gröninger",
+      "Kevin Splittstößer",
+      "Marcus Kipp"
     ],
     [
       "Alexander Haslböck",
@@ -147,6 +152,11 @@
       "Andreas Conrad",
       "Clara Conrad",
       "Jan Kühn"
+    ],
+    [
+      "Andreas Kramer",
+      "Jan Ballerstaedt",
+      "Jan-Erik Stern"
     ],
     [
       "André Wagner",
@@ -620,13 +630,18 @@
     ],
     [
       "Franziska Läßig",
-      "Konstantina Arvanitidi",
-      "Robin Küster"
+      "Marvin Reinecke",
+      "Maximilian Berg"
     ],
     [
       "Frederik Gebbeken",
       "Lukas Weißelberg",
       "Stephan Kesisoglu"
+    ],
+    [
+      "Frederik Wörn",
+      "Gabriel Kupka",
+      "Klaudia Jaros"
     ],
     [
       "Gregor Wilhelm",
@@ -759,6 +774,11 @@
       "Torben Hedderich"
     ],
     [
+      "Konstantina Arvanitidi",
+      "Nicholas Wolf",
+      "Robin Küster"
+    ],
+    [
       "Lennart Ziegler",
       "Noah Ziegler",
       "Robin Ziegler"
@@ -834,14 +854,14 @@
       "Wolfgang Mueller"
     ],
     [
+      "Martin Margraf",
+      "Niklas Koch",
+      "Simon Massholder"
+    ],
+    [
       "Marvin Mocker",
       "Moritz Pelosato",
       "Timo Bender"
-    ],
-    [
-      "Marvin Reinecke",
-      "Maximilian Berg",
-      "Nicholas Wolf"
     ],
     [
       "Marvin Rock",
@@ -902,6 +922,11 @@
       "N. N.",
       "N. N.",
       "Steffen Waschki"
+    ],
+    [
+      "N. N.",
+      "Sascha Kaiser",
+      "Tim Gilmer"
     ],
     [
       "Nicolas Faure",
