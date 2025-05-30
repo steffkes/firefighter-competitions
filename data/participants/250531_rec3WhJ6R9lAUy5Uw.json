@@ -1,7 +1,7 @@
 {
-  "date": "2025-05-30T09:19:28.732474",
+  "date": "2025-05-30T15:20:04.422093",
   "competition_id": "rec3WhJ6R9lAUy5Uw",
-  "count": 6,
+  "count": 9,
   "teams": [
     [
       "Jason van Emmenes"
@@ -10,7 +10,13 @@
       "Johanna Storms"
     ],
     [
+      "Marcel Fuhrmann"
+    ],
+    [
       "Marcel Weichert"
+    ],
+    [
+      "Marius Weidner"
     ],
     [
       "Niclas Holthaus"
@@ -20,6 +26,9 @@
     ],
     [
       "Tobias Diedrigkeit"
+    ],
+    [
+      "Tobias Schiffer"
     ]
   ]
 }
