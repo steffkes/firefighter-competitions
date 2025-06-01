@@ -1,5 +1,5 @@
 {
-  "date": "2025-06-01T03:17:52.956313",
+  "date": "2025-06-01T09:18:44.463382",
   "competition_id": "rec7LjyDM30EEliVH",
   "count": 567,
   "teams": [
@@ -199,6 +199,11 @@
       "Thore Benz"
     ],
     [
+      "Arno Schulze",
+      "Jakob Messer",
+      "Leonie Grebe"
+    ],
+    [
       "Aron Horn",
       "Jonas-Fynn Morhard",
       "Luis Fuchs"
@@ -275,8 +280,8 @@
     ],
     [
       "Bryan Pesché",
-      "Cyril Lickes",
-      "Gilles Hutmacher"
+      "Gilles Hutmacher",
+      "Philipp Lepage"
     ],
     [
       "Catrin Klemm -Möhn",
@@ -389,6 +394,11 @@
       "Simon Weißer"
     ],
     [
+      "Daniel Buhl",
+      "Maximilian Jöst",
+      "Micha Krimm"
+    ],
+    [
       "Daniel Dux",
       "Philipp Steichen",
       "Samuel Scherer"
@@ -499,14 +509,9 @@
       "Lisa Koep"
     ],
     [
-      "Eric Mrosek",
-      "Florian Leuchtweis",
-      "Malte Menold"
-    ],
-    [
       "Erwin Kukuljac",
-      "Luca Weis",
-      "Stefan Trzaska"
+      "Luca Rajic",
+      "Luca Weis"
     ],
     [
       "Fabian Beck",
@@ -599,9 +604,9 @@
       "Sebastian Schmid"
     ],
     [
-      "Florian Rose",
-      "Nico Rütershoff",
-      "Torge Brunhorn"
+      "Florian Leuchtweis",
+      "Malte Menold",
+      "Philipp Paschke"
     ],
     [
       "Florian Röll",
@@ -662,11 +667,6 @@
       "Jakob Albert",
       "Johannes Schmitt",
       "Tim Heckmann"
-    ],
-    [
-      "Jakob Messer",
-      "Leonie Grebe",
-      "Sarah Schwab"
     ],
     [
       "Jan Kilb",
@@ -889,11 +889,6 @@
       "Sebastian Fischer"
     ],
     [
-      "Maximilian Genders",
-      "Maximilian Jöst",
-      "Micha Krimm"
-    ],
-    [
       "Melanie Brück",
       "Robin Fischer",
       "Sebastian Büchling"
@@ -927,6 +922,11 @@
       "N. N.",
       "Sascha Kaiser",
       "Tim Gilmer"
+    ],
+    [
+      "Nico Rütershoff",
+      "Robert Schneider",
+      "Torge Brunhorn"
     ],
     [
       "Nicolas Faure",
