@@ -1,7 +1,7 @@
 {
-  "date": "2025-06-05T03:44:33.102316",
+  "date": "2025-06-05T09:22:42.488346",
   "competition_id": "reczDUPUd3QCRSGFr",
-  "count": 48,
+  "count": 54,
   "teams": [
     [
       "Alexander Tönges",
@@ -34,6 +34,10 @@
     [
       "Dominic Scholz",
       "Simon Gapp"
+    ],
+    [
+      "Dominik Schmidt",
+      "Timo Bonifer"
     ],
     [
       "Eric Niebergall",
@@ -84,6 +88,10 @@
       "Leigh Traber"
     ],
     [
+      "Mathias Mämpel",
+      "Stefan Kompauer"
+    ],
+    [
       "Max Kärcher",
       "Philipp Burkart"
     ],
@@ -98,6 +106,10 @@
     [
       "Philipp Diegler",
       "Tom Klauck"
+    ],
+    [
+      "Rui Lourenco",
+      "Victoria Buchholz"
     ]
   ]
 }
