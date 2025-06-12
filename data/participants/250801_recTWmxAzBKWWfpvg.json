@@ -1,7 +1,7 @@
 {
-  "date": "2025-06-12T09:24:32.828211",
+  "date": "2025-06-12T15:16:42.413976",
   "competition_id": "recTWmxAzBKWWfpvg",
-  "count": 306,
+  "count": 310,
   "teams": [
     [
       "Aaron Begier",
@@ -112,6 +112,10 @@
       "Heiko Oswald"
     ],
     [
+      "Benjamin Heid",
+      "Sebastian Nauth"
+    ],
+    [
       "Benjamin Marz",
       "Frederic Rühle"
     ],
@@ -128,12 +132,12 @@
       "Jonas Maag"
     ],
     [
-      "Bisinger Robin",
-      "Florian Feuerbacher"
+      "Bernd Helmer",
+      "Johannes Müller"
     ],
     [
-      "Bjarne Henningsen",
-      "Salih Kahraman"
+      "Bisinger Robin",
+      "Florian Feuerbacher"
     ],
     [
       "Björn Hartlieb",
@@ -194,10 +198,6 @@
     [
       "Demmer Maurice",
       "Raphael Heck"
-    ],
-    [
-      "Denis Müller",
-      "Steven Wolf"
     ],
     [
       "Dennis Fischer",
@@ -264,6 +264,10 @@
       "Simon Hauber"
     ],
     [
+      "Florian Takacs",
+      "Simon Hüsges"
+    ],
+    [
       "Fritz Bommer",
       "Maximilian Weinert"
     ],
@@ -304,6 +308,10 @@
       "Tom Storz"
     ],
     [
+      "Jan Ottersky",
+      "Steven Wolf"
+    ],
+    [
       "Jann Gampper",
       "Marwan Schaus"
     ],
@@ -318,10 +326,6 @@
     [
       "Jannik Ronellenfitsch",
       "Sebastian Müller"
-    ],
-    [
-      "Jasmin Schwarz",
-      "Laura Schwarz"
     ],
     [
       "Jens Bader",
@@ -438,6 +442,10 @@
     [
       "Louisa Wein",
       "Stefan Hoppe"
+    ],
+    [
+      "Lucas Nauth",
+      "Rico Zischka"
     ],
     [
       "Lucie König",
