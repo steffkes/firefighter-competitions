@@ -1,7 +1,7 @@
 {
-  "date": "2025-06-14T09:15:22.735204",
+  "date": "2025-06-14T15:13:49.844558",
   "competition_id": "recooWID949hlRemN",
-  "count": 692,
+  "count": 691,
   "teams": [
     [
       "Adam Slavicek"
@@ -112,9 +112,6 @@
       "David Kubis"
     ],
     [
-      "David Probst"
-    ],
-    [
       "Dawid Rabczyk"
     ],
     [
@@ -134,6 +131,18 @@
     ],
     [
       "Dominik Zirbes"
+    ],
+    [
+      "Dummy Dummy"
+    ],
+    [
+      "Dummy Dummy"
+    ],
+    [
+      "Dummy Dummy"
+    ],
+    [
+      "Dummy Dummy"
     ],
     [
       "Egidijus Krivickas"
@@ -211,9 +220,6 @@
       "Jan Pipis"
     ],
     [
-      "Jan Volfl"
-    ],
-    [
       "Jan Wisniewski"
     ],
     [
@@ -269,9 +275,6 @@
     ],
     [
       "Lena Schuster"
-    ],
-    [
-      "Lubomír Králíček"
     ],
     [
       "Luka Heim"
@@ -574,6 +577,9 @@
       "Sören Warzok"
     ],
     [
+      "Tautvydas Sauciunas"
+    ],
+    [
       "Thomas Bogovits"
     ],
     [
@@ -629,9 +635,6 @@
     ],
     [
       "Vladyslav Oliinyk"
-    ],
-    [
-      "Vojtěch Kaštánek"
     ],
     [
       "Wolfgang Stark"
@@ -909,12 +912,12 @@
       "Simon Burger"
     ],
     [
-      "Jan Völfl",
-      "Martin Mrzena"
-    ],
-    [
       "Jannik Werner",
       "Mike Stöbener"
+    ],
+    [
+      "Janota Ondr",
+      "Martin Mrzena"
     ],
     [
       "Jaroslav Visnevski",
@@ -959,10 +962,6 @@
     [
       "Lena Schuster",
       "Sören Warzok"
-    ],
-    [
-      "Luboš Králíček",
-      "Ondřej Blažek"
     ],
     [
       "Luka Heim",
@@ -1295,8 +1294,8 @@
     [
       "Adam Slavíček",
       "David Kubiš",
-      "Luboš Králíček",
       "Martin Mrzena",
+      "Ondrej Janota",
       "Ondřej Blažek"
     ],
     [
