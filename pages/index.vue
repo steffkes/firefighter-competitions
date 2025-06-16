@@ -96,6 +96,7 @@
           <tbody>
             <CompetitionRow
               v-for="competition in upcomingRegistrations"
+              :key="competition.id"
               :competition="competition"
             />
           </tbody>
@@ -123,6 +124,7 @@
 
             <CompetitionRow
               v-for="competition in filteredCompetitions"
+              :key="competition.id"
               :competition="competition"
             />
           </tbody>
