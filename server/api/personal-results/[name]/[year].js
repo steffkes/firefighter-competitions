@@ -30,7 +30,7 @@ WHERE $1 = ANY(names)`,
 
   return result.rows
     .filter(({ competition_id }) =>
-      competitions[competition_id].date.start?.startsWith(requestedYear),
+      competitions[competition_id]?.date?.start?.startsWith(requestedYear),
     )
     .toSorted((a, b) =>
       competitions[a.competition_id].date.start.localeCompare(
