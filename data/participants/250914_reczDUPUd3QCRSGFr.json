@@ -1,7 +1,7 @@
 {
-  "date": "2025-06-30T09:01:03.052185",
+  "date": "2025-06-30T15:17:02.872111",
   "competition_id": "reczDUPUd3QCRSGFr",
-  "count": 68,
+  "count": 76,
   "teams": [
     [
       "Alexander Proff",
@@ -10,6 +10,10 @@
     [
       "Alexander Tönges",
       "Andreas Friedrich"
+    ],
+    [
+      "Anna Henke",
+      "Christian Alflen"
     ],
     [
       "Ben Jäger",
@@ -34,6 +38,10 @@
     [
       "Christian Koch",
       "Petra Koch"
+    ],
+    [
+      "Christoph Steigerwald",
+      "Marc Besch"
     ],
     [
       "Daniel Minnert",
@@ -104,6 +112,10 @@
       "Sebastian Stoffel"
     ],
     [
+      "Kilian Dominik Jonas",
+      "Marcel Ziefle"
+    ],
+    [
       "Lars Iwer",
       "Michael Wollstädter"
     ],
@@ -138,6 +150,10 @@
     [
       "Rui Lourenco",
       "Victoria Buchholz"
+    ],
+    [
+      "Stefan Merkel",
+      "Tobias Müller"
     ]
   ]
 }
