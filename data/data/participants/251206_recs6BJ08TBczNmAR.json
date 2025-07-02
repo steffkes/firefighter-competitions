@@ -1,11 +1,15 @@
 {
-  "date": "2025-07-02T09:01:36.082430",
+  "date": "2025-07-02T15:17:04.980547",
   "competition_id": "recs6BJ08TBczNmAR",
-  "count": 240,
+  "count": 258,
   "teams": [
     [
       "Adrian Jagusch",
       "Kai Reichelt"
+    ],
+    [
+      "Alex Bartelt",
+      "Philip Voigt"
     ],
     [
       "Alex Fromme",
@@ -30,6 +34,10 @@
     [
       "Alexander Tönges",
       "Andreas Friedrich"
+    ],
+    [
+      "Andre Tomkowiak",
+      "Sascha Müller"
     ],
     [
       "Andreas Schumann",
@@ -192,6 +200,10 @@
       "Yannik Oklitschek"
     ],
     [
+      "Florian Sickert",
+      "Richard Hauschild"
+    ],
+    [
       "Florian Wedel",
       "Norma Hemmann"
     ],
@@ -230,6 +242,10 @@
     [
       "Huldreich Schäbs",
       "Sarah Pfetzing"
+    ],
+    [
+      "Ian Born",
+      "Jamie Petzold"
     ],
     [
       "Ingo Blut",
@@ -312,6 +328,10 @@
       "Lena Wagner"
     ],
     [
+      "Julian Schmitt",
+      "Martina Schönek"
+    ],
+    [
       "Julius Lange",
       "Max Landgraf"
     ],
@@ -332,12 +352,24 @@
       "Maik Meiritz"
     ],
     [
+      "Kevin Kiessbauer",
+      "Tim Rommert"
+    ],
+    [
       "Kevin Megert",
       "Patrick Kordts"
     ],
     [
+      "Lars Homeyer",
+      "Tobias Krösch"
+    ],
+    [
       "Lars Rödel",
       "Tobias Bartsch"
+    ],
+    [
+      "Lea Bartaune",
+      "Tim Rommer"
     ],
     [
       "Lee Röver",
@@ -466,6 +498,10 @@
     [
       "Rico Börno",
       "Rocco Ansorge"
+    ],
+    [
+      "Rune Jäger",
+      "Sebastian Nave"
     ],
     [
       "Scarlett Franco",
