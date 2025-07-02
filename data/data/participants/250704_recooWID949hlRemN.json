@@ -1,7 +1,7 @@
 {
-  "date": "2025-07-02T03:50:26.321683",
+  "date": "2025-07-02T09:01:11.606454",
   "competition_id": "recooWID949hlRemN",
-  "count": 707,
+  "count": 709,
   "teams": [
     [
       "Adam Slavicek"
@@ -64,6 +64,9 @@
       "Baigum Abrahams"
     ],
     [
+      "Balint Tacasz"
+    ],
+    [
       "Benjamin Fleischer"
     ],
     [
@@ -113,6 +116,9 @@
     ],
     [
       "David Kubis"
+    ],
+    [
+      "David Probst"
     ],
     [
       "Dawid Rabczyk"
@@ -1167,6 +1173,11 @@
       "Vera Licha"
     ],
     [
+      "Alexander Hellwig",
+      "Balint Tacasz",
+      "Michel Menten"
+    ],
+    [
       "Alexander Sader",
       "Chiara Schmidt",
       "Tobias Fischer"
@@ -1202,11 +1213,6 @@
       "Simon Burger"
     ],
     [
-      "Jörg Winkler",
-      "Mario Fleerkortte",
-      "Mirco Feuerhack"
-    ],
-    [
       "Markus Brockers",
       "Matthias Metzen",
       "Stefan Masson"
@@ -1215,12 +1221,6 @@
       "Patrick Kirsch",
       "Robin Kuhnert",
       "Sascha Wermeier"
-    ],
-    [
-      "",
-      "Alexander Hellwig",
-      "Balint Tacasz",
-      "Michel Menten"
     ],
     [
       "Alan Dittrich",
@@ -1305,6 +1305,12 @@
       "Maurice Clemens",
       "Stefan Fetting",
       "Timo Schulz"
+    ],
+    [
+      "Jörg Winkler",
+      "Mario Fleerkortte",
+      "Matthias Schmitt",
+      "Mirco Feuerhack"
     ],
     [
       "Nick Kuhlen",
