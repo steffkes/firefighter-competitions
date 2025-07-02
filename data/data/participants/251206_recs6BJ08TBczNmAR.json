@@ -1,7 +1,12 @@
 {
-  "date": "2025-07-02T15:17:04.980547",
+  "date": "2025-07-02T21:18:42.532332",
   "competition_id": "recs6BJ08TBczNmAR",
-  "count": 258,
+  "slots": [
+    {
+      "amount": 59
+    }
+  ],
+  "count": 282,
   "teams": [
     [
       "Adrian Jagusch",
@@ -34,6 +39,10 @@
     [
       "Alexander Tönges",
       "Andreas Friedrich"
+    ],
+    [
+      "Alexander Weiß",
+      "Stefan Matheis"
     ],
     [
       "Andre Tomkowiak",
@@ -92,6 +101,10 @@
       "Jascha Burow"
     ],
     [
+      "Carsten Rudolph",
+      "Paul Schädel"
+    ],
+    [
       "Cedric Matthäus",
       "Yannick Eckelt"
     ],
@@ -114,6 +127,10 @@
     [
       "Christian Lutat",
       "Florian Krautwurst"
+    ],
+    [
+      "Christian Marks",
+      "Florian Oertelt-Grimm"
     ],
     [
       "Christoph Jennrich",
@@ -152,6 +169,10 @@
       "Lorena Heider"
     ],
     [
+      "David Stilper",
+      "Saupe Frank"
+    ],
+    [
       "Dominik Brand",
       "Niclas Meyenschein"
     ],
@@ -166,6 +187,10 @@
     [
       "Elias Behmke",
       "Jens Obermann"
+    ],
+    [
+      "Enrico Kohl",
+      "Tuchbreiter Nicole"
     ],
     [
       "Erik Langenhahn",
@@ -208,6 +233,10 @@
       "Norma Hemmann"
     ],
     [
+      "Frank Saupe",
+      "Weickmann Matthias"
+    ],
+    [
       "Gerrit Lindlein",
       "Maurice Clemens"
     ],
@@ -230,6 +259,10 @@
     [
       "Harry Blume",
       "Stefan Heider"
+    ],
+    [
+      "Heiko Pandza",
+      "Madlen Illig"
     ],
     [
       "Henrik Düffert",
@@ -262,6 +295,10 @@
     [
       "Jan Kaiser",
       "Rick Flade"
+    ],
+    [
+      "Jan Schaar",
+      "Niclas Schaar"
     ],
     [
       "Jan-Nick Rische",
@@ -316,6 +353,10 @@
       "Stephan Zoschke"
     ],
     [
+      "Jost Karge",
+      "Leon Grabs"
+    ],
+    [
       "Julia Wester",
       "Martin Franke"
     ],
@@ -350,6 +391,10 @@
     [
       "Karsten Kala Kohrs",
       "Maik Meiritz"
+    ],
+    [
+      "Kay von Chamier",
+      "Marius Freimuth"
     ],
     [
       "Kevin Kiessbauer",
@@ -396,12 +441,20 @@
       "Robert Müller"
     ],
     [
+      "Lukas Lorenz",
+      "Toni Menzel"
+    ],
+    [
       "Lukas Zädow",
       "Nadja Boesler"
     ],
     [
       "Maik Freigang",
       "Sabine Sauer"
+    ],
+    [
+      "Maik Zschiesche",
+      "Sven Postel"
     ],
     [
       "Manuel Fleischhauer",
