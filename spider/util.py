@@ -68,14 +68,18 @@ class JsonItemExporter(BaseItemExporter):
             del slot["competition_id"]
             return slot
 
+        slots = sorted(
+            map(slotMapper, self.slots), key=lambda slot: (slot["label"] or "")
+        )
+
         teams = sorted(
             map(lambda item: item["names"], self.items),
             key=lambda names: (len(names), list(map(lambda name: name or "", names))),
         )
+
         data = {
-            "date": datetime.now().isoformat(),
             "competition_id": competition_id,
-            "slots": list(map(slotMapper, self.slots)),
+            "slots": slots,
             "count": len(list(itertools.chain.from_iterable(teams))),
             "teams": teams,
         }
@@ -129,6 +133,9 @@ class Spider(scrapy.Spider):
     ranks = {"category": {}, "age_group": {}}
 
     custom_settings = {
+        "DEFAULT_REQUEST_HEADERS": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+        },
         "FEED_EXPORTERS": {
             "starter": JsonItemExporter,
             "results": JsonLinesItemExporter,
