@@ -1,7 +1,7 @@
 {
   "competition_id": "recooWID949hlRemN",
   "slots": [],
-  "count": 709,
+  "count": 710,
   "teams": [
     [
       "Adam Dyson"
@@ -67,9 +67,6 @@
       "Baigum Abrahams"
     ],
     [
-      "Balint Tacasz"
-    ],
-    [
       "Benjamin Fleischer"
     ],
     [
@@ -115,6 +112,9 @@
       "David Kalicki"
     ],
     [
+      "David Kalicki"
+    ],
+    [
       "David Kubis"
     ],
     [
@@ -137,12 +137,6 @@
     ],
     [
       "Dominik Zirbes"
-    ],
-    [
-      "Dummy"
-    ],
-    [
-      "Dummy"
     ],
     [
       "Dummy"
@@ -179,9 +173,6 @@
     ],
     [
       "Florian Wedel"
-    ],
-    [
-      "Frank Peter"
     ],
     [
       "Gerald Aurisch"
@@ -257,9 +248,6 @@
     ],
     [
       "Jörg Eberhard"
-    ],
-    [
-      "Jörg Sven Winkler"
     ],
     [
       "Karolis Grazinis"
@@ -607,9 +595,6 @@
       "Tobias Fischer"
     ],
     [
-      "Tobias Nöhr"
-    ],
-    [
       "Tom Trost"
     ],
     [
@@ -655,16 +640,12 @@
       "Zora Werbke"
     ],
     [
-      "0000 0000",
-      "Thomas Schragner"
-    ],
-    [
       "???",
       "Krzysztof Stencel"
     ],
     [
       "Adam Slavíček",
-      "David Kubiš"
+      "Roman Munzer"
     ],
     [
       "Alan Dittrich",
@@ -675,8 +656,12 @@
       "Michel Menten"
     ],
     [
+      "Alexander Marschall",
+      "Andrè Moebes"
+    ],
+    [
       "Alexander Reitz",
-      "Patrick Boos"
+      "Simon Feuerhack"
     ],
     [
       "Alexander Sader",
@@ -699,8 +684,8 @@
       "Lars Nawrocki"
     ],
     [
-      "Andreas Gaßner",
-      "Lukas Gaßner"
+      "Andreas Gassner",
+      "Thomas Schragner"
     ],
     [
       "Andreas Wilhelm",
@@ -709,10 +694,6 @@
     [
       "Andrius Asmontas",
       "Marius Gasparenas"
-    ],
-    [
-      "Andrè Moebes",
-      "Moritz Bock"
     ],
     [
       "André Dupont",
@@ -733,10 +714,6 @@
     [
       "Anja Sudholt",
       "Gerrit Lindlein"
-    ],
-    [
-      "Anna Ja",
-      "Jannik Wagner"
     ],
     [
       "Anna Köllner",
@@ -800,7 +777,11 @@
     ],
     [
       "David Kalicki",
-      "Tobias Nöhr"
+      "Miriam Hübner"
+    ],
+    [
+      "David Kubas",
+      "Tomislav Visnar"
     ],
     [
       "Dawid Rabczyk",
@@ -908,7 +889,7 @@
     ],
     [
       "Jaka Kopitar",
-      "Mark Klemen"
+      "Miroc Michlovsky"
     ],
     [
       "Jamie Breckunitch",
@@ -925,6 +906,10 @@
     [
       "Jan Panick",
       "Simon Burger"
+    ],
+    [
+      "Jannik Wagner",
+      "Sina Berger"
     ],
     [
       "Jannik Werner",
@@ -955,10 +940,6 @@
       "Niklas Eberhard"
     ],
     [
-      "Jörg Sven Winkler",
-      "Mirco Feuerhack"
-    ],
-    [
       "Kathrin Grote Lambers",
       "Sven Ramaker"
     ],
@@ -983,6 +964,10 @@
       "Stefan Roskosch"
     ],
     [
+      "Lukas Gaßner",
+      "Thomas Bogovits"
+    ],
+    [
       "Lukas Leonavicius",
       "Romualdas Vilimas"
     ],
@@ -997,6 +982,10 @@
     [
       "Marina Nikic",
       "Verena Nikic"
+    ],
+    [
+      "Mario Fleerkorte",
+      "Mirco Feuerhack"
     ],
     [
       "Mario Hansen",
@@ -1076,7 +1065,7 @@
     ],
     [
       "Miriam Hübner",
-      "Tobias Nöhr"
+      "Sascha Michalla"
     ],
     [
       "Miro Michlovský",
@@ -1141,10 +1130,6 @@
     [
       "Robin Winter",
       "Steve Rimmer"
-    ],
-    [
-      "Roman Munzer",
-      "Tomislav Visnar"
     ],
     [
       "Ruben Werbke",
@@ -1228,7 +1213,7 @@
     ],
     [
       "Alessia Hörning",
-      "Nicole Mrosek",
+      "Jonas Eisenhauer",
       "Thorsten Kunz",
       "Viktoria Klik"
     ],
@@ -1245,12 +1230,6 @@
       "Travis Leonard"
     ],
     [
-      "Anna Jansen",
-      "Janna Hoppman",
-      "Marvin Stöbener",
-      "Oliver Wichert"
-    ],
-    [
       "Christian Küpers",
       "Kathrin Madlen Grote Lambers",
       "Mareike Rosenbaum",
@@ -1265,7 +1244,7 @@
     [
       "Denny Goldhahn",
       "Jannik Wagner",
-      "Maik Stöbener",
+      "Marvin Stöbener",
       "Michel Bantel"
     ],
     [
@@ -1305,16 +1284,16 @@
       "Timo Schulz"
     ],
     [
-      "Jörg Winkler",
-      "Mario Fleerkortte",
-      "Matthias Schmitt",
-      "Mirco Feuerhack"
+      "Isabell Dörbecher",
+      "Janna Hoppman",
+      "Mike Stöbener",
+      "Oliver Wichert"
     ],
     [
-      "Nick Kuhlen",
-      "Olaf Krause",
-      "Phillip Blau",
-      "Yannic Linnemann"
+      "Mario Fleerkortte",
+      "Mathias Barkling",
+      "Matthias Schmitt",
+      "Mirco Feuerhack"
     ],
     [
       "Adam Slavíček",
@@ -1322,6 +1301,13 @@
       "Martin Mrzena",
       "Ondrej Janota",
       "Ondřej Blažek"
+    ],
+    [
+      "Adrian Schmiemann",
+      "Nick Kuhlen",
+      "Olaf Krause",
+      "Phillip Blau",
+      "Yannic Linnemann"
     ],
     [
       "Alexander Kulhawy",
@@ -1364,6 +1350,13 @@
       "Björn Herborn",
       "Dominic Scholz",
       "Simon Gapp"
+    ],
+    [
+      "Andreas Gassner",
+      "Lukas Gassner",
+      "Markus Heiss",
+      "Thomas Bogovits",
+      "Thomas Schragner"
     ],
     [
       "Andrius Asmontas",

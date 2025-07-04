@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 26
+      "amount": 18
     }
   ],
-  "count": 348,
+  "count": 364,
   "teams": [
     [
       "Adrian Jagusch",
@@ -104,12 +104,12 @@
       "Kirsten Schneidereit"
     ],
     [
-      "Brayen Kandetzki",
-      "Simeon Feige"
-    ],
-    [
       "Bruno Ebermann",
       "Max Freudenberg"
+    ],
+    [
+      "Bryan Kandetzki",
+      "Simeon Feige"
     ],
     [
       "Carsten Janßen",
@@ -232,6 +232,10 @@
       "Jens Obermann"
     ],
     [
+      "Elly Schweigert",
+      "Yvonne Zeiner"
+    ],
+    [
       "Enrico Kohl",
       "Tuchbreiter Nicole"
     ],
@@ -278,6 +282,10 @@
     [
       "Florian Hockauf",
       "Julian Thormeyer"
+    ],
+    [
+      "Florian Maaß",
+      "Jasper Lettow"
     ],
     [
       "Florian Ruth",
@@ -432,6 +440,10 @@
       "Leon Grabs"
     ],
     [
+      "Joy Ann Beßler",
+      "Paul Sänger"
+    ],
+    [
       "Julia Wester",
       "Martin Franke"
     ],
@@ -496,6 +508,10 @@
       "Patrick Kordts"
     ],
     [
+      "Konrad Kröber",
+      "Nico Lehnigk"
+    ],
+    [
       "Lars Homeyer",
       "Tobias Krösch"
     ],
@@ -522,6 +538,14 @@
     [
       "Leon Wenzel",
       "Riccardo Rüster"
+    ],
+    [
+      "Leonard Brost",
+      "Thomas Monreal"
+    ],
+    [
+      "Linus Merkel",
+      "Tobias Schmitt"
     ],
     [
       "Luca Munz",
@@ -670,6 +694,14 @@
     [
       "Patrick Hein",
       "Sebastian Sauer"
+    ],
+    [
+      "Patrick Riedel",
+      "Tommy Voigt"
+    ],
+    [
+      "Paul Schlonsak",
+      "Uwe Schlonsak"
     ],
     [
       "Pierre Aster",
