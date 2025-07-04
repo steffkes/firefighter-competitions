@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 32
+      "amount": 27
     }
   ],
-  "count": 336,
+  "count": 346,
   "teams": [
     [
       "Adrian Jagusch",
@@ -160,6 +160,10 @@
       "Philipp Herberich"
     ],
     [
+      "Christoph Minderlein",
+      "Jannes Baumann"
+    ],
+    [
       "Christopher Reith",
       "Kilian Kreutz"
     ],
@@ -204,6 +208,10 @@
       "Lorena Heider"
     ],
     [
+      "David Bakker",
+      "Rob Klaasen"
+    ],
+    [
       "David Stilper",
       "Saupe Frank"
     ],
@@ -228,8 +236,16 @@
       "Tuchbreiter Nicole"
     ],
     [
+      "Eric Hering",
+      "Stefan Marienthal"
+    ],
+    [
       "Erik Langenhahn",
       "Sean Paul Renker"
+    ],
+    [
+      "Fabian Blümmert",
+      "Matthias Schmitt"
     ],
     [
       "Fabian Kluge",
@@ -454,6 +470,10 @@
     [
       "Karel Zapletal",
       "Lukas Mooz"
+    ],
+    [
+      "Karl Weinert",
+      "Milena Weiss"
     ],
     [
       "Karsten Kala Kohrs",
