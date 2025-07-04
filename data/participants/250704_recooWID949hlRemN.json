@@ -1,8 +1,11 @@
 {
   "competition_id": "recooWID949hlRemN",
   "slots": [],
-  "count": 707,
+  "count": 709,
   "teams": [
+    [
+      "Adam Dyson"
+    ],
     [
       "Adam Slavicek"
     ],
@@ -35,6 +38,9 @@
     ],
     [
       "Alexander Tittelbach"
+    ],
+    [
+      "Andre Kühne"
     ],
     [
       "Andreas Gaßner"
@@ -110,9 +116,6 @@
     ],
     [
       "David Kubis"
-    ],
-    [
-      "David Probst"
     ],
     [
       "Dawid Rabczyk"
@@ -529,9 +532,6 @@
       "Rüdiger Zeuner-Christ"
     ],
     [
-      "Sabine Sauer"
-    ],
-    [
       "Sascha Michala"
     ],
     [
@@ -731,6 +731,10 @@
       "Melanie Schönewald"
     ],
     [
+      "Anja Sudholt",
+      "Gerrit Lindlein"
+    ],
+    [
       "Anna Ja",
       "Jannik Wagner"
     ],
@@ -869,10 +873,6 @@
     [
       "Gerd Müller",
       "Wolfgang Stark"
-    ],
-    [
-      "Gerrit Lindlein",
-      "Nicole Mrosek"
     ],
     [
       "Gerrit Lindlein",
@@ -1036,6 +1036,10 @@
     ],
     [
       "Maurine Kronberg",
+      "Sabine Sauer"
+    ],
+    [
+      "Maurine Kronberg",
       "Stefan Fetting"
     ],
     [
@@ -1083,8 +1087,8 @@
       "Phillip Blau"
     ],
     [
-      "Nicole Mrosek",
-      "Sabine Sauer"
+      "Nico Burelbach",
+      "Thilo Willems"
     ],
     [
       "Nils Plattner",
