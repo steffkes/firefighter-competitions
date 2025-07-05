@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 18
+      "amount": 15
     }
   ],
-  "count": 364,
+  "count": 370,
   "teams": [
     [
       "Adrian Jagusch",
@@ -96,6 +96,10 @@
       "Lars Mayer"
     ],
     [
+      "Benny Polnik",
+      "Leon Wendler"
+    ],
+    [
       "Björn Herborn",
       "Daniel Pätzolt"
     ],
@@ -106,6 +110,10 @@
     [
       "Bruno Ebermann",
       "Max Freudenberg"
+    ],
+    [
+      "Bruno Höhne",
+      "Tim Schütze"
     ],
     [
       "Bryan Kandetzki",
@@ -602,6 +610,10 @@
     [
       "Marius Lindlein",
       "Philipp Juffa"
+    ],
+    [
+      "Mark Bauer",
+      "Thomas Noack"
     ],
     [
       "Markus Fladung",
