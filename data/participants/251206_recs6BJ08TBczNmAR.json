@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 3
+      "amount": 48
     }
   ],
-  "count": 394,
+  "count": 404,
   "teams": [
     [
       "Adrian Jagusch",
@@ -204,6 +204,10 @@
       "Ina Düll"
     ],
     [
+      "Damon Winkler",
+      "Moritz Rudi Euchler"
+    ],
+    [
       "Daniel Havmand",
       "Ole Nedergaard"
     ],
@@ -246,6 +250,10 @@
     [
       "David Stilper",
       "Saupe Frank"
+    ],
+    [
+      "Dominic Leon Götz",
+      "Lukas Schilling"
     ],
     [
       "Dominik Brand",
@@ -330,6 +338,10 @@
     [
       "Florian Wedel",
       "Norma Hemmann"
+    ],
+    [
+      "Frank Malcher",
+      "Joshua Horn"
     ],
     [
       "Frank Saupe",
@@ -660,6 +672,10 @@
       "Thomas Noack"
     ],
     [
+      "Markus Berg",
+      "Thorben Berg"
+    ],
+    [
       "Markus Fladung",
       "Steffen Siebert"
     ],
@@ -678,6 +694,10 @@
     [
       "Martino Jungbauer",
       "Michael Friedrich"
+    ],
+    [
+      "Marvin Gürtler",
+      "Niklas Röneke"
     ],
     [
       "Marvin Hänel",
