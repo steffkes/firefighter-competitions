@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 9
+      "amount": 3
     }
   ],
-  "count": 382,
+  "count": 394,
   "teams": [
     [
       "Adrian Jagusch",
@@ -26,6 +26,10 @@
     [
       "Alexander Faber",
       "Simon Gilbert"
+    ],
+    [
+      "Alexander Gottfried",
+      "Marcel Schumacher"
     ],
     [
       "Alexander Greis",
@@ -204,6 +208,10 @@
       "Ole Nedergaard"
     ],
     [
+      "Daniel Hiekel",
+      "Kevin Stolze"
+    ],
+    [
       "Daniel Hörschelmann",
       "Tamina Lorbach"
     ],
@@ -230,6 +238,10 @@
     [
       "David Bakker",
       "Rob Klaasen"
+    ],
+    [
+      "David Schwalke",
+      "Jeremy Olszewski"
     ],
     [
       "David Stilper",
@@ -380,6 +392,10 @@
       "Sebastian von Hartz"
     ],
     [
+      "Jakob Seufert",
+      "Ole Schmitt"
+    ],
+    [
       "Jakub Kulhánek",
       "Petr Urban"
     ],
@@ -416,6 +432,10 @@
       "Sebastian Brandt"
     ],
     [
+      "Jannis Görlinger",
+      "Noa Schmidt"
+    ],
+    [
       "Jannis Heider",
       "Niklas Pfeil"
     ],
@@ -434,6 +454,10 @@
     [
       "Joan Olucha",
       "Vincent Hoffmann"
+    ],
+    [
+      "Johanna Kirschner",
+      "Luca Malcher"
     ],
     [
       "Johannes Göttlinger",
