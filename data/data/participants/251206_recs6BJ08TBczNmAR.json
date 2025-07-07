@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 42
+      "amount": 38
     }
   ],
-  "count": 416,
+  "count": 424,
   "teams": [
     [
       "Adrian Jagusch",
@@ -208,6 +208,10 @@
       "Ina Düll"
     ],
     [
+      "Clemens Heyder",
+      "Stefan Helwig"
+    ],
+    [
       "Damon Winkler",
       "Moritz Rudi Euchler"
     ],
@@ -230,6 +234,10 @@
     [
       "Daniel Müller",
       "Frank Schneider"
+    ],
+    [
+      "Daniel Richter",
+      "Philipp Lehmann"
     ],
     [
       "Daniel Ruder",
@@ -374,6 +382,10 @@
     [
       "Hannes Schmid",
       "Jochen Stolz"
+    ],
+    [
+      "Hannes Wild",
+      "Jan Hoffmann"
     ],
     [
       "Hans Hänke",
@@ -546,6 +558,10 @@
     [
       "Jürgen Alfanz",
       "Konstantin Leitenbauer"
+    ],
+    [
+      "Jürgen Herberich",
+      "Markus Herberich"
     ],
     [
       "Kai Neugebauer",
