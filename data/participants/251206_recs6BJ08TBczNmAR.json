@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 45
+      "amount": 42
     }
   ],
-  "count": 410,
+  "count": 416,
   "teams": [
     [
       "Adrian Jagusch",
@@ -304,6 +304,10 @@
       "Patrick Sauter"
     ],
     [
+      "Felix Hartung",
+      "Lukas Mann"
+    ],
+    [
       "Felix Hentschel",
       "Matthias Lemm"
     ],
@@ -350,6 +354,10 @@
     [
       "Frank Saupe",
       "Weickmann Matthias"
+    ],
+    [
+      "Frederik Püls",
+      "Jannik Schorr"
     ],
     [
       "Gerrit Lindlein",
@@ -730,6 +738,10 @@
     [
       "Max Dittmann",
       "Sebastian Grieser"
+    ],
+    [
+      "Max Dransfeld",
+      "Rebekka Große"
     ],
     [
       "Maximilian Kiehl",
