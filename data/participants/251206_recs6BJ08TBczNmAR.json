@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 48
+      "amount": 45
     }
   ],
-  "count": 404,
+  "count": 410,
   "teams": [
     [
       "Adrian Jagusch",
@@ -50,6 +50,10 @@
     [
       "Alexander Weiß",
       "Stefan Matheis"
+    ],
+    [
+      "Andre Reisewitz",
+      "Burkhard Meyer"
     ],
     [
       "Andre Tomkowiak",
@@ -480,6 +484,10 @@
       "Tobias Rösch"
     ],
     [
+      "John Gutzke",
+      "Laura Andres"
+    ],
+    [
       "Jonas Martin",
       "Leah Sahner"
     ],
@@ -706,6 +714,10 @@
     [
       "Matthias Fröhlich",
       "Matthias Stumm"
+    ],
+    [
+      "Matthias Kaden",
+      "Michael Kaufmann"
     ],
     [
       "Matthias Weickmann",
