@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 32
+      "amount": 29
     }
   ],
-  "count": 436,
+  "count": 442,
   "teams": [
     [
       "Adrian Jagusch",
@@ -254,6 +254,10 @@
     [
       "Daniela Carl",
       "Lorena Heider"
+    ],
+    [
+      "David Abram",
+      "Tom Schlegel"
     ],
     [
       "David Bakker",
@@ -660,6 +664,10 @@
       "Mick Sauerland"
     ],
     [
+      "Lucas Zeuch",
+      "Nico Langmann"
+    ],
+    [
       "Luis Wölkner",
       "Robert Müller"
     ],
@@ -682,6 +690,10 @@
     [
       "Maik Zschiesche",
       "Sven Postel"
+    ],
+    [
+      "Manfred Lehmann",
+      "Maximilian Voelzke"
     ],
     [
       "Manuel Fleischhauer",
