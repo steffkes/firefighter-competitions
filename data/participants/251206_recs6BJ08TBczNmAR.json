@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 26
+      "amount": 23
     }
   ],
-  "count": 448,
+  "count": 454,
   "teams": [
     [
       "Adrian Jagusch",
@@ -194,6 +194,10 @@
     [
       "Christoph Minderlein",
       "Jannes Baumann"
+    ],
+    [
+      "Christoph Spranger",
+      "Kevin Germuhl"
     ],
     [
       "Christopher Reith",
@@ -628,6 +632,10 @@
       "Patrick Kordts"
     ],
     [
+      "Klaus Simon",
+      "Lena Lücker"
+    ],
+    [
       "Konrad Kröber",
       "Nico Lehnigk"
     ],
@@ -802,6 +810,10 @@
     [
       "Maximilian Kiehl",
       "Michael Scurla"
+    ],
+    [
+      "Michael Bantel",
+      "Ronny Pietsch"
     ],
     [
       "Michael Mehler",
