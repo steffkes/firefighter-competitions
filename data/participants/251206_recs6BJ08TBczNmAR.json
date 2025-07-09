@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 29
+      "amount": 26
     }
   ],
-  "count": 442,
+  "count": 448,
   "teams": [
     [
       "Adrian Jagusch",
@@ -156,6 +156,10 @@
       "Marco Illein"
     ],
     [
+      "Christian Grüner",
+      "Toni Schubert"
+    ],
+    [
       "Christian Kaplan",
       "Martin Machalke"
     ],
@@ -282,6 +286,10 @@
     [
       "Dominik Kohlmann",
       "Jakob Henning"
+    ],
+    [
+      "Dominik Krauß",
+      "Felix Spranger"
     ],
     [
       "Dominik Thiel",
@@ -422,6 +430,10 @@
     [
       "Henrik Düffert",
       "Henry Glanz"
+    ],
+    [
+      "Henry Strauß",
+      "Ronny Schenk"
     ],
     [
       "Hugo Hofmann",
