@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 23
+      "amount": 18
     }
   ],
-  "count": 454,
+  "count": 464,
   "teams": [
     [
       "Adrian Jagusch",
@@ -38,6 +38,10 @@
     [
       "Alexander Lang",
       "Michael Strauch"
+    ],
+    [
+      "Alexander Paul",
+      "Sandro Blume"
     ],
     [
       "Alexander Schulz",
@@ -348,6 +352,10 @@
       "Jonas Ziegaus"
     ],
     [
+      "Felix Paul",
+      "Willy Zisler"
+    ],
+    [
       "Finn Block",
       "Lucas Matties"
     ],
@@ -608,6 +616,10 @@
       "Lukas Mooz"
     ],
     [
+      "Karina Paul",
+      "Tobias Kaufung"
+    ],
+    [
       "Karl Weinert",
       "Milena Weiss"
     ],
@@ -668,6 +680,10 @@
       "Tristan Hose"
     ],
     [
+      "Leon Kaufung",
+      "Roberto Dornhofer"
+    ],
+    [
       "Leon Wenzel",
       "Riccardo Rüster"
     ],
@@ -702,6 +718,10 @@
     [
       "Lukas Zädow",
       "Nadja Boesler"
+    ],
+    [
+      "Maik Beyer",
+      "Robert Müller"
     ],
     [
       "Maik Freigang",
