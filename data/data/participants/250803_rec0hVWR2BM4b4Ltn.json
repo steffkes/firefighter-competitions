@@ -1,7 +1,7 @@
 {
   "competition_id": "rec0hVWR2BM4b4Ltn",
   "slots": [],
-  "count": 838,
+  "count": 842,
   "teams": [
     [
       "Aaron Saad Albrecht",
@@ -37,7 +37,7 @@
     ],
     [
       "Albert Marin",
-      "Stefan Reinhart"
+      "Florian Stortz"
     ],
     [
       "Alex Duarte Faceira",
@@ -104,6 +104,10 @@
       "Thomas Schindele"
     ],
     [
+      "Alina Denker",
+      "Richard Haase"
+    ],
+    [
       "Andre Bohlmann",
       "Tom Kaiser"
     ],
@@ -137,7 +141,7 @@
     ],
     [
       "Andreas Frick",
-      "Nikolay Shaparin"
+      "Fabian Persinger"
     ],
     [
       "Andreas Fruhmann",
@@ -349,7 +353,7 @@
     ],
     [
       "Christian Hoffmann",
-      "Luc Schreiner"
+      "Nikolay Shaparin"
     ],
     [
       "Christian Hoos",
@@ -778,10 +782,6 @@
     [
       "Florian Schürenkrämer",
       "Hendrik Rütten"
-    ],
-    [
-      "Florian Stortz",
-      "Stephan Vogt"
     ],
     [
       "Frank Herbert",
@@ -1220,8 +1220,16 @@
       "Philipp Koch"
     ],
     [
+      "Liam Tiede",
+      "Pascal Heppner"
+    ],
+    [
       "Louis Rademacher",
       "Marcel Sven Opiol"
+    ],
+    [
+      "Luc Schreiner",
+      "Stefan Reinhart"
     ],
     [
       "Luca Falk",

@@ -1,8 +1,11 @@
 {
   "competition_id": "rec1YO14jpAPEJEUV",
   "slots": [],
-  "count": 421,
+  "count": 433,
   "teams": [
+    [
+      "Aleksander Celarek"
+    ],
     [
       "Alessia Hörning"
     ],
@@ -79,6 +82,9 @@
       "Daniel Schimank"
     ],
     [
+      "Daniel Toporek"
+    ],
+    [
       "Daniela Primus"
     ],
     [
@@ -89,6 +95,9 @@
     ],
     [
       "David Probst"
+    ],
+    [
+      "Dawid Rąbczyk"
     ],
     [
       "Denny Goldhahn"
@@ -239,6 +248,9 @@
     ],
     [
       "Marvin Stöbener"
+    ],
+    [
+      "Mateusz Wesołowski"
     ],
     [
       "Mathias Hey"
@@ -436,6 +448,10 @@
       "Zuzana Tomková"
     ],
     [
+      "Aleksander Celarek",
+      "Dawid Rąbczyk"
+    ],
+    [
       "Alessia Hörning",
       "Jasmin Weber"
     ],
@@ -466,6 +482,10 @@
     [
       "Andre Dupont",
       "Anja Riehn"
+    ],
+    [
+      "Andrè Moebes",
+      "Simon Polauke"
     ],
     [
       "André Dupont",
@@ -542,6 +562,10 @@
     [
       "Daniel Schimank",
       "Sascha Michala"
+    ],
+    [
+      "Daniel Toporek",
+      "Mateusz Wesołowski"
     ],
     [
       "Daniela Primus",
@@ -716,10 +740,6 @@
       "Tobias Brune"
     ],
     [
-      "N.N. N.N.",
-      "N.N. N.N."
-    ],
-    [
       "Niels Bessert",
       "Nils Fröhlich"
     ],
@@ -778,6 +798,12 @@
       "Lena Schuster",
       "Leon Zeipel",
       "Moritz Millnitz"
+    ],
+    [
+      "Aleksander Celarek",
+      "Daniel Toporek",
+      "Dawid Rąbczyk",
+      "Mateusz Wesołowski"
     ],
     [
       "Alessia Hörning",
@@ -859,6 +885,13 @@
       "Tobias Fischer"
     ],
     [
+      "Andrè Moebes",
+      "Marion Zander",
+      "Moritz Bock",
+      "N.N. N.N.",
+      "Wiebke Lührs"
+    ],
+    [
       "Benny Henne",
       "Blau Phillip",
       "Frau FINDENWIRNOCH",
@@ -920,13 +953,6 @@
       "N.N. N.N.",
       "Nils Schmidt",
       "Uwe Heise"
-    ],
-    [
-      "Moritz Bock",
-      "N.N. N.N.",
-      "N.N. N.N.",
-      "N.N. N.N.",
-      "Wiebke Lührs"
     ]
   ]
 }
