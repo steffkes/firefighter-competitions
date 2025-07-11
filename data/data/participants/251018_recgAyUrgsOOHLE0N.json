@@ -2,10 +2,10 @@
   "competition_id": "recgAyUrgsOOHLE0N",
   "slots": [
     {
-      "amount": 217
+      "amount": 215
     }
   ],
-  "count": 33,
+  "count": 35,
   "teams": [
     [
       "Alexander Greis"
@@ -62,6 +62,9 @@
       "Marc Sobeck"
     ],
     [
+      "Marcus Woito"
+    ],
+    [
       "Marion Gayer"
     ],
     [
@@ -87,6 +90,9 @@
     ],
     [
       "Simon Schleich"
+    ],
+    [
+      "Stefan Prinz"
     ],
     [
       "Stefan Schulz"
