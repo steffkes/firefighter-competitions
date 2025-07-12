@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 14
+      "amount": 12
     }
   ],
-  "count": 472,
+  "count": 476,
   "teams": [
     [
       "Adrian Jagusch",
@@ -312,6 +312,10 @@
       "Jens Obermann"
     ],
     [
+      "Elias Köpke",
+      "Kevin Jung"
+    ],
+    [
       "Elly Schweigert",
       "Yvonne Zeiner"
     ],
@@ -550,6 +554,10 @@
     [
       "Johannes Göttlinger",
       "Marin Böhm"
+    ],
+    [
+      "Johannes Marks",
+      "Vincent Puscher"
     ],
     [
       "Johannes Pleier",
