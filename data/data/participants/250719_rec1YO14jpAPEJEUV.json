@@ -1,7 +1,7 @@
 {
   "competition_id": "rec1YO14jpAPEJEUV",
   "slots": [],
-  "count": 436,
+  "count": 439,
   "teams": [
     [
       "Aleksander Celarek"
@@ -103,13 +103,7 @@
       "Denny Goldhahn"
     ],
     [
-      "Dirk Fischer"
-    ],
-    [
       "Dominic Arnold"
-    ],
-    [
-      "Dominik Zirbes"
     ],
     [
       "Erik Lorenz"
@@ -197,6 +191,9 @@
     ],
     [
       "Lukas Wickmann"
+    ],
+    [
+      "Magnus Hirschfeld"
     ],
     [
       "Magnus Metje"
@@ -364,6 +361,9 @@
       "Robin Altbürger"
     ],
     [
+      "Rüdiger Zeuner-Christ"
+    ],
+    [
       "Sascha Kessler"
     ],
     [
@@ -467,6 +467,10 @@
     [
       "Alexander Kulhawy",
       "René Bode"
+    ],
+    [
+      "Alexander Marschall",
+      "Nils Schmidt"
     ],
     [
       "Alexander Sader",
@@ -637,10 +641,6 @@
       "Yousef Alqallaf"
     ],
     [
-      "Kommt Noch",
-      "Michel Menten"
-    ],
-    [
       "Krummacker Jan",
       "Weiß Michael"
     ],
@@ -670,7 +670,7 @@
     ],
     [
       "Lukas Wickmann",
-      "Nils Schmidt"
+      "Patrick Vierhaus"
     ],
     [
       "Magnus Metje",
@@ -731,6 +731,10 @@
     [
       "Michal Brousil",
       "Pavel Kouřík"
+    ],
+    [
+      "Michel Menten",
+      "Rüdiger Zeuner-Christ"
     ],
     [
       "N. N.",
@@ -845,12 +849,6 @@
       "Kirsten Schneidereit"
     ],
     [
-      "Christian Follmann",
-      "David Probst",
-      "Dirk Fischer",
-      "Dominik Zirbes"
-    ],
-    [
       "David Kubiš",
       "Michal Brousil",
       "Pavel Kouřík",
@@ -900,6 +898,13 @@
       "Frau FINDENWIRNOCH",
       "Marina Nikic",
       "Werxhausen Thomas"
+    ],
+    [
+      "Christian Follmann",
+      "David Probst",
+      "Matthias Ascheberg",
+      "Michel Menten",
+      "Rüdiger Zeuner-Christ"
     ],
     [
       "Christian Ullrich",
