@@ -1,7 +1,7 @@
 {
   "competition_id": "rec0hVWR2BM4b4Ltn",
   "slots": [],
-  "count": 908,
+  "count": 932,
   "teams": [
     [
       "Aaron Saad Albrecht",
@@ -50,6 +50,10 @@
     [
       "Alexander Düllberg",
       "Sabrina Schinkel"
+    ],
+    [
+      "Alexander Gohlke",
+      "Andreas Weißelberg"
     ],
     [
       "Alexander Hanke",
@@ -332,6 +336,10 @@
       "Marc Vondenhof"
     ],
     [
+      "Carsten Weber",
+      "Daniel Weber"
+    ],
+    [
       "Carsten-Matthias Westerhoff",
       "Lorant Lübben"
     ],
@@ -388,6 +396,10 @@
       "Torsten Kaufmann"
     ],
     [
+      "Christian Klimaschka",
+      "Matthias Bülow"
+    ],
+    [
       "Christian Merl",
       "Franziska Schulz"
     ],
@@ -418,6 +430,10 @@
     [
       "Christian Töppler",
       "Jonas Schulze"
+    ],
+    [
+      "Christian Vom Bruch",
+      "Dennis Hofmann"
     ],
     [
       "Christian Wedershoven",
@@ -520,6 +536,10 @@
       "Steve Roidl"
     ],
     [
+      "Daniel Alboldt",
+      "Robin Lehrl"
+    ],
+    [
       "Daniel Brunner",
       "Ronny Weber"
     ],
@@ -550,6 +570,10 @@
     [
       "Daniel Krude",
       "Leon Doerenkamp"
+    ],
+    [
+      "Daniel Schröder",
+      "Johannes Jahn"
     ],
     [
       "Daniel Thies",
@@ -670,6 +694,10 @@
     [
       "Elisa Ehmer",
       "Martin Eichenlaub"
+    ],
+    [
+      "Emma Schmarbeck",
+      "Max Pälmer"
     ],
     [
       "Enrico Kohl",
@@ -852,8 +880,16 @@
       "Jonas Hemkes"
     ],
     [
+      "Frederik Gebbeken",
+      "Lukas Weißelberg"
+    ],
+    [
       "Freimut Manfred",
       "Sina Gehring"
+    ],
+    [
+      "Fynn-Luca Bügemannskemper",
+      "Stephan Kesisoglu"
     ],
     [
       "Geneviève Depiereux",
@@ -960,6 +996,10 @@
       "Simon Hendrix"
     ],
     [
+      "Jan Karol Wosz",
+      "Sebastian Durth"
+    ],
+    [
       "Jan Kucek",
       "Steve Kohlscheen"
     ],
@@ -998,6 +1038,10 @@
     [
       "Janine Franken",
       "Marc Winkler"
+    ],
+    [
+      "Janis Prötz",
+      "Matthias Geiger"
     ],
     [
       "Jannick Schwarzer",
@@ -1098,6 +1142,10 @@
     [
       "Jonas Winkler",
       "Philipp Mewes"
+    ],
+    [
+      "Jonas Wößner",
+      "Marco Ruoff"
     ],
     [
       "Jonas von Laufenberg",
@@ -1472,10 +1520,6 @@
       "Stephan Korn"
     ],
     [
-      "Marco Ruoff",
-      "Markus Widmaier"
-    ],
-    [
       "Marco Sommerkamp",
       "Saskia Tschierschke"
     ],
@@ -1562,6 +1606,10 @@
     [
       "Matthias Richter",
       "Sven Lütticke"
+    ],
+    [
+      "Matthias Urban",
+      "Stephan Schmitz"
     ],
     [
       "Matthias Weickmann",
