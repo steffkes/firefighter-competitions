@@ -1,7 +1,7 @@
 {
   "competition_id": "rec1YO14jpAPEJEUV",
   "slots": [],
-  "count": 454,
+  "count": 453,
   "teams": [
     [
       "Aleksander Celarek"
@@ -124,6 +124,9 @@
       "Florian Bügel"
     ],
     [
+      "Florian Hockauf"
+    ],
+    [
       "Florian Krautwurst"
     ],
     [
@@ -131,9 +134,6 @@
     ],
     [
       "Florian Wedel"
-    ],
-    [
-      "Frank Peter"
     ],
     [
       "Gerhard Kruse"
@@ -212,9 +212,6 @@
     ],
     [
       "Marco Illein"
-    ],
-    [
-      "Marco Juffa"
     ],
     [
       "Marina Nikic"
@@ -334,9 +331,6 @@
       "Pavel Kouřík"
     ],
     [
-      "Phil Heise"
-    ],
-    [
       "Philipp Gailer"
     ],
     [
@@ -380,9 +374,6 @@
     ],
     [
       "Sebastian Wehlauer"
-    ],
-    [
-      "Simon Feuerhack"
     ],
     [
       "Simon Polauke"
@@ -788,11 +779,6 @@
       "x xx"
     ],
     [
-      "Alexander Ruppert",
-      "Michael Weiß",
-      "Stefan Jordan"
-    ],
-    [
       "Lena Schuster",
       "Leon Zeipel",
       "Moritz Millnitz"
@@ -820,6 +806,12 @@
       "Carina Marschall",
       "Hendrik Ammermann",
       "Janina Neumann"
+    ],
+    [
+      "Alexander Ruppert",
+      "Christian Gremmler",
+      "Marc Rassek",
+      "Michael Weiß"
     ],
     [
       "Alexander Sader",
@@ -856,12 +848,6 @@
       "Mario Fleerkortte",
       "Matthias Schmitt",
       "Maximilian Bohl"
-    ],
-    [
-      "Dario Peter",
-      "Jens Lüdecke",
-      "Mathias Hay",
-      "Stefan Roskosch"
     ],
     [
       "David Kubiš",
@@ -902,9 +888,9 @@
       "Wiebke Lührs"
     ],
     [
-      "Benny Henne",
+      "Anja Riehn",
+      "Benjamin Henne",
       "Blau Phillip",
-      "Frau FINDENWIRNOCH",
       "Marina Nikic",
       "Werxhausen Thomas"
     ],
@@ -949,6 +935,13 @@
       "Oliver Moj",
       "Robin Altbürger",
       "Sören Warzok"
+    ],
+    [
+      "Dario Peter",
+      "Jens Lüdecke",
+      "Mathias Hay",
+      "Robin Altbürger",
+      "Stefan Roskosch"
     ],
     [
       "Denny Goldhahn",
