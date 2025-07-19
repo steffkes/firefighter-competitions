@@ -1,7 +1,7 @@
 {
   "competition_id": "rec1YO14jpAPEJEUV",
   "slots": [],
-  "count": 453,
+  "count": 458,
   "teams": [
     [
       "Aleksander Celarek"
@@ -112,6 +112,15 @@
       "Dominic Arnold"
     ],
     [
+      "Dummy Dummy"
+    ],
+    [
+      "Dummy Dummy"
+    ],
+    [
+      "Dummy Dummy 3"
+    ],
+    [
       "Erik Lorenz"
     ],
     [
@@ -175,9 +184,6 @@
       "Katrin Bagdahn"
     ],
     [
-      "Khaled Alotaibi"
-    ],
-    [
       "Kirsten Schneidereit"
     ],
     [
@@ -236,9 +242,6 @@
     ],
     [
       "Martin Ledderhose"
-    ],
-    [
-      "Marvin Hänel"
     ],
     [
       "Marvin Hänel"
@@ -349,6 +352,9 @@
       "Rensch Nico"
     ],
     [
+      "René Bode"
+    ],
+    [
       "René Stange"
     ],
     [
@@ -362,6 +368,9 @@
     ],
     [
       "Rüdiger Zeuner-Christ"
+    ],
+    [
+      "Sandy-Sue Sarah Stockes"
     ],
     [
       "Sascha Kessler"
@@ -419,9 +428,6 @@
     ],
     [
       "Wayne Bastow"
-    ],
-    [
-      "Wiebke Boss"
     ],
     [
       "Wiebke Lührs"
@@ -540,7 +546,7 @@
     ],
     [
       "Christian Lutat",
-      "Maximilian Bohl"
+      "Florian Krautwurst"
     ],
     [
       "Claudia Mäder",
@@ -739,6 +745,10 @@
       "Tobias Brune"
     ],
     [
+      "Nico Rensch",
+      "Robert Green"
+    ],
+    [
       "Niels Bessert",
       "Nils Fröhlich"
     ],
@@ -790,12 +800,6 @@
       "Mateusz Wesołowski"
     ],
     [
-      "Alessia Hörning",
-      "Can-Pierre Richter",
-      "Jasmin Weber",
-      "Meiko Schlps"
-    ],
-    [
       "Alexander Bähre",
       "Björn Schwerdt",
       "Jakob Karabacak",
@@ -839,7 +843,7 @@
     ],
     [
       "Christian Dillinger",
-      "Emma Kurutz",
+      "Claudia Mäder",
       "Joan Olucha",
       "Kirsten Schneidereit"
     ],
@@ -872,6 +876,13 @@
       "Michael Weiß",
       "Niels Bessert",
       "Nils Fröhlich"
+    ],
+    [
+      "Alessia Hörning",
+      "Can-Pierre Richter",
+      "Jasmin Weber",
+      "Meiko Schlps",
+      "Stefan Fetting"
     ],
     [
       "Alexander Sader",
