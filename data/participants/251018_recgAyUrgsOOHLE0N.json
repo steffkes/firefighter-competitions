@@ -2,10 +2,10 @@
   "competition_id": "recgAyUrgsOOHLE0N",
   "slots": [
     {
-      "amount": 202
+      "amount": 199
     }
   ],
-  "count": 49,
+  "count": 52,
   "teams": [
     [
       "Alexander Greis"
@@ -98,6 +98,9 @@
       "Matthias Hefele"
     ],
     [
+      "Patrick Mayr"
+    ],
+    [
       "Peter Wolfram"
     ],
     [
@@ -125,6 +128,9 @@
       "Simon Schleich"
     ],
     [
+      "Stefan Bauer"
+    ],
+    [
       "Stefan Prinz"
     ],
     [
@@ -132,6 +138,9 @@
     ],
     [
       "Stefan Summerer"
+    ],
+    [
+      "Steve Roidl"
     ],
     [
       "Timo Schneider"
