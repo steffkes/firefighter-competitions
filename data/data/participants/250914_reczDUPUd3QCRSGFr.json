@@ -1,7 +1,7 @@
 {
   "competition_id": "reczDUPUd3QCRSGFr",
   "slots": [],
-  "count": 166,
+  "count": 172,
   "teams": [
     [
       "Alexander Proff",
@@ -96,12 +96,20 @@
       "Timo Schmitz"
     ],
     [
+      "Christian Schmitt",
+      "Robin Schmidt"
+    ],
+    [
       "Christoph Steigerwald",
       "Marc Besch"
     ],
     [
       "Clara Baum",
       "Florian Solms"
+    ],
+    [
+      "Daniel Esterlein",
+      "Sascha Frey"
     ],
     [
       "Daniel Junglas",
@@ -334,6 +342,10 @@
     [
       "Stefan Merkel",
       "Tobias Müller"
+    ],
+    [
+      "Tim Nauth",
+      "Valentin Hook"
     ]
   ]
 }
