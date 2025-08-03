@@ -5,12 +5,8 @@
       "amount": 0
     }
   ],
-  "count": 950,
+  "count": 966,
   "teams": [
-    [
-      "Aaron Saad Albrecht",
-      "Mathis Grumbach"
-    ],
     [
       "Achim Marx",
       "Kevin Barzen"
@@ -25,7 +21,11 @@
     ],
     [
       "Adrian Opielewicz",
-      "Fabian Schmidt"
+      "Nico Rauschenberger"
+    ],
+    [
+      "Adrian Schwind",
+      "Marius Fath"
     ],
     [
       "Adrian Schwind",
@@ -33,7 +33,11 @@
     ],
     [
       "Adrian Schäfer",
-      "Julia Wester"
+      "Martin Franke"
+    ],
+    [
+      "Adriano Steyer",
+      "Timon Geisheim"
     ],
     [
       "Agostino Marulli",
@@ -57,7 +61,7 @@
     ],
     [
       "Alexander Düllberg",
-      "Sabrina Schinkel"
+      "Lukas van Gassen"
     ],
     [
       "Alexander Gohlke",
@@ -73,7 +77,7 @@
     ],
     [
       "Alexander Krol",
-      "Christian Goedicke"
+      "Ruth Kranzdorf"
     ],
     [
       "Alexander Kühne",
@@ -100,10 +104,6 @@
       "Jonas Marten Mateka"
     ],
     [
-      "Alexander Spelsberg",
-      "Jan Nicolaus Brück"
-    ],
-    [
       "Alexander Wigger",
       "Lena Kurz"
     ],
@@ -118,10 +118,6 @@
     [
       "Alfonso Barcena",
       "Thomas Schindele"
-    ],
-    [
-      "Alina Denker",
-      "Richard Haase"
     ],
     [
       "Andre Bohlmann",
@@ -144,6 +140,10 @@
       "Christian Derks"
     ],
     [
+      "Andreas Brehm",
+      "Jonas Eich"
+    ],
+    [
       "Andreas Endres",
       "Niklas Lomberg"
     ],
@@ -157,7 +157,7 @@
     ],
     [
       "Andreas Fruhmann",
-      "Roman Hopp"
+      "Moritz Nagel"
     ],
     [
       "Andreas Hand",
@@ -192,10 +192,6 @@
       "Till Schneider"
     ],
     [
-      "Ann-Kathrien Gräwe",
-      "Miriam Müller"
-    ],
-    [
       "Ann-Kathrin Neuhöfer",
       "Joshua Schneider"
     ],
@@ -208,12 +204,8 @@
       "Nils Schard"
     ],
     [
-      "Anna-Lena Wieland",
-      "Laura Herr"
-    ],
-    [
       "Anne Tabelion",
-      "Simon Scheidt"
+      "Jonas Wenzel"
     ],
     [
       "Annika Gusella",
@@ -245,7 +237,7 @@
     ],
     [
       "Antonia Schniedermann",
-      "Svea Hönekop"
+      "Lars Volke"
     ],
     [
       "Arthur Schneider",
@@ -312,6 +304,10 @@
       "Maurine Kronberger"
     ],
     [
+      "Björn Höffer",
+      "Miriam Müller"
+    ],
+    [
       "Björn Müller",
       "Caspar Goss"
     ],
@@ -334,6 +330,10 @@
     [
       "Carina Ritterbach",
       "Tim Holl"
+    ],
+    [
+      "Carlo Huysmans",
+      "Lena Marie Harenberg"
     ],
     [
       "Carlos Brückner",
@@ -390,10 +390,6 @@
     [
       "Christian Hoffmann",
       "Nikolay Shaparin"
-    ],
-    [
-      "Christian Hoos",
-      "Selina Stein"
     ],
     [
       "Christian Jansen",
@@ -465,7 +461,7 @@
     ],
     [
       "Christina Krafzig",
-      "Lorreine Paffenholz"
+      "Lorraine Paffenholz"
     ],
     [
       "Christina Wurm",
@@ -477,7 +473,7 @@
     ],
     [
       "Christoph Gonschor",
-      "Stephan Schnepper"
+      "Maurice Marco"
     ],
     [
       "Christoph Hellweg",
@@ -553,7 +549,7 @@
     ],
     [
       "Daniel Alboldt",
-      "Robin Lehrl"
+      "Daniel Weber"
     ],
     [
       "Daniel Brunner",
@@ -660,10 +656,6 @@
       "Sarah Schumacher"
     ],
     [
-      "Dominik Bause",
-      "Sascha Heinz"
-    ],
-    [
       "Dominik Frühm",
       "Jochen Bürk"
     ],
@@ -693,11 +685,15 @@
     ],
     [
       "Dorina Pischler",
-      "Jamie Svanda"
+      "Martin Kannewischer"
     ],
     [
       "Dr. Cornelius Voigt",
       "Thomas Donner"
+    ],
+    [
+      "Elias Rudewig",
+      "Laura Herr"
     ],
     [
       "Elias Schwarz",
@@ -732,6 +728,10 @@
       "Tanja Greber"
     ],
     [
+      "Erik Lellwitz",
+      "Sven Lütticke"
+    ],
+    [
       "Erik Lorenz",
       "Lukas Maletz"
     ],
@@ -754,6 +754,10 @@
     [
       "Fabian Huberty",
       "Pascal Kirchartz"
+    ],
+    [
+      "Fabian Kluge",
+      "Maimuna Krüger"
     ],
     [
       "Fabian Kluge",
@@ -916,12 +920,12 @@
       "Raphael Schmitz-Hennek"
     ],
     [
-      "Gerd Prezochwski",
+      "Gerd Przechowski",
       "Niklas Tenhaak"
     ],
     [
       "Gerrit Dehne",
-      "Tobias Reichler"
+      "Mathias Richter"
     ],
     [
       "Gerrit Heiden",
@@ -942,6 +946,10 @@
     [
       "Giorginio Schwarze",
       "Niclas Guske"
+    ],
+    [
+      "Gorginio Schwarze",
+      "Marco Diederich"
     ],
     [
       "Guido Küster",
@@ -970,10 +978,6 @@
     [
       "Heiko Wenzel",
       "Jörg Hackel"
-    ],
-    [
-      "Helena Höfer",
-      "Madeleine Krammer"
     ],
     [
       "Helmut Rupprecht",
@@ -1020,10 +1024,6 @@
       "Sebastian Durth"
     ],
     [
-      "Jan Kiepe",
-      "Lukas Kerb"
-    ],
-    [
       "Jan Kucek",
       "Steve Kohlscheen"
     ],
@@ -1064,6 +1064,10 @@
       "Sylvia Reinartz"
     ],
     [
+      "Janik Waldmann",
+      "Jessica Möring"
+    ],
+    [
       "Janine Franken",
       "Marc Winkler"
     ],
@@ -1078,6 +1082,14 @@
     [
       "Jannik Löhr",
       "Kai Schurmann"
+    ],
+    [
+      "Jannis Topolic",
+      "Julius Lauber"
+    ],
+    [
+      "Jaqueline Phan",
+      "Martin Franke"
     ],
     [
       "Jasmin Bohun",
@@ -1128,14 +1140,6 @@
       "Tobias Walter"
     ],
     [
-      "Jessica Möring",
-      "Tristan Spitzer"
-    ],
-    [
-      "Jochen Drüen",
-      "Stephanie Eisenreich"
-    ],
-    [
       "Joel Braun",
       "Marco Kaufmann"
     ],
@@ -1153,7 +1157,7 @@
     ],
     [
       "Jona Eckenroth",
-      "Tim Breuer-Wollnik"
+      "Martin Turra"
     ],
     [
       "Jonas Dallmayer",
@@ -1200,8 +1204,12 @@
       "Nils Henn"
     ],
     [
-      "Julia Wester",
-      "Martin Franke"
+      "Julia König",
+      "Richard Haase"
+    ],
+    [
+      "Julia Stenzel",
+      "Lisa Baukloh"
     ],
     [
       "Julia Zaun",
@@ -1218,6 +1226,10 @@
     [
       "Julian Lother",
       "Lena Wagner"
+    ],
+    [
+      "Julian Vennekamp",
+      "Luca Oymanns"
     ],
     [
       "Juliane Schmidt",
@@ -1316,10 +1328,6 @@
       "Mark Karis"
     ],
     [
-      "Kevin Baumann",
-      "Niklas Vetten"
-    ],
-    [
       "Kevin Becker",
       "Tim Johnen"
     ],
@@ -1340,8 +1348,16 @@
       "Robin Krumm"
     ],
     [
+      "Lars Duhr",
+      "Thomas Endres"
+    ],
+    [
       "Lars Kerry Mertens",
       "Thomas Röttgen"
+    ],
+    [
+      "Lars Volke",
+      "Martin Franke"
     ],
     [
       "Lasse Kotter",
@@ -1354,10 +1370,6 @@
     [
       "Lea Rechenauer",
       "Thomas Braun"
-    ],
-    [
-      "Lena Marie Harenberg",
-      "Marcus Klauck"
     ],
     [
       "Lena Muthers",
@@ -1412,10 +1424,6 @@
       "Marlon Gerwing"
     ],
     [
-      "Luca Oymanns",
-      "Thomas Böwing"
-    ],
-    [
       "Luca Sophie Mund",
       "Lukas Winheller"
     ],
@@ -1449,11 +1457,15 @@
     ],
     [
       "Lukas Diederich",
-      "Mareike Balter"
+      "Oliver Paul"
     ],
     [
       "Lukas Eisenburger",
       "Niclas Jost"
+    ],
+    [
+      "Lukas Kerb",
+      "Sören Wicke"
     ],
     [
       "Lukas Klaus",
@@ -1486,6 +1498,10 @@
     [
       "Lydia Voß",
       "Paul Florian Thomas"
+    ],
+    [
+      "Madeleine Krammer",
+      "Peter Nübel"
     ],
     [
       "Malte Steinkuhl",
@@ -1540,12 +1556,20 @@
       "Markus Tietze"
     ],
     [
+      "Marcel Walter",
+      "Marlon Gerwing"
+    ],
+    [
       "Marcel Weber",
-      "Maximilian Kleibrink"
+      "Maurice Kwiotek"
     ],
     [
       "Marco Montillon",
       "Stephan Korn"
+    ],
+    [
+      "Marco Sommerkamp",
+      "Paul Kissel"
     ],
     [
       "Marco Sommerkamp",
@@ -1580,16 +1604,16 @@
       "Pascal Hilser"
     ],
     [
-      "Marius Fath",
-      "Tobias Spieth"
-    ],
-    [
       "Marius Lätzsch",
       "Neal Schraven"
     ],
     [
       "Marius Schulz",
       "Max Theisen"
+    ],
+    [
+      "Marko Cikes",
+      "Niklas Vetten"
     ],
     [
       "Markus Danner",
@@ -1605,7 +1629,7 @@
     ],
     [
       "Martin Brieden",
-      "Thomas Ciolek"
+      "Roman Hopp"
     ],
     [
       "Martin Hofmann",
@@ -1628,16 +1652,16 @@
       "Simon Dörper"
     ],
     [
+      "Mathis Grumbach",
+      "Piet Starck"
+    ],
+    [
       "Matthias Dechert",
       "Moritz Nagel"
     ],
     [
       "Matthias Kurtsiefer",
       "Simon Kersting"
-    ],
-    [
-      "Matthias Richter",
-      "Sven Lütticke"
     ],
     [
       "Matthias Urban",
@@ -1650,10 +1674,6 @@
     [
       "Matthias Weickmann",
       "Nicole Tuchbreiter"
-    ],
-    [
-      "Maurice Kwiotek",
-      "Paul Kissel"
     ],
     [
       "Mauritz König",
@@ -1694,6 +1714,10 @@
     [
       "Michael Kuper",
       "Oliver Müller"
+    ],
+    [
+      "Michael Retschke",
+      "Sascha Heinz"
     ],
     [
       "Michael Risch",
@@ -1832,6 +1856,10 @@
       "Tim Schäfer"
     ],
     [
+      "René Budde",
+      "Stephanie Eisenreich"
+    ],
+    [
       "Robert Braun",
       "Stephan Lewerenz"
     ],
@@ -1869,7 +1897,7 @@
     ],
     [
       "Stefan Aniello",
-      "Tom Aniello"
+      "Tobias Reicher"
     ],
     [
       "Stefan Peters",
@@ -1878,6 +1906,10 @@
     [
       "Stefanie Heeg",
       "Thorsten Schnitzler"
+    ],
+    [
+      "Theresa Maass",
+      "Thomas Ciolek"
     ],
     [
       "Theresa Maaß",
