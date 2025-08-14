@@ -1,7 +1,7 @@
 {
   "competition_id": "recIIaJGTGbA10gKS",
   "slots": [],
-  "count": 184,
+  "count": 195,
   "teams": [
     [
       "Alexander Greis"
@@ -248,8 +248,16 @@
       "Michel Menten"
     ],
     [
+      "Dummy Dummy",
+      "Dummy Dummy"
+    ],
+    [
       "Eric Keßler",
       "Karsten Schug"
+    ],
+    [
+      "Ezikiel Alinea",
+      "Jules Burke"
     ],
     [
       "Fabian Ehm",
@@ -311,6 +319,11 @@
       "Kevin Waizenegger"
     ],
     [
+      "Dummy Dummy",
+      "Dummy Dummy",
+      "Dummy Dummy"
+    ],
+    [
       "Andreas Friedrich",
       "Björn Herborn",
       "Dominic Scholz",
@@ -321,6 +334,12 @@
       "Jens Köwilein",
       "Ruben Werbke",
       "Sven Metzger"
+    ],
+    [
+      "Brandon Sigala",
+      "Ezikiel Alinea",
+      "Jules Burke",
+      "Sam Firman"
     ],
     [
       "Christian Follmann",
