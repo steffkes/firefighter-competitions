@@ -1,7 +1,7 @@
 {
   "competition_id": "recIIaJGTGbA10gKS",
   "slots": [],
-  "count": 195,
+  "count": 183,
   "teams": [
     [
       "Alexander Greis"
@@ -11,9 +11,6 @@
     ],
     [
       "Alexander Reitz"
-    ],
-    [
-      "Andreas Ille"
     ],
     [
       "Andreas Wilhelm"
@@ -56,9 +53,6 @@
     ],
     [
       "Dominik Zirbes"
-    ],
-    [
-      "Dummy"
     ],
     [
       "Gabriel Bauer"
@@ -200,10 +194,6 @@
       "Björn Herborn"
     ],
     [
-      "Andreas Ille",
-      "Gerd Müller"
-    ],
-    [
       "Andreas Wilhelm",
       "Sven Reuter"
     ],
@@ -246,10 +236,6 @@
     [
       "Dominik Zirbes",
       "Michel Menten"
-    ],
-    [
-      "Dummy Dummy",
-      "Dummy Dummy"
     ],
     [
       "Eric Keßler",
@@ -309,19 +295,9 @@
       "Graci Little Axe"
     ],
     [
-      "Andreas Ille",
-      "Georg Pabst",
-      "Gerd Müller"
-    ],
-    [
       "Christoph Maier",
       "David Melsheimer",
       "Kevin Waizenegger"
-    ],
-    [
-      "Dummy Dummy",
-      "Dummy Dummy",
-      "Dummy Dummy"
     ],
     [
       "Andreas Friedrich",
