@@ -1,8 +1,12 @@
 {
   "competition_id": "reczDUPUd3QCRSGFr",
   "slots": [],
-  "count": 300,
+  "count": 306,
   "teams": [
+    [
+      "Achim Marx",
+      "Kevin Barzen"
+    ],
     [
       "Alexander Kratz",
       "Marco Kiefer"
@@ -252,6 +256,10 @@
       "Simon Zaß"
     ],
     [
+      "Eric Mahlich",
+      "Tobias Heckmann"
+    ],
+    [
       "Eric Niebergall",
       "Florian Domis"
     ],
@@ -438,6 +446,10 @@
     [
       "Kilian Fruth",
       "Oliver Karger"
+    ],
+    [
+      "Klaus Ludt",
+      "Wolfgang Closheim"
     ],
     [
       "Lars Iwer",
