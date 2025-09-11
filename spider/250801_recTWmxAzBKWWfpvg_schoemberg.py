@@ -1,40 +1,13 @@
 import scrapy
-from datetime import datetime
-from util import JsonItemExporter, JsonLinesItemExporter, ParticipantItem, ResultItem
+from util import Spider, ParticipantItem, ResultItem
+import re
 
 
-class Spider(scrapy.Spider):
+class CompetitionSpider(Spider):
     name = __name__
-    race_date = datetime.strptime(__name__.split("_")[0], "%y%m%d").strftime("%Y-%m-%d")
-    competition_id = __name__.split("_")[1]
-    ident = __name__[0:24]
 
     race_id = "314379"
     race_key = "5dfc4e446d96c06bd1addb9630b6273d"
-
-    custom_settings = {
-        "FEED_EXPORTERS": {
-            "starter": JsonItemExporter,
-            "results": JsonLinesItemExporter,
-        },
-        "FEEDS": {
-            "data/participants/%(ident)s.json": {
-                "format": "starter",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ParticipantItem],
-            },
-            "data/results/%(name)s.jsonl": {
-                "format": "results",
-                "encoding": "utf8",
-                "overwrite": True,
-                "item_classes": [ResultItem],
-            },
-        },
-        "EXTENSIONS": {
-            "scrapy.extensions.telnet.TelnetConsole": None,
-        },
-    }
 
     def start_requests(self):
         yield scrapy.FormRequest(
@@ -46,6 +19,27 @@ class Spider(scrapy.Spider):
                 "contest": "9",
             },
             callback=self.parse_starters,
+        )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+            formdata={
+                "key": self.race_key,
+                "listname": "01_Baywa und Feuerwehr|Ergebnisliste_Feuerwehr_MW",
+                "contest": "9",
+            },
+        )
+
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+            formdata={
+                "key": self.race_key,
+                "listname": "01_Baywa und Feuerwehr|Ergebnisliste_Feuerwehr_Mixed",
+                "contest": "9",
+            },
+            callback=self.parse_mixed,
         )
 
     def parse_starters(self, response):
@@ -66,9 +60,52 @@ class Spider(scrapy.Spider):
                 names=sorted(map(fixName, [name1, name2])),
             )
 
+    def handle_results(self, data, category):
+        for team, entry in data.items():
+            duration = self.fixDuration(team.split("///")[-1])
+            names = sorted(map(lambda record: fixName(record[2]), entry))
+
+            yield ResultItem(
+                date=self.race_date,
+                competition_id=self.competition_id,
+                type="OPA",
+                category=category,
+                duration=duration,
+                names=names,
+                bib=None,
+            )
+
+    def parse(self, response):
+        data = response.json()
+
+        yield from self.handle_results(data["data"]["#1_Männlich"], "M")
+        yield from self.handle_results(data["data"]["#2_Weiblich"], "W")
+
+    def parse_mixed(self, response):
+        data = response.json()
+
+        yield from self.handle_results(data["data"], "X")
+
 
 def fixName(name):
-    return " ".join(reversed(list(map(str.strip, name.split(",")))))
+    if "," in name:
+        return " ".join(reversed(list(map(str.strip, name.split(",")))))
+
+    return re.sub(
+        r"(([A-ZÄÜÖäüöß]+[-\s])?([A-ZÄÜÖäüöß]+))\s(.+)",
+        lambda match: " ".join(
+            [
+                match.group(4),
+                "".join(
+                    map(
+                        lambda str: str[0] + str[1:].lower(),
+                        filter(None, match.group(2, 3)),
+                    )
+                ),
+            ]
+        ),
+        name.replace(",", ""),
+    )
 
 
 import pytest
@@ -79,6 +116,8 @@ import pytest
     [
         ("Wetzel, Denise", "Denise Wetzel"),
         ("Julia, Keller", "Keller Julia"),
+        ("TESCHNER-JEIKOWSKI Sarah", "Sarah Teschner-Jeikowski"),
+        ("RAJDA Remigiusz Eugeniusz", "Remigiusz Eugeniusz Rajda"),
     ],
 )
 def test_fixName(input, output):
