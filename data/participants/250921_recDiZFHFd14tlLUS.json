@@ -1,8 +1,28 @@
 {
   "competition_id": "recDiZFHFd14tlLUS",
   "slots": [],
-  "count": 592,
+  "count": 602,
   "teams": [
+    [
+      "",
+      ""
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "",
+      ""
+    ],
     [
       "",
       ""
@@ -645,7 +665,7 @@
     ],
     [
       "Gunther Fuchs",
-      "Tobias Alber"
+      "Pascal Schlecht"
     ],
     [
       "Günther Hindelang",
@@ -685,7 +705,7 @@
     ],
     [
       "Jan Poganatz",
-      "Levi Laich"
+      "Janosch Christens"
     ],
     [
       "Jan Rebholz",
@@ -1080,10 +1100,6 @@
       "Peter Hartmann"
     ],
     [
-      "Pascal Schlecht",
-      "Tim Klein"
-    ],
-    [
       "Pascal Straub",
       "Sarah Masser"
     ],
@@ -1186,6 +1202,10 @@
     [
       "Thilo von Grafenstein",
       "Tim Dollansky"
+    ],
+    [
+      "Tim Klein",
+      "Tobias Alber"
     ]
   ]
 }
