@@ -1,8 +1,12 @@
 {
   "competition_id": "recDiZFHFd14tlLUS",
   "slots": [],
-  "count": 602,
+  "count": 604,
   "teams": [
+    [
+      "",
+      ""
+    ],
     [
       "",
       ""
@@ -252,6 +256,10 @@
       "Rainer Hage"
     ],
     [
+      "Calvin Stoll",
+      "Gunther Fuchs"
+    ],
+    [
       "Chris Koppenhöfer",
       "Hugo Hölzle"
     ],
@@ -381,7 +389,7 @@
     ],
     [
       "Daniel Jetter",
-      "Philipp Rigoni"
+      "Julian Beck"
     ],
     [
       "Daniel Link",
@@ -662,10 +670,6 @@
     [
       "Gitta Sigle",
       "Simon Dörrer"
-    ],
-    [
-      "Gunther Fuchs",
-      "Pascal Schlecht"
     ],
     [
       "Günther Hindelang",
