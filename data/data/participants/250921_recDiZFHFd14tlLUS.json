@@ -4,12 +4,12 @@
   "count": 600,
   "teams": [
     [
-      "A Frick",
-      "Fabian Senedzuk"
-    ],
-    [
       "Achim Gekeler",
       "Laurin Holzapfel"
+    ],
+    [
+      "Achim Keller",
+      "Manuel Bidmon"
     ],
     [
       "Adrian Jehle",
@@ -80,6 +80,10 @@
       "Andy Hinkel"
     ],
     [
+      "Andi Frick",
+      "Fabian Senedzuk"
+    ],
+    [
       "Andre Rommel",
       "Michael Bezner"
     ],
@@ -97,7 +101,7 @@
     ],
     [
       "Andreas Feger",
-      "Dominic Butze"
+      "Dominik Hipp"
     ],
     [
       "Andreas Fischer",
@@ -145,7 +149,7 @@
     ],
     [
       "Annalena Anhalt",
-      "Sabrina Wicker"
+      "Manuel Lerner"
     ],
     [
       "Anne Weiß",
@@ -185,7 +189,7 @@
     ],
     [
       "Benjamin Bäuerle",
-      "Manuel Bidmon"
+      "Robin Waibel"
     ],
     [
       "Benjamin Osswald",
@@ -284,10 +288,6 @@
       "Severin Mader"
     ],
     [
-      "Christian Schulze",
-      "Michael Dreßen"
-    ],
-    [
       "Christian Töppler",
       "Daniel Mewes"
     ],
@@ -302,6 +302,10 @@
     [
       "Christoph Beck",
       "Kevin Brütsch"
+    ],
+    [
+      "Christoph Brucks",
+      "Michael Benitz"
     ],
     [
       "Christoph Groß",
@@ -456,10 +460,6 @@
       "Fabian Bihl"
     ],
     [
-      "Dominik Jaeckle",
-      "Robin Scherle"
-    ],
-    [
       "Dominik Jehle",
       "Julius Bäder"
     ],
@@ -470,6 +470,10 @@
     [
       "Dominik Marx",
       "Giulio Milan"
+    ],
+    [
+      "Dominik Rothfelder",
+      "Tim Decker"
     ],
     [
       "Dominique Wüst",
@@ -486,6 +490,10 @@
     [
       "Elina Grenacher",
       "Luana Grenacher"
+    ],
+    [
+      "Elisa Nestler",
+      "Pia Rimpel"
     ],
     [
       "Elisa Nestler",
@@ -512,8 +520,8 @@
       "Sven Vogler"
     ],
     [
-      "Fabian Missfelder",
-      "Lukas Gönner"
+      "Fabian Persinger",
+      "Sebastian Knecht"
     ],
     [
       "Fabian Sedlmaier",
@@ -616,10 +624,6 @@
       "Kai Amendinger"
     ],
     [
-      "Fynn Yesper Matthiesen",
-      "Robin Waibel"
-    ],
-    [
       "Gabriel Kammerer",
       "Johannes Kammerer"
     ],
@@ -637,15 +641,11 @@
     ],
     [
       "Giorginio Schwarze",
-      "Simon Rebmann"
+      "Niclas Guske"
     ],
     [
       "Gitta Sigle",
       "Simon Dörrer"
-    ],
-    [
-      "Günther Hindelang",
-      "Steve Roidl"
     ],
     [
       "Hannes Saile",
@@ -717,10 +717,6 @@
     ],
     [
       "Jasmin Bohun",
-      "Sina Gehring"
-    ],
-    [
-      "Jasmin Bohun",
       "Theresa Maas"
     ],
     [
@@ -789,7 +785,7 @@
     ],
     [
       "Julian Fritz",
-      "Martin Jannack"
+      "Paul Ebel"
     ],
     [
       "Julian Tauer",
@@ -802,6 +798,10 @@
     [
       "Julian Ziegler",
       "Yves Hartung"
+    ],
+    [
+      "Julian Zimmermann",
+      "Nicola-Simon Knie"
     ],
     [
       "Julien Schmidt",
@@ -820,16 +820,12 @@
       "Rene Stümp"
     ],
     [
-      "Jürgen Maier",
-      "Michael Benitz"
-    ],
-    [
       "Kai Nester",
       "Niklas Hofer"
     ],
     [
       "Kai Simon",
-      "Martin Mair"
+      "Simon Stierle"
     ],
     [
       "Karsten Neupert",
@@ -864,10 +860,6 @@
       "Markus Weinmann"
     ],
     [
-      "Lea Rechenauer",
-      "Sebastian Knecht"
-    ],
-    [
       "Leander Beck",
       "Leon Blaschke"
     ],
@@ -894,10 +886,6 @@
     [
       "Luca Zimmermann",
       "Silas Siegel"
-    ],
-    [
-      "Lukas Frey",
-      "Tim Frey"
     ],
     [
       "Lukas Keller",
@@ -952,6 +940,10 @@
       "Philipp Jehle"
     ],
     [
+      "Marc Schneider",
+      "Tim Frey"
+    ],
+    [
       "Marcel Sulz",
       "Marius Rothfelder"
     ],
@@ -976,6 +968,10 @@
       "Norbert Sander"
     ],
     [
+      "Marcos Oliveira",
+      "Markus Braun"
+    ],
+    [
       "Marie Faller",
       "Robin Winter"
     ],
@@ -996,16 +992,16 @@
       "Matthias Kröner"
     ],
     [
-      "Markus Braun",
-      "Oliver Söll"
-    ],
-    [
       "Markus Gutbrod",
       "Tobias Prenzel"
     ],
     [
       "Markus Klink",
       "Thomas Kern"
+    ],
+    [
+      "Martin Franke",
+      "Steve Roidl"
     ],
     [
       "Martin Kalus",
@@ -1045,7 +1041,7 @@
     ],
     [
       "Maximilian Berg",
-      "Moritz Nagel"
+      "Tobias Weinaus"
     ],
     [
       "Melissa Castiello",
@@ -1101,7 +1097,7 @@
     ],
     [
       "Pasqual Brusberg",
-      "Stefan Vogelreiter"
+      "Stefan Voglreiter"
     ],
     [
       "Patrick Ischwang",
@@ -1144,16 +1140,16 @@
       "Samuel Daiber"
     ],
     [
-      "René Dulz",
-      "Tim Decker"
-    ],
-    [
       "René Willmann",
       "Simeon Bänsch"
     ],
     [
       "Robert Braun",
       "Stephan Lewerenz"
+    ],
+    [
+      "Robin Scherle",
+      "Timo Bender"
     ],
     [
       "Robin Schönwald",
@@ -1190,6 +1186,10 @@
     [
       "Shelem Garcia Marin",
       "Sven Delitzsch"
+    ],
+    [
+      "Sina Gehring",
+      "Theresa Maas"
     ],
     [
       "Stefan Munz",
