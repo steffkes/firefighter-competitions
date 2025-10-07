@@ -2,10 +2,10 @@
   "competition_id": "recgAyUrgsOOHLE0N",
   "slots": [
     {
-      "amount": 150
+      "amount": 149
     }
   ],
-  "count": 106,
+  "count": 107,
   "teams": [
     [
       "Alexander Greis"
@@ -116,9 +116,6 @@
       "Karsten Neupert"
     ],
     [
-      "Lars Pfeiffer"
-    ],
-    [
       "Lennard Kuna"
     ],
     [
@@ -132,6 +129,9 @@
     ],
     [
       "Lukas Willer"
+    ],
+    [
+      "Magnus Panek"
     ],
     [
       "Manuel Weixler"
@@ -234,6 +234,9 @@
     ],
     [
       "Simon Schleich"
+    ],
+    [
+      "Sina Gögler"
     ],
     [
       "Stefan Bauer"
