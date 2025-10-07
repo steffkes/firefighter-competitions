@@ -1,14 +1,8 @@
 {
   "competition_id": "recWftiqj9uXljQY9",
   "slots": [],
-  "count": 651,
+  "count": 612,
   "teams": [
-    [
-      "ADAM SPYCHAŁA"
-    ],
-    [
-      "Adam Bartosiński"
-    ],
     [
       "Adam Justyński"
     ],
@@ -32,9 +26,6 @@
     ],
     [
       "Alexander Junge"
-    ],
-    [
-      "Alexander Körner"
     ],
     [
       "Alexander Reitz"
@@ -121,9 +112,6 @@
       "Daniel Finster"
     ],
     [
-      "Daniel Friedrich"
-    ],
-    [
       "Daniel Gremmelspacher"
     ],
     [
@@ -160,13 +148,7 @@
       "Dietmar Kirsch"
     ],
     [
-      "Dirk Fischer"
-    ],
-    [
       "Dominic Scholz"
-    ],
-    [
-      "Dominik Zirbes"
     ],
     [
       "Enrico Graf"
@@ -244,9 +226,6 @@
       "Jens Lüdecke"
     ],
     [
-      "Jens Walter"
-    ],
-    [
       "Jeremy Kretschmer"
     ],
     [
@@ -292,9 +271,6 @@
       "Krzysztof Stencel"
     ],
     [
-      "Kuba Gajewski"
-    ],
-    [
       "Lars Creutzer"
     ],
     [
@@ -338,9 +314,6 @@
     ],
     [
       "Mario Pfeiffer"
-    ],
-    [
-      "Marlena Wójcik"
     ],
     [
       "Marta Arrobe da Encarnacao"
@@ -481,9 +454,6 @@
       "Paweł Ochniak"
     ],
     [
-      "Paweł Śmietana"
-    ],
-    [
       "Peter Joba"
     ],
     [
@@ -491,9 +461,6 @@
     ],
     [
       "Philipp Fitzmann"
-    ],
-    [
-      "Piotr Spiżewski"
     ],
     [
       "Rafał Bereza"
@@ -661,22 +628,14 @@
       "nn nn"
     ],
     [
-      "Łukasz Gołąbek"
+      "nn nn"
     ],
     [
-      "Łukasz Sawina"
+      "Łukasz Gołąbek"
     ],
     [
       "... ...",
       "Nico Pötter"
-    ],
-    [
-      "ADAM SPYCHAŁA",
-      "DAWID HYZYK"
-    ],
-    [
-      "Adam Bartosiński",
-      "Marlena Wójcik"
     ],
     [
       "Adam Justyński",
@@ -685,10 +644,6 @@
     [
       "Adam Slaviček",
       "David Kubiš"
-    ],
-    [
-      "Add On Registration",
-      "David Kubis"
     ],
     [
       "Adrian Józefiak",
@@ -812,7 +767,7 @@
     ],
     [
       "Chiara Schmidt",
-      "Tobias Fischer"
+      "Sascha Michala"
     ],
     [
       "DAWID HYZYK",
@@ -875,12 +830,12 @@
       "Łukasz Gołąbek"
     ],
     [
-      "Dawid Rąbczyk",
-      "Mateusz Wesołowski"
+      "Dawid Hyzyk",
+      "Pawel Lesnicki"
     ],
     [
-      "Dirk Fischer",
-      "Rüdiger Zeuner-Christ"
+      "Dawid Rąbczyk",
+      "Mateusz Wesołowski"
     ],
     [
       "Dustin Knobloch",
@@ -999,10 +954,6 @@
       "Przemysław Mania"
     ],
     [
-      "Konrad Kuchnik",
-      "Pawel Lesnicki"
-    ],
-    [
       "Krzysztof Patrzała",
       "Marcin Grąs"
     ],
@@ -1047,20 +998,12 @@
       "Valentin Hornschuh"
     ],
     [
-      "Martyna Mojsa",
-      "Pawel Lesnicki"
-    ],
-    [
       "Martyna Świerczyk",
       "Mateusz Delinger"
     ],
     [
       "Marvin Burger",
       "Tobias Brune"
-    ],
-    [
-      "Mateusz Brembor",
-      "Paweł Ochniak"
     ],
     [
       "Mateusz Brembor",
@@ -1123,12 +1066,12 @@
       "Sebastian Schindlbeck"
     ],
     [
-      "Terézia Foott",
-      "Ulrich Köllner"
+      "Rüdiger Zeuner-Christ",
+      "Thomas Schragner"
     ],
     [
-      "Thomas Schragner",
-      "xxxx xxxx"
+      "Terézia Foott",
+      "Ulrich Köllner"
     ],
     [
       "Tobias Bartel",
@@ -1162,11 +1105,6 @@
       "Tobias Brune"
     ],
     [
-      "Konrad Kuchnik",
-      "Pawel Lesnicki",
-      "Pawel Smietana"
-    ],
-    [
       "Adam Justyński",
       "Dawid Geiger",
       "Michał Kałuża",
@@ -1177,12 +1115,6 @@
       "Boris Herberg",
       "Lars Spielberg",
       "Tim Schulze"
-    ],
-    [
-      "Alexander Sader",
-      "Joel Bloch",
-      "Sascha Michala",
-      "Tobias Fischer"
     ],
     [
       "Amir Jazmati",
@@ -1231,19 +1163,6 @@
       "Mathias Gahl",
       "Michael Bartmann",
       "Simon Schoog-Döhring"
-    ],
-    [
-      "Konrad Kuchnik",
-      "Martyna Mojsa",
-      "Pawel Lesnicki",
-      "Pawel Smietana"
-    ],
-    [
-      "ADAM SPYCHAŁA",
-      "DAWID HYZYK",
-      "JUSTYNA Cichocka",
-      "Katarzyna Jakubek",
-      "PAWEŁ LEŚNICKI"
     ],
     [
       "Adam Slavíček",
@@ -1299,6 +1218,13 @@
       "Chiara Schmidt",
       "David Kalicki",
       "Meghann Krüger",
+      "Sascha Michala"
+    ],
+    [
+      "Alexander Sader",
+      "Daniel Friedrich",
+      "Joel Bloch",
+      "Mano Waldvogel",
       "Sascha Michala"
     ],
     [
@@ -1372,11 +1298,11 @@
       "Rafał Bereza"
     ],
     [
-      "Dawid Cieślewicz",
-      "Jakub Paczkowski",
+      "Dawid Hyzyk",
+      "Justyna Cichocka",
       "Magdalena Pietrzyk",
       "Mateusz Brembor",
-      "Paweł Ochniak"
+      "Pawel Lesnicki"
     ],
     [
       "Finden Wirnoch",
@@ -1412,13 +1338,6 @@
       "Miroslav Michlovský",
       "Pavel Novak",
       "Tomáš Sirotek"
-    ],
-    [
-      "Thomas Schragner",
-      "xxx xxx",
-      "xxx xxx",
-      "xxx xxx",
-      "xxx xxx"
     ]
   ]
 }
