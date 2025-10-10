@@ -1,7 +1,7 @@
 {
   "competition_id": "recWftiqj9uXljQY9",
   "slots": [],
-  "count": 594,
+  "count": 595,
   "teams": [
     [
       "Adam Justyński"
@@ -262,7 +262,7 @@
       "Lucas Beyer"
     ],
     [
-      "Lukas Marrátil"
+      "Lukas Navrátil"
     ],
     [
       "Lukas Stäbler"
@@ -323,9 +323,6 @@
     ],
     [
       "Matthias Ascheberg"
-    ],
-    [
-      "Matthias Buttig"
     ],
     [
       "Matthias Drobar"
@@ -407,9 +404,6 @@
     ],
     [
       "Pascal Haupt"
-    ],
-    [
-      "Paul Bargmann"
     ],
     [
       "Pavel Novak"
@@ -523,6 +517,9 @@
       "Tobias Tangermann"
     ],
     [
+      "Tobias Tangermann"
+    ],
+    [
       "Tom Vanauer"
     ],
     [
@@ -575,9 +572,6 @@
     ],
     [
       "Zuzana Tomková"
-    ],
-    [
-      "nn nn"
     ],
     [
       "nn nn"
@@ -688,16 +682,12 @@
       "Tim Schulze"
     ],
     [
-      "Bianca Schöffegger",
-      "Thomas Bogovits"
+      "Birthe Plohg",
+      "Mike Hoppe"
     ],
     [
       "Birthe Plohg",
       "Rebea Sonnenberg"
-    ],
-    [
-      "Birthe Plohg",
-      "Thorsten Plohg"
     ],
     [
       "Björn Herborn",
@@ -724,8 +714,8 @@
       "JUSTYNA CICHOCKA"
     ],
     [
-      "DIETMAR KIRSCH",
-      "MAGNUS HIRSCHFELD"
+      "Daniel Finster",
+      "David Kalicki"
     ],
     [
       "Daniel Friedrich",
@@ -780,6 +770,10 @@
       "Mateusz Wesołowski"
     ],
     [
+      "Dietmar Kirsch",
+      "Tobias Brune"
+    ],
+    [
       "Dustin Knobloch",
       "Heiko Richter"
     ],
@@ -820,8 +814,8 @@
       "Uwe Schlonsak"
     ],
     [
-      "Hendrik Kumpe",
-      "Noah Lindwedel"
+      "Jakob Kopek",
+      "Miroslaw Nevesely"
     ],
     [
       "Jakub Paczkowski",
@@ -837,7 +831,7 @@
     ],
     [
       "Jan Rohde",
-      "N N"
+      "Marvin Burger"
     ],
     [
       "Janick Mamerow",
@@ -873,7 +867,7 @@
     ],
     [
       "Ján Pipiš",
-      "Matúš Bali-Hudák"
+      "Tomas Sirotek"
     ],
     [
       "Jörg Sven Winkler",
@@ -924,6 +918,10 @@
       "Nicole Tuchbreiter"
     ],
     [
+      "Lennart Backhaus",
+      "Noah Lindwedel"
+    ],
+    [
       "Lucas Beyer",
       "Nicolas Loest"
     ],
@@ -936,24 +934,20 @@
       "Mateusz Brembor"
     ],
     [
-      "Mario Pfeiffer",
-      "Thomas Preiner"
-    ],
-    [
       "Markus Hohmann",
       "Valentin Hornschuh"
+    ],
+    [
+      "Martin Erbe",
+      "Thomas Bogovits"
     ],
     [
       "Martyna Świerczyk",
       "Mateusz Delinger"
     ],
     [
-      "Marvin Burger",
-      "Tobias Brune"
-    ],
-    [
       "Mateusz Brembor",
-      "Paweł Ochniak"
+      "Paczkowski Jakub"
     ],
     [
       "Mateusz Delinger",
@@ -974,6 +968,14 @@
     [
       "Matthias Ascheberg",
       "Rostislav Budař"
+    ],
+    [
+      "Matthias Drobar",
+      "Thomas Preiner"
+    ],
+    [
+      "Matus Bali-Hudak",
+      "Pavel Novák"
     ],
     [
       "Melanie Schönwald",
@@ -1004,10 +1006,6 @@
       "Severin Körschgen"
     ],
     [
-      "Pavel Novák",
-      "Tomáš Sirotek"
-    ],
-    [
       "Peter Joba",
       "Wachsmann Pia"
     ],
@@ -1032,17 +1030,8 @@
       "Wayne Bastow"
     ],
     [
-      "Vojtěch Dvořák",
-      "Zuzana Tomková"
-    ],
-    [
       "Volker Hederich",
       "Wayne Bastrow"
-    ],
-    [
-      "Adrian Schratt",
-      "Andrea Jüsche",
-      "Ralph Kinhacl"
     ],
     [
       "Andreas Ille",
@@ -1050,21 +1039,21 @@
       "Gerd Müller"
     ],
     [
-      "Jan Rohde",
-      "Marvin Burger",
-      "Tobias Brune"
+      "DIETMAR KIRSCH",
+      "Mike Hoppe",
+      "WOLFGANG STARK"
     ],
     [
-      "Adam Justyński",
-      "Dawid Geiger",
-      "Michał Kałuża",
-      "Łukasz Gołąbek"
+      "Adam Slavíček",
+      "David Kubiš",
+      "Lukas Navratil",
+      "Zdenek Podzimek"
     ],
     [
-      "Amir Jazmati",
-      "Hendrik Kumpe",
-      "Noah Lindwedel",
-      "Thore Steinmetz"
+      "Adrian Schratt",
+      "Andreas Jüsche",
+      "Ralph Kinhacl",
+      "Sebastian Schindlbeck"
     ],
     [
       "Andreas Hillerich",
@@ -1079,6 +1068,12 @@
       "Tobias Tangermann"
     ],
     [
+      "Antonia Kulhawy",
+      "Birthe Plohg",
+      "Melanie Schönwald",
+      "Rebea Sonnenberg"
+    ],
+    [
       "Benjamin Schimmeck",
       "Boris Herberg",
       "Lars Spielberg",
@@ -1091,16 +1086,22 @@
       "Nicole Mrosek"
     ],
     [
-      "DIETMAR KIRSCH",
-      "MAGNUS HIRSCHFELD",
-      "Mike Hoppe",
-      "WOLFGANG STARK"
+      "Daniel Schimank",
+      "Martin Erbe",
+      "Mike Weikamm",
+      "Tino Töpfer"
     ],
     [
-      "Daniel Remde",
+      "Daniela Primus",
+      "Jan Rohde",
+      "Marvin Burger",
+      "Tobias Brune"
+    ],
+    [
       "David Kalicki",
       "Justin Kleinert",
-      "Richard Heineke"
+      "Richard Heineke",
+      "Thomas Moros"
     ],
     [
       "Frank Buderer",
@@ -1109,17 +1110,29 @@
       "Matz Matthiessen"
     ],
     [
+      "Hans Jürgen Vogt",
+      "Jan Fleerkortte",
+      "Jörg Sven Winkler",
+      "Mario Fleerkortte"
+    ],
+    [
       "Jens Lüdeke",
       "Mathias Gahl",
       "Michael Bartmann",
       "Simon Schoog-Döhring"
     ],
     [
-      "Adam Slavíček",
-      "David Kubiš",
-      "Jan Völfl",
-      "Martin Mrzena",
-      "Michal Brousil"
+      "Lennart Backhaus",
+      "Noah Lindwedel",
+      "Thore Steinmetz",
+      "Tristan Schulze-Windlof"
+    ],
+    [
+      "Adam Justyński",
+      "Dawid Geiger",
+      "Karol Mazur",
+      "Michał Kałuża",
+      "Łukasz Gołąbek"
     ],
     [
       "Adrian Józefiak",
@@ -1178,25 +1191,11 @@
       "Sascha Michala"
     ],
     [
-      "Andre Kühne",
-      "Daniel Schimank",
-      "Martin Erbe",
-      "Mike Weikamm",
-      "Tino Töpfer"
-    ],
-    [
       "Anna Köllner",
       "Benjamin Fleischer",
       "Ralf Herp",
       "Schuster Rares",
       "Werbke Zora"
-    ],
-    [
-      "Antonia Kulhawy",
-      "Birthe Plohg",
-      "Melanie Schönwald",
-      "N.N. N.N.",
-      "Rebea Sonnenberg"
     ],
     [
       "Beata Świderska",
@@ -1241,6 +1240,13 @@
       "Zuzana Tomková"
     ],
     [
+      "Daniel Finster",
+      "Hansi Marwedel",
+      "Mathias Hey",
+      "Severin Kirschgen",
+      "Vladislav Olynic"
+    ],
+    [
       "Daniel Toporek",
       "Dawid Rąbczyk",
       "Krzysztof Stencel",
@@ -1253,20 +1259,6 @@
       "Magdalena Pietrzyk",
       "Mateusz Brembor",
       "Pawel Lesnicki"
-    ],
-    [
-      "Finden Wirnoch",
-      "Hansi Marwedel",
-      "Mathias Hey",
-      "Severin Kirschgen",
-      "Vladislav Olynic"
-    ],
-    [
-      "Hans Jürgen Vogt",
-      "Jörg Bohun",
-      "Jörg Sven Winkler",
-      "Mario Fleerkortte",
-      "Mirco Feuerhack"
     ],
     [
       "Jan Kapek",
@@ -1288,6 +1280,13 @@
       "Miroslav Michlovský",
       "Pavel Novak",
       "Tomáš Sirotek"
+    ],
+    [
+      "Jürgen Pfistermüller",
+      "Matthias Drobar",
+      "Peter Schmidmair",
+      "Thomas Bogovits",
+      "Thomas Preiner"
     ]
   ]
 }
