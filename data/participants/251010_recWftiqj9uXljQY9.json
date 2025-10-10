@@ -1,7 +1,7 @@
 {
   "competition_id": "recWftiqj9uXljQY9",
   "slots": [],
-  "count": 595,
+  "count": 600,
   "teams": [
     [
       "Adam Justyński"
@@ -1150,10 +1150,10 @@
     ],
     [
       "Aleksander Celarek",
+      "Jakub Paczkowski",
       "Mateusz Brembor",
       "Mateusz Zieleziecki",
-      "Paweł Jaskurzyński",
-      "Paweł Ochniak"
+      "Paweł Jaskurzyński"
     ],
     [
       "Alexander Kulhawy",
@@ -1287,6 +1287,13 @@
       "Peter Schmidmair",
       "Thomas Bogovits",
       "Thomas Preiner"
+    ],
+    [
+      "Kaiser Christine",
+      "Lucas Beyer",
+      "Nico Loest",
+      "Peter Joba",
+      "Pia Wachsmann"
     ]
   ]
 }
