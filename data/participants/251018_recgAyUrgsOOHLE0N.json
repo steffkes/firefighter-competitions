@@ -2,10 +2,10 @@
   "competition_id": "recgAyUrgsOOHLE0N",
   "slots": [
     {
-      "amount": 129
+      "amount": 127
     }
   ],
-  "count": 120,
+  "count": 122,
   "teams": [
     [
       "Alexander Greis"
@@ -257,6 +257,9 @@
       "Sabrina-Verena Schmid"
     ],
     [
+      "Silas Guse"
+    ],
+    [
       "Simon Schleich"
     ],
     [
@@ -270,6 +273,9 @@
     ],
     [
       "Stefan Prinz"
+    ],
+    [
+      "Stefan Rauscher"
     ],
     [
       "Stefan Schulz"
