@@ -2,10 +2,10 @@
   "competition_id": "recgAyUrgsOOHLE0N",
   "slots": [
     {
-      "amount": 126
+      "amount": 125
     }
   ],
-  "count": 124,
+  "count": 125,
   "teams": [
     [
       "Alexander Greis"
@@ -131,6 +131,9 @@
       "Karsten Neupert"
     ],
     [
+      "Kilian Holzheu"
+    ],
+    [
       "Korbinian Gast"
     ],
     [
@@ -147,9 +150,6 @@
     ],
     [
       "Lukas Weiler"
-    ],
-    [
-      "Lukas Willer"
     ],
     [
       "Magnus Panek"
@@ -228,6 +228,9 @@
     ],
     [
       "Peter Wolfram"
+    ],
+    [
+      "Petra Koch"
     ],
     [
       "Philipp Gürntke"
