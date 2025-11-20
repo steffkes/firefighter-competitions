@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 0
+      "amount": 20
     }
   ],
-  "count": 508,
+  "count": 518,
   "teams": [
     [
       "1 Gewinner 1",
@@ -192,6 +192,10 @@
       "MEHLER Michael"
     ],
     [
+      "BÜRGE Fabian",
+      "LEINHOS Steve"
+    ],
+    [
       "CARL Daniela",
       "HEIDER Lorena"
     ],
@@ -250,6 +254,10 @@
     [
       "DÖBERT Mirko",
       "SCHEURING Robin"
+    ],
+    [
+      "DÖLL Rocky",
+      "FLÄHMIH Elias"
     ],
     [
       "DÜFFERT Henrik",
@@ -450,6 +458,10 @@
     [
       "GÜRTLER Marvin",
       "RÖNEKE Niklas"
+    ],
+    [
+      "HAAS Alexander",
+      "REBHAN Tom"
     ],
     [
       "HAMMER Jens",
@@ -672,6 +684,10 @@
       "ZÜHLSDORFF Sebastian"
     ],
     [
+      "KOHL Eni",
+      "STILPE David"
+    ],
+    [
       "KOHL Enrico",
       "TUCHBREITER Nicole"
     ],
@@ -786,6 +802,10 @@
     [
       "LEUS Ivan",
       "PRUIM Christijn"
+    ],
+    [
+      "LINSER Alexander",
+      "LINSER Oliver"
     ],
     [
       "LORENZ Lukas",
