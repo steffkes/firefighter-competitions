@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 20
+      "amount": 18
     }
   ],
-  "count": 518,
+  "count": 522,
   "teams": [
     [
       "1 Gewinner 1",
@@ -226,6 +226,10 @@
     [
       "DIERCKS Kevin",
       "EISOLDT Sven"
+    ],
+    [
+      "DIETRICH Rene",
+      "KUBIS Georg"
     ],
     [
       "DILLINGER Christian",
@@ -490,6 +494,10 @@
     [
       "HEIN Patrick",
       "SAUER Sebastian"
+    ],
+    [
+      "HELLER Bastian",
+      "KUHLMANN Peter"
     ],
     [
       "HELLFRITSCH Michel",
