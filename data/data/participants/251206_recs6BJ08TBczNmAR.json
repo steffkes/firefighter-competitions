@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 17
+      "amount": 18
     }
   ],
-  "count": 524,
+  "count": 522,
   "teams": [
     [
       "1 Gewinner 1",
@@ -388,10 +388,6 @@
       "KNEBEL Claudia"
     ],
     [
-      "FUß Marius",
-      "SCHACK Torsten"
-    ],
-    [
       "FUß Tony",
       "NAST Benjamin"
     ],
@@ -441,7 +437,7 @@
     ],
     [
       "GRIEßMANN Hendrik",
-      "SCHMIDT Ryan"
+      "ROßDEUTSCH Manuel"
     ],
     [
       "GRÜNER Christian",
@@ -621,7 +617,7 @@
     ],
     [
       "JUFFA Philipp",
-      "LINDLEIN Marius"
+      "LINDLEIN Gerrit"
     ],
     [
       "JUNG Kevin",
@@ -734,10 +730,6 @@
     [
       "KRAUß Dominik",
       "SPRANGER Felix"
-    ],
-    [
-      "KREUTZ Kilian",
-      "REITH Christopher"
     ],
     [
       "KRIMM Jennifer",
@@ -960,6 +952,10 @@
       "SCHMIDT Daniel"
     ],
     [
+      "REITH Christopher",
+      "SCHACK Torsten"
+    ],
+    [
       "RIEDEL Patrick",
       "VOIGT Tommy"
     ],
@@ -996,8 +992,8 @@
       "STRAUß Henry"
     ],
     [
-      "SCHLONSAK Paul",
-      "SCHLONSAK Uwe"
+      "SCHLONSAK Uwe",
+      "WALTER Jens"
     ],
     [
       "SCHMID Hannes",
