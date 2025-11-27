@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 92
+      "amount": 91
     }
   ],
-  "count": 106,
+  "count": 108,
   "teams": [
     [
       "Alexander Kook",
@@ -82,6 +82,10 @@
     [
       "Fabian Schröter",
       "Wayne Lüdecke"
+    ],
+    [
+      "Felix Poser",
+      "Jeremy Heier"
     ],
     [
       "Franziska Nowka",
