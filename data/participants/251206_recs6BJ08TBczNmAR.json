@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 18
+      "amount": 19
     }
   ],
-  "count": 522,
+  "count": 520,
   "teams": [
     [
       "1 Gewinner 1",
@@ -301,7 +301,11 @@
     ],
     [
       "ENGELHARDT Andreas",
-      "RAU Christian"
+      "LEIPOLD Torsten"
+    ],
+    [
+      "ESCHENBACHER Tim",
+      "WOLF Mirko"
     ],
     [
       "EUCHLER Moritz Rudi",
@@ -788,10 +792,6 @@
       "RICHTER Daniel"
     ],
     [
-      "LEIPOLD Torsten",
-      "WICHT Michael"
-    ],
-    [
       "LEPPIG Hannes",
       "LEUNERT Tom"
     ],
@@ -884,10 +884,6 @@
       "ROSE Lukas"
     ],
     [
-      "MÜLLER Daniel",
-      "SCHNEIDER Frank"
-    ],
-    [
       "MÜLLER Robert",
       "WÖLKNER Luis"
     ],
@@ -938,10 +934,6 @@
     [
       "POSTEL Sven",
       "ZSCHIESCHE Maik"
-    ],
-    [
-      "PÜLS Frederik",
-      "SCHORR Jannik"
     ],
     [
       "RAABE Bert",
@@ -1010,6 +1002,10 @@
     [
       "SCHMITT Ole",
       "SEUFERT Jakob"
+    ],
+    [
+      "SCHNEIDER Frank",
+      "WICHT Michael"
     ],
     [
       "SCHNEIDER Peer",
