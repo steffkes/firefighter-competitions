@@ -8,10 +8,6 @@
   "count": 520,
   "teams": [
     [
-      "1 Gewinner 1",
-      "2 Gewinner 2"
-    ],
-    [
       "ABRAM David",
       "SCHLEGEL Tom"
     ],
@@ -36,6 +32,10 @@
       "LANGE Julius"
     ],
     [
+      "ARNOLD Michael",
+      "RUPP Sascha"
+    ],
+    [
       "ASTER Pierre",
       "PÖTZSCH Stephan"
     ],
@@ -45,7 +45,7 @@
     ],
     [
       "BAIER Heiko",
-      "WINKLER Marcel"
+      "LANGGUT Max"
     ],
     [
       "BAKKER David",
@@ -78,10 +78,6 @@
     [
       "BAUER Mark",
       "NOACK Thomas"
-    ],
-    [
-      "BAUMANN Jannes",
-      "MINDERLEIN Christoph"
     ],
     [
       "BEBENSEE Malte",
@@ -121,7 +117,7 @@
     ],
     [
       "BLOCK Finn",
-      "MATTIES Lucas"
+      "MATHIES Lucas"
     ],
     [
       "BLUME Harry",
@@ -140,12 +136,16 @@
       "SCHMITT Matthias"
     ],
     [
+      "BLÜMMERT Fabian",
+      "SCHUBERT Justin"
+    ],
+    [
       "BODE René",
       "KULHAWY Alexander"
     ],
     [
       "BOESLER Nadja",
-      "ZÄDOW Lukas"
+      "WENDEROTH Benjamin"
     ],
     [
       "BORN Ian",
@@ -168,10 +168,6 @@
       "RAU Steven"
     ],
     [
-      "BROST Leonard",
-      "MONREAL Thomas"
-    ],
-    [
       "BUBNER Chiara",
       "KRÜGER Julia"
     ],
@@ -182,10 +178,6 @@
     [
       "BÄHRE Alexander",
       "MENZEL Justus"
-    ],
-    [
-      "BÖHM Marin",
-      "GÖTTLINGER Johannes"
     ],
     [
       "BÖHM Robert",
@@ -229,7 +221,7 @@
     ],
     [
       "DILLINGER Christian",
-      "HOFFMANN Vincent"
+      "STEIN Fabian"
     ],
     [
       "DITTMANN Max",
@@ -304,10 +296,6 @@
       "WINKLER Damon"
     ],
     [
-      "FABER Alexander",
-      "GILBERT Simon"
-    ],
-    [
       "FAUPEL Marco",
       "FEIGE Tommy"
     ],
@@ -328,20 +316,12 @@
       "SIEBERT Steffen"
     ],
     [
-      "FLEISCHHAUER Manuel",
-      "NEUMANN Paul"
-    ],
-    [
       "FLOCK Enrico",
       "KIESER Erik"
     ],
     [
       "FLÜGGE Jannik",
       "ROCKAR Sven"
-    ],
-    [
-      "FRANCO Scarlett",
-      "KÖRBER Steven"
     ],
     [
       "FRANKE Martin",
@@ -353,11 +333,15 @@
     ],
     [
       "FREIGANG Maik",
+      "GREIS Alexander"
+    ],
+    [
+      "FREIGANG Maik",
       "SAUER Sabine"
     ],
     [
       "FREIMUTH Marius",
-      "VON CHAMIER Kay"
+      "PITRUSKA Laura"
     ],
     [
       "FRIEDRICH Andreas",
@@ -392,10 +376,6 @@
       "SAUTER Patrick"
     ],
     [
-      "GERBETH Lukas",
-      "SCHUBERT Justin"
-    ],
-    [
       "GERMUHL Kevin",
       "SPRANGER Christoph"
     ],
@@ -406,6 +386,14 @@
     [
       "GIERING Jonas",
       "JENNRICH Christoph"
+    ],
+    [
+      "GILBERT Simon",
+      "LIFZIK Lorenz"
+    ],
+    [
+      "GLOTZBACH Matthias",
+      "KÖRBER Steven"
     ],
     [
       "GOTTFRIED Alexander",
@@ -426,10 +414,6 @@
     [
       "GRAMBS Oliver",
       "HESSE Martin"
-    ],
-    [
-      "GREIS Alexander",
-      "HEINZE Nelly"
     ],
     [
       "GREIS Alexander",
@@ -454,6 +438,10 @@
     [
       "GÖRLINGER Jannis",
       "SCHMIDT Noa"
+    ],
+    [
+      "GÖTTLINGER Johannes",
+      "PANDZA Heiko"
     ],
     [
       "GÖTZ Dominic Leon",
@@ -492,8 +480,12 @@
       "MICHAELIS Jörn"
     ],
     [
+      "HAßBACH Artur",
+      "HEISE Clemens"
+    ],
+    [
       "HEIDER Jannis",
-      "PFEIL Niklas"
+      "OKLITSCHEK Yannik"
     ],
     [
       "HEIN Patrick",
@@ -506,10 +498,6 @@
     [
       "HELLFRITSCH Michel",
       "SCHNECKENHAUS Daniel"
-    ],
-    [
-      "HELWIG Stefan",
-      "HEYDER Clemens"
     ],
     [
       "HEMMANN Norma",
@@ -536,8 +524,8 @@
       "PÄTZOLT Daniel"
     ],
     [
-      "HERING Eric",
-      "MARIENTHAL Stefan"
+      "HEYDER Clemens",
+      "WAGNER John"
     ],
     [
       "HEßDÖRFER Jessica",
@@ -558,6 +546,10 @@
     [
       "HILPERT Anke",
       "WEIPRECHT Michael"
+    ],
+    [
+      "HILPERT Paul",
+      "NEHRDICH Pascal"
     ],
     [
       "HOCKAUF Florian",
@@ -590,6 +582,10 @@
     [
       "HÄNKE Hans",
       "JONASCH Paul"
+    ],
+    [
+      "HÄUSLER Peter",
+      "SIMON Lara"
     ],
     [
       "HÖHER Julian",
@@ -626,10 +622,6 @@
     [
       "JUNG Kevin",
       "KÖPKE Elias"
-    ],
-    [
-      "JÄGER Lenia",
-      "NEHRDICH Pascal"
     ],
     [
       "JÄGER Robert",
@@ -736,7 +728,15 @@
       "ROCHOLL Marco"
     ],
     [
+      "KRUK Kevin",
+      "ROCHOLL Marco"
+    ],
+    [
       "KRÖBER Konrad",
+      "MONREAL Thomas"
+    ],
+    [
+      "KRÖBER Stefan",
       "LEHNIGK Nico"
     ],
     [
@@ -757,7 +757,7 @@
     ],
     [
       "KÜNZEL Sebastian",
-      "NEUGEBAUER Kai"
+      "PALAS Marcel"
     ],
     [
       "LANG Alexander",
@@ -782,6 +782,10 @@
     [
       "LEHMANN Philipp",
       "RICHTER Daniel"
+    ],
+    [
+      "LEIHNDORF Leon",
+      "ZÄDOW Lukas"
     ],
     [
       "LEPPIG Hannes",
@@ -836,10 +840,6 @@
       "PUSCHER Vincent"
     ],
     [
-      "MARTIN Johannes",
-      "SCHÜTZE Tim"
-    ],
-    [
       "MARTIN Jonas",
       "SAHNER Leah"
     ],
@@ -848,12 +848,12 @@
       "WEIß Alexander"
     ],
     [
-      "MATTHIESEN Stev",
-      "RIEMER Marcus"
+      "MATTHESSEN Mats",
+      "STEIN Fabian"
     ],
     [
-      "MAYER Lars",
-      "WENDEROTH Benjamin"
+      "MATTHIESEN Stev",
+      "RIEMER Marcus"
     ],
     [
       "MEYER Axel",
@@ -862,6 +862,14 @@
     [
       "MEYER Burkhard",
       "REISEWITZ Andre"
+    ],
+    [
+      "MILOBARA Maximilian",
+      "NEUMANN Paul"
+    ],
+    [
+      "MINDERLEIN Christoph",
+      "SOWINSKI Thorben"
     ],
     [
       "MOOZ Lukas",
@@ -884,6 +892,10 @@
       "TOMKOWIAK Andre"
     ],
     [
+      "NOACK Johannes",
+      "SCHÜTZE Tim"
+    ],
+    [
       "NOLL Sidney",
       "PAUL Felix"
     ],
@@ -894,10 +906,6 @@
     [
       "OLSZEWSKI Jeremy",
       "SCHWALKE David"
-    ],
-    [
-      "OLUCHA Joan",
-      "STEIN Fabian"
     ],
     [
       "OSSE Hendrik",
@@ -918,10 +926,6 @@
     [
       "PAULI Vincent",
       "PÖHL Silvio"
-    ],
-    [
-      "PETER Niklas",
-      "REICHEL Silas"
     ],
     [
       "PFETZING Sarah",
@@ -1030,10 +1034,6 @@
     [
       "SCHÖCH Andreas",
       "UNKEL Markus"
-    ],
-    [
-      "SIMON Lara",
-      "WAGNER Patrik"
     ],
     [
       "SPALECK Tim",
