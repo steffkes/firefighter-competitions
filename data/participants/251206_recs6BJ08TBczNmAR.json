@@ -2,10 +2,10 @@
   "competition_id": "recs6BJ08TBczNmAR",
   "slots": [
     {
-      "amount": 19
+      "amount": 23
     }
   ],
-  "count": 520,
+  "count": 512,
   "teams": [
     [
       "ABRAM David",
@@ -120,10 +120,6 @@
       "MATHIES Lucas"
     ],
     [
-      "BLUME Harry",
-      "HEIDER Stefan"
-    ],
-    [
       "BLUMENSTEIN Alexander",
       "MERKEL Linus"
     ],
@@ -200,6 +196,10 @@
       "RISCHE Jan-Nick"
     ],
     [
+      "DAHINTEN Marcel Otto",
+      "HENNING Jakob"
+    ],
+    [
       "DEMBECK Nils",
       "SCHMIED Torsten"
     ],
@@ -236,10 +236,6 @@
       "KAUFUNG Leon"
     ],
     [
-      "DREYER Florian",
-      "RÖSCH Florian"
-    ],
-    [
       "DUPSLAFF Christian",
       "ILLEIN Marco"
     ],
@@ -250,10 +246,6 @@
     [
       "DÖLL Rocky",
       "FLÄHMIH Elias"
-    ],
-    [
-      "DÜFFERT Henrik",
-      "GLANZ Henry"
     ],
     [
       "DÜFFERT Mareile",
@@ -308,6 +300,10 @@
       "FOCHLER Martin"
     ],
     [
+      "FISCHER Daniel",
+      "WERNER Michael"
+    ],
+    [
       "FLADE Rick",
       "KAISER Jan"
     ],
@@ -346,10 +342,6 @@
     [
       "FRIEDRICH Andreas",
       "TÖNGES Alexander"
-    ],
-    [
-      "FRIEDRICH Michael",
-      "JUNGBAUER Martino"
     ],
     [
       "FRITSCH Andrè",
@@ -400,10 +392,6 @@
       "SCHUMACHER Marcel"
     ],
     [
-      "GOTTSCHALK Sarah",
-      "KEIL Christian"
-    ],
-    [
       "GRABARSE Mario",
       "THOMANN Marcel"
     ],
@@ -430,6 +418,10 @@
     [
       "GRÜNER Christian",
       "SCHUBERT Toni"
+    ],
+    [
+      "GÄSTE 1",
+      "GÄSTE 2"
     ],
     [
       "GÖLLNITZ Florian",
@@ -504,10 +496,6 @@
       "WEDEL Florian"
     ],
     [
-      "HENNING Jakob",
-      "KOHLMANN Dominik"
-    ],
-    [
       "HENTSCHEL Felix",
       "LEMM Matthias"
     ],
@@ -524,16 +512,16 @@
       "PÄTZOLT Daniel"
     ],
     [
+      "HERMIG Eric",
+      "MARIENTHAL Stefan"
+    ],
+    [
       "HEYDER Clemens",
       "WAGNER John"
     ],
     [
       "HEßDÖRFER Jessica",
       "ZEIDLER Peter"
-    ],
-    [
-      "HIEKEL Daniel",
-      "STOLZE Kevin"
     ],
     [
       "HILDEBRANDT Robert",
@@ -580,10 +568,6 @@
       "WAGNER Maximilian"
     ],
     [
-      "HÄNKE Hans",
-      "JONASCH Paul"
-    ],
-    [
       "HÄUSLER Peter",
       "SIMON Lara"
     ],
@@ -612,6 +596,10 @@
       "SCHULZ Alexander"
     ],
     [
+      "JONASCH Paul",
+      "SIEGL Kevin"
+    ],
+    [
       "JUFFA Marco",
       "URBACH Verena"
     ],
@@ -622,6 +610,10 @@
     [
       "JUNG Kevin",
       "KÖPKE Elias"
+    ],
+    [
+      "JUNGBAUER Martino",
+      "KEIL Christian"
     ],
     [
       "JÄGER Robert",
@@ -656,10 +648,6 @@
       "PAUL Felix"
     ],
     [
-      "KAUFUNG Tobias",
-      "PAUL Karina"
-    ],
-    [
       "KIESSBAUER Kevin",
       "ROMMERT Tim"
     ],
@@ -690,6 +678,10 @@
     [
       "KOHL Enrico",
       "TUCHBREITER Nicole"
+    ],
+    [
+      "KOHLMANN Dominik",
+      "PFETZING Sarah"
     ],
     [
       "KOHRS Karsten Kala",
@@ -808,10 +800,6 @@
       "MENZEL Toni"
     ],
     [
-      "LORENZ Mathias",
-      "RUDER Daniel"
-    ],
-    [
       "LOTHER Julian",
       "WAGNER Lena"
     ],
@@ -826,10 +814,6 @@
     [
       "MAAS Christopher",
       "MILOBARA Maximilian"
-    ],
-    [
-      "MAIER Markus",
-      "SCHNEIDER Ralf"
     ],
     [
       "MARKS Christian",
@@ -884,6 +868,10 @@
       "ROSE Lukas"
     ],
     [
+      "MÜLLER Isabelle",
+      "VOGEL Jan"
+    ],
+    [
       "MÜLLER Robert",
       "WÖLKNER Luis"
     ],
@@ -898,10 +886,6 @@
     [
       "NOLL Sidney",
       "PAUL Felix"
-    ],
-    [
-      "OKLITSCHEK Yannik",
-      "RUTH Florian"
     ],
     [
       "OLSZEWSKI Jeremy",
@@ -926,10 +910,6 @@
     [
       "PAULI Vincent",
       "PÖHL Silvio"
-    ],
-    [
-      "PFETZING Sarah",
-      "SCHÄBS Huldreich"
     ],
     [
       "PLEIER Johannes",
@@ -960,8 +940,20 @@
       "VOIGT Tommy"
     ],
     [
+      "ROHKOHL Julian",
+      "STOLZE Kevin"
+    ],
+    [
+      "RUDER Daniel",
+      "RUDER Thomas"
+    ],
+    [
       "RÄDER Sandro",
       "WOLFF Tom"
+    ],
+    [
+      "RÖSCH Florian",
+      "WITTMANN Kilian"
     ],
     [
       "RÖVER Lee",
@@ -984,16 +976,8 @@
       "WEICKMANN Matthias"
     ],
     [
-      "SCHAAR Jan",
-      "SCHAAR Niclas"
-    ],
-    [
       "SCHENK Ronny",
       "STRAUß Henry"
-    ],
-    [
-      "SCHMID Hannes",
-      "STOLZ Jochen"
     ],
     [
       "SCHMIDT Lukas",
