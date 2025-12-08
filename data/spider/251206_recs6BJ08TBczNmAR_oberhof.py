@@ -31,6 +31,17 @@ class CompetitionSpider(Spider):
             callback=self.parse_slots,
         )
 
+        yield scrapy.FormRequest(
+            method="GET",
+            url="https://my.raceresult.com/%s/RRPublish/data/list" % self.race_id,
+            formdata={
+                "key": self.race_key,
+                "listname": "Online|Final",
+                "contest": "1",
+                "name": "%231_StairRun - Feuerwehr",
+            },
+        )
+
     def parse_slots(self, response):
         contests = response.json()["RegistrationConfig"]["Registrations"][0]["Contests"]
 
@@ -66,6 +77,64 @@ class CompetitionSpider(Spider):
                     competition_id=self.competition_id,
                     names=sorted(map(self.fixName, [raw_name_1, raw_name_2])),
                 )
+
+    def parse(self, response):
+        results = []
+        mapping = {
+            "#1_M": ("M", "M"),
+            "#2_M 100": ("M", "M 100"),
+            "#3_M 80": ("M", "M 80"),
+            "#4_Mix": ("X", None),
+            "#5_W": ("W", None),
+        }
+
+        for ident, records in response.json()["data"][
+            "#1_StairRun - Feuerwehr"
+        ].items():
+            (category, age_group) = mapping[ident.strip()]
+
+            for record in records:
+                [
+                    _id1,
+                    _id2,
+                    _rank_age_group,
+                    bib,
+                    _team,
+                    name1,
+                    name2,
+                    raw_duration,
+                ] = record
+
+                result = ResultItem(
+                    date=self.race_date,
+                    competition_id=self.competition_id,
+                    type="MPA",
+                    duration=self.fixDuration(raw_duration),
+                    names=sorted([name1, name2]),
+                    category=category,
+                    age_group=age_group,
+                    bib=bib,
+                    rank=ResultRankItem(),
+                )
+                results.append(result)
+
+        ranks = {
+            "category": {},
+            "age_group": {},
+        }
+
+        for result in sorted(results, key=lambda result: result["duration"]):
+            result["rank"]["total"] = ranks.get("total", 1)
+            ranks["total"] = result["rank"]["total"] + 1
+
+            result["rank"]["category"] = ranks["category"].get(result["category"], 1)
+            ranks["category"][result["category"]] = result["rank"]["category"] + 1
+
+            if result["age_group"]:
+                result["rank"]["age_group"] = ranks["age_group"].get(result["age_group"], 1)
+                ranks["age_group"][result["age_group"]] = result["rank"]["age_group"] + 1
+
+        yield from results
 
 
 import pytest
