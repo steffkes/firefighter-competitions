@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 81
+      "amount": 80
     }
   ],
-  "count": 132,
+  "count": 136,
   "teams": [
     [
       "Alexander Kook",
@@ -18,6 +18,10 @@
     [
       "Alexander Weiß",
       "Anne-Kathrin Weiß"
+    ],
+    [
+      "Andreas Bezikofer",
+      "Markus Moser"
     ],
     [
       "Andreas Dunkelberg",
@@ -106,6 +110,10 @@
     [
       "Eric Poller",
       "Johannes Stiller"
+    ],
+    [
+      "Fabian Bürge",
+      "Steve Leinhos"
     ],
     [
       "Fabian Schröter",
