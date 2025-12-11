@@ -2,11 +2,15 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 76
+      "amount": 68
     }
   ],
-  "count": 152,
+  "count": 170,
   "teams": [
+    [
+      "Adrian Kirchner",
+      "Armin Kirchner"
+    ],
     [
       "Alexander Kook",
       "Thomas Hügle"
@@ -14,6 +18,10 @@
     [
       "Alexander Oehler",
       "Soraya Bartlitz"
+    ],
+    [
+      "Alexander Roos",
+      "Patrick Schramm"
     ],
     [
       "Alexander Weiß",
@@ -34,6 +42,10 @@
     [
       "André Pappert",
       "Nicolas Eitner"
+    ],
+    [
+      "Birk Scheler",
+      "Frank Meinhold"
     ],
     [
       "Brian Schink",
@@ -104,8 +116,16 @@
       "Silvio Wick"
     ],
     [
+      "Darlene Schramm",
+      "Jannik Stephan"
+    ],
+    [
       "Dennis Ruhl",
       "René Sonke"
+    ],
+    [
+      "Dominik Wukasch",
+      "Robin Henke"
     ],
     [
       "Eileen Holzmann",
@@ -142,6 +162,10 @@
     [
       "Florian Eichhorn",
       "Mathias Nüchterlein"
+    ],
+    [
+      "Florian Sickert",
+      "Lena Sophie Behne"
     ],
     [
       "Frank Hergenröther",
@@ -188,6 +212,10 @@
       "Stefan Schulze"
     ],
     [
+      "Julia Krüger",
+      "Tobias Fröhlich"
+    ],
+    [
       "Justin Maaser",
       "Tommy Büttner"
     ],
@@ -202,6 +230,10 @@
     [
       "Kolja Brosch",
       "Tatjana Kaufmann"
+    ],
+    [
+      "Lasse Timmerhues",
+      "Tobias Klinger"
     ],
     [
       "Leon Hädrich",
@@ -294,6 +326,10 @@
     [
       "Philipp Rögner",
       "Tino Leidel"
+    ],
+    [
+      "Richard Hauschild",
+      "Thomas Richter"
     ],
     [
       "Ronny Langbein",
