@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 77
+      "amount": 76
     }
   ],
-  "count": 146,
+  "count": 152,
   "teams": [
     [
       "Alexander Kook",
@@ -92,6 +92,10 @@
       "Domenik Weitzmann"
     ],
     [
+      "Daniel Hörschelmann",
+      "Tamina Lorbach"
+    ],
+    [
       "Daniel Matthey",
       "Oliver Ellinger"
     ],
@@ -158,6 +162,10 @@
     [
       "Jan Wandrei",
       "Jannik Bauch"
+    ],
+    [
+      "Janine Gerber",
+      "Patrick Sauter"
     ],
     [
       "Jannis Demuth",
@@ -242,6 +250,10 @@
     [
       "Markus Pahn",
       "Tobias Hannusch"
+    ],
+    [
+      "Marvin Hänel",
+      "Maximilian Wagner"
     ],
     [
       "Matthias Kaden",
