@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 68
+      "amount": 67
     }
   ],
-  "count": 170,
+  "count": 174,
   "teams": [
     [
       "Adrian Kirchner",
@@ -124,6 +124,10 @@
       "René Sonke"
     ],
     [
+      "Dominik Strba",
+      "Mario Blaschke"
+    ],
+    [
       "Dominik Wukasch",
       "Robin Henke"
     ],
@@ -162,6 +166,10 @@
     [
       "Florian Eichhorn",
       "Mathias Nüchterlein"
+    ],
+    [
+      "Florian Laubach",
+      "Mario Siegel"
     ],
     [
       "Florian Sickert",
