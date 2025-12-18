@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 62
+      "amount": 58
     }
   ],
-  "count": 192,
+  "count": 200,
   "teams": [
     [
       "Adrian Kirchner",
@@ -34,6 +34,10 @@
     [
       "Andreas Dunkelberg",
       "Oliver Diete"
+    ],
+    [
+      "Andreas Reinhardt",
+      "Florian Jambresic"
     ],
     [
       "Andreas Scherer",
@@ -212,6 +216,10 @@
       "Patrick Sauter"
     ],
     [
+      "Jannes Weigel",
+      "Tom Helbing"
+    ],
+    [
       "Jannis Demuth",
       "Marvin Bollmann"
     ],
@@ -250,6 +258,10 @@
     [
       "Karolin Barcsik",
       "Tanja Raupach"
+    ],
+    [
+      "Katja Schack",
+      "Nick Kämmer"
     ],
     [
       "Kevin Bauer",
@@ -346,6 +358,10 @@
     [
       "Nadine Weidhaus",
       "Sören Stier"
+    ],
+    [
+      "Nils Dembeck",
+      "Torsten Schmied"
     ],
     [
       "Patrick Niedzwetzki",
