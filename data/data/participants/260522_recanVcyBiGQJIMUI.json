@@ -2,43 +2,106 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 150
+      "amount": 129
     }
   ],
-  "count": 11,
+  "count": 32,
   "teams": [
     [
-      null
+      "Alfonso Barcena"
     ],
     [
-      null
+      "Benjamin Nägelein"
     ],
     [
-      null
+      "Calvin Scholl"
     ],
     [
-      null
+      "Christian Lampart"
     ],
     [
-      null
+      "Elias Vogt"
     ],
     [
-      null
+      "Felix Fingerle"
     ],
     [
-      null
+      "Felix Huber"
     ],
     [
-      null
+      "Felix Kurfürst"
     ],
     [
-      null
+      "Florian Erlenmaier"
     ],
     [
-      null
+      "Florian Richter"
     ],
     [
-      null
+      "Gunther Fuchs"
+    ],
+    [
+      "Jonas Kirstein"
+    ],
+    [
+      "Jörg Bauer"
+    ],
+    [
+      "Jürgen Gloger"
+    ],
+    [
+      "Jürgen Hutzler"
+    ],
+    [
+      "Manfred Freimut"
+    ],
+    [
+      "Marius-Can Kern"
+    ],
+    [
+      "Markus Frieß"
+    ],
+    [
+      "Markus Klink"
+    ],
+    [
+      "Martin Franke"
+    ],
+    [
+      "Martin Köberle"
+    ],
+    [
+      "Michael Arnegger"
+    ],
+    [
+      "Pascal Schlecht"
+    ],
+    [
+      "Philipp Dongus"
+    ],
+    [
+      "Robin Kirchmaier"
+    ],
+    [
+      "Sascha Unsöld"
+    ],
+    [
+      "Sascha Wiedmann"
+    ],
+    [
+      "Sebastian Stamer"
+    ],
+    [
+      "Thomas Kern"
+    ],
+    [
+      "Thomas Schindele"
+    ],
+    [
+      "Tim Klein"
+    ],
+    [
+      "Tino Leidel"
     ]
   ]
 }

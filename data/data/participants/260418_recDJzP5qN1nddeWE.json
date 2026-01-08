@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 31
+      "amount": 30
     }
   ],
-  "count": 262,
+  "count": 264,
   "teams": [
     [
       "Adrian Kirchner",
@@ -70,6 +70,10 @@
     [
       "André Pappert",
       "Nicolas Eitner"
+    ],
+    [
+      "Angela Heitzer",
+      "Lisa-Marie Gerblich"
     ],
     [
       "Ann-Christin Siegel",
