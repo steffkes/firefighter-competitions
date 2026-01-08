@@ -2,16 +2,22 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 125
+      "amount": 115
     }
   ],
-  "count": 36,
+  "count": 46,
   "teams": [
     [
       "Alfonso Barcena"
     ],
     [
+      "Andre Thieringer"
+    ],
+    [
       "Andreas Butzer"
+    ],
+    [
+      "Andreas Wirth"
     ],
     [
       "Benjamin Nägelein"
@@ -21,6 +27,9 @@
     ],
     [
       "Christian Lampart"
+    ],
+    [
+      "Claude Kaufmann"
     ],
     [
       "Dominik Steidle"
@@ -44,10 +53,16 @@
       "Florian Richter"
     ],
     [
+      "Florian Wirth"
+    ],
+    [
       "Gunther Fuchs"
     ],
     [
       "Jonas Kirstein"
+    ],
+    [
+      "Julian Röscheise"
     ],
     [
       "Jörg Bauer"
@@ -65,6 +80,9 @@
       "Marius-Can Kern"
     ],
     [
+      "Mark Winter"
+    ],
+    [
       "Markus Frieß"
     ],
     [
@@ -77,7 +95,13 @@
       "Martin Köberle"
     ],
     [
+      "Martin Loos"
+    ],
+    [
       "Michael Arnegger"
+    ],
+    [
+      "Nick Hespeler"
     ],
     [
       "Pascal Schlecht"
@@ -86,7 +110,13 @@
       "Philipp Dongus"
     ],
     [
+      "Rainer Kunz"
+    ],
+    [
       "Robin Kirchmaier"
+    ],
+    [
+      "Roland Erhardt"
     ],
     [
       "Rudi Wengert"
