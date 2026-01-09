@@ -2,10 +2,10 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 114
+      "amount": 112
     }
   ],
-  "count": 47,
+  "count": 49,
   "teams": [
     [
       "Alfonso Barcena"
@@ -116,6 +116,9 @@
       "Rainer Kunz"
     ],
     [
+      "Robert Jäger"
+    ],
+    [
       "Robin Kirchmaier"
     ],
     [
@@ -147,6 +150,9 @@
     ],
     [
       "Tom Nägelein"
+    ],
+    [
+      "Wolfgang Fähnle"
     ]
   ]
 }
