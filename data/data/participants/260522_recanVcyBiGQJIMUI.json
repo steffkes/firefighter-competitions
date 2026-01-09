@@ -2,10 +2,10 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 112
+      "amount": 107
     }
   ],
-  "count": 49,
+  "count": 54,
   "teams": [
     [
       "Alfonso Barcena"
@@ -30,6 +30,9 @@
     ],
     [
       "Claude Kaufmann"
+    ],
+    [
+      "Damion Werner"
     ],
     [
       "Dominik Steidle"
@@ -95,10 +98,16 @@
       "Martin Franke"
     ],
     [
+      "Martin Karg"
+    ],
+    [
       "Martin Köberle"
     ],
     [
       "Martin Loos"
+    ],
+    [
+      "Maximilian Harbeck"
     ],
     [
       "Michael Arnegger"
@@ -114,6 +123,9 @@
     ],
     [
       "Rainer Kunz"
+    ],
+    [
+      "Raphael Pfleghaar"
     ],
     [
       "Robert Jäger"
@@ -144,6 +156,9 @@
     ],
     [
       "Tim Klein"
+    ],
+    [
+      "Tim Schaaf"
     ],
     [
       "Tino Leidel"
