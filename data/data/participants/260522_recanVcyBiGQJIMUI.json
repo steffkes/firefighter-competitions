@@ -2,10 +2,10 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 103
+      "amount": 98
     }
   ],
-  "count": 58,
+  "count": 63,
   "teams": [
     [
       "Alfonso Barcena"
@@ -15,6 +15,9 @@
     ],
     [
       "Andreas Butzer"
+    ],
+    [
+      "Andreas Schäch"
     ],
     [
       "Andreas Wirth"
@@ -27,6 +30,9 @@
     ],
     [
       "Christian Fleschhut"
+    ],
+    [
+      "Christian Kreit"
     ],
     [
       "Christian Lampart"
@@ -66,6 +72,9 @@
     ],
     [
       "Hagen Scherer"
+    ],
+    [
+      "Hannes Schmid"
     ],
     [
       "Jonas Kirstein"
@@ -146,6 +155,9 @@
       "Roland Erhardt"
     ],
     [
+      "Roman Retsch"
+    ],
+    [
       "Rudi Wengert"
     ],
     [
@@ -159,6 +171,9 @@
     ],
     [
       "Steve Roidl"
+    ],
+    [
+      "Thomas Junginger"
     ],
     [
       "Thomas Kern"
