@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 12
+      "amount": 7
     }
   ],
-  "count": 300,
+  "count": 322,
   "teams": [
     [
       "Adrian Kirchner",
@@ -18,6 +18,10 @@
     [
       "Alexander Hartleb",
       "Julius Döring"
+    ],
+    [
+      "Alexander Heise",
+      "Sebastian Kautz"
     ],
     [
       "Alexander Kook",
@@ -112,8 +116,16 @@
       "Daniel Pätzolt"
     ],
     [
+      "Bodo Voss",
+      "Sebastian Zastrow"
+    ],
+    [
       "Brian Schink",
       "Marcel Groth"
+    ],
+    [
+      "Carl  Jacob Drese",
+      "Steven Meincke"
     ],
     [
       "Carsten Held",
@@ -130,6 +142,10 @@
     [
       "Christian Krause",
       "Sebastian Löffler"
+    ],
+    [
+      "Christian Mitsch",
+      "Matthias Weickmann"
     ],
     [
       "Christian Mogalla",
@@ -236,6 +252,10 @@
       "Manuel Schlothauer"
     ],
     [
+      "Enrico Kohl",
+      "Nicole Tuchbreiter"
+    ],
+    [
       "Eric Koch",
       "Jan-Peter Attula"
     ],
@@ -258,6 +278,10 @@
     [
       "Felix Poser",
       "Jeremy Heier"
+    ],
+    [
+      "Fionn Herchenbach",
+      "Jakob Föhring"
     ],
     [
       "Florian Banse",
@@ -326,6 +350,10 @@
     [
       "Jan Barcsik",
       "Maik Rosenbauer"
+    ],
+    [
+      "Jan Hanke",
+      "Steffen Hanke"
     ],
     [
       "Jan Wandrei",
@@ -452,6 +480,14 @@
       "Markus Brill"
     ],
     [
+      "Lucas Zimmermann",
+      "Max Spengler"
+    ],
+    [
+      "Malte Haack",
+      "Reimond Kamrath"
+    ],
+    [
       "Manfred Sommerauer",
       "Marco Henkel"
     ],
@@ -520,6 +556,10 @@
       "Michael Kaufmann"
     ],
     [
+      "Matthias Weickmann",
+      "Nicole Tuchbreiter"
+    ],
+    [
       "Max Raudßus",
       "Stephan Trog"
     ],
@@ -550,6 +590,10 @@
     [
       "Niklas Hensel",
       "Robert Gothe"
+    ],
+    [
+      "Niklas Neugebauer",
+      "Tom Hohl"
     ],
     [
       "Nils Dembeck",
