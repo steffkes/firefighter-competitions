@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 19
+      "amount": 13
     }
   ],
-  "count": 280,
+  "count": 300,
   "teams": [
     [
       "Adrian Kirchner",
@@ -22,6 +22,10 @@
     [
       "Alexander Kook",
       "Thomas Hügle"
+    ],
+    [
+      "Alexander Lang",
+      "Michael Strauch"
     ],
     [
       "Alexander Oehler",
@@ -92,6 +96,10 @@
       "Steffen Kröger"
     ],
     [
+      "Benjamin Nast",
+      "Julian Eisenschmidt"
+    ],
+    [
       "Bernd Range",
       "Lucas Harbich"
     ],
@@ -156,6 +164,10 @@
       "Jan Ral"
     ],
     [
+      "Clemens Gutmann",
+      "Jonathan Nüdling"
+    ],
+    [
       "Colin Grahmann",
       "Johannes Ludwig"
     ],
@@ -174,6 +186,10 @@
     [
       "Daniel Matthey",
       "Oliver Ellinger"
+    ],
+    [
+      "Daniel Müller",
+      "Justin Witzel"
     ],
     [
       "Daniel Prinz",
@@ -292,8 +308,20 @@
       "Victoria Kein"
     ],
     [
+      "Hendrik Grießmann",
+      "Torsten Schack"
+    ],
+    [
       "Hugo Hartmann",
       "Jörg Hartmann"
+    ],
+    [
+      "Jacqueline Phan",
+      "Martin Franke"
+    ],
+    [
+      "Jacqueline Phan",
+      "Martin Franke"
     ],
     [
       "Jan Barcsik",
@@ -380,6 +408,10 @@
       "Lukas Wielgorz"
     ],
     [
+      "Jürgen Herberich",
+      "Markus Herberich"
+    ],
+    [
       "Karolin Barcsik",
       "Tanja Raupach"
     ],
@@ -390,6 +422,10 @@
     [
       "Kevin Bauer",
       "Patrick Kreß"
+    ],
+    [
+      "Kilian Kreutz",
+      "Manuel Roßdeutsch"
     ],
     [
       "Kolja Brosch",
@@ -406,6 +442,10 @@
     [
       "Leon Hädrich",
       "Marcel Gießhöfer"
+    ],
+    [
+      "Leonhard Kreutz",
+      "Philipp Herberich"
     ],
     [
       "Lucas Harbich",
