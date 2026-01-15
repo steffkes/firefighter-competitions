@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 7
+      "amount": 5
     }
   ],
-  "count": 322,
+  "count": 330,
   "teams": [
     [
       "Adrian Kirchner",
@@ -42,6 +42,10 @@
     [
       "Alexander Weiß",
       "Anne-Kathrin Weiß"
+    ],
+    [
+      "Alina Löhrke",
+      "Florian Wietzke"
     ],
     [
       "Andreas Bezikofer",
@@ -220,6 +224,14 @@
       "Jannik Stephan"
     ],
     [
+      "David Stilper",
+      "Enrico Kohl"
+    ],
+    [
+      "David Stilper",
+      "Laura Wiench"
+    ],
+    [
       "Denis Weinreich",
       "Jörn Köllmer"
     ],
@@ -310,6 +322,10 @@
     [
       "Frank Hergenröther",
       "Oliver Adelhardt"
+    ],
+    [
+      "Frank Saupe",
+      "Matthias Weickmann"
     ],
     [
       "Franz Weihs",
