@@ -2,10 +2,10 @@
   "competition_id": "recDJzP5qN1nddeWE",
   "slots": [
     {
-      "amount": 4
+      "amount": 2
     }
   ],
-  "count": 332,
+  "count": 342,
   "teams": [
     [
       "Adrian Kirchner",
@@ -98,6 +98,10 @@
     [
       "Annalena Anhalt",
       "Oskar Stetter"
+    ],
+    [
+      "Antje Vetter",
+      "Susanne Gaßmann"
     ],
     [
       "Axel Habenstein",
@@ -288,6 +292,10 @@
       "Wayne Lüdecke"
     ],
     [
+      "Fabian Vetter",
+      "Lysann Leni Kolbe"
+    ],
+    [
       "Felix Poser",
       "Jeremy Heier"
     ],
@@ -428,6 +436,10 @@
       "Matthias Sowa"
     ],
     [
+      "Jonas Ihme",
+      "Steven Becker"
+    ],
+    [
       "Jonas Wittmann",
       "Stephan Jannik"
     ],
@@ -442,6 +454,10 @@
     [
       "Julian Münch",
       "Raffaela Barnes"
+    ],
+    [
+      "Julian Schmidt",
+      "Tobias Hergenröther"
     ],
     [
       "Justin Maaser",
@@ -526,6 +542,10 @@
     [
       "Marcus Giese",
       "Michael Ulrich"
+    ],
+    [
+      "Marcus Grimm",
+      "Stefan Reifig"
     ],
     [
       "Mario Koch",
