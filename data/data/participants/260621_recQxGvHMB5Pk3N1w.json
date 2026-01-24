@@ -1,7 +1,7 @@
 {
   "competition_id": "recQxGvHMB5Pk3N1w",
   "slots": [],
-  "count": 142,
+  "count": 148,
   "teams": [
     [
       "Aaron Nees",
@@ -34,6 +34,10 @@
     [
       "Anne Weiß",
       "Petra Koch"
+    ],
+    [
+      "Ben Brodbeck",
+      "Jens Moldt"
     ],
     [
       "Ben Zimmermann",
@@ -106,6 +110,10 @@
     [
       "Dominik Fäth",
       "Marcel Fäth"
+    ],
+    [
+      "Eike Will",
+      "Sabine Sauer"
     ],
     [
       "Enrico Werner",
@@ -286,6 +294,10 @@
     [
       "Robert Braun",
       "Stephan Lewerenz"
+    ],
+    [
+      "Thomas Weege",
+      "Tomke Weege"
     ]
   ]
 }
