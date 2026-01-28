@@ -1,7 +1,7 @@
 {
   "competition_id": "recQxGvHMB5Pk3N1w",
   "slots": [],
-  "count": 190,
+  "count": 206,
   "teams": [
     [
       "Aaron Nees",
@@ -18,6 +18,10 @@
     [
       "Alexander Proff",
       "Jaqueline Hofmann"
+    ],
+    [
+      "Alexander Wiertschok",
+      "René Zeckert"
     ],
     [
       "Alina Kuhn",
@@ -96,8 +100,20 @@
       "Jannik Lienkamp"
     ],
     [
+      "Christophe Hoffmann",
+      "Claude Kaufmann"
+    ],
+    [
+      "Christophe Theiβ",
+      "Remy Harpes"
+    ],
+    [
       "Claas Wittkopf",
       "Leon Lenz"
+    ],
+    [
+      "Claude Rieff",
+      "Nico Kleer"
     ],
     [
       "Damian Pyka",
@@ -348,6 +364,10 @@
       "Moritz Maubach"
     ],
     [
+      "Nico Kleer",
+      "Remy Harpes"
+    ],
+    [
       "Nils Dembeck",
       "Torsten Schmied"
     ],
@@ -382,6 +402,14 @@
     [
       "Thomas Weege",
       "Tomke Weege"
+    ],
+    [
+      "Eike Tiemann",
+      "Jonas Ahlemeier",
+      "Leon Dullweber",
+      "Nils Humbke",
+      "Paul Schwier",
+      "Torsten Brandhorst"
     ]
   ]
 }
