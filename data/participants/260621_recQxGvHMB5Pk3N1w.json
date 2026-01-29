@@ -1,7 +1,7 @@
 {
   "competition_id": "recQxGvHMB5Pk3N1w",
   "slots": [],
-  "count": 210,
+  "count": 214,
   "teams": [
     [
       "Aaron Nees",
@@ -196,6 +196,10 @@
       "Niclas Guske"
     ],
     [
+      "Hannes Brand",
+      "Tobias Mehrings"
+    ],
+    [
       "Hannes Großhauser",
       "Mario Paldino"
     ],
@@ -364,10 +368,6 @@
       "Simon Wolter"
     ],
     [
-      "Michael Backus",
-      "Ole Schröder"
-    ],
-    [
       "Michael Rombach",
       "Moritz Maubach"
     ],
@@ -410,6 +410,12 @@
     [
       "Thomas Weege",
       "Tomke Weege"
+    ],
+    [
+      "Hendrik Görgens",
+      "Luca Schulten",
+      "Michael Backus",
+      "Ole Schröder"
     ],
     [
       "Eike Tiemann",
