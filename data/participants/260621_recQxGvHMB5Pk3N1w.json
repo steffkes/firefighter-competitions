@@ -1,7 +1,7 @@
 {
   "competition_id": "recQxGvHMB5Pk3N1w",
   "slots": [],
-  "count": 249,
+  "count": 261,
   "teams": [
     [
       "Sam Bora Oguz"
@@ -29,6 +29,10 @@
     [
       "Alexander Proff",
       "Jaqueline Hofmann"
+    ],
+    [
+      "Alexander Resch",
+      "Felix Haun"
     ],
     [
       "Alexander Wiertschok",
@@ -295,6 +299,10 @@
       "Stefanie Hauser"
     ],
     [
+      "Jörg Elsenbruch",
+      "Simon Schneider"
+    ],
+    [
       "Jürgen Gehring",
       "Tobias Urban"
     ],
@@ -493,6 +501,16 @@
       "Nils Humbke",
       "Paul Schwier",
       "Torsten Brandhorst"
+    ],
+    [
+      "Alexander Kuhlhawy",
+      "Benjamin Unruh",
+      "Denis Erbe",
+      "Fabio Wellegehausen",
+      "Florian Kröhl",
+      "Henning Bröcker",
+      "Jonas Pabel",
+      "Rene Bode"
     ]
   ]
 }
