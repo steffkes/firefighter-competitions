@@ -64,11 +64,24 @@
           </a>
         </div>
 
-        <div v-if="filteredCompetitions.length" class="navbar-end">
+        <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a :href="calendarPath" class="button is-primary">
-                🗓️ Wettkämpfe für deinen Kalendar
+              <a
+                href="//www.instagram.com/firefighter_competitions"
+                class="button has-text-white"
+                style="
+                  background: #833ab4;
+                  background: linear-gradient(
+                    to right,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045
+                  );
+                "
+              >
+                <img src="/instagram.svg" class="mr-2" /> Folge uns auf
+                Instagram
               </a>
             </div>
           </div>
