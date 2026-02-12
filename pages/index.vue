@@ -16,76 +16,21 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="/"> 👨‍🚒 </a>
 
+        <a
+          href="//www.instagram.com/firefighter_competitions"
+          class="navbar-item"
+        >
+          <img src="/instagram.svg" />
+        </a>
+        <a
+          href="//whatsapp.com/channel/0029VbC7AG5CnA7orIZ6Xc0p"
+          class="navbar-item"
+        >
+          <img src="/whatsapp.svg" />
+        </a>
         <a class="navbar-item is-hidden-desktop" @click="activeModal = true"
           ><img src="/qr-code.svg" style="opacity: 0.1"
         /></a>
-
-        <a
-          role="button"
-          class="navbar-burger"
-          :class="{ 'is-active': activeNavbar }"
-          aria-label="menu"
-          aria-expanded="false"
-          @click="activeNavbar = !activeNavbar"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div class="navbar-menu" :class="{ 'is-active': activeNavbar }">
-        <div class="navbar-start">
-          <a
-            class="navbar-item"
-            :class="[kind.FCC.type, { 'is-light': !competitionFilter.FCC }]"
-          >
-            <label class="checkbox" :title="kind.FCC.title">
-              <input type="checkbox" v-model="competitionFilter.FCC" />
-              FCC
-            </label>
-          </a>
-
-          <a
-            class="navbar-item"
-            :class="[kind.FSR.type, { 'is-light': !competitionFilter.FSR }]"
-          >
-            <label class="checkbox" :title="kind.FSR.title">
-              <input type="checkbox" v-model="competitionFilter.FSR" />
-              FSR
-            </label>
-          </a>
-
-          <a class="navbar-item">
-            <label class="checkbox">
-              <input type="checkbox" v-model="displayPastCompetitions" />
-              Zeige vergangene Wettkämpfe an
-            </label>
-          </a>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a
-                href="//www.instagram.com/firefighter_competitions"
-                class="button has-text-white"
-                style="
-                  background: #833ab4;
-                  background: linear-gradient(
-                    to right,
-                    #833ab4,
-                    #fd1d1d,
-                    #fcb045
-                  );
-                "
-              >
-                <img src="/instagram.svg" class="mr-2" /> Folge uns auf
-                Instagram
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </nav>
 
