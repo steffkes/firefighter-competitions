@@ -2,10 +2,10 @@
   "competition_id": "recanVcyBiGQJIMUI",
   "slots": [
     {
-      "amount": 11
+      "amount": 4
     }
   ],
-  "count": 150,
+  "count": 157,
   "teams": [
     [
       "Achim Gekeler"
@@ -155,6 +155,9 @@
       "Florian Wöhrle"
     ],
     [
+      "Frank Herbert"
+    ],
+    [
       "Frederik Faul"
     ],
     [
@@ -231,6 +234,9 @@
     ],
     [
       "Jürgen Hutzler"
+    ],
+    [
+      "Karsten Neupert"
     ],
     [
       "Katrin Böttinger"
@@ -314,6 +320,9 @@
       "Michael Fischer"
     ],
     [
+      "Michael Schlupf"
+    ],
+    [
       "Michael Steurer"
     ],
     [
@@ -380,6 +389,12 @@
       "Rudi Wengert"
     ],
     [
+      "Sascha Amrhein"
+    ],
+    [
+      "Sascha Kneißle"
+    ],
+    [
       "Sascha Lux"
     ],
     [
@@ -393,6 +408,9 @@
     ],
     [
       "Silas Häußermann"
+    ],
+    [
+      "Simon Wahl"
     ],
     [
       "Stefan Esch"
@@ -441,6 +459,9 @@
     ],
     [
       "Tino Leidel"
+    ],
+    [
+      "Tobias Diedrigkeit"
     ],
     [
       "Tom Engelmann"
