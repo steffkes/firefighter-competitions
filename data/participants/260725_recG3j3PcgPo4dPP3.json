@@ -1,8 +1,12 @@
 {
   "competition_id": "recG3j3PcgPo4dPP3",
   "slots": [],
-  "count": 28,
+  "count": 32,
   "teams": [
+    [
+      "Adrian Kirchner",
+      "Armin Kirchner"
+    ],
     [
       "Alexander Greis",
       "Jacqueline Phan"
@@ -54,6 +58,10 @@
     [
       "Dominic Scholz",
       "Simon Gapp"
+    ],
+    [
+      "Holger Rörich",
+      "Thorsten Speer"
     ],
     [
       "Robin Scheuring",
