@@ -1,7 +1,7 @@
 {
   "competition_id": "recFv1fiTjY16XynK",
   "slots": [],
-  "count": 590,
+  "count": 613,
   "teams": [
     [
       "Adam Slavíček"
@@ -50,6 +50,9 @@
     ],
     [
       "Anja Sudholt"
+    ],
+    [
+      "Anna Janssen"
     ],
     [
       "Anna Köllner"
@@ -119,6 +122,9 @@
     ],
     [
       "Dennis Wolz"
+    ],
+    [
+      "Denny Goldhahn"
     ],
     [
       "Dirk Fischer"
@@ -349,6 +355,9 @@
       "Michael Rainer"
     ],
     [
+      "Michel Bantel"
+    ],
+    [
       "Michel Menten"
     ],
     [
@@ -377,6 +386,9 @@
     ],
     [
       "Oliver Moj"
+    ],
+    [
+      "Oliver Wichert"
     ],
     [
       "Patrick Boos"
@@ -452,6 +464,9 @@
     ],
     [
       "Stefan Fetting"
+    ],
+    [
+      "Stefan Heinemann"
     ],
     [
       "Stefan Roskosch"
@@ -604,6 +619,10 @@
       "Björn Herborn"
     ],
     [
+      "Andre Hermes",
+      "Michael Bastuck"
+    ],
+    [
       "Andreas Wilhelm",
       "Sven Reuter"
     ],
@@ -618,6 +637,10 @@
     [
       "Anja Sudholt",
       "Nils Broch"
+    ],
+    [
+      "Anna Jansen",
+      "Jannik Werner"
     ],
     [
       "Anna Köllner",
@@ -724,6 +747,14 @@
       "Juliane Wolz"
     ],
     [
+      "Denny Goldhahn",
+      "Luisa Hornschuh"
+    ],
+    [
+      "Denny Goldhahn",
+      "Stefan Heinemann"
+    ],
+    [
       "Dirk Fischer",
       "Rüdiger Zeuner Christ"
     ],
@@ -780,6 +811,10 @@
       "Rebea Sonnenberg"
     ],
     [
+      "Isabell Dörrbecker",
+      "Michel Bantel"
+    ],
+    [
       "Jaka Kopitar",
       "Miroslav Michlovsky"
     ],
@@ -794,6 +829,10 @@
     [
       "Jana Bank",
       "Thomas Werxhausen"
+    ],
+    [
+      "Jana Hoppmann",
+      "Stefan Heinemann"
     ],
     [
       "Jasmin Bohun",
@@ -930,6 +969,10 @@
     [
       "Michael Güth",
       "Uwe Heise"
+    ],
+    [
+      "Michel Bantel",
+      "Oliver Wichert"
     ],
     [
       "Michéle Burgmann",
@@ -1116,6 +1159,12 @@
       "David Kubiš",
       "Martin Erbe",
       "Sebastjan Vovko"
+    ],
+    [
+      "Denny Goldhahn",
+      "Jannik Werner",
+      "Michel Bantel",
+      "Stefan Heinemann"
     ],
     [
       "Desirée Reitz",
