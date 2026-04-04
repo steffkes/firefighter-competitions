@@ -2,16 +2,19 @@
   "competition_id": "recQ5pRDFPJhOfmS3",
   "slots": [
     {
-      "amount": 231
+      "amount": 218
     }
   ],
-  "count": 22,
+  "count": 35,
   "teams": [
     [
       "Andreas Huber"
     ],
     [
       "Benjamin Eger-Glaser"
+    ],
+    [
+      "Christian Lampart"
     ],
     [
       "Christian Regenbogen"
@@ -29,6 +32,9 @@
       "Florian Wirth"
     ],
     [
+      "Franziska Hennig"
+    ],
+    [
       "Jakob Wiest"
     ],
     [
@@ -38,19 +44,52 @@
       "Julius Römpp"
     ],
     [
+      "Korbinian Gast"
+    ],
+    [
+      "Lars Mayer"
+    ],
+    [
       "Lasse Gellings"
     ],
     [
       "Marcus Reindl"
     ],
     [
+      "Marcus Schulze"
+    ],
+    [
       "Mark Winter"
+    ],
+    [
+      "Markus Fischer"
     ],
     [
       "Matthias Maurer"
     ],
     [
       "Max Peters"
+    ],
+    [
+      "Michael Blattenberger"
+    ],
+    [
+      "Philipp Döhler"
+    ],
+    [
+      "Robin Scheuring"
+    ],
+    [
+      "Sophie Asanger"
+    ],
+    [
+      "Steve Roidl"
+    ],
+    [
+      "Timo Elser"
+    ],
+    [
+      "Tom Rebhan"
     ],
     [
       "Vanessa Kopp"
