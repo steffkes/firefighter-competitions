@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RoughJS sample</title>
+    <script src="https://unpkg.com/roughjs@latest/bundled/rough.js"></script>
+    <style>
+      svg {
+        overflow: visible;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg id="svg"></svg>
+
+    <script>
+      const svg = document.getElementById("svg");
+      const rc = rough.svg(svg);
+
+      const elements = [];
+
+      const fix = 10;
+
+      const labels = [
+        "Jan",
+        "Feb",
+        "Mär",
+        "Apr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dez",
+      ];
+
+      const marker = {
+        2: {
+          8: true,
+        },
+        3: {
+          15: true,
+        },
+        4: {
+          5: true,
+        },
+        5: {
+          10: true,
+          11: true,
+          17: true,
+        },
+      };
+
+      const getDayIndex = (date) => (date.getDay() || 7) - 1;
+
+      svg.setAttribute("width", fix * 36 + 25);
+      svg.setAttribute("height", fix * 12 + 25);
+
+      const label = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text",
+      );
+      label.appendChild(document.createTextNode("Feuerwehr-Wettkämpfe 2025"));
+      label.setAttribute("x", "50%");
+      label.setAttribute("y", "10");
+      label.setAttribute("font-size", "14");
+      label.setAttribute("dominant-baseline", "middle");
+      label.setAttribute("text-anchor", "middle");
+      elements.push(label);
+
+      for (const m of Array(12).keys()) {
+        const label = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text",
+        );
+        label.appendChild(document.createTextNode(labels[m]));
+        label.setAttribute("x", "0");
+        label.setAttribute("y", 25 + m * 10 + 5 + m * 5);
+        label.setAttribute("font-size", "10");
+        label.setAttribute("dominant-baseline", "middle");
+        elements.push(label);
+
+        const firstOfMonthIndex = getDayIndex(new Date(2025, m, 1));
+
+        for (const d of Array(36).keys()) {
+          const date = new Date(2025, m, d + 1 - firstOfMonthIndex);
+          console.log({ m, d, month: date.getMonth(), date });
+
+          let strokeOpacity = 0;
+          const options = {};
+
+          if (m == date.getMonth()) {
+            strokeOpacity = 0.1;
+
+            if ([5, 6].indexOf(getDayIndex(date)) >= 0) {
+              strokeOpacity = 0.35;
+            }
+
+            if ((marker[date.getMonth() + 1] ?? {})[date.getDate()]) {
+              options.fill = "rgba(0, 180, 0, 1)";
+              options.fillStyle = "cross-hatch";
+              options.fillWeight = 1;
+            }
+          }
+
+          elements.push(
+            rc.rectangle(
+              /* x */ 25 + d * fix,
+              /* y */ 25 + m * fix + m * 5,
+              /* w */ fix,
+              /* h */ fix,
+              {
+                ...options,
+                stroke: "rgba(0, 0, 0, " + strokeOpacity + ")",
+                //stroke: d > firstOfMonthIndex ? "black": "rgba(0, 0, 0, 0.1)",
+                //stroke: 'rgba(0, 0, 0, ' + ( d % 10 == 0 ? 1 : 0.1 ) + ')',
+                //fill: (marker[m+1] ?? {})[d] ? 'rgba(255, 0, 0, 1)' : null
+              },
+            ),
+          );
+          //rc.rectangle(30, 10, 10, 10, {       fill: 'rgba(255,0,0,0.2)', fillStyle: 'solid',  }),
+        }
+      }
+
+      elements.forEach((elem) => svg.appendChild(elem));
+
+      /*
+    //line and rectangle
+    svg.appendChild(rc.line(60, 60, 190, 60));
+    svg.appendChild(rc.rectangle(10, 10, 100, 100));
+    svg.appendChild(rc.rectangle(140, 10, 100, 100, {
+      fill: 'rgba(255,0,0,0.2)',
+      fillStyle: 'solid',
+      roughness: 2
+    }));
+    svg.appendChild(rc.rectangle(10, 130, 100, 100, {
+      fill: 'red',
+      stroke: 'blue',
+      hachureAngle: 60,
+      hachureGap: 10,
+      fillWeight: 5,
+      strokeWidth: 5
+    }));
+
+
+    // ellipse and circle
+    svg.appendChild(rc.ellipse(350, 50, 150, 80));
+    svg.appendChild(rc.ellipse(610, 50, 150, 80, {
+      fill: 'blue'
+    }));
+    svg.appendChild(rc.circle(480, 50, 80, {
+      stroke: 'red', strokeWidth: 2,
+      fill: 'rgba(0,255,0,0.3)', fillStyle: 'solid'
+    }));
+
+    //overlapping circles
+    svg.appendChild(rc.circle(480, 150, 80, {
+      stroke: 'red', strokeWidth: 4,
+      fill: 'rgba(0,255,0,1)', fillWeight: 4, hachureGap: 6
+    }));
+    svg.appendChild(rc.circle(530, 150, 80, {
+      stroke: 'blue', strokeWidth: 4,
+      fill: 'rgba(255,255,0,1)', fillWeight: 4, hachureGap: 6
+    }));
+
+    // linearPath and polygon
+    svg.appendChild(rc.linearPath([[690, 10], [790, 20], [750, 120], [690, 100]], {
+      roughness: 0.7,
+      stroke: 'red', strokeWidth: 4
+    }));
+    svg.appendChild(rc.polygon([[690, 130], [790, 140], [750, 240], [690, 220]]));
+    svg.appendChild(rc.polygon([[690, 250], [790, 260], [750, 360], [690, 340]], {
+      stroke: 'red', strokeWidth: 4,
+      fill: 'rgba(0,0,255,0.2)', fillStyle: 'solid'
+    }));
+    svg.appendChild(rc.polygon([[690, 370], [790, 385], [750, 480], [690, 460]], {
+      stroke: 'red',
+      hachureAngle: 65,
+      fill: 'rgba(0,0,255,0.6)'
+    }));
+
+
+    // arcs
+    svg.appendChild(rc.arc(350, 200, 200, 180, Math.PI, Math.PI * 1.6));
+    svg.appendChild(rc.arc(350, 300, 200, 180, Math.PI, Math.PI * 1.6, true));
+    svg.appendChild(rc.arc(350, 300, 200, 180, 0, Math.PI / 2, true, {
+      stroke: 'red', strokeWidth: 4,
+      fill: 'rgba(255,255,0,0.4)', fillStyle: 'solid'
+    }));
+    svg.appendChild(rc.arc(350, 300, 200, 180, Math.PI / 2, Math.PI, true, {
+      stroke: 'blue', strokeWidth: 2,
+      fill: 'rgba(255,0,255,0.4)'
+    }));
+
+    // draw sine curve
+    let points = [];
+    for (let i = 0; i < 20; i++) {
+      // 4pi - 400px
+      let x = (400 / 20) * i + 10;
+      let xdeg = (Math.PI / 100) * x;
+      let y = Math.round(Math.sin(xdeg) * 90) + 500;
+      points.push([x, y]);
+    }
+    svg.appendChild(rc.curve(points, {
+      roughness: 1.2, stroke: 'red', strokeWidth: 3
+    }));
+    */
+    </script>
+  </body>
+</html>

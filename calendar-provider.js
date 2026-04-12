@@ -1,4 +1,4 @@
-import competitionProvider from "./competition-provider.js";
+import { fetchCompetitions } from "./server/utils/competitions.js";
 import ical from "ical-generator";
 import { add, parseISO as parse } from "date-fns";
 
@@ -12,7 +12,7 @@ export default async (variant) => {
     },
   });
 
-  const competitions = (await competitionProvider()).filter(({ kind }) =>
+  const competitions = (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).filter(({ kind }) =>
     variant.includes(kind),
   );
   for (const competition of competitions) {

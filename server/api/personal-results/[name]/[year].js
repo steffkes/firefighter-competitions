@@ -1,5 +1,5 @@
 import { defineEventHandler } from "h3"; // needed for test
-import competitionProvider from "@/competition-provider.js";
+import { fetchCompetitions } from "../../../utils/competitions.js";
 import pg from "pg";
 
 export default defineEventHandler(async (event) => {
@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   const requestedYear = getRouterParam(event, "year");
 
   const competitions = Object.fromEntries(
-    (await competitionProvider()).map((competition) => [
+    (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).map((competition) => [
       competition.id,
       competition,
     ]),

@@ -1,0 +1,20 @@
+import axios from "axios";
+import { parseContent } from "@/src/firefit/RunParser";
+
+/*
+# PB per name/participant
+
+SELECT MIN(competition_id) as competition_id, MIN(duration) as duration, names
+FROM results
+WHERE names IN(
+  ARRAY['Stefanie Reich']::varchar[],
+  ARRAY['Till Schmidt']::varchar[],
+  ARRAY['Frieder Schulz']::varchar[]
+)
+GROUP BY names
+*/
+
+export default defineEventHandler(async (event) => {
+  const { data } = await axios.get("https://firefit-europe.eu/en/runs/");
+  return parseContent(data);
+});

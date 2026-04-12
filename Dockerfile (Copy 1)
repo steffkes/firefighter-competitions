@@ -1,0 +1,52 @@
+FROM node:14.4.0-alpine3.11 AS base
+
+RUN echo "preferInteractive: false,      # --non-interactive" >> /root/.yarnrc
+RUN echo "enableImmutableInstalls: true, # --frozen-lockfile" >> /root/.yarnrc
+
+# --
+
+FROM base AS foundation
+
+WORKDIR /app
+
+RUN apk add --no-cache chromium==81.0.4044.113-r0 nss freetype \
+                       freetype-dev harfbuzz ca-certificates ttf-freefont
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+# --
+
+FROM base AS production-builder
+
+RUN mkdir /build
+WORKDIR /build
+
+COPY . ./
+
+RUN yarn install --ignore-engines && \
+    yarn run build
+
+# ---
+
+FROM foundation AS development
+
+# ---
+
+FROM foundation AS production
+
+ENV NODE_ENV=production
+
+RUN mkdir -p /app/{data,src}
+
+COPY data/questionnaires.js ./data/
+COPY src/certificate.js ./src/
+COPY src/event-schemas.js ./src/
+COPY package.json ./
+COPY server.js ./
+COPY yarn.lock ./
+COPY --from=production-builder /build/dist ./public
+
+RUN yarn install --production --ignore-engines
+
+CMD ["server.js"]
