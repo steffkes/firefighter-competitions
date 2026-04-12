@@ -1,12 +1,22 @@
 {
   "competition_id": "recj7HIkRvhtDJZ08",
   "slots": [],
-  "count": 222,
+  "count": 309,
   "teams": [
+    [
+      "Abdelhak Lamaallam",
+      "Alexander Endters",
+      "Leon Ginic"
+    ],
     [
       "Adrian Mandt",
       "David Lesch",
       "Frederik Weidner"
+    ],
+    [
+      "Alejandro Hernandez-Bonell",
+      "Alexander Weiß",
+      "Anne Weiß"
     ],
     [
       "Alex Wagner",
@@ -19,6 +29,11 @@
       "Marie Sorg"
     ],
     [
+      "Aline Krouhs",
+      "Anselm Waigand",
+      "Lilly Kaiser"
+    ],
+    [
       "Andreas Engelhardt",
       "Christian Rau",
       "Torsten Leipold"
@@ -29,6 +44,11 @@
       "Thomas Rosog"
     ],
     [
+      "Andrei Vîntu",
+      "Korbinian Rudloff",
+      "Marc Lontke"
+    ],
+    [
       "André Jeserig",
       "Elias Lechner",
       "Fabian Kluge"
@@ -37,6 +57,21 @@
       "Andy Bühner",
       "Claus-Stephan Zink",
       "Florian Heß"
+    ],
+    [
+      "Anika Weber",
+      "Judith Wahl",
+      "Niklas Dr. Löffler"
+    ],
+    [
+      "Anna Zeuge",
+      "Peer Meyer",
+      "Robin Arenz"
+    ],
+    [
+      "Anton Pientka",
+      "Felix Rach",
+      "Paul Bretschneider"
     ],
     [
       "Arne Ochs",
@@ -69,6 +104,11 @@
       "Sven Hemmeter"
     ],
     [
+      "Bruno Zieger",
+      "Kristoffer Theiß",
+      "Stefan Klingauf"
+    ],
+    [
       "Cedric Göring",
       "Dominik Paul",
       "Vanessa Herz"
@@ -77,6 +117,16 @@
       "Cem Sen",
       "David Ermini",
       "Seimen Vorstandslechner"
+    ],
+    [
+      "Christian Düfel",
+      "Daniel Simon",
+      "Jennifer Krimm"
+    ],
+    [
+      "Christian Düfel",
+      "Noah Rudloff",
+      "Zelestin Ehrenheim"
     ],
     [
       "Christian Erbes",
@@ -92,6 +142,11 @@
       "Christian Janzen",
       "Michael Bahmann",
       "Niko Tursky"
+    ],
+    [
+      "Christian Rausch",
+      "Hermann Birkenfeld",
+      "Maximus Roos"
     ],
     [
       "Christian Reichert",
@@ -117,6 +172,11 @@
       "Christoph Filz",
       "Julian Reichhold",
       "Roman Reichhold"
+    ],
+    [
+      "Christopher Haß",
+      "Malte Mezger",
+      "Timo Botz"
     ],
     [
       "Cilia Wörenkämper",
@@ -149,6 +209,11 @@
       "Ulf Langwasser"
     ],
     [
+      "David Dwight Robert Hudson",
+      "Luca María Alexander Oswald",
+      "Tobias Schmitz"
+    ],
+    [
       "David Pixa",
       "Magnus Wengeler",
       "Thil Kunstleger"
@@ -157,6 +222,16 @@
       "Dennis Deißenroth",
       "Karl-Ludwig Bräuer",
       "Marcel Ruoff"
+    ],
+    [
+      "Dennis Vetter",
+      "Luis Handschuh",
+      "Robin Kettnaker"
+    ],
+    [
+      "Domenik Schulz",
+      "Leon Naumann",
+      "Vincent Neubauer"
     ],
     [
       "Dominic Krämer",
@@ -189,9 +264,24 @@
       "Mike Fieber"
     ],
     [
+      "Felix Zenglein",
+      "Frederik Staubach",
+      "Halil Kirman"
+    ],
+    [
+      "Filipp Fleckensteiner",
+      "Jacqueline Schmitt",
+      "Jona Schmitt"
+    ],
+    [
       "Florian Bajusz",
       "Jochen Fröhlich",
       "Svenja Mank"
+    ],
+    [
+      "Florian Erbacher",
+      "Markus Röck",
+      "Torben Krieger"
     ],
     [
       "Florian Erlenmaier",
@@ -219,14 +309,29 @@
       "Max Demant"
     ],
     [
+      "Hendrik Schirra",
+      "Moritz Nagel",
+      "Tobias Weinaus"
+    ],
+    [
       "Henrik Rappe",
       "Martin Ledderhose",
       "Sascha Wieseke"
     ],
     [
+      "Jakob Seufert",
+      "Katharina Weber",
+      "Lea Riemann"
+    ],
+    [
       "Jan Gaß",
       "Jan Hertzler",
       "Lukas Stricker"
+    ],
+    [
+      "Janina Beck",
+      "Jason Lehmann",
+      "Niclas Chacon-Lotto"
     ],
     [
       "Jannis Unger",
@@ -244,6 +349,11 @@
       "Tamara Bedacht"
     ],
     [
+      "Jochen Lüdering",
+      "Stefan Kämper",
+      "Zelestin Ehrenheim"
+    ],
+    [
       "Johannes Goldbach",
       "Roger Spahr",
       "Till Heller"
@@ -257,6 +367,11 @@
       "Jonas Korbach",
       "Moritz Höhn",
       "Niclas Reusch"
+    ],
+    [
+      "Julia Aumüller",
+      "Nikola Adamovski",
+      "Timo Battenberg"
     ],
     [
       "Julia Krauß",
@@ -299,6 +414,11 @@
       "Robert Richter"
     ],
     [
+      "Larbi Ikkache",
+      "Quentin Stiel",
+      "Till Emme"
+    ],
+    [
       "Lee Kröber",
       "Magnus Winter",
       "Sarah Rock"
@@ -339,6 +459,11 @@
       "Samira Lauterbach"
     ],
     [
+      "Markus Simon",
+      "Moritz Krieger",
+      "Torben Hedderich"
+    ],
+    [
       "Martin Brieden",
       "Philipp Heinzel",
       "Stephan Smirnoff"
@@ -347,6 +472,16 @@
       "Marvin Stork",
       "Niklas Huthmann",
       "Renée Bäcker"
+    ],
+    [
+      "Mathias Piesker",
+      "Stefan Schreiner",
+      "Steffen Weicker"
+    ],
+    [
+      "Mehran Mehrabian",
+      "Silas Höbeler",
+      "Stefan Dirscherl"
     ],
     [
       "Melanie Brück",
@@ -372,6 +507,16 @@
       "N. N.",
       "N. N.",
       "N. N."
+    ],
+    [
+      "Niklas Edel",
+      "Sascha Vaneslow",
+      "Tim Grauel"
+    ],
+    [
+      "Niklas Metzner",
+      "Sebastian Rohrer",
+      "Tom Hohl"
     ]
   ]
 }
