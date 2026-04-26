@@ -37,5 +37,5 @@ GROUP BY competition_id`,
       return competition;
     });
   },
-  { maxAge: 60 * 60 /* 1 hour */ }
+  { maxAge: 60 * 60 * 24 }
 );
