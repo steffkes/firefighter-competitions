@@ -34,14 +34,14 @@ export const fetchCompetitions = async (apiKey) => {
 
   const [stairrunsRes, challengesRes] = await Promise.all([
     $fetch(
-      "https://api.airtable.com/v0/appF8BPHzWCy6OKVF/tbl7nlGCJYqn3uF7C",
+      "https://api.airtable.com/v0/appsiPKktPaUcrB96/tbl7nlGCJYqn3uF7C",
       {
         headers: { Authorization: `Bearer ${apiKey}` },
         params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
       }
     ),
     $fetch(
-      "https://api.airtable.com/v0/appF8BPHzWCy6OKVF/tblRWTfwwmzoImHq1",
+      "https://api.airtable.com/v0/appsiPKktPaUcrB96/tblRWTfwwmzoImHq1",
       {
         headers: { Authorization: `Bearer ${apiKey}` },
         params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
