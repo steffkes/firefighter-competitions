@@ -163,11 +163,7 @@ const getDateFromDate = (date) => date.toISOString().substring(0, 10);
 const isPast = (competition) =>
   getDateFromDate(new Date()) > getDateFromDate(new Date(competition.date.end));
 
-const { data: competitions, refresh } = await useFetch("/api/competitions");
-
-onMounted(() => {
-  setInterval(refresh, 60 * 60 * 1000); // Every hour
-});
+const { data: competitions } = await useFetch("/api/competitions");
 
 const filteredCompetitions = computed(() => {
   let filteredCompetitions = competitions.value;
