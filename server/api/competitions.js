@@ -40,5 +40,5 @@ GROUP BY competition_id`,
       return competition;
     });
   },
-  { maxAge: 60 * 60 * 24 },
+  { swr: true, maxAge: 60 * 60 * 24 },
 );
