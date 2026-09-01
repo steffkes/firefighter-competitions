@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       watch: ["./calendar-provider.js", "./app/router.options.ts"],
     },
     prerender: {
-      routes: ["/fcc.ics", "/fsr.ics", "/fcc-fsr.ics"],
+      routes: ["/fcc.ics", "/fsr.ics", "/fcc-fsr.ics", "/competitions.json"],
     },
 
     esbuild: {
