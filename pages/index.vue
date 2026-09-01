@@ -163,7 +163,7 @@ const getDateFromDate = (date) => date.toISOString().substring(0, 10);
 const isPast = (competition) =>
   getDateFromDate(new Date()) > getDateFromDate(new Date(competition.date.end));
 
-const { data: competitions } = await useFetch("/api/competitions");
+const { data: competitions } = await useFetch("/competitions.json");
 
 const filteredCompetitions = computed(() => {
   let filteredCompetitions = competitions.value;
