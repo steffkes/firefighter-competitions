@@ -3,10 +3,7 @@ export default defineNuxtConfig({
 
   nitro: {
     devServer: {
-      watch: [
-        "./calendar-provider.js",
-        "./app/router.options.ts",
-      ],
+      watch: ["./calendar-provider.js", "./app/router.options.ts"],
     },
     prerender: {
       routes: ["/fcc.ics", "/fsr.ics", "/fcc-fsr.ics"],

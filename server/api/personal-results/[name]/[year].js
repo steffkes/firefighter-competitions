@@ -9,10 +9,9 @@ export default defineEventHandler(async (event) => {
   const requestedYear = getRouterParam(event, "year");
 
   const competitions = Object.fromEntries(
-    (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).map((competition) => [
-      competition.id,
-      competition,
-    ]),
+    (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).map(
+      (competition) => [competition.id, competition],
+    ),
   );
 
   const client = new pg.Client({

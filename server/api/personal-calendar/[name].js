@@ -8,10 +8,9 @@ export default defineEventHandler(async (event) => {
   );
 
   const competitions = Object.fromEntries(
-    (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).map((competition) => [
-      competition.id,
-      competition,
-    ]),
+    (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).map(
+      (competition) => [competition.id, competition],
+    ),
   );
 
   const client = new pg.Client({

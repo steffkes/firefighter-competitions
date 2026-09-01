@@ -12,9 +12,9 @@ export default async (variant) => {
     },
   });
 
-  const competitions = (await fetchCompetitions(process.env.AIRTABLE_API_KEY)).filter(({ kind }) =>
-    variant.includes(kind),
-  );
+  const competitions = (
+    await fetchCompetitions(process.env.AIRTABLE_API_KEY)
+  ).filter(({ kind }) => variant.includes(kind));
   for (const competition of competitions) {
     let status = "CONFIRMED";
     if (competition.date.is_draft) {

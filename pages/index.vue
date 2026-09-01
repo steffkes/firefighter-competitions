@@ -166,7 +166,7 @@ const isPast = (competition) =>
 const { data: competitions, refresh } = await useFetch("/api/competitions");
 
 onMounted(() => {
-  setInterval(refresh, 60 * 60 * 1000);  // Every hour
+  setInterval(refresh, 60 * 60 * 1000); // Every hour
 });
 
 const filteredCompetitions = computed(() => {

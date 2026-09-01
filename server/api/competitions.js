@@ -29,13 +29,16 @@ GROUP BY competition_id`,
         {},
       );
     } catch (error) {
-      console.warn("Database unavailable, serving competitions without participant counts");
+      console.warn(
+        "Database unavailable, serving competitions without participant counts",
+      );
     }
 
     return competitions.map((competition) => {
-      competition.participants.count = participantsCount[competition.id] || null;
+      competition.participants.count =
+        participantsCount[competition.id] || null;
       return competition;
     });
   },
-  { maxAge: 60 * 60 * 24 }
+  { maxAge: 60 * 60 * 24 },
 );
