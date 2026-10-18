@@ -5,15 +5,19 @@ export default defineNuxtConfig({
     devServer: {
       watch: ["./calendar-provider.js", "./app/router.options.ts"],
     },
-    prerender: {
-      routes: ["/fcc.ics", "/fsr.ics", "/fcc-fsr.ics", "/competitions.json"],
-    },
 
     esbuild: {
       options: {
         target: "esnext",
       },
     },
+  },
+
+  routeRules: {
+    // refresh feeds once a day, serve the stale copy while refreshing
+    "/fcc.ics": { swr: 60 * 60 * 24 },
+    "/fsr.ics": { swr: 60 * 60 * 24 },
+    "/fcc-fsr.ics": { swr: 60 * 60 * 24 },
   },
 
   runtimeConfig: {
