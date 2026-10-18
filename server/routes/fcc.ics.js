@@ -3,5 +3,8 @@ import calendarProvider from "@/calendar-provider";
 
 export default defineEventHandler(async (event) => {
   appendHeader(event, "Content-Type", "text/calendar");
-  return await calendarProvider(["FCC"]);
+  return await calendarProvider(
+    ["FCC"],
+    useRuntimeConfig(event).AIRTABLE_API_KEY,
+  );
 });

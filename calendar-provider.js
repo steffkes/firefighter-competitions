@@ -2,7 +2,7 @@ import { fetchCompetitions } from "./server/utils/competitions.js";
 import ical from "ical-generator";
 import { add, parseISO as parse } from "date-fns";
 
-export default async (variant) => {
+export default async (variant, apiKey) => {
   const calendar = ical({
     name: "👨‍🚒 " + "Feuerwehr Wettkämpfe: " + variant.join(" & "),
     prodId: {
@@ -12,9 +12,9 @@ export default async (variant) => {
     },
   });
 
-  const competitions = (
-    await fetchCompetitions(process.env.AIRTABLE_API_KEY)
-  ).filter(({ kind }) => variant.includes(kind));
+  const competitions = (await fetchCompetitions(apiKey)).filter(({ kind }) =>
+    variant.includes(kind),
+  );
   for (const competition of competitions) {
     let status = "CONFIRMED";
     if (competition.date.is_draft) {
