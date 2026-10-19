@@ -148,8 +148,9 @@
 
           <template v-if="!competitionsError">
             <section v-for="group in months" :key="group.key" class="mb-4">
-              <h2 class="heading has-text-grey-dark has-text-weight-bold mb-1">
-                {{ group.label }}
+              <h2 class="title is-5 mb-2">
+                {{ group.month }}
+                <span class="has-text-grey-light">{{ group.year }}</span>
               </h2>
               <table class="table is-fullwidth is-striped is-hoverable mb-0">
                 <tbody>
@@ -169,7 +170,7 @@
           </template>
         </div>
 
-        <footer class="footer mt-5 px-4 py-5">
+        <footer class="footer page-footer mt-5 mx-4 mb-4 px-4 py-5">
           <div class="content has-text-centered">
             <div class="mb-2">
               <ExplainerBox />
@@ -246,6 +247,9 @@
 .filter-bar .button {
   margin-bottom: 0.25rem;
 }
+.page-footer {
+  border-radius: 6px;
+}
 .message-body .table {
   background: transparent;
 }
@@ -319,10 +323,9 @@ const filteredCompetitions = computed(() =>
     .sort((a, b) => compareBy(a, b, (c) => c.date.start)),
 );
 
-const monthLabel = (date) =>
+const monthName = (date) =>
   new Date(date.substring(0, 10) + "T00:00:00Z").toLocaleDateString("de-DE", {
     month: "long",
-    year: "numeric",
     timeZone: "UTC",
   });
 
@@ -334,7 +337,8 @@ const months = computed(() => {
     if (!group) {
       group = {
         key,
-        label: monthLabel(competition.date.start),
+        month: monthName(competition.date.start),
+        year: competition.date.start.substring(0, 4),
         competitions: [],
       };
       groups.push(group);

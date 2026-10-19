@@ -1,10 +1,9 @@
 <template>
   <time class="date-block" :class="variantClass" :datetime="start">
     <span class="date-block-small">{{ weekday }}</span>
-    <span class="date-block-day" :class="{ 'is-range': endDate }">{{
-      day
-    }}</span>
+    <span class="date-block-day">{{ day }}</span>
     <span class="date-block-small">{{ month }}</span>
+    <span v-if="until" class="date-block-until">{{ until }}</span>
   </time>
 </template>
 
@@ -29,9 +28,16 @@
   font-weight: 700;
   white-space: nowrap;
 }
-.date-block-day.is-range {
-  font-size: 0.95rem;
-  line-height: 1.5;
+.date-block-until {
+  align-self: stretch;
+  margin-top: 0.2rem;
+  padding-top: 0.15rem;
+  border-top: 1px solid currentColor;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0.8;
 }
 </style>
 
@@ -69,23 +75,17 @@ const endDate = computed(() =>
     : null,
 );
 
-const weekday = computed(() =>
-  endDate.value
-    ? WEEKDAYS[startDate.value.getUTCDay()] +
-      "–" +
-      WEEKDAYS[endDate.value.getUTCDay()]
-    : WEEKDAYS[startDate.value.getUTCDay()],
-);
-const day = computed(() =>
-  endDate.value
-    ? pad(startDate.value.getUTCDate()) + "–" + pad(endDate.value.getUTCDate())
-    : pad(startDate.value.getUTCDate()),
-);
-const month = computed(() => {
-  const startMonth = MONTHS[startDate.value.getUTCMonth()];
-  if (!endDate.value) return startMonth;
-  const endMonth = MONTHS[endDate.value.getUTCMonth()];
-  return startMonth == endMonth ? startMonth : startMonth + "–" + endMonth;
+// the block always shows the first day; multi-day events add a small
+// "bis" line with the last day (and its month when it differs)
+const weekday = computed(() => WEEKDAYS[startDate.value.getUTCDay()]);
+const day = computed(() => pad(startDate.value.getUTCDate()));
+const month = computed(() => MONTHS[startDate.value.getUTCMonth()]);
+const until = computed(() => {
+  if (!endDate.value) return null;
+  const endDay = endDate.value.getUTCDate() + ".";
+  return endDate.value.getUTCMonth() == startDate.value.getUTCMonth()
+    ? "bis " + endDay
+    : "bis " + endDay + (endDate.value.getUTCMonth() + 1) + ".";
 });
 
 const variantClass = computed(() =>
