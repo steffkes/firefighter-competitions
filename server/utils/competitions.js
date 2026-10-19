@@ -1,3 +1,5 @@
+import { createError } from "h3";
+
 export const fetchCompetitions = async (apiKey) => {
   if (!apiKey) {
     throw new Error("AIRTABLE_API_KEY not configured");
@@ -32,16 +34,38 @@ export const fetchCompetitions = async (apiKey) => {
     };
   };
 
-  const [stairrunsRes, challengesRes] = await Promise.all([
-    $fetch("https://api.airtable.com/v0/appsiPKktPaUcrB96/tbl7nlGCJYqn3uF7C", {
-      headers: { Authorization: `Bearer ${apiKey}` },
-      params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
-    }),
-    $fetch("https://api.airtable.com/v0/appsiPKktPaUcrB96/tblRWTfwwmzoImHq1", {
-      headers: { Authorization: `Bearer ${apiKey}` },
-      params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
-    }),
-  ]);
+  let stairrunsRes, challengesRes;
+  try {
+    [stairrunsRes, challengesRes] = await Promise.all([
+      $fetch(
+        "https://api.airtable.com/v0/appsiPKktPaUcrB96/tbl7nlGCJYqn3uF7C",
+        {
+          headers: { Authorization: `Bearer ${apiKey}` },
+          params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
+        },
+      ),
+      $fetch(
+        "https://api.airtable.com/v0/appsiPKktPaUcrB96/tblRWTfwwmzoImHq1",
+        {
+          headers: { Authorization: `Bearer ${apiKey}` },
+          params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
+        },
+      ),
+    ]);
+  } catch (error) {
+    // e.g. PUBLIC_API_BILLING_LIMIT_EXCEEDED once the monthly quota is used up
+    const reason = error?.data?.errors?.[0]?.error || error?.data?.error?.type;
+    console.error(
+      `Airtable request failed (${error?.statusCode || "?"} ${reason || error?.message})`,
+    );
+    throw createError({
+      statusCode: 503,
+      statusMessage: "Service Unavailable",
+      message:
+        "Die Wettkampftermine können gerade nicht geladen werden. Bitte versuche es später noch einmal.",
+      data: { reason: reason || null },
+    });
+  }
 
   const stairruns = stairrunsRes.records.map((record) =>
     mapperFn(record, "FSR"),

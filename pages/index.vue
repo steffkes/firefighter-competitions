@@ -36,6 +36,16 @@
 
     <div class="columns">
       <div class="column">
+        <div v-if="competitionsError" class="notification is-danger is-light">
+          <p class="has-text-weight-bold">
+            Die Wettkampftermine können gerade nicht geladen werden.
+          </p>
+          <p>
+            Bitte versuche es später noch einmal. Wenn das Problem bleibt, melde
+            dich gerne (Kontakt ganz unten).
+          </p>
+        </div>
+
         <ExplainerBox />
 
         <table
@@ -74,7 +84,10 @@
             </tr>
           </tfoot>
           <tbody>
-            <tr v-if="!filteredCompetitions.length" class="has-text-grey-light">
+            <tr
+              v-if="!filteredCompetitions.length && !competitionsError"
+              class="has-text-grey-light"
+            >
               <td colspan="2">
                 Mit der getroffenen Auswahl gibt es keine Wettkämpfe.
               </td>
@@ -163,10 +176,11 @@ const getDateFromDate = (date) => date.toISOString().substring(0, 10);
 const isPast = (competition) =>
   getDateFromDate(new Date()) > getDateFromDate(new Date(competition.date.end));
 
-const { data: competitions } = await useFetch("/competitions.json");
+const { data: competitions, error: competitionsError } =
+  await useFetch("/competitions.json");
 
 const filteredCompetitions = computed(() => {
-  let filteredCompetitions = competitions.value;
+  let filteredCompetitions = competitions.value || [];
   if (!displayPastCompetitions.value) {
     filteredCompetitions = filteredCompetitions.filter(
       (competition) => !isPast(competition),
