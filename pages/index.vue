@@ -127,6 +127,7 @@
                     <td class="date-cell">
                       <FormattedDate
                         :date="competition.date.registration_opens"
+                        :with-year="false"
                       />
                     </td>
                     <td>
@@ -243,7 +244,7 @@
   vertical-align: middle;
 }
 .soon-table .date-cell {
-  width: 9.5rem;
+  width: 8rem;
   white-space: nowrap;
   text-align: right;
 }

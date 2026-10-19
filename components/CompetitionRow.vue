@@ -8,7 +8,7 @@
     }"
   >
     <td class="date-cell">
-      <CompetitionDate :competition="competition" />
+      <CompetitionDate :competition="competition" :with-year="false" />
     </td>
     <td>
       <CompetitionName :competition="competition" />
@@ -21,7 +21,7 @@
 .date-cell {
   /* the same width in every month's table, so the names line up; a
      multi-day range breaks into one line per day */
-  width: 9.5rem;
+  width: 8rem;
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
