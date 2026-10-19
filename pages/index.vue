@@ -13,7 +13,7 @@
 
   <div class="container">
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+      <div class="navbar-brand is-flex-grow-1">
         <a class="navbar-item" href="/"> 👨‍🚒 </a>
 
         <a
@@ -31,6 +31,10 @@
         <a class="navbar-item is-hidden-desktop" @click="activeModal = true"
           ><img src="/qr-code.svg" style="opacity: 0.1"
         /></a>
+
+        <div class="navbar-item ml-auto">
+          <ExplainerBox />
+        </div>
       </div>
     </nav>
 
@@ -45,8 +49,6 @@
             dich gerne (Kontakt ganz unten).
           </p>
         </div>
-
-        <ExplainerBox />
 
         <template v-if="upcomingRegistrations.length">
           <div class="tabs mb-3">
@@ -104,7 +106,8 @@
       </div>
       <div class="column">
         <ClientOnly>
-          <div style="height: 100vh; width: 100%">
+          <!-- isolate keeps leaflet's z-indexes from covering the info pop-out -->
+          <div style="height: 100vh; width: 100%; isolation: isolate">
             <l-map
               :use-global-leaflet="false"
               v-model:zoom="zoom"
