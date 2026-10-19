@@ -48,19 +48,22 @@
 
         <ExplainerBox />
 
+        <template v-if="upcomingRegistrations.length">
+          <div class="tabs mb-3">
+            <ul>
+              <li class="is-active"><a>Anmeldung öffnet bald</a></li>
+            </ul>
+          </div>
+          <p class="has-text-grey is-size-7 mb-3">
+            Bei diesen Wettkämpfen öffnet die Anmeldung innerhalb der nächsten
+            vier Wochen.
+          </p>
+        </template>
+
         <table
           v-if="upcomingRegistrations.length"
           class="table is-fullwidth is-striped is-hoverable mb-6"
         >
-          <thead>
-            <tr>
-              <th></th>
-              <th>
-                Anmeldung bei diesen Wettkämpfen öffnet innerhalb der nächsten
-                vier Wochen
-              </th>
-            </tr>
-          </thead>
           <tbody>
             <CompetitionRow
               v-for="competition in upcomingRegistrations"
@@ -70,7 +73,7 @@
           </tbody>
         </table>
 
-        <div v-if="!competitionsError && years.length" class="tabs">
+        <div v-if="!competitionsError && years.length" class="tabs mb-3">
           <ul>
             <li
               v-for="year in years"
@@ -86,18 +89,6 @@
           v-if="!competitionsError"
           class="table is-fullwidth is-striped is-hoverable"
         >
-          <thead>
-            <tr>
-              <th class="date">Datum</th>
-              <th>Wettkampf / Art / Ort</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th class="date">Datum</th>
-              <th>Wettkampf / Art / Ort</th>
-            </tr>
-          </tfoot>
           <tbody>
             <tr v-if="!competitionsOfYear.length" class="has-text-grey-light">
               <td colspan="2">
