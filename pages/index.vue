@@ -131,13 +131,7 @@
                       />
                     </td>
                     <td>
-                      <a
-                        class="is-block has-text-weight-semibold has-text-link"
-                        style="text-decoration: none"
-                        :href="competition.url || '#' + competition.id"
-                        @click.prevent="selected = competition"
-                        >{{ competition.name }}</a
-                      >
+                      <CompetitionName :competition="competition" />
                       <CompetitionStatus :competition="competition" with-date />
                     </td>
                   </tr>
@@ -158,7 +152,6 @@
                     v-for="competition in group.competitions"
                     :key="competition.id"
                     :competition="competition"
-                    @select="selected = $event"
                   />
                 </tbody>
               </table>
@@ -207,12 +200,6 @@
       </section>
     </div>
   </div>
-
-  <CompetitionDetail
-    v-if="selected"
-    :competition="selected"
-    @close="selected = null"
-  />
 </template>
 
 <style scoped>
@@ -257,8 +244,7 @@
   vertical-align: middle;
 }
 .soon-table .date-cell {
-  width: 4rem;
-  padding-left: 0;
+  width: 4.75rem;
 }
 .map-card {
   width: 100%;
@@ -290,7 +276,6 @@ const kindLabel = computed(
 );
 
 const showMap = ref(false);
-const selected = ref(null);
 const activeModal = ref(false);
 
 const today = () => new Date().toISOString().substring(0, 10);
@@ -312,14 +297,6 @@ const filteredCompetitions = computed(() =>
   (competitions.value || [])
     .filter((competition) => !isPast(competition))
     .filter(({ kind }) => kindFilter.value == "all" || kind == kindFilter.value)
-    .map((competition) => ({
-      ...competition,
-      // still used by the map popups
-      has_registration_pending: Boolean(
-        competition.date.registration_opens &&
-          today() <= competition.date.registration_opens.substring(0, 10),
-      ),
-    }))
     .sort((a, b) => compareBy(a, b, (c) => c.date.start)),
 );
 

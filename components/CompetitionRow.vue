@@ -14,12 +14,7 @@
       />
     </td>
     <td>
-      <a
-        class="is-block has-text-weight-semibold"
-        :href="competition.url || '#' + competition.id"
-        @click.prevent="$emit('select', competition)"
-        >{{ competition.name }}</a
-      >
+      <CompetitionName :competition="competition" />
       <CompetitionStatus :competition="competition" />
     </td>
   </tr>
@@ -27,13 +22,12 @@
 
 <style scoped>
 .date-cell {
-  width: 4rem;
-  padding-left: 0;
+  width: 4.75rem;
 }
 td {
   vertical-align: middle;
 }
-.is-canceled a {
+.is-canceled .competition-name {
   text-decoration: line-through;
 }
 tr:target {
@@ -44,7 +38,6 @@ tr:target {
 
 <script setup>
 defineProps(["competition"]);
-defineEmits(["select"]);
 
 const getDateFromDate = (date) => date.toISOString().substring(0, 10);
 

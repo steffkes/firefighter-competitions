@@ -10,6 +10,7 @@
 <style scoped>
 .date-block {
   width: 3.25rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,17 +77,19 @@ const endDate = computed(() =>
 );
 
 // the block always shows the first day; multi-day events add a small
-// "bis" line with the last day (and its month when it differs)
+// "bis DD.MM." line with the last day
 const weekday = computed(() => WEEKDAYS[startDate.value.getUTCDay()]);
 const day = computed(() => pad(startDate.value.getUTCDate()));
 const month = computed(() => MONTHS[startDate.value.getUTCMonth()]);
-const until = computed(() => {
-  if (!endDate.value) return null;
-  const endDay = endDate.value.getUTCDate() + ".";
-  return endDate.value.getUTCMonth() == startDate.value.getUTCMonth()
-    ? "bis " + endDay
-    : "bis " + endDay + (endDate.value.getUTCMonth() + 1) + ".";
-});
+const until = computed(() =>
+  endDate.value
+    ? "bis " +
+      pad(endDate.value.getUTCDate()) +
+      "." +
+      pad(endDate.value.getUTCMonth() + 1) +
+      "."
+    : null,
+);
 
 const variantClass = computed(() =>
   props.variant == "warning"
