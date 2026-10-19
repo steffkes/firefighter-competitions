@@ -297,6 +297,13 @@ const isPast = (competition) =>
 const { data: competitions, error: competitionsError } =
   await useFetch("/competitions.json");
 
+// ties are broken by name so server and browser render the same order;
+// a comparator that never returns 0 lets each JS engine order ties its own
+// way, which re-sorts the list during hydration
+const compare = (x, y) => (x < y ? -1 : x > y ? 1 : 0);
+const compareBy = (a, b, key) =>
+  compare(key(a), key(b)) || compare(a.name, b.name) || compare(a.kind, b.kind);
+
 const filteredCompetitions = computed(() =>
   (competitions.value || [])
     .filter((competition) => !isPast(competition))
@@ -309,7 +316,7 @@ const filteredCompetitions = computed(() =>
           today() <= competition.date.registration_opens.substring(0, 10),
       ),
     }))
-    .sort((a, b) => (a.date.start < b.date.start ? -1 : 1)),
+    .sort((a, b) => compareBy(a, b, (c) => c.date.start)),
 );
 
 const monthLabel = (date) =>
@@ -345,9 +352,7 @@ const upcomingRegistrations = computed(() =>
       const days = (opens - new Date(today())) / (1000 * 60 * 60 * 24);
       return days >= 0 && days < 7 * 4;
     })
-    .sort((a, b) =>
-      a.date.registration_opens < b.date.registration_opens ? -1 : 1,
-    ),
+    .sort((a, b) => compareBy(a, b, (c) => c.date.registration_opens)),
 );
 
 useHead({
