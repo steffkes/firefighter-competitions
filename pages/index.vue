@@ -70,7 +70,10 @@
           </tbody>
         </table>
 
-        <table class="table is-fullwidth is-striped is-hoverable">
+        <table
+          v-if="!competitionsError"
+          class="table is-fullwidth is-striped is-hoverable"
+        >
           <thead>
             <tr>
               <th class="date">Datum</th>
@@ -84,10 +87,7 @@
             </tr>
           </tfoot>
           <tbody>
-            <tr
-              v-if="!filteredCompetitions.length && !competitionsError"
-              class="has-text-grey-light"
-            >
+            <tr v-if="!filteredCompetitions.length" class="has-text-grey-light">
               <td colspan="2">
                 Mit der getroffenen Auswahl gibt es keine Wettkämpfe.
               </td>
