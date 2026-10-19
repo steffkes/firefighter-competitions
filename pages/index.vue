@@ -125,9 +125,8 @@
                     :key="competition.id"
                   >
                     <td class="date-cell">
-                      <CompetitionDateBlock
-                        :start="competition.date.registration_opens"
-                        variant="warning"
+                      <FormattedDate
+                        :date="competition.date.registration_opens"
                       />
                     </td>
                     <td>
@@ -244,7 +243,8 @@
   vertical-align: middle;
 }
 .soon-table .date-cell {
-  width: 7rem;
+  width: 9.5rem;
+  white-space: nowrap;
   text-align: right;
 }
 .map-card {

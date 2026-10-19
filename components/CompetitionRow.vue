@@ -8,10 +8,7 @@
     }"
   >
     <td class="date-cell">
-      <CompetitionDateBlock
-        :start="competition.date.start"
-        :end="competition.date.end"
-      />
+      <CompetitionDate :competition="competition" />
     </td>
     <td>
       <CompetitionName :competition="competition" />
@@ -22,8 +19,14 @@
 
 <style scoped>
 .date-cell {
-  width: 7rem;
+  /* the same width in every month's table, so the names line up; a
+     multi-day range breaks into one line per day */
+  width: 9.5rem;
   text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.date-cell :deep(span) {
+  white-space: nowrap;
 }
 td {
   vertical-align: middle;

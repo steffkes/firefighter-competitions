@@ -14,10 +14,9 @@
           'is-canceled': competition.date.is_canceled,
         }"
       >
-        <CompetitionDateBlock
-          :start="competition.date.start"
-          :end="competition.date.end"
-        />
+        <div class="competition-popup-date">
+          <CompetitionDate :competition="competition" />
+        </div>
         <div>
           <CompetitionName :competition="competition" />
           <CompetitionStatus :competition="competition" />
@@ -33,8 +32,14 @@
   align-items: center;
   gap: 0.75rem;
 }
-.competition-popup :deep(.date-block) {
+.competition-popup-date {
   flex-shrink: 0;
+  width: min-content;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.competition-popup-date :deep(span) {
+  white-space: nowrap;
 }
 .is-canceled :deep(.competition-name) {
   text-decoration: line-through;
