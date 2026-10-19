@@ -1,90 +1,100 @@
 <template>
-  <article
-    class="message is-info"
-    :class="{
-      'is-hidden': !state,
-    }"
-  >
-    <div class="message-header">
-      <p>Info</p>
-      <button @click="remove" class="delete" aria-label="delete"></button>
+  <div ref="root" class="dropdown is-right" :class="{ 'is-active': open }">
+    <div class="dropdown-trigger">
+      <button
+        class="button is-info is-light is-small"
+        aria-haspopup="true"
+        aria-controls="explainer-box"
+        :aria-expanded="open"
+        @click="open = !open"
+      >
+        ℹ️ Info
+      </button>
     </div>
-    <div class="message-body">
-      <p>
-        Damit ihr euch zurecht findet, eine kurze Erklärung was hier was ist:
-      </p>
+    <div id="explainer-box" class="dropdown-menu" role="dialog">
+      <div class="dropdown-content message is-info">
+        <div class="message-body">
+          <p>
+            Damit ihr euch zurecht findet, eine kurze Erklärung was hier was
+            ist:
+          </p>
 
-      <table class="table mt-3" style="background-color: transparent">
-        <tbody>
-          <tr>
-            <td class="exp">
-              <span
-                :title="kind['FSR'].title"
-                :class="['tag', kind['FSR'].type]"
-                >FSR</span
-              >
-            </td>
-            <td>
-              <b>F</b>irefighter <b>S</b>tair <b>R</b>un / Feuerwehr-Treppenlauf
-            </td>
-          </tr>
-          <tr>
-            <td class="exp">
-              <span :title="kind.FCC.title" :class="['tag', kind.FCC.type]"
-                >FCC</span
-              >
-            </td>
-            <td>
-              <b>F</b>irefighter <b>C</b>ombat <b>C</b>hallenge (oder ähnlicher
-              Wettkampf)
-            </td>
-          </tr>
-          <tr>
-            <td class="exp">
-              <span class="tag">
-                {{ flag("DE") }}
-                Musterhausen</span
-              >
-            </td>
-            <td>Ort und Land des Wettkampfes</td>
-          </tr>
-          <tr>
-            <td class="exp">
-              <span class="tag is-dark"> ⏰ {{ formatDate(new Date()) }} </span>
-            </td>
-            <td>Datum zu dem die Anmeldung öffnet</td>
-          </tr>
-          <tr>
-            <td class="exp"><span class="tag">👨‍🚒 42</span></td>
-            <td>Bislang angemeldete Teilnehmer</td>
-          </tr>
-          <tr>
-            <td class="exp"><span class="tag is-link">🤚 42</span></td>
-            <td>Offene Gesuche für eine/n Laufpartner/in</td>
-          </tr>
+          <table class="table mt-3" style="background-color: transparent">
+            <tbody>
+              <tr>
+                <td class="exp">
+                  <span
+                    :title="kind['FSR'].title"
+                    :class="['tag', kind['FSR'].type]"
+                    >FSR</span
+                  >
+                </td>
+                <td>
+                  <b>F</b>irefighter <b>S</b>tair <b>R</b>un /
+                  Feuerwehr-Treppenlauf
+                </td>
+              </tr>
+              <tr>
+                <td class="exp">
+                  <span :title="kind.FCC.title" :class="['tag', kind.FCC.type]"
+                    >FCC</span
+                  >
+                </td>
+                <td>
+                  <b>F</b>irefighter <b>C</b>ombat <b>C</b>hallenge (oder
+                  ähnlicher Wettkampf)
+                </td>
+              </tr>
+              <tr>
+                <td class="exp">
+                  <span class="tag">
+                    {{ flag("DE") }}
+                    Musterhausen</span
+                  >
+                </td>
+                <td>Ort und Land des Wettkampfes</td>
+              </tr>
+              <tr>
+                <td class="exp">
+                  <span class="tag is-dark">
+                    ⏰ {{ formatDate(new Date()) }}
+                  </span>
+                </td>
+                <td>Datum zu dem die Anmeldung öffnet</td>
+              </tr>
+              <tr>
+                <td class="exp"><span class="tag">👨‍🚒 42</span></td>
+                <td>Bislang angemeldete Teilnehmer</td>
+              </tr>
+              <tr>
+                <td class="exp"><span class="tag is-link">🤚 42</span></td>
+                <td>Offene Gesuche für eine/n Laufpartner/in</td>
+              </tr>
 
-          <tr>
-            <td class="exp">❌</td>
-            <td>Dieser Wettkampf wurde abgesagt</td>
-          </tr>
+              <tr>
+                <td class="exp">❌</td>
+                <td>Dieser Wettkampf wurde abgesagt</td>
+              </tr>
 
-          <tr>
-            <td class="exp">❓</td>
-            <td>Der Termin dieses Wettkampfes ist noch nicht endgültig</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="has-text-right">
-        <button @click="remove" class="button is-info">
-          Nicht mehr anzeigen
-        </button>
-      </p>
+              <tr>
+                <td class="exp">❓</td>
+                <td>Der Termin dieses Wettkampfes ist noch nicht endgültig</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </article>
+  </div>
 </template>
 
 <style scoped>
+.dropdown-menu {
+  width: min(28rem, calc(100vw - 2rem));
+}
+.dropdown-content {
+  padding: 0;
+}
 table {
   color: inherit;
 }
@@ -117,11 +127,25 @@ const flag = (countryCode) =>
     .toUpperCase()
     .replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt()));
 
-const state = ref(
-  JSON.parse(localStorage.getItem("explainerBox/state")) ?? true,
-);
-const remove = () => {
-  localStorage.setItem("explainerBox/state", false);
-  state.value = false;
+const open = ref(false);
+const root = ref(null);
+
+const close = (event) => {
+  if (
+    event.type == "keydown"
+      ? event.key == "Escape"
+      : !root.value?.contains(event.target)
+  ) {
+    open.value = false;
+  }
 };
+
+onMounted(() => {
+  document.addEventListener("click", close);
+  document.addEventListener("keydown", close);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener("click", close);
+  document.removeEventListener("keydown", close);
+});
 </script>
