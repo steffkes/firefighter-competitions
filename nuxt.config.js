@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 
   nitro: {
     devServer: {
-      watch: ["./calendar-provider.js", "./app/router.options.ts"],
+      watch: ["./app/router.options.ts"],
     },
 
     esbuild: {
