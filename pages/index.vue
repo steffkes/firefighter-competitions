@@ -70,6 +70,18 @@
           </tbody>
         </table>
 
+        <div v-if="!competitionsError && years.length" class="tabs">
+          <ul>
+            <li
+              v-for="year in years"
+              :key="year"
+              :class="{ 'is-active': year == activeYear }"
+            >
+              <a @click="selectedYear = year">{{ year }}</a>
+            </li>
+          </ul>
+        </div>
+
         <table
           v-if="!competitionsError"
           class="table is-fullwidth is-striped is-hoverable"
@@ -87,14 +99,14 @@
             </tr>
           </tfoot>
           <tbody>
-            <tr v-if="!filteredCompetitions.length" class="has-text-grey-light">
+            <tr v-if="!competitionsOfYear.length" class="has-text-grey-light">
               <td colspan="2">
                 Mit der getroffenen Auswahl gibt es keine Wettkämpfe.
               </td>
             </tr>
 
             <CompetitionRow
-              v-for="competition in filteredCompetitions"
+              v-for="competition in competitionsOfYear"
               :key="competition.id"
               :competition="competition"
             />
@@ -218,6 +230,25 @@ const filteredCompetitions = computed(() => {
 
   return filteredCompetitions;
 });
+
+const getYear = (competition) => new Date(competition.date.start).getFullYear();
+
+const years = computed(() => [
+  ...new Set(filteredCompetitions.value.map(getYear)),
+]);
+
+const selectedYear = ref(null);
+const activeYear = computed(() =>
+  years.value.includes(selectedYear.value)
+    ? selectedYear.value
+    : years.value[0],
+);
+
+const competitionsOfYear = computed(() =>
+  filteredCompetitions.value.filter(
+    (competition) => getYear(competition) == activeYear.value,
+  ),
+);
 
 const upcomingRegistrations = computed(() => {
   return filteredCompetitions.value.filter(
