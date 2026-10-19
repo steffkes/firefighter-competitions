@@ -244,7 +244,8 @@
   vertical-align: middle;
 }
 .soon-table .date-cell {
-  width: 4.75rem;
+  width: 7rem;
+  text-align: right;
 }
 .map-card {
   width: 100%;

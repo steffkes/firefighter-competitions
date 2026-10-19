@@ -35,7 +35,6 @@
 }
 .competition-popup :deep(.date-block) {
   flex-shrink: 0;
-  margin: 0;
 }
 .is-canceled :deep(.competition-name) {
   text-decoration: line-through;

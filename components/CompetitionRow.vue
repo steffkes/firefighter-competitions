@@ -22,7 +22,8 @@
 
 <style scoped>
 .date-cell {
-  width: 4.75rem;
+  width: 7rem;
+  text-align: right;
 }
 td {
   vertical-align: middle;
