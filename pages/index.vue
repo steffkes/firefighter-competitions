@@ -54,24 +54,22 @@
               <li class="is-active"><a>Anmeldung öffnet bald</a></li>
             </ul>
           </div>
-          <p class="has-text-grey is-size-7 mb-3">
+
+          <table class="table is-fullwidth is-striped is-hoverable mb-3">
+            <tbody>
+              <CompetitionRow
+                v-for="competition in upcomingRegistrations"
+                :key="competition.id"
+                :competition="competition"
+              />
+            </tbody>
+          </table>
+
+          <p class="has-text-grey is-size-7 mb-6">
             Bei diesen Wettkämpfen öffnet die Anmeldung innerhalb der nächsten
             vier Wochen.
           </p>
         </template>
-
-        <table
-          v-if="upcomingRegistrations.length"
-          class="table is-fullwidth is-striped is-hoverable mb-6"
-        >
-          <tbody>
-            <CompetitionRow
-              v-for="competition in upcomingRegistrations"
-              :key="competition.id"
-              :competition="competition"
-            />
-          </tbody>
-        </table>
 
         <div v-if="!competitionsError && years.length" class="tabs mb-3">
           <ul>
