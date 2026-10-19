@@ -1,6 +1,25 @@
 import { createError } from "h3";
 
-export const fetchCompetitions = async (apiKey) => {
+// Airtable returns at most 100 records per request, follow `offset` until done
+const fetchAllRecords = async (url, apiKey) => {
+  const records = [];
+  let offset;
+  do {
+    const res = await $fetch(url, {
+      headers: { Authorization: `Bearer ${apiKey}` },
+      params: {
+        "sort[0][field]": "Datum",
+        "sort[0][direction]": "desc",
+        ...(offset && { offset }),
+      },
+    });
+    records.push(...res.records);
+    offset = res.offset;
+  } while (offset);
+  return { records };
+};
+
+const fetchCompetitionsFromAirtable = async (apiKey) => {
   if (!apiKey) {
     throw new Error("AIRTABLE_API_KEY not configured");
   }
@@ -37,19 +56,13 @@ export const fetchCompetitions = async (apiKey) => {
   let stairrunsRes, challengesRes;
   try {
     [stairrunsRes, challengesRes] = await Promise.all([
-      $fetch(
-        "https://api.airtable.com/v0/appsiPKktPaUcrB96/tbl7nlGCJYqn3uF7C",
-        {
-          headers: { Authorization: `Bearer ${apiKey}` },
-          params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
-        },
+      fetchAllRecords(
+        "https://api.airtable.com/v0/appU8k3LUgeNrpcJg/tbl7nlGCJYqn3uF7C",
+        apiKey,
       ),
-      $fetch(
-        "https://api.airtable.com/v0/appsiPKktPaUcrB96/tblRWTfwwmzoImHq1",
-        {
-          headers: { Authorization: `Bearer ${apiKey}` },
-          params: { "sort[0][field]": "Datum", "sort[0][direction]": "desc" },
-        },
+      fetchAllRecords(
+        "https://api.airtable.com/v0/appU8k3LUgeNrpcJg/tblRWTfwwmzoImHq1",
+        apiKey,
       ),
     ]);
   } catch (error) {
@@ -87,3 +100,15 @@ export const fetchCompetitions = async (apiKey) => {
 
   return competitions;
 };
+
+// every route shares this one copy, so Airtable is asked at most once a day;
+// a failed refresh keeps serving the previous copy
+export const fetchCompetitions = defineCachedFunction(
+  fetchCompetitionsFromAirtable,
+  {
+    name: "airtable-competitions",
+    getKey: () => "all",
+    maxAge: 60 * 60 * 24,
+    swr: true,
+  },
+);
