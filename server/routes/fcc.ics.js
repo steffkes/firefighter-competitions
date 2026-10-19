@@ -1,5 +1,5 @@
 import { appendHeader } from "h3";
-import calendarProvider from "@/calendar-provider";
+import calendarProvider from "../utils/calendar-provider.js";
 
 export default defineEventHandler(async (event) => {
   appendHeader(event, "Content-Type", "text/calendar");

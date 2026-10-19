@@ -1,4 +1,4 @@
-import { fetchCompetitions } from "./server/utils/competitions.js";
+import { fetchCompetitions } from "./competitions.js";
 import ical from "ical-generator";
 import { add, parseISO as parse } from "date-fns";
 
