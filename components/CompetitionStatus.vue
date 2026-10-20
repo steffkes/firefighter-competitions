@@ -3,9 +3,9 @@
     <span class="mr-2 mb-2 has-text-grey-dark is-size-7">
       {{ flag(competition.location.country_code) }}
       {{ competition.location.city }}
-      <template v-if="withDate">
-        · <CompetitionDate :competition="competition"
-      /></template>
+    </span>
+    <span v-if="withDate" class="mr-2 mb-2 has-text-grey-dark is-size-7">
+      📅 <CompetitionDate :competition="competition" />
     </span>
     <span v-if="competition.date.is_canceled" class="tag is-danger is-light"
       >Abgesagt</span
@@ -15,7 +15,7 @@
     >
     <span
       v-if="withOpening && !competition.date.is_canceled && opensLater"
-      class="tag is-success is-light"
+      class="tag is-warning is-light"
       :title="'Anmeldung startet am ' + formatDate(opensLater)"
     >
       Anmeldung ab&nbsp;<FormattedDate :date="opensLater" />
