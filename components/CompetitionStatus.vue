@@ -14,6 +14,13 @@
       >Termin vorläufig</span
     >
     <span
+      v-if="withOpening && !competition.date.is_canceled && opensLater"
+      class="tag is-success is-light"
+      :title="'Anmeldung startet am ' + formatDate(opensLater)"
+    >
+      Anmeldung ab&nbsp;<FormattedDate :date="opensLater" />
+    </span>
+    <span
       v-if="!competition.date.is_canceled && (isOpen || count)"
       class="tag is-success is-light"
     >
@@ -29,9 +36,12 @@
 </template>
 
 <script setup>
+import { formatDate } from "../util";
+
 const props = defineProps({
   competition: { type: Object, required: true },
   withDate: { type: Boolean, default: false },
+  withOpening: { type: Boolean, default: true },
 });
 
 const today = () => new Date().toISOString().substring(0, 10);
@@ -43,6 +53,11 @@ const isOpen = computed(() => {
       opens.substring(0, 10) <= today() &&
       props.competition.date.end.substring(0, 10) >= today(),
   );
+});
+
+const opensLater = computed(() => {
+  const opens = props.competition.date.registration_opens;
+  return opens && opens.substring(0, 10) > today() ? opens : null;
 });
 
 const count = computed(() => props.competition.participants?.count);

@@ -132,7 +132,11 @@
                     </td>
                     <td>
                       <CompetitionName :competition="competition" />
-                      <CompetitionStatus :competition="competition" with-date />
+                      <CompetitionStatus
+                        :competition="competition"
+                        with-date
+                        :with-opening="false"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -239,9 +243,6 @@
 }
 .message-body .table {
   background: transparent;
-}
-.soon-table td {
-  vertical-align: middle;
 }
 .soon-table .date-cell {
   width: 8rem;

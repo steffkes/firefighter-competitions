@@ -28,9 +28,6 @@
 .date-cell :deep(span) {
   white-space: nowrap;
 }
-td {
-  vertical-align: middle;
-}
 .is-canceled .competition-name {
   text-decoration: line-through;
 }
