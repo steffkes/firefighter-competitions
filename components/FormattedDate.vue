@@ -1,6 +1,6 @@
 <template>
   <time :datetime="date">
-    {{ formatDate(date) }}
+    {{ formatDate(date, { withYear }) }}
   </time>
 </template>
 
@@ -13,5 +13,8 @@ time {
 <script setup>
 import { formatDate } from "../util";
 
-defineProps(["date"]);
+defineProps({
+  date: { type: String, required: true },
+  withYear: { type: Boolean, default: true },
+});
 </script>

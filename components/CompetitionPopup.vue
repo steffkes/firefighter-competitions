@@ -7,42 +7,47 @@
     ]"
   >
     <l-popup>
-      <component :is="competition.date.is_canceled ? 's' : 'div'">
-        <div class="m-0 has-text-grey-light" style="white-space: nowrap">
+      <div
+        class="competition-popup"
+        :class="{
+          'has-text-grey-light': competition.date.is_draft,
+          'is-canceled': competition.date.is_canceled,
+        }"
+      >
+        <div class="competition-popup-date">
           <CompetitionDate :competition="competition" />
-
-          <span
-            class="tag is-success ml-2"
-            v-if="competition.has_registration_pending"
-            style="cursor: help"
-            :title="
-              'Anmeldung startet am ' +
-              formatDate(competition.date.registration_opens)
-            "
-          >
-            ⏰
-            <FormattedDate
-              :date="competition.date.registration_opens"
-              class="ml-1"
-            />
-          </span>
         </div>
-
-        <p class="m-0 my-2">
-          <a v-if="competition.url" :href="competition.url" class="is-block">{{
-            competition.name
-          }}</a>
-          <span v-else>{{ competition.name }}</span>
-        </p>
-        <CompetitionTags :competition="competition" />
-      </component>
+        <div>
+          <CompetitionName :competition="competition" />
+          <CompetitionStatus :competition="competition" />
+        </div>
+      </div>
     </l-popup>
   </l-marker>
 </template>
+
+<style scoped>
+.competition-popup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.competition-popup-date {
+  flex-shrink: 0;
+  width: min-content;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.competition-popup-date :deep(span) {
+  white-space: nowrap;
+}
+.is-canceled :deep(.competition-name) {
+  text-decoration: line-through;
+}
+</style>
 
 <script setup>
 defineProps(["competition"]);
 
 import { LMarker, LPopup } from "@vue-leaflet/vue-leaflet";
-import { formatDate } from "../util";
 </script>

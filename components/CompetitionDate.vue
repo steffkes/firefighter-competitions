@@ -1,5 +1,7 @@
 <template>
-  <span><FormattedDate :date="competition.date.start" /></span>
+  <span
+    ><FormattedDate :date="competition.date.start" :with-year="withYear"
+  /></span>
 
   <span
     v-if="
@@ -8,7 +10,7 @@
     class="ml-1"
   >
     -
-    <FormattedDate :date="competition.date.end" />
+    <FormattedDate :date="competition.date.end" :with-year="withYear" />
   </span>
 </template>
 
@@ -19,7 +21,10 @@ span {
 </style>
 
 <script setup>
-defineProps(["competition"]);
+defineProps({
+  competition: { type: Object, required: true },
+  withYear: { type: Boolean, default: true },
+});
 
 import { formatDate } from "../util";
 </script>
