@@ -14,7 +14,7 @@
   <div class="container">
     <div class="columns is-gapless mb-0">
       <div class="column page-list">
-        <header class="px-4 pt-4">
+        <header class="px-4 pt-4 pb-4">
           <div class="page-header mb-1">
             <h1 class="title is-4 mb-0">Feuerwehr-Wettkämpfe</h1>
             <div class="page-header-links">
