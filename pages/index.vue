@@ -169,9 +169,6 @@
 
         <footer class="footer page-footer mt-5 mx-4 mb-4 px-4 py-5">
           <div class="content has-text-centered">
-            <div class="mb-2">
-              <ExplainerBox />
-            </div>
             <p>
               Hast du Fragen zum Kalender? Oder weißt von Wettkämpfen die hier
               noch fehlen?<br />
