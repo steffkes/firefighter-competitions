@@ -178,7 +178,7 @@
             </p>
             <p v-if="lastUpdated" class="is-size-7 has-text-grey">
               Zuletzt aktualisiert:
-              <time :datetime="dataStatus.fetchedAt">{{ lastUpdated }}</time>
+              <time :datetime="fetchedAt">{{ lastUpdated }}</time>
             </p>
           </div>
         </footer>
@@ -287,19 +287,30 @@ const today = () => new Date().toISOString().substring(0, 10);
 const isPast = (competition) =>
   today() > new Date(competition.date.end).toISOString().substring(0, 10);
 
-const { data: competitions, error: competitionsError } =
-  await useFetch("/competitions.json");
+// when the data was last fetched from Airtable (not when this page rendered),
+// taken from the Last-Modified header of the competitions response
+const fetchedAt = useState("competitions-fetched-at", () => null);
 
-// when the data was last fetched from Airtable (not when this page rendered);
+const { data: competitions, error: competitionsError } = await useFetch(
+  "/competitions.json",
+  {
+    onResponse({ response }) {
+      const lastModified = response.headers.get("last-modified");
+      fetchedAt.value = lastModified
+        ? new Date(lastModified).toISOString()
+        : null;
+    },
+  },
+);
+
 // a fixed time zone keeps server and browser output identical
-const { data: dataStatus } = await useFetch("/api/competitions-updated");
 const lastUpdated = computed(() =>
-  dataStatus.value?.fetchedAt
+  fetchedAt.value
     ? new Intl.DateTimeFormat("de-DE", {
         dateStyle: "medium",
         timeStyle: "short",
         timeZone: "Europe/Berlin",
-      }).format(new Date(dataStatus.value.fetchedAt)) + " Uhr"
+      }).format(new Date(fetchedAt.value)) + " Uhr"
     : null,
 );
 
