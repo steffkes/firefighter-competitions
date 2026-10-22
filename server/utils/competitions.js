@@ -105,17 +105,22 @@ const fetchCompetitionsFromAirtable = async (apiKey) => {
       return a.name.localeCompare(b.name);
     });
 
-  return competitions;
+  return { fetchedAt: new Date().toISOString(), competitions };
 };
 
 // every route shares this one copy, so Airtable is asked at most once a day;
-// a failed refresh keeps serving the previous copy
-export const fetchCompetitions = defineCachedFunction(
+// a failed refresh keeps serving the previous copy.
+// `fetchedAt` records when Airtable was actually asked, not when a page rendered.
+export const fetchCompetitionData = defineCachedFunction(
   fetchCompetitionsFromAirtable,
   {
-    name: "airtable-competitions",
+    // v2: the cached value changed from a plain list to { fetchedAt, competitions }
+    name: "airtable-competitions-v2",
     getKey: () => "all",
     maxAge: 60 * 60 * 24,
     swr: true,
   },
 );
+
+export const fetchCompetitions = async (apiKey) =>
+  (await fetchCompetitionData(apiKey)).competitions;

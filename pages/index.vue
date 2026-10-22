@@ -165,6 +165,11 @@
               Mit dieser Auswahl gibt es keine Wettkämpfe.
             </p>
           </template>
+
+          <p v-if="lastUpdated" class="is-size-7 has-text-grey mt-4">
+            Zuletzt aktualisiert:
+            <time :datetime="fetchedAt">{{ lastUpdated }}</time>
+          </p>
         </div>
 
         <footer class="footer page-footer mt-5 mx-4 mb-4 px-4 py-5">
@@ -283,8 +288,32 @@ const today = () => new Date().toISOString().substring(0, 10);
 const isPast = (competition) =>
   today() > new Date(competition.date.end).toISOString().substring(0, 10);
 
-const { data: competitions, error: competitionsError } =
-  await useFetch("/competitions.json");
+// when the data was last fetched from Airtable (not when this page rendered),
+// taken from the Last-Modified header of the competitions response
+const fetchedAt = useState("competitions-fetched-at", () => null);
+
+const { data: competitions, error: competitionsError } = await useFetch(
+  "/competitions.json",
+  {
+    onResponse({ response }) {
+      const lastModified = response.headers.get("last-modified");
+      fetchedAt.value = lastModified
+        ? new Date(lastModified).toISOString()
+        : null;
+    },
+  },
+);
+
+// a fixed time zone keeps server and browser output identical
+const lastUpdated = computed(() =>
+  fetchedAt.value
+    ? new Intl.DateTimeFormat("de-DE", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "Europe/Berlin",
+      }).format(new Date(fetchedAt.value)) + " Uhr"
+    : null,
+);
 
 // ties are broken by name so server and browser render the same order;
 // a comparator that never returns 0 lets each JS engine order ties its own

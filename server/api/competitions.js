@@ -1,10 +1,18 @@
-import { fetchCompetitions } from "../utils/competitions.js";
+import { fetchCompetitionData } from "../utils/competitions.js";
 import pg from "pg";
 
 export default defineCachedEventHandler(
   async (event) => {
     const config = useRuntimeConfig(event);
-    const competitions = await fetchCompetitions(config.AIRTABLE_API_KEY);
+    const { fetchedAt, competitions } = await fetchCompetitionData(
+      config.AIRTABLE_API_KEY,
+    );
+    // when Airtable was last asked; the homepage footer reads this header
+    setResponseHeader(
+      event,
+      "Last-Modified",
+      new Date(fetchedAt).toUTCString(),
+    );
 
     // Temporarily keep DB merge for participant counts until data service is ready
     let participantsCount = {};
