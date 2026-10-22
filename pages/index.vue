@@ -165,6 +165,11 @@
               Mit dieser Auswahl gibt es keine Wettkämpfe.
             </p>
           </template>
+
+          <p v-if="lastUpdated" class="is-size-7 has-text-grey mt-4">
+            Zuletzt aktualisiert:
+            <time :datetime="fetchedAt">{{ lastUpdated }}</time>
+          </p>
         </div>
 
         <footer class="footer page-footer mt-5 mx-4 mb-4 px-4 py-5">
@@ -175,10 +180,6 @@
               Melde dich bitte bei <strong>Stefan</strong>:
               <a href="tel:004916097048114">📞 0160 970 48 114</a>&nbsp;
               <a href="mailto:stefan@mathe.is">✉️ stefan@mathe.is</a>
-            </p>
-            <p v-if="lastUpdated" class="is-size-7 has-text-grey">
-              Zuletzt aktualisiert:
-              <time :datetime="fetchedAt">{{ lastUpdated }}</time>
             </p>
           </div>
         </footer>
