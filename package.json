@@ -27,6 +27,7 @@
   "dependencies": {
     "bulma": "^0.9.4",
     "ical-generator": "^4.1.0",
+    "ioredis": "^5.11.1",
     "pg": "^8.13.1"
   },
   "optionalDependencies": {

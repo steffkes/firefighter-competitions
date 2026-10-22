@@ -4,7 +4,9 @@ import { createError } from "h3";
 const fetchAllRecords = async (url, apiKey) => {
   const records = [];
   let offset;
+  let requests = 0;
   do {
+    requests++;
     const res = await $fetch(url, {
       headers: { Authorization: `Bearer ${apiKey}` },
       params: {
@@ -16,7 +18,7 @@ const fetchAllRecords = async (url, apiKey) => {
     records.push(...res.records);
     offset = res.offset;
   } while (offset);
-  return { records };
+  return { records, requests };
 };
 
 const fetchCompetitionsFromAirtable = async (apiKey) => {
@@ -79,6 +81,11 @@ const fetchCompetitionsFromAirtable = async (apiKey) => {
       data: { reason: reason || null },
     });
   }
+
+  // one line per actual Airtable fetch, to compare against the API quota
+  console.info(
+    `Airtable fetched (${stairrunsRes.requests + challengesRes.requests} requests)`,
+  );
 
   const stairruns = stairrunsRes.records.map((record) =>
     mapperFn(record, "FSR"),
