@@ -176,6 +176,10 @@
               <a href="tel:004916097048114">📞 0160 970 48 114</a>&nbsp;
               <a href="mailto:stefan@mathe.is">✉️ stefan@mathe.is</a>
             </p>
+            <p v-if="lastUpdated" class="is-size-7 has-text-grey">
+              Zuletzt aktualisiert:
+              <time :datetime="dataStatus.fetchedAt">{{ lastUpdated }}</time>
+            </p>
           </div>
         </footer>
       </div>
@@ -285,6 +289,19 @@ const isPast = (competition) =>
 
 const { data: competitions, error: competitionsError } =
   await useFetch("/competitions.json");
+
+// when the data was last fetched from Airtable (not when this page rendered);
+// a fixed time zone keeps server and browser output identical
+const { data: dataStatus } = await useFetch("/api/competitions-updated");
+const lastUpdated = computed(() =>
+  dataStatus.value?.fetchedAt
+    ? new Intl.DateTimeFormat("de-DE", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "Europe/Berlin",
+      }).format(new Date(dataStatus.value.fetchedAt)) + " Uhr"
+    : null,
+);
 
 // ties are broken by name so server and browser render the same order;
 // a comparator that never returns 0 lets each JS engine order ties its own
