@@ -108,19 +108,51 @@ const fetchCompetitionsFromAirtable = async (apiKey) => {
   return { fetchedAt: new Date().toISOString(), competitions };
 };
 
-// every route shares this one copy, so Airtable is asked at most once a day;
-// a failed refresh keeps serving the previous copy.
+const CACHE_KEY = "airtable-competitions";
+// stored without a TTL, only used when Airtable fails
+const FALLBACK_KEY = "airtable-competitions:last-known-good";
+const TTL = 60 * 60 * 24;
+
+let pending = null;
+
+// Airtable is asked at most once a day: the cached copy expires after 24h
+// (Redis TTL) and the next request fetches and stores a fresh one.
 // `fetchedAt` records when Airtable was actually asked, not when a page rendered.
-export const fetchCompetitionData = defineCachedFunction(
-  fetchCompetitionsFromAirtable,
-  {
-    // v2: the cached value changed from a plain list to { fetchedAt, competitions }
-    name: "airtable-competitions-v2",
-    getKey: () => "all",
-    maxAge: 60 * 60 * 24,
-    swr: true,
-  },
-);
+export const fetchCompetitionData = async (apiKey) => {
+  const storage = useStorage("cache");
+
+  const cached = await storage.getItem(CACHE_KEY).catch((error) => {
+    console.error("Cache read failed", error);
+    return null;
+  });
+  // the in-memory storage (no CACHE_REDIS_URL) ignores TTLs, so check the age too
+  if (cached && Date.now() - new Date(cached.fetchedAt) < TTL * 1000) {
+    return cached;
+  }
+
+  // concurrent requests on this instance share one Airtable fetch
+  pending ??= (async () => {
+    try {
+      const data = await fetchCompetitionsFromAirtable(apiKey);
+      await Promise.all([
+        storage.setItem(CACHE_KEY, data, { ttl: TTL }),
+        storage.setItem(FALLBACK_KEY, data),
+      ]).catch((error) => console.error("Cache write failed", error));
+      return data;
+    } catch (error) {
+      const fallback = await storage.getItem(FALLBACK_KEY).catch(() => null);
+      if (fallback) {
+        console.warn("Serving the last known good competitions");
+        return fallback;
+      }
+      throw error;
+    }
+  })().finally(() => {
+    pending = null;
+  });
+
+  return pending;
+};
 
 export const fetchCompetitions = async (apiKey) =>
   (await fetchCompetitionData(apiKey)).competitions;

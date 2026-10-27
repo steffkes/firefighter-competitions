@@ -13,13 +13,6 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    // refresh feeds once a day, serve the stale copy while refreshing
-    "/fcc.ics": { swr: 60 * 60 * 24 },
-    "/fsr.ics": { swr: 60 * 60 * 24 },
-    "/fcc-fsr.ics": { swr: 60 * 60 * 24 },
-  },
-
   runtimeConfig: {
     DB_DSN: process.env.DB_DSN,
     AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
