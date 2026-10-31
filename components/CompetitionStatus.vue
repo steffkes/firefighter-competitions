@@ -13,54 +13,34 @@
     <span v-else-if="competition.date.is_draft" class="tag is-light"
       >Termin vorläufig</span
     >
-    <span
-      v-if="withOpening && !competition.date.is_canceled && opensLater"
-      class="tag is-warning is-light"
-      :title="'Anmeldung startet am ' + formatDate(opensLater)"
-    >
-      Anmeldung ab&nbsp;<FormattedDate :date="opensLater" />
-    </span>
-    <span
-      v-if="!competition.date.is_canceled && (isOpen || count)"
-      class="tag is-success is-light"
-    >
-      <template v-if="isOpen">Anmeldung offen</template>
-      <template v-if="isOpen && count">&nbsp;·&nbsp;</template>
-      <template v-if="count">👨‍🚒 {{ count }}</template>
-    </span>
     <SingleboerseCounter
       v-if="singleboerse[competition.id]"
       :id="singleboerse[competition.id]"
     />
+    <CompetitionRegistration
+      v-if="withRegistration"
+      class="registration-line"
+      :competition="competition"
+      :with-opening="withOpening"
+    />
   </div>
 </template>
 
-<script setup>
-import { formatDate } from "../util";
+<style scoped>
+.registration-line {
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
+}
+</style>
 
+<script setup>
 const props = defineProps({
   competition: { type: Object, required: true },
   withDate: { type: Boolean, default: false },
   withOpening: { type: Boolean, default: true },
+  // rows show the registration line on its own, across both columns
+  withRegistration: { type: Boolean, default: true },
 });
-
-const today = () => new Date().toISOString().substring(0, 10);
-
-const isOpen = computed(() => {
-  const opens = props.competition.date.registration_opens;
-  return Boolean(
-    opens &&
-      opens.substring(0, 10) <= today() &&
-      props.competition.date.end.substring(0, 10) >= today(),
-  );
-});
-
-const opensLater = computed(() => {
-  const opens = props.competition.date.registration_opens;
-  return opens && opens.substring(0, 10) > today() ? opens : null;
-});
-
-const count = computed(() => props.competition.participants?.count);
 
 const singleboerse = {
   recyC5LmxecehTxWD: "240511-schonach",
