@@ -19,6 +19,5 @@ RUN npm install && \
 FROM base AS production
 
 COPY --from=production-builder /build/.output ./
-COPY --from=production-builder /build/data ./data
 
 CMD ["node", "server/index.mjs"]
