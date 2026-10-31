@@ -1,18 +1,20 @@
 import { fetchCompetitionData } from "../utils/competitions.js";
 import pg from "pg";
 
+// A failed query yields no rows and ok: false, so the result is not cached
 const query = async (client, sql) => {
   try {
-    return (await client.query(sql)).rows;
+    return { rows: (await client.query(sql)).rows, ok: true };
   } catch (error) {
     console.warn(`Query failed (${error.message})`);
-    return [];
+    return { rows: [], ok: false };
   }
 };
 
 // Participant counts and remaining slots change more often than the
 // Airtable data, so they are cached for an hour on their own.
-// A failed connection throws and is not cached.
+// A failed connection throws and is not cached; a failed query is served
+// for this request but not cached either.
 const fetchDatabaseData = defineCachedFunction(
   async (dsn) => {
     const client = new pg.Client({ connectionString: dsn });
@@ -36,7 +38,7 @@ ORDER BY competition_id, label NULLS FIRST`,
       await client.end();
     }
 
-    const participantsCount = counts.reduce(
+    const participantsCount = counts.rows.reduce(
       (state, entry) => ({
         ...state,
         [entry["competition_id"]]: parseInt(entry["participants_count"], 10),
@@ -45,16 +47,25 @@ ORDER BY competition_id, label NULLS FIRST`,
     );
 
     const registration = {};
-    for (const { competition_id, label, slots: amount } of slots) {
+    for (const { competition_id, label, slots: amount } of slots.rows) {
       (registration[competition_id] ||= []).push({
         label: label || null,
         slots: Math.max(0, amount),
       });
     }
 
-    return { participantsCount, registration };
+    return {
+      participantsCount,
+      registration,
+      complete: counts.ok && slots.ok,
+    };
   },
-  { name: "competitions-database", maxAge: 60 * 60, getKey: () => "all" },
+  {
+    name: "competitions-database",
+    maxAge: 60 * 60,
+    getKey: () => "all",
+    validate: (entry) => entry.value?.complete === true,
+  },
 );
 
 export default defineEventHandler(async (event) => {
