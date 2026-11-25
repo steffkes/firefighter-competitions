@@ -51,6 +51,32 @@
             Alle Treppenläufe und Combat Challenges für Feuerwehrleute, in
             Deutschland und darüber hinaus.
           </p>
+          <div class="holiday-toggle mt-3">
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                :checked="holidaysEnabled"
+                @change="chooseHolidays({ enabled: $event.target.checked })"
+              />
+              Schulferien anzeigen
+            </label>
+            <div v-if="holidaysEnabled" class="select is-small">
+              <select
+                :value="holidayState"
+                aria-label="Bundesland"
+                @change="chooseHolidays({ state: $event.target.value })"
+              >
+                <option value="" disabled>Bundesland wählen</option>
+                <option
+                  v-for="state in states"
+                  :key="state.code"
+                  :value="state.code"
+                >
+                  {{ state.name }}
+                </option>
+              </select>
+            </div>
+          </div>
         </header>
 
         <div class="filter-bar px-4">
@@ -144,7 +170,16 @@
             </div>
           </article>
 
-          <template v-if="!competitionsError">
+          <div v-if="!competitionsError" ref="listEl" class="holiday-list">
+            <div
+              v-for="band in holidayBands"
+              :key="band.key"
+              class="holiday-band"
+              :style="{ top: band.top + 'px', height: band.height + 'px' }"
+              :title="band.label"
+            >
+              <span>{{ band.label }}</span>
+            </div>
             <section v-for="group in months" :key="group.key" class="mb-4">
               <h2 class="title is-5 mb-2">
                 {{ group.month }}
@@ -164,7 +199,7 @@
             <p v-if="!months.length" class="has-text-grey py-5">
               Mit dieser Auswahl gibt es keine Wettkämpfe.
             </p>
-          </template>
+          </div>
 
           <p v-if="lastUpdated" class="is-size-7 has-text-grey mt-4">
             Zuletzt aktualisiert:
@@ -209,6 +244,47 @@
 </template>
 
 <style scoped>
+/* room on the left for the school holiday bands, beside the whole view */
+.page-list {
+  padding-left: 1.5rem;
+}
+.holiday-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2rem;
+}
+.holiday-toggle input {
+  accent-color: #2f8f83;
+  margin-right: 0.25rem;
+}
+.holiday-list {
+  position: relative;
+}
+.holiday-band {
+  position: absolute;
+  left: -1.5rem;
+  width: 1.25rem;
+  background: #eaf6f4;
+  border-right: 3px solid #2f8f83;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
+}
+.holiday-band span {
+  /* reads bottom to top, starting at the band's lower end; a label longer
+     than its band runs past the top */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  color: #2f8f83;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.4rem 0;
+}
 .page-header {
   display: flex;
   align-items: center;
@@ -270,6 +346,8 @@
 </style>
 
 <script setup>
+import { states } from "~/composables/useSchoolHolidays.js";
+
 const kindOptions = [
   { key: "all", label: "Alle" },
   { key: "FSR", label: "Treppenläufe" },
@@ -364,6 +442,77 @@ const upcomingRegistrations = computed(() =>
     })
     .sort((a, b) => compareBy(a, b, (c) => c.date.registration_opens)),
 );
+
+// school holidays: a band beside the competitions that fall into them
+const {
+  enabled: holidaysEnabled,
+  state: holidayState,
+  holidays,
+  init: initHolidays,
+  choose: chooseHolidays,
+} = useSchoolHolidays();
+
+const dayMonth = (date) =>
+  date.substring(8, 10) + "." + date.substring(5, 7) + ".";
+
+// only holidays that at least one listed competition falls into
+const holidayGroups = computed(() =>
+  holidays.value
+    .map((holiday) => ({
+      ...holiday,
+      ids: filteredCompetitions.value
+        .filter(
+          ({ date }) =>
+            date.start.substring(0, 10) <= holiday.end &&
+            date.end.substring(0, 10) >= holiday.start,
+        )
+        .map(({ id }) => id),
+    }))
+    .filter(({ ids }) => ids.length),
+);
+
+const listEl = ref(null);
+const holidayBands = ref([]);
+
+const measureHolidayBands = () => {
+  const list = listEl.value;
+  if (!list) return (holidayBands.value = []);
+  const offset = list.getBoundingClientRect().top;
+  holidayBands.value = holidayGroups.value
+    .map((holiday) => {
+      const rows = holiday.ids
+        .map((id) => list.querySelector(`tr[id="${CSS.escape(id)}"]`))
+        .filter(Boolean)
+        .map((row) => row.getBoundingClientRect());
+      if (!rows.length) return null;
+      const top = Math.min(...rows.map(({ top }) => top));
+      const bottom = Math.max(...rows.map(({ bottom }) => bottom));
+      return {
+        key: holiday.name + holiday.start,
+        top: top - offset,
+        height: bottom - top,
+        label: `${holiday.name} (${dayMonth(holiday.start)}–${dayMonth(holiday.end)})`,
+      };
+    })
+    .filter(Boolean);
+};
+
+watch(holidayGroups, () => nextTick(measureHolidayBands));
+
+let listObserver;
+onMounted(() => {
+  initHolidays();
+  listObserver = new ResizeObserver(measureHolidayBands);
+  watch(
+    listEl,
+    (list, previous) => {
+      if (previous) listObserver.unobserve(previous);
+      if (list) listObserver.observe(list);
+    },
+    { immediate: true },
+  );
+});
+onBeforeUnmount(() => listObserver?.disconnect());
 
 useHead({
   title: "Feuerwehr Wettkämpfe",
