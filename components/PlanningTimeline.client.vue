@@ -35,6 +35,14 @@
       stattfanden.
     </p>
 
+    <button
+      class="button is-small is-light"
+      :class="{ 'is-loading': exporting }"
+      @click="exportPng"
+    >
+      Als Bild speichern (PNG)
+    </button>
+
     <div
       v-if="tip"
       class="planning-tip"
@@ -167,8 +175,8 @@ const el = (name, attrs, parent) => {
   return node;
 };
 
-const render = () => {
-  const host = chart.value;
+// draws into the page by default; the export passes its own node and width
+const render = (host = chart.value, width = null) => {
   if (!host) return;
   host.innerHTML = "";
 
@@ -177,8 +185,8 @@ const render = () => {
   const colorOf = (c) =>
     c.kind == "FCC" ? CHALLENGE : color[c.series] || ONCE;
 
-  const narrow = host.clientWidth < 600;
-  const W = Math.max(host.clientWidth, 320);
+  const W = width || Math.max(host.clientWidth, 320);
+  const narrow = W < 600;
   const L = narrow ? 30 : 48;
   const plotW = W - L - 8;
   const LANE = narrow ? 6 : 8;
@@ -431,9 +439,10 @@ const render = () => {
       svg,
     );
   }
+  return { svg, W, H };
 };
 
-watch([planning, showChallenges, selected], render);
+watch([planning, showChallenges, selected], () => render());
 // redraw when the width changes; the element can appear after mount
 const observer = import.meta.client ? new ResizeObserver(() => render()) : null;
 watch(chart, (node, previous) => {
@@ -441,6 +450,143 @@ watch(chart, (node, previous) => {
   if (node) observer.observe(node);
 });
 onMounted(() => chart.value && observer.observe(chart.value));
+
+// --- PNG export: the chart at a fixed width with title, legend and date,
+// so it reads well when sent around (e.g. via WhatsApp)
+const exporting = ref(false);
+const exportPng = async () => {
+  exporting.value = true;
+  try {
+    const EXPORT_W = 1200;
+    const M = 32;
+    const { svg: chartSvg, H: chartH } = render(
+      document.createElement("div"),
+      EXPORT_W - 2 * M,
+    );
+    const legend = [
+      ["#1f77b4", "Treppenlauf (eine Farbe pro Lauf)"],
+      [ONCE, "bisher nur einmal"],
+      ["forecast", "erwartet (aus Vorjahr)"],
+      ...(showChallenges.value ? [[CHALLENGE, "Combat Challenge"]] : []),
+      ["#f14668", "heute"],
+    ];
+    const headH = selectedInfo.value ? 128 : 104;
+    const W = EXPORT_W;
+    const H = headH + chartH + 56;
+    const out = el("svg", {
+      xmlns: NS,
+      viewBox: `0 0 ${W} ${H}`,
+      width: W,
+      height: H,
+      "font-family": "Helvetica, Arial, sans-serif",
+    });
+    el("rect", { width: W, height: H, fill: "#fff" }, out);
+    el(
+      "text",
+      { x: M, y: M + 18, "font-size": 24, "font-weight": 700, fill: "#363636" },
+      out,
+    ).textContent = "Wann finden die Treppenläufe statt?";
+    let lx = M;
+    for (const [swatch, label] of legend) {
+      const y = M + 44;
+      if (swatch == "forecast")
+        el(
+          "rect",
+          {
+            x: lx,
+            y,
+            width: 14,
+            height: 8,
+            rx: 2,
+            fill: "#fff",
+            stroke: "#777",
+            "stroke-dasharray": "2 1.5",
+          },
+          out,
+        );
+      else
+        el(
+          "rect",
+          { x: lx, y, width: 14, height: 8, rx: 2, fill: swatch },
+          out,
+        );
+      const t = el(
+        "text",
+        { x: lx + 20, y: y + 8, "font-size": 13, fill: "#4a4a4a" },
+        out,
+      );
+      t.textContent = label;
+      lx += 20 + label.length * 7 + 22;
+    }
+    if (selectedInfo.value) {
+      const t = el(
+        "text",
+        { x: M, y: M + 90, "font-size": 15, fill: "#7a7a7a" },
+        out,
+      );
+      el(
+        "tspan",
+        { "font-weight": 700, fill: selectedInfo.value.color },
+        t,
+      ).textContent = selectedInfo.value.name;
+      el("tspan", {}, t).textContent =
+        ` · ${selectedInfo.value.city} · ${selectedInfo.value.count}× seit ${selectedInfo.value.since}`;
+    }
+    const g = el("g", { transform: `translate(${M} ${headH})` }, out);
+    g.appendChild(chartSvg);
+    const stand = new Date().toLocaleDateString("de-DE", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    el(
+      "text",
+      { x: M, y: H - 20, "font-size": 12, fill: "#7a7a7a" },
+      out,
+    ).textContent = `Feuerwehr-Wettkämpfe · Stand ${stand}`;
+
+    const url = URL.createObjectURL(
+      new Blob([new XMLSerializer().serializeToString(out)], {
+        type: "image/svg+xml",
+      }),
+    );
+    const image = new Image();
+    await new Promise((resolve, reject) => {
+      image.onload = resolve;
+      image.onerror = reject;
+      image.src = url;
+    });
+    const canvas = document.createElement("canvas");
+    canvas.width = W * 2;
+    canvas.height = H * 2;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(2, 2);
+    ctx.drawImage(image, 0, 0);
+    URL.revokeObjectURL(url);
+    const blob = await new Promise((resolve) =>
+      canvas.toBlob(resolve, "image/png"),
+    );
+    const filename = `terminplanung-${today}.png`;
+    const file = new File([blob], filename, { type: "image/png" });
+
+    // phones: open the share sheet (WhatsApp & co.), everything else: download
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: "Terminplanung" });
+        return;
+      } catch (error) {
+        if (error?.name == "AbortError") return;
+      }
+    }
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  } finally {
+    exporting.value = false;
+  }
+};
 onBeforeUnmount(() => observer?.disconnect());
 </script>
 
