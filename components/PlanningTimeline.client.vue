@@ -17,15 +17,47 @@
       </label>
     </div>
 
-    <p class="planning-selected">
-      <template v-if="selectedInfo">
-        <strong :style="{ color: selectedInfo.color }">{{
-          selectedInfo.name
-        }}</strong>
-        · {{ selectedInfo.city }} · {{ selectedInfo.count }}× seit
-        {{ selectedInfo.since }}
-      </template>
-    </p>
+    <div class="planning-filters">
+      <div class="select is-small">
+        <select v-model="country" aria-label="Land">
+          <option value="">Alle Länder</option>
+          <option v-for="c in countries" :key="c.code" :value="c.code">
+            {{ flag(c.code) }} {{ c.code }} ({{ c.count }})
+          </option>
+        </select>
+      </div>
+      <div class="select is-small">
+        <select :value="''" aria-label="Lauf hinzufügen" @change="addSeries">
+          <option value="">Lauf hervorheben …</option>
+          <option
+            v-for="s in pickableSeries"
+            :key="s.key"
+            :value="s.key"
+            :disabled="selected.includes(s.key)"
+          >
+            {{ s.name }} ({{ s.city }})
+          </option>
+        </select>
+      </div>
+      <span
+        v-for="info in selectedInfos"
+        :key="info.key"
+        class="tag is-white planning-chip"
+        :style="{ borderColor: info.color }"
+      >
+        <i class="dot" :style="{ background: info.color }"></i>
+        {{ info.name }} · {{ info.city }} · {{ info.count }}× seit
+        {{ info.since }}
+        <button
+          class="delete is-small"
+          :aria-label="`${info.name} entfernen`"
+          @click="toggleSeries(info.key)"
+        ></button>
+      </span>
+      <a v-if="selected.length > 1" class="is-size-7" @click="selected = []"
+        >Auswahl aufheben</a
+      >
+    </div>
 
     <div ref="chart" class="planning-chart"></div>
 
@@ -116,23 +148,92 @@ const realCount = computed(
   () => planning.value.items.filter((c) => c.status != "forecast").length,
 );
 
-const showChallenges = ref(true);
-const selected = ref(null);
-const tip = ref(null);
-const chart = ref(null);
+const route = useRoute();
+const router = useRouter();
 
-const selectedInfo = computed(() => {
-  const list = selected.value && planning.value.series[selected.value];
-  if (!list) return null;
-  const real = list.filter((c) => c.status != "forecast");
+const showChallenges = ref(true);
+// highlighted series and country filter live in the URL (?land=DE&lauf=…),
+// so a filtered view can be shared as a link
+const fromQuery = (value) => (Array.isArray(value) ? value[0] : value) || "";
+const country = ref(fromQuery(route.query.land).toUpperCase());
+const selected = ref(
+  fromQuery(route.query.lauf)
+    .split(",")
+    .filter(Boolean)
+    .map((key) => `FSR:${key}`),
+);
+watch([country, selected], () =>
+  router.replace({
+    query: {
+      ...route.query,
+      land: country.value || undefined,
+      lauf:
+        selected.value.map((key) => key.replace(/^FSR:/, "")).join(",") ||
+        undefined,
+    },
+  }),
+);
+
+const toggleSeries = (key) => {
+  selected.value = selected.value.includes(key)
+    ? selected.value.filter((k) => k != key)
+    : [...selected.value, key];
+};
+const addSeries = (event) => {
+  const key = event.target.value;
+  event.target.value = "";
+  if (key && !selected.value.includes(key))
+    selected.value = [...selected.value, key];
+};
+
+const flag = (code) =>
+  code.length == 2
+    ? code
+        .toUpperCase()
+        .replace(/./g, (char) =>
+          String.fromCodePoint(127397 + char.charCodeAt()),
+        )
+    : "";
+
+// countries with stair runs first, by number of stair runs
+const countries = computed(() => {
+  const counts = {};
+  for (const c of planning.value.items) {
+    if (!c.country || c.status == "forecast") continue;
+    counts[c.country] ||= { code: c.country, count: 0 };
+    counts[c.country].count++;
+  }
+  return Object.values(counts).sort(
+    (a, b) => b.count - a.count || a.code.localeCompare(b.code),
+  );
+});
+
+const seriesInfo = (key) => {
+  const real = (planning.value.series[key] || []).filter(
+    (c) => c.status != "forecast",
+  );
+  if (!real.length) return null;
   return {
+    key,
     name: real[0].name,
     city: real[0].city,
+    country: real[0].country,
     count: real.length,
     since: yearOf(real[0].start),
-    color: colors.value[selected.value],
+    color: colors.value[key] || ONCE,
   };
-});
+};
+const pickableSeries = computed(() =>
+  planning.value.recurring
+    .map(([key]) => seriesInfo(key))
+    .filter((s) => !country.value || s.country == country.value)
+    .sort((a, b) => a.name.localeCompare(b.name, "de")),
+);
+const selectedInfos = computed(() =>
+  selected.value.map(seriesInfo).filter(Boolean),
+);
+const tip = ref(null);
+const chart = ref(null);
 
 const shortDate = (s) => {
   const d = parseDate(s);
@@ -196,7 +297,13 @@ const render = (host = chart.value, width = null) => {
   const dayW = plotW / 365;
   const x = (s) => L + yearFraction(s) * plotW;
 
-  const visible = items.filter((c) => c.kind == "FSR" || showChallenges.value);
+  const isOn = (key) => selected.value.includes(key);
+  const anySelected = selected.value.length > 0;
+  const visible = items.filter(
+    (c) =>
+      (c.kind == "FSR" || showChallenges.value) &&
+      (!country.value || c.country == country.value),
+  );
   const years = [...new Set(visible.map((c) => yearOf(c.start)))].sort(
     (a, b) => b - a,
   );
@@ -258,7 +365,7 @@ const render = (host = chart.value, width = null) => {
   el("rect", { width: 2, height: 4, fill: "#bbb" }, pattern);
   svg.addEventListener("click", (event) => {
     if (event.target == svg || event.target.dataset.background)
-      selected.value = null;
+      selected.value = [];
   });
 
   // months, measured on a non-leap year
@@ -341,7 +448,7 @@ const render = (host = chart.value, width = null) => {
       if (yearOf(b.start) - yearOf(a.start) > 2) continue;
       const ax = (a._x0 + a._x1) / 2;
       const bx = (b._x0 + b._x1) / 2;
-      const on = selected.value == key;
+      const on = isOn(key);
       // a big jump means the event moved: keep that line faint so the
       // steady runs stand out
       const moved = Math.abs(ax - bx) > 45 * dayW;
@@ -354,7 +461,7 @@ const render = (host = chart.value, width = null) => {
           y2: b._cy,
           stroke: color[key],
           "stroke-width": on ? 2.5 : 1.2,
-          opacity: selected.value && !on ? 0.08 : on ? 1 : moved ? 0.18 : 0.6,
+          opacity: anySelected && !on ? 0.08 : on ? 1 : moved ? 0.18 : 0.6,
           "stroke-dasharray": b.status == "forecast" ? "3 2" : "",
         },
         lines,
@@ -365,7 +472,7 @@ const render = (host = chart.value, width = null) => {
   const marks = el("g", {}, svg);
   for (const row of rows) {
     for (const c of [...row.fcc, ...row.fsr]) {
-      const dim = selected.value && c.series != selected.value;
+      const dim = anySelected && !isOn(c.series);
       const fill = colorOf(c);
       const attrs = {
         x: c._x0,
@@ -395,32 +502,54 @@ const render = (host = chart.value, width = null) => {
       rect.addEventListener("mouseleave", () => (tip.value = null));
       rect.addEventListener("click", (event) => {
         event.stopPropagation();
-        selected.value =
-          c.kind == "FSR" && selected.value != c.series ? c.series : null;
+        // tapping a run adds it to the highlighted runs, tapping again removes it
+        if (c.kind == "FSR") toggleSeries(c.series);
         showTip(event, c);
       });
     }
   }
 
-  // dates next to every occurrence of the selected run
-  for (const c of series[selected.value] || []) {
-    if (!shownYears.has(yearOf(c.start))) continue;
-    const right = c._x1 + 60 < L + plotW;
+  // dates next to every occurrence of the highlighted runs; a label that
+  // would overlap an earlier one moves to the other side, or below
+  const shown = new Set(visible);
+  const placed = [];
+  const fontSize = narrow ? 10 : 11;
+  const fits = (box) =>
+    box.x0 >= L &&
+    box.x1 <= L + plotW &&
+    !placed.some(
+      (p) => box.x0 < p.x1 && box.x1 > p.x0 && box.y0 < p.y1 && box.y1 > p.y0,
+    );
+  for (const c of selected.value.flatMap((key) => series[key] || [])) {
+    if (!shown.has(c)) continue;
+    const text = (c.status == "forecast" ? "~ " : "") + shortDate(c.start);
+    const w = text.length * fontSize * 0.6;
+    const candidates = [0, 1, -1, 2, -2].flatMap((shift) => {
+      const y = c._cy + 4 + shift * (fontSize + 2);
+      return [
+        { anchor: "start", x: c._x1 + 4, x0: c._x1 + 4, x1: c._x1 + 4 + w, y },
+        { anchor: "end", x: c._x0 - 4, x0: c._x0 - 4 - w, x1: c._x0 - 4, y },
+      ];
+    });
+    const spot = candidates
+      .map((b) => ({ ...b, y0: b.y - fontSize, y1: b.y + 2 }))
+      .find(fits) || { ...candidates[0], y0: 0, y1: 0 };
+    placed.push(spot);
     el(
       "text",
       {
-        x: right ? c._x1 + 4 : c._x0 - 4,
-        y: c._cy + 4,
-        "text-anchor": right ? "start" : "end",
-        "font-size": narrow ? 10 : 11,
+        x: spot.x,
+        y: spot.y,
+        "text-anchor": spot.anchor,
+        "font-size": fontSize,
         "font-weight": 600,
-        fill: color[selected.value] || ONCE,
+        fill: color[c.series] || ONCE,
         stroke: "#fff",
         "stroke-width": 3,
         "paint-order": "stroke",
       },
       svg,
-    ).textContent = (c.status == "forecast" ? "~ " : "") + shortDate(c.start);
+    ).textContent = text;
   }
 
   const todayRow = rows.find((row) => row.year == yearOf(today));
@@ -442,7 +571,7 @@ const render = (host = chart.value, width = null) => {
   return { svg, W, H };
 };
 
-watch([planning, showChallenges, selected], () => render());
+watch([planning, showChallenges, selected, country], () => render());
 // redraw when the width changes; the element can appear after mount
 const observer = import.meta.client ? new ResizeObserver(() => render()) : null;
 watch(chart, (node, previous) => {
@@ -470,7 +599,8 @@ const exportPng = async () => {
       ...(showChallenges.value ? [[CHALLENGE, "Combat Challenge"]] : []),
       ["#f14668", "heute"],
     ];
-    const headH = selectedInfo.value ? 128 : 104;
+    const infos = selectedInfos.value;
+    const headH = 104 + (country.value || infos.length ? 24 : 0);
     const W = EXPORT_W;
     const H = headH + chartH + 56;
     const out = el("svg", {
@@ -518,19 +648,21 @@ const exportPng = async () => {
       t.textContent = label;
       lx += 20 + label.length * 7 + 22;
     }
-    if (selectedInfo.value) {
+    if (country.value || infos.length) {
       const t = el(
         "text",
         { x: M, y: M + 90, "font-size": 15, fill: "#7a7a7a" },
         out,
       );
-      el(
-        "tspan",
-        { "font-weight": 700, fill: selectedInfo.value.color },
-        t,
-      ).textContent = selectedInfo.value.name;
-      el("tspan", {}, t).textContent =
-        ` · ${selectedInfo.value.city} · ${selectedInfo.value.count}× seit ${selectedInfo.value.since}`;
+      if (country.value)
+        el("tspan", { "font-weight": 700, fill: "#363636" }, t).textContent =
+          `Nur ${country.value}` + (infos.length ? "   " : "");
+      infos.forEach((info, i) => {
+        el("tspan", { "font-weight": 700, fill: info.color }, t).textContent =
+          info.name;
+        el("tspan", {}, t).textContent =
+          ` (${info.city})` + (i < infos.length - 1 ? " · " : "");
+      });
     }
     const g = el("g", { transform: `translate(${M} ${headH})` }, out);
     g.appendChild(chartSvg);
@@ -641,6 +773,27 @@ onBeforeUnmount(() => observer?.disconnect());
   width: 2px;
   height: 12px;
   background: #f14668;
+}
+.planning-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-bottom: 8px;
+}
+.planning-filters .select select {
+  max-width: 260px;
+}
+.planning-chip {
+  gap: 6px;
+  border: 1.5px solid;
+  font-size: 0.75rem;
+}
+.planning-chip .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 }
 .planning-selected {
   min-height: 26px;

@@ -4,7 +4,7 @@
     <p class="subtitle is-6 has-text-grey mt-1 mb-4">
       Jede Zeile ein Jahr, 1. Januar bis 31. Dezember. Jeder wiederkehrende
       Treppenlauf hat eine eigene Farbe, Linien verbinden ihn über die Jahre.
-      Antippen hebt ihn hervor.
+      Antippen hebt Läufe hervor, auch mehrere gleichzeitig.
     </p>
 
     <div v-if="error" class="notification is-danger is-light">
