@@ -51,9 +51,18 @@
             Alle Treppenläufe und Combat Challenges für Feuerwehrleute, in
             Deutschland und darüber hinaus.
           </p>
-          <div v-if="holidaysEnabled" class="holiday-state mt-3">
-            <span>Schulferien für</span>
-            <div class="select is-small">
+          <div v-if="holidaysAvailable" class="holiday-state mt-3">
+            <label class="holiday-toggle">
+              <span class="holiday-toggle-box">
+                <input
+                  type="checkbox"
+                  :checked="holidaysEnabled"
+                  @change="chooseHolidays({ enabled: $event.target.checked })"
+                />
+              </span>
+              Schulferien anzeigen
+            </label>
+            <div v-if="holidaysEnabled" class="select is-small">
               <select
                 :value="holidayState"
                 aria-label="Bundesland"
@@ -164,19 +173,6 @@
           </article>
 
           <div v-if="!competitionsError" ref="listEl" class="holiday-list">
-            <label
-              ref="toggleEl"
-              class="holiday-toggle"
-              title="Schulferien anzeigen"
-            >
-              <input
-                type="checkbox"
-                :checked="holidaysEnabled"
-                aria-label="Schulferien anzeigen"
-                @change="chooseHolidays({ enabled: $event.target.checked })"
-              />
-              <span>Schulferien anzeigen</span>
-            </label>
             <div
               v-for="band in holidayBands"
               :key="band.key"
@@ -184,9 +180,7 @@
               :style="{ top: band.top + 'px', height: band.height + 'px' }"
               :title="band.label"
             >
-              <span :style="{ maxHeight: band.room + 'px' }">{{
-                band.label
-              }}</span>
+              <span>{{ band.label }}</span>
             </div>
             <section v-for="group in months" :key="group.key" class="mb-4">
               <h2 class="title is-5 mb-2">
@@ -261,31 +255,28 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #2f8f83;
+  /* as tall as the dropdown, so the tabs don't move when it appears */
+  min-height: 1.875rem;
 }
-/* the on/off switch sits in the left column, above the holiday bands */
 .holiday-toggle {
+  position: relative;
+  cursor: pointer;
+}
+/* the checkbox hangs in the left column, where the holiday bands are, so
+   the text lines up with the title, the tabs and the list */
+.holiday-toggle-box {
   position: absolute;
-  top: 0.2rem;
+  top: 0;
+  bottom: 0;
   left: -1.5rem;
   width: 1.25rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  cursor: pointer;
-  color: #7a7a7a;
+  justify-content: center;
 }
-.holiday-toggle input {
-  accent-color: #2f8f83;
+.holiday-toggle-box input {
   margin: 0;
   cursor: pointer;
-}
-.holiday-toggle span {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 0.7rem;
-  font-weight: 600;
 }
 .holiday-list {
   position: relative;
@@ -294,9 +285,9 @@
   position: absolute;
   left: -1.5rem;
   width: 1.25rem;
-  background: #eaf6f4;
-  border-right: 3px solid #2f8f83;
-  border-radius: 4px 0 0 4px;
+  /* hatched, so it stands apart from the striped competition rows */
+  background: repeating-linear-gradient(135deg, #f0f0f0 0 4px, #e4e4e4 4px 8px);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -309,13 +300,10 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
-  color: #2f8f83;
+  color: #6b6b6b;
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.4rem 0;
-  /* max-height (set per band) stops the label below the on/off switch */
-  overflow: hidden;
-  text-overflow: ellipsis;
   flex-shrink: 0;
 }
 .page-header {
@@ -481,6 +469,7 @@ const {
   enabled: holidaysEnabled,
   state: holidayState,
   holidays,
+  available: holidaysAvailable,
   init: initHolidays,
   choose: chooseHolidays,
 } = useSchoolHolidays();
@@ -505,17 +494,12 @@ const holidayGroups = computed(() =>
 );
 
 const listEl = ref(null);
-const toggleEl = ref(null);
 const holidayBands = ref([]);
 
 const measureHolidayBands = () => {
   const list = listEl.value;
   if (!list) return (holidayBands.value = []);
   const offset = list.getBoundingClientRect().top;
-  // bands start just below the on/off switch, which sits in the same column
-  const minTop = toggleEl.value
-    ? toggleEl.value.getBoundingClientRect().bottom - offset + 4
-    : 0;
   holidayBands.value = holidayGroups.value
     .map((holiday) => {
       const rows = holiday.ids
@@ -523,16 +507,12 @@ const measureHolidayBands = () => {
         .filter(Boolean)
         .map((row) => row.getBoundingClientRect());
       if (!rows.length) return null;
-      const top = Math.min(...rows.map(({ top }) => top));
+      const top = Math.min(...rows.map(({ top }) => top)) - offset;
       const bottom = Math.max(...rows.map(({ bottom }) => bottom)) - offset;
-      const start = Math.max(top - offset, minTop);
-      if (bottom - start < 8) return null;
       return {
         key: holiday.name + holiday.start,
-        top: start,
-        height: bottom - start,
-        // the label may run up past the band, but not into the switch
-        room: bottom - minTop,
+        top,
+        height: bottom - top,
         label: `${holiday.name} (${dayMonth(holiday.start)}–${dayMonth(holiday.end)})`,
       };
     })

@@ -17,26 +17,31 @@ const shortName = (name) =>
   shortNames[name] || name.replace(/ferien$/i, "").trim() || name;
 
 export default defineEventHandler(async (event) => {
-  setResponseHeader(
-    event,
-    "Cache-Control",
-    "public, max-age=3600, s-maxage=86400, stale-while-revalidate=3600",
-  );
-
   const from = new Date();
   from.setMonth(from.getMonth() - 1);
   const to = new Date();
   to.setMonth(to.getMonth() + 24);
 
-  const holidays = await $fetch("https://openholidaysapi.org/SchoolHolidays", {
-    query: {
-      countryIsoCode: "DE",
-      languageIsoCode: "DE",
-      validFrom: toDate(from),
-      validTo: toDate(to),
-    },
-    headers: { Accept: "application/json" },
-  });
+  let holidays;
+  try {
+    holidays = await $fetch("https://openholidaysapi.org/SchoolHolidays", {
+      query: {
+        countryIsoCode: "DE",
+        languageIsoCode: "DE",
+        validFrom: toDate(from),
+        validTo: toDate(to),
+      },
+      headers: { Accept: "application/json" },
+    });
+  } catch (error) {
+    console.error("OpenHolidays request failed", error);
+    // don't let the CDN keep a failure for a day
+    setResponseHeader(event, "Cache-Control", "no-store");
+    throw createError({
+      statusCode: 502,
+      statusMessage: "School holidays unavailable",
+    });
+  }
 
   const byState = {};
   for (const holiday of holidays) {
@@ -55,5 +60,11 @@ export default defineEventHandler(async (event) => {
   for (const list of Object.values(byState)) {
     list.sort((a, b) => (a.start < b.start ? -1 : a.start > b.start ? 1 : 0));
   }
+  // only a good answer is kept by the CDN
+  setResponseHeader(
+    event,
+    "Cache-Control",
+    "public, max-age=3600, s-maxage=86400, stale-while-revalidate=3600",
+  );
   return byState;
 });

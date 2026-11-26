@@ -41,6 +41,8 @@ export const useSchoolHolidays = () => {
   const state = useState("school-holidays-state", () => "");
   const byState = useState("school-holidays-data", () => null);
 
+  // always loaded (the CDN keeps it), so we know whether to offer the switch;
+  // a failed request leaves it hidden
   const load = async () => {
     if (byState.value) return;
     try {
@@ -65,7 +67,7 @@ export const useSchoolHolidays = () => {
         }
       } catch {}
     }
-    if (enabled.value) await load();
+    await load();
   };
 
   // called from the checkbox and the dropdown: the visitor decided
@@ -73,7 +75,6 @@ export const useSchoolHolidays = () => {
     if ("enabled" in changes) enabled.value = changes.enabled;
     if ("state" in changes) state.value = changes.state;
     writeStored({ enabled: enabled.value, state: state.value });
-    if (enabled.value) await load();
   };
 
   const holidays = computed(() =>
@@ -82,5 +83,10 @@ export const useSchoolHolidays = () => {
       : [],
   );
 
-  return { enabled, state, holidays, init, choose };
+  // the switch is only offered once there are holidays to show
+  const available = computed(() =>
+    Object.values(byState.value || {}).some((list) => list.length),
+  );
+
+  return { enabled, state, holidays, available, init, choose };
 };
