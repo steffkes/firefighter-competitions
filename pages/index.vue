@@ -164,14 +164,18 @@
           </article>
 
           <div v-if="!competitionsError" ref="listEl" class="holiday-list">
-            <label class="holiday-toggle" title="Schulferien anzeigen">
+            <label
+              ref="toggleEl"
+              class="holiday-toggle"
+              title="Schulferien anzeigen"
+            >
               <input
                 type="checkbox"
                 :checked="holidaysEnabled"
                 aria-label="Schulferien anzeigen"
                 @change="chooseHolidays({ enabled: $event.target.checked })"
               />
-              <span>Ferien</span>
+              <span>Schulferien anzeigen</span>
             </label>
             <div
               v-for="band in holidayBands"
@@ -180,7 +184,9 @@
               :style="{ top: band.top + 'px', height: band.height + 'px' }"
               :title="band.label"
             >
-              <span>{{ band.label }}</span>
+              <span :style="{ maxHeight: band.room + 'px' }">{{
+                band.label
+              }}</span>
             </div>
             <section v-for="group in months" :key="group.key" class="mb-4">
               <h2 class="title is-5 mb-2">
@@ -307,6 +313,10 @@
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.4rem 0;
+  /* max-height (set per band) stops the label below the on/off switch */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
 }
 .page-header {
   display: flex;
@@ -495,12 +505,17 @@ const holidayGroups = computed(() =>
 );
 
 const listEl = ref(null);
+const toggleEl = ref(null);
 const holidayBands = ref([]);
 
 const measureHolidayBands = () => {
   const list = listEl.value;
   if (!list) return (holidayBands.value = []);
   const offset = list.getBoundingClientRect().top;
+  // bands start just below the on/off switch, which sits in the same column
+  const minTop = toggleEl.value
+    ? toggleEl.value.getBoundingClientRect().bottom - offset + 4
+    : 0;
   holidayBands.value = holidayGroups.value
     .map((holiday) => {
       const rows = holiday.ids
@@ -509,11 +524,15 @@ const measureHolidayBands = () => {
         .map((row) => row.getBoundingClientRect());
       if (!rows.length) return null;
       const top = Math.min(...rows.map(({ top }) => top));
-      const bottom = Math.max(...rows.map(({ bottom }) => bottom));
+      const bottom = Math.max(...rows.map(({ bottom }) => bottom)) - offset;
+      const start = Math.max(top - offset, minTop);
+      if (bottom - start < 8) return null;
       return {
         key: holiday.name + holiday.start,
-        top: top - offset,
-        height: bottom - top,
+        top: start,
+        height: bottom - start,
+        // the label may run up past the band, but not into the switch
+        room: bottom - minTop,
         label: `${holiday.name} (${dayMonth(holiday.start)}–${dayMonth(holiday.end)})`,
       };
     })
