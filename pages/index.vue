@@ -51,16 +51,9 @@
             Alle Treppenläufe und Combat Challenges für Feuerwehrleute, in
             Deutschland und darüber hinaus.
           </p>
-          <div class="holiday-toggle mt-3">
-            <label class="checkbox">
-              <input
-                type="checkbox"
-                :checked="holidaysEnabled"
-                @change="chooseHolidays({ enabled: $event.target.checked })"
-              />
-              Schulferien anzeigen
-            </label>
-            <div v-if="holidaysEnabled" class="select is-small">
+          <div v-if="holidaysEnabled" class="holiday-state mt-3">
+            <span>Schulferien für</span>
+            <div class="select is-small">
               <select
                 :value="holidayState"
                 aria-label="Bundesland"
@@ -171,6 +164,15 @@
           </article>
 
           <div v-if="!competitionsError" ref="listEl" class="holiday-list">
+            <label class="holiday-toggle" title="Schulferien anzeigen">
+              <input
+                type="checkbox"
+                :checked="holidaysEnabled"
+                aria-label="Schulferien anzeigen"
+                @change="chooseHolidays({ enabled: $event.target.checked })"
+              />
+              <span>Ferien</span>
+            </label>
             <div
               v-for="band in holidayBands"
               :key="band.key"
@@ -244,19 +246,40 @@
 </template>
 
 <style scoped>
-/* room on the left for the school holiday bands, beside the whole view */
-.page-list {
-  padding-left: 1.5rem;
+/* room on the left for the school holiday bands, beside the whole view
+   (beats Bulma's `.columns.is-gapless > .column { padding: 0 !important }`) */
+.columns.is-gapless > .page-list {
+  padding-left: 1.5rem !important;
 }
-.holiday-toggle {
+.holiday-state {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  min-height: 2rem;
+  gap: 0.5rem;
+  color: #2f8f83;
+}
+/* the on/off switch sits in the left column, above the holiday bands */
+.holiday-toggle {
+  position: absolute;
+  top: 0.2rem;
+  left: -1.5rem;
+  width: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  color: #7a7a7a;
 }
 .holiday-toggle input {
   accent-color: #2f8f83;
-  margin-right: 0.25rem;
+  margin: 0;
+  cursor: pointer;
+}
+.holiday-toggle span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 .holiday-list {
   position: relative;
